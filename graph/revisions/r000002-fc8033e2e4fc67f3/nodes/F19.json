@@ -1,0 +1,18 @@
+{
+  "id": "F19",
+  "title": "Vulnerability Disclosure and Bug Bounties",
+  "type": "frontier",
+  "parent": "vulnerability",
+  "domain": "vulnerability",
+  "status": "OPEN",
+  "question": "Scope, phối hợp vá, bằng chứng không gây hại và thời gian disclosure được quyết định thế nào?",
+  "related": "vul-fix",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Asset-vulnerability pair; VM team",
+  "aliases": [
+    "Disclosure và bug bounty"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "F29",
+  "title": "Model and Data Poisoning",
+  "type": "frontier",
+  "parent": "agents",
+  "domain": "agents",
+  "status": "OPEN",
+  "question": "Phân biệt training poisoning, retrieval poisoning và memory poisoning bằng cơ chế/observable nào?",
+  "related": "ai-memory",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Ứng dụng LLM và automation; AI/platform owner",
+  "aliases": [
+    "Đầu độc model và data"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

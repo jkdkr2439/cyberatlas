@@ -1,0 +1,68 @@
+{
+  "id": "net-segment",
+  "title": "Effective Network Segmentation",
+  "condition": "Một workload bị compromise",
+  "input": "Source identity, destination và port/protocol",
+  "process": "Thực thi policy tại đường đi thật",
+  "output": "Kết nối cần thiết qua; kết nối khác bị chặn",
+  "data": "Policy và thử nghiệm connectivity",
+  "invariant": "Có VLAN không chứng minh cắt đường authority",
+  "failure": "Đường quản trị hoặc IPv6 đi vòng",
+  "control": "Deny-by-default theo luồng hợp lệ đã quan sát",
+  "measure": "Đường cấm còn kết nối / đường cấm đã thử",
+  "test": "Thử route dự phòng, IPv6 và management plane",
+  "tradeoff": "Chặn nhầm ảnh hưởng dịch vụ và debug",
+  "open": "Lưu lượng phát sinh theo mùa có được đưa vào model?",
+  "type": "mechanism",
+  "parent": "network",
+  "domain": "network",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Lưu lượng giữa dịch vụ; network team; Một workload bị compromise",
+  "goal": "Đường kết nối chỉ mở cho quan hệ có chủ đích",
+  "variables": "DNS; route; IPv6; proxy; lưu lượng mã hóa",
+  "resources": "Thiết bị mạng; bản đồ luồng; năng lực lọc",
+  "book_anchor": {
+    "id": "B6626",
+    "line": 6626,
+    "level": 2,
+    "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+    "end_line": 7585
+  },
+  "source_refs": [
+    "book",
+    "zt"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Lưu lượng phát sinh theo mùa có được đưa vào model? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Đường cấm còn kết nối / đường cấm đã thử",
+    "domain": "Lưu lượng giữa dịch vụ; network team; Một workload bị compromise",
+    "conditions": "Một workload bị compromise",
+    "goal": "Đường kết nối chỉ mở cho quan hệ có chủ đích",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Policy và thử nghiệm connectivity; bằng chứng test: Thử route dự phòng, IPv6 và management plane",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Chặn nhầm ảnh hưởng dịch vụ và debug; Lưu lượng phát sinh theo mùa có được đưa vào model?",
+    "binding": "net-segment → điểm thực thi: Thực thi policy tại đường đi thật"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Kết nối cần thiết qua; kết nối khác bị chặn / Đường quản trị hoặc IPv6 đi vòng",
+    "domain": "Chốt population và giới hạn: Lưu lượng giữa dịch vụ; network team; Một workload bị compromise",
+    "mechanism": "Control có giữ invariant này không? Có VLAN không chứng minh cắt đường authority",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Thử route dự phòng, IPv6 và management plane",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Thiết bị mạng; bản đồ luồng; năng lực lọc; DNS; route; IPv6; proxy; lưu lượng mã hóa",
+    "consequence": "Đạt Đường kết nối chỉ mở cho quan hệ có chủ đích nhưng phải theo dõi Chặn nhầm ảnh hưởng dịch vụ và debug"
+  },
+  "aliases": [
+    "Phân vùng thực sự"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

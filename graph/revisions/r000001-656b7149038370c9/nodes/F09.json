@@ -1,0 +1,13 @@
+{
+  "id": "F09",
+  "title": "Browser isolation và cross-origin",
+  "type": "frontier",
+  "parent": "web",
+  "domain": "web",
+  "status": "OPEN",
+  "question": "Origin/site, cookie, storage và messaging tạo ranh giới khác nhau thế nào?",
+  "related": "web-xss",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Parser và trình duyệt; AppSec"
+}

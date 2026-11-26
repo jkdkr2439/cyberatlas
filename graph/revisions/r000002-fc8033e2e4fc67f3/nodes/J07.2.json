@@ -1,0 +1,20 @@
+{
+  "id": "J07.2",
+  "title": "Verify Affected Components",
+  "type": "step",
+  "parent": "J07",
+  "domain": "vulnerability",
+  "journey": "J07",
+  "order": 2,
+  "process": "Version match chưa chứng minh code path áp dụng; backport và build options có thể đổi kết luận.",
+  "observable": "Vendor/build evidence và scope affected component.",
+  "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context.",
+  "goal": "Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Thành phần lỗi có thật"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

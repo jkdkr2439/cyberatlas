@@ -1,0 +1,15 @@
+{
+  "id": "J08.7",
+  "title": "Ứng phó không tạo hazard mới",
+  "type": "step",
+  "parent": "J08",
+  "domain": "ot",
+  "journey": "J08",
+  "order": 7,
+  "process": "Isolate, restart hay scan có thể làm sai thời gian điều khiển. Thử trong lab/twin và cần kỹ sư cho tác động thực.",
+  "observable": "Approved intervention envelope và stop conditions.",
+  "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety.",
+  "goal": "Giữ quy trình trong envelope an toàn khi gặp sai lệch số, với quyết định do chuyên gia vận hành xác nhận.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

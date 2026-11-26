@@ -1,0 +1,63 @@
+{
+  "id": "vul-fix",
+  "title": "Sửa và kiểm lại",
+  "condition": "Ticket được đánh dấu resolved",
+  "input": "Patch/config và finding gốc",
+  "process": "Kiểm artifact/state thực và test lại điều kiện lỗi",
+  "output": "Finding thật sự không tái hiện trong scope",
+  "data": "Fix receipt, version và retest result",
+  "invariant": "Đóng ticket không phải bằng chứng sửa xong",
+  "failure": "Patch chưa restart; node khác chưa cập nhật",
+  "control": "Retest ở asset đúng và check drift",
+  "measure": "Finding reopen / finding từng xác nhận fixed",
+  "test": "Một node cố tình chưa rollout trong lab",
+  "tradeoff": "Retest tăng thời gian và tải hệ",
+  "open": "Mitigation tạm có hết hạn hoặc mất hiệu lực khi đổi route?",
+  "type": "mechanism",
+  "parent": "vulnerability",
+  "domain": "vulnerability",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Asset-vulnerability pair; VM team; Ticket được đánh dấu resolved",
+  "goal": "Giảm đường gây hại có ý nghĩa trong scope",
+  "variables": "Reachability; exploitability; control; tuổi tồn tại",
+  "resources": "Scanner; inventory; change window; kiểm chứng sửa",
+  "book_anchor": {
+    "id": "B5510",
+    "line": 5510,
+    "level": 2,
+    "title": "Phần 05 — Ontology rủi ro: Threat, Vulnerability, Likelihood, Impact, Risk",
+    "end_line": 6625
+  },
+  "source_refs": [
+    "book",
+    "cvss"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Mitigation tạm có hết hạn hoặc mất hiệu lực khi đổi route? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Finding reopen / finding từng xác nhận fixed",
+    "domain": "Asset-vulnerability pair; VM team; Ticket được đánh dấu resolved",
+    "conditions": "Ticket được đánh dấu resolved",
+    "goal": "Giảm đường gây hại có ý nghĩa trong scope",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Fix receipt, version và retest result; bằng chứng test: Một node cố tình chưa rollout trong lab",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Retest tăng thời gian và tải hệ; Mitigation tạm có hết hạn hoặc mất hiệu lực khi đổi route?",
+    "binding": "vul-fix → điểm thực thi: Kiểm artifact/state thực và test lại điều kiện lỗi"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Finding thật sự không tái hiện trong scope / Patch chưa restart; node khác chưa cập nhật",
+    "domain": "Chốt population và giới hạn: Asset-vulnerability pair; VM team; Ticket được đánh dấu resolved",
+    "mechanism": "Control có giữ invariant này không? Đóng ticket không phải bằng chứng sửa xong",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Một node cố tình chưa rollout trong lab",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Scanner; inventory; change window; kiểm chứng sửa; Reachability; exploitability; control; tuổi tồn tại",
+    "consequence": "Đạt Giảm đường gây hại có ý nghĩa trong scope nhưng phải theo dõi Retest tăng thời gian và tải hệ"
+  }
+}

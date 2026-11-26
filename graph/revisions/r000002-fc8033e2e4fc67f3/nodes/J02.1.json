@@ -1,0 +1,20 @@
+{
+  "id": "J02.1",
+  "title": "Establish Actor and Tenant Claims",
+  "type": "step",
+  "parent": "J02",
+  "domain": "authorization",
+  "journey": "J02",
+  "order": 1,
+  "process": "Phân biệt tenant được xác nhận trong session với tenant_id do client gửi. Tenant context phải có nguồn authority rõ.",
+  "observable": "Verified principal/tenant; input do client khai được đánh dấu không tin.",
+  "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền.",
+  "goal": "Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Actor và tenant claim được nhận diện"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

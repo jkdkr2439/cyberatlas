@@ -1,0 +1,13 @@
+{
+  "id": "F20",
+  "title": "Threat intelligence",
+  "type": "frontier",
+  "parent": "detection",
+  "domain": "detection",
+  "status": "OPEN",
+  "question": "Indicator hết hạn khi nào, nguồn có độc lập không và intelligence có đổi quyết định thực tế không?",
+  "related": "det-behavior",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Tín hiệu đến quyết định; SOC"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "J03.5",
+  "title": "Ký không làm biến mất rủi ro",
+  "type": "step",
+  "parent": "J03",
+  "domain": "supply",
+  "journey": "J03",
+  "order": 5,
+  "process": "Signature xác nhận binding theo khóa; policy phải xét ai ký, vì sao được tin, key còn hợp lệ không.",
+  "observable": "Signer scope, key validity, revocation và signing logs.",
+  "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng.",
+  "goal": "Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

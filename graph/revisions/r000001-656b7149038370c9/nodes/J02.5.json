@@ -1,0 +1,15 @@
+{
+  "id": "J02.5",
+  "title": "Cache không nối nhầm tenant",
+  "type": "step",
+  "parent": "J02",
+  "domain": "authorization",
+  "journey": "J02",
+  "order": 5,
+  "process": "Key thiếu tenant/permission dimension có thể trả dữ liệu đã authorize cho người trước. Invalidation phải phản ánh thay đổi scope.",
+  "observable": "Cache key contract; test cùng object-local-ID ở hai tenant.",
+  "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền.",
+  "goal": "Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

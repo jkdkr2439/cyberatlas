@@ -1,0 +1,20 @@
+{
+  "id": "J07.4",
+  "title": "Establish Reachability Paths",
+  "type": "step",
+  "parent": "J07",
+  "domain": "vulnerability",
+  "journey": "J07",
+  "order": 4,
+  "process": "Reachability theo attacker position, route, identity và thời gian; public/private là quá thô.",
+  "observable": "Path evidence, segmentation test và trust assumptions.",
+  "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context.",
+  "goal": "Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Đường tiếp cận được xác định"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

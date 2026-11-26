@@ -1,0 +1,29 @@
+{
+  "id": "cloud",
+  "title": "Cloud Control Planes",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Account/project và dịch vụ cloud; platform",
+  "goal": "Chỉ thay đổi tài nguyên bằng authority được kiểm soát",
+  "variables": "Shared responsibility; role chain; policy inheritance",
+  "resources": "Inventory đa account; audit log; sandbox test",
+  "book_part": 6,
+  "book_anchor": {
+    "id": "B6626",
+    "line": 6626,
+    "level": 2,
+    "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+    "end_line": 7585
+  },
+  "source_refs": [
+    "zt"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Account/project và dịch vụ cloud; platform",
+  "aliases": [
+    "Cloud control plane"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

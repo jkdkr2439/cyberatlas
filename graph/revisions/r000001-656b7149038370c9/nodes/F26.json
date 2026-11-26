@@ -1,0 +1,13 @@
+{
+  "id": "F26",
+  "title": "Accessibility và security usability",
+  "type": "frontier",
+  "parent": "human",
+  "domain": "human",
+  "status": "OPEN",
+  "question": "Control loại người dùng nào khỏi dịch vụ, có phương án giữ assurance mà giảm loại trừ không?",
+  "related": "id-recovery",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities"
+}

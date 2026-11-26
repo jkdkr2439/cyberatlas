@@ -1,0 +1,30 @@
+{
+  "id": "software",
+  "title": "Secure Software Development Lifecycle",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Thiết kế đến vận hành; engineering",
+  "goal": "Yêu cầu bảo mật tồn tại qua các lần thay đổi",
+  "variables": "Ngôn ngữ; framework; test quality; release pressure",
+  "resources": "Review; CI; test fixtures; owner khắc phục",
+  "book_part": 11,
+  "book_anchor": {
+    "id": "B12409",
+    "line": 12409,
+    "level": 2,
+    "title": "Phần 11 — Từ ontology sang hệ thống AI security agent",
+    "end_line": 14030
+  },
+  "source_refs": [
+    "ssdf",
+    "asvs"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Thiết kế đến vận hành; engineering",
+  "aliases": [
+    "Vòng đời phát triển phần mềm"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

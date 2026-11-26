@@ -1,0 +1,15 @@
+{
+  "id": "J08.3",
+  "title": "Lệnh gắn chủ thể và mục đích",
+  "type": "step",
+  "parent": "J08",
+  "domain": "ot",
+  "journey": "J08",
+  "order": 3,
+  "process": "Setpoint đúng cú pháp có thể sai chế độ. Kiểm cả nguồn, authority và phase vận hành.",
+  "observable": "Command source, work order, mode và decision.",
+  "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety.",
+  "goal": "Giữ quy trình trong envelope an toàn khi gặp sai lệch số, với quyết định do chuyên gia vận hành xác nhận.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

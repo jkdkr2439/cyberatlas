@@ -1,0 +1,36 @@
+{
+  "id": "J01",
+  "title": "Thu hồi quyền: vì sao disable account vẫn chưa xong?",
+  "cards": [
+    "id-mfa",
+    "id-recovery",
+    "ses-issue",
+    "ses-revoke",
+    "ses-concurrency",
+    "hum-offboard"
+  ],
+  "goal": "Một chủ thể bị thu hồi không còn thực hiện hành động thuộc scope sau bound được chấp thuận.",
+  "boundary": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online.",
+  "branches": [
+    "Online introspection: revocation nhanh hơn nhưng identity outage có thể chặn dịch vụ.",
+    "Short-lived token: giới hạn cửa sổ nhưng phụ thuộc khả năng cấp mới và cách cache kiểm expiry.",
+    "OPEN: offline consumer và hợp đồng bound tối đa cần quyết định riêng."
+  ],
+  "reopen": "Có thêm loại credential, region, cache hoặc token exchange; incident cho thấy deny không bền.",
+  "type": "journey",
+  "parent": "identity",
+  "domain": "identity",
+  "status": "analyst_process_model",
+  "provenance": "analyst_expansion",
+  "steps": [
+    "J01.1",
+    "J01.2",
+    "J01.3",
+    "J01.4",
+    "J01.5",
+    "J01.6",
+    "J01.7",
+    "J01.8"
+  ],
+  "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+}

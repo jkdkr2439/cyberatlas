@@ -1,0 +1,24 @@
+{
+  "id": "human",
+  "title": "Con người và quyền truy cập vật lý",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Nhân viên, khách, thiết bị; HR/IT/facilities",
+  "goal": "Quy trình có thể dùng an toàn trong áp lực thực tế",
+  "variables": "Mệt mỏi; động cơ; accessibility; contractor; offboarding",
+  "resources": "Đào tạo theo vai; hỗ trợ; kiểm soát ra vào",
+  "book_part": 2,
+  "book_anchor": {
+    "id": "B470",
+    "line": 470,
+    "level": 2,
+    "title": "Phần 02 — Cơ chế gốc: hằng và biến trong bảo mật",
+    "end_line": 1603
+  },
+  "source_refs": [
+    "csf"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities"
+}

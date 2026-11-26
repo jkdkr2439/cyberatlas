@@ -1,0 +1,15 @@
+{
+  "id": "J05.8",
+  "title": "Feedback thay đổi hệ quan sát",
+  "type": "step",
+  "parent": "J05",
+  "domain": "telemetry",
+  "journey": "J05",
+  "order": 8,
+  "process": "Incident hoặc test miss làm đổi sensor/schema/rule/triage; kiểm lại sau thay đổi mới xác nhận learning loop.",
+  "observable": "Versioned change, retest, cost và false-positive shift.",
+  "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ.",
+  "goal": "Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "containers",
+  "title": "Container và Kubernetes",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Cluster và workload; platform/SRE",
+  "goal": "Quyền workload không mặc nhiên thành quyền node",
+  "variables": "Admission mode; RBAC; CNI; token; runtime",
+  "resources": "Admission; runtime telemetry; đội vận hành",
+  "book_part": 4,
+  "book_anchor": {
+    "id": "B3534",
+    "line": 3534,
+    "level": 2,
+    "title": "Phần 04 — Phân loại lỗi bảo mật bằng hai trục IPOD và hằng/biến",
+    "end_line": 5509
+  },
+  "source_refs": [
+    "k8s"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Cluster và workload; platform/SRE"
+}

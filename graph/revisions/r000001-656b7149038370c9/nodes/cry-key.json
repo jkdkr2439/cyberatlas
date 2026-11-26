@@ -1,0 +1,63 @@
+{
+  "id": "cry-key",
+  "title": "Vòng đời khóa",
+  "condition": "Khóa dùng cho nhiều tài sản",
+  "input": "Generate, distribute, rotate, revoke, destroy",
+  "process": "Ràng quyền sử dụng với mục đích và vòng đời",
+  "output": "Khóa hoạt động trong phạm vi cho phép",
+  "data": "Key inventory, audit và dependency",
+  "invariant": "Xóa khóa có thể đồng thời phá khả năng recovery",
+  "failure": "Backup có ciphertext nhưng không còn key",
+  "control": "Custody riêng, rotation có kiểm thử khôi phục",
+  "measure": "Tài sản mã hóa có key recovery được thử / tài sản cần recovery",
+  "test": "Khôi phục backup sau một lần rotation",
+  "tradeoff": "Khóa dự phòng thêm bề mặt truy cập",
+  "open": "Cryptographic erasure có bao phủ mọi bản sao khóa không?",
+  "type": "mechanism",
+  "parent": "crypto",
+  "domain": "crypto",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Dữ liệu lưu và truyền; PKI/KMS owner; Khóa dùng cho nhiều tài sản",
+  "goal": "Bí mật và toàn vẹn theo mô hình đối thủ cụ thể",
+  "variables": "Thuật toán; khóa; nonce; chứng thư; thời hạn bí mật",
+  "resources": "KMS/HSM; backup khóa; năng lực chuyển đổi",
+  "book_anchor": {
+    "id": "B8536",
+    "line": 8536,
+    "level": 2,
+    "title": "Phần 08 — Data ontology cho agent bảo mật",
+    "end_line": 10085
+  },
+  "source_refs": [
+    "book",
+    "asvs"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Cryptographic erasure có bao phủ mọi bản sao khóa không? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Tài sản mã hóa có key recovery được thử / tài sản cần recovery",
+    "domain": "Dữ liệu lưu và truyền; PKI/KMS owner; Khóa dùng cho nhiều tài sản",
+    "conditions": "Khóa dùng cho nhiều tài sản",
+    "goal": "Bí mật và toàn vẹn theo mô hình đối thủ cụ thể",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Key inventory, audit và dependency; bằng chứng test: Khôi phục backup sau một lần rotation",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Khóa dự phòng thêm bề mặt truy cập; Cryptographic erasure có bao phủ mọi bản sao khóa không?",
+    "binding": "cry-key → điểm thực thi: Ràng quyền sử dụng với mục đích và vòng đời"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Khóa hoạt động trong phạm vi cho phép / Backup có ciphertext nhưng không còn key",
+    "domain": "Chốt population và giới hạn: Dữ liệu lưu và truyền; PKI/KMS owner; Khóa dùng cho nhiều tài sản",
+    "mechanism": "Control có giữ invariant này không? Xóa khóa có thể đồng thời phá khả năng recovery",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Khôi phục backup sau một lần rotation",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? KMS/HSM; backup khóa; năng lực chuyển đổi; Thuật toán; khóa; nonce; chứng thư; thời hạn bí mật",
+    "consequence": "Đạt Bí mật và toàn vẹn theo mô hình đối thủ cụ thể nhưng phải theo dõi Khóa dự phòng thêm bề mặt truy cập"
+  }
+}

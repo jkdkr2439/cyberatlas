@@ -1,0 +1,41 @@
+{
+  "id": "J07",
+  "title": "From Scanner Findings to Contextual Priorities",
+  "cards": [
+    "vul-context",
+    "vul-fix",
+    "vul-exposure",
+    "inv-discovery",
+    "gov-loss",
+    "arch-blast"
+  ],
+  "goal": "Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.",
+  "boundary": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context.",
+  "branches": [
+    "Patch nhanh: loại một nguyên nhân nhưng có regression và maintenance constraints.",
+    "Control bù: có thể cắt đường sớm hơn nhưng cần expiry và test drift.",
+    "OPEN: thiếu dữ liệu exploit không phải xác suất bằng không."
+  ],
+  "reopen": "Có exploitation evidence mới, đổi route/control, dữ liệu criticality hoặc bản vá bị rollback.",
+  "type": "journey",
+  "parent": "vulnerability",
+  "domain": "vulnerability",
+  "status": "analyst_process_model",
+  "provenance": "analyst_expansion",
+  "steps": [
+    "J07.1",
+    "J07.2",
+    "J07.3",
+    "J07.4",
+    "J07.5",
+    "J07.6",
+    "J07.7",
+    "J07.8"
+  ],
+  "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context.",
+  "aliases": [
+    "Lỗ hổng: từ scanner finding đến ưu tiên có ý nghĩa"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

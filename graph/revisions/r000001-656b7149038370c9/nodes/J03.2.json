@@ -1,0 +1,15 @@
+{
+  "id": "J03.2",
+  "title": "Dependency được resolve",
+  "type": "step",
+  "parent": "J03",
+  "domain": "supply",
+  "journey": "J03",
+  "order": 2,
+  "process": "Tên và version phải gắn nguồn và nội dung cụ thể. SBOM là inventory, không phải kết luận mọi dependency an toàn.",
+  "observable": "Resolved digest, registry, transitive tree và install steps.",
+  "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng.",
+  "goal": "Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

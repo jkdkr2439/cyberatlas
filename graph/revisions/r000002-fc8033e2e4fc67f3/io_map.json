@@ -1,0 +1,2824 @@
+{
+  "nodes": [
+    {
+      "id": "action-approval:I",
+      "title": "Input: Approval Bound to a Specific Action",
+      "phenomenon": "Preview args, target và user intent",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Agent chuẩn bị hành động có hậu quả"
+    },
+    {
+      "id": "action-approval:O",
+      "title": "Output: Approval Bound to a Specific Action",
+      "phenomenon": "Approval có scope, version và expiry",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Agent chuẩn bị hành động có hậu quả"
+    },
+    {
+      "id": "action-digest:I",
+      "title": "Input: Canonical Action Representation",
+      "phenomenon": "Tool name, args, object refs và versions",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Agent chuẩn bị hành động có hậu quả; Approval được bind bằng digest"
+    },
+    {
+      "id": "action-digest:O",
+      "title": "Output: Canonical Action Representation",
+      "phenomenon": "Cùng hành động cho cùng binding; đổi nghĩa thì binding đổi",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Agent chuẩn bị hành động có hậu quả; Approval được bind bằng digest"
+    },
+    {
+      "id": "action-execution:I",
+      "title": "Input: Tool Execution Contracts",
+      "phenomenon": "Capability, tool args và resource budget",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request"
+    },
+    {
+      "id": "action-execution:O",
+      "title": "Output: Tool Execution Contracts",
+      "phenomenon": "Hậu quả cụ thể hoặc lỗi có phân loại",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request"
+    },
+    {
+      "id": "action-observe:I",
+      "title": "Input: Independent Post-Action Observation",
+      "phenomenon": "Receipt và read-back từ hệ đích",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request; Tool receipt không đủ để biết hệ đã đổi"
+    },
+    {
+      "id": "action-observe:O",
+      "title": "Output: Independent Post-Action Observation",
+      "phenomenon": "Verified, contradicted hoặc unresolved outcome",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request; Tool receipt không đủ để biết hệ đã đổi"
+    },
+    {
+      "id": "action-retry:I",
+      "title": "Input: Retries after Ambiguous Outcomes",
+      "phenomenon": "Execution ID và trạng thái commit chưa biết",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request; Tool timeout có thể đã tạo side effect"
+    },
+    {
+      "id": "action-retry:O",
+      "title": "Output: Retries after Ambiguous Outcomes",
+      "phenomenon": "Không lặp hậu quả ngoài ý định",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request; Tool timeout có thể đã tạo side effect"
+    },
+    {
+      "id": "action-toctou:I",
+      "title": "Input: Post-Approval Context Changes",
+      "phenomenon": "Approved snapshot và target state hiện tại",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Agent chuẩn bị hành động có hậu quả; Giữa review và execution có thời gian"
+    },
+    {
+      "id": "action-toctou:O",
+      "title": "Output: Post-Approval Context Changes",
+      "phenomenon": "Hành động chỉ chạy nếu context còn khớp",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Agent chuẩn bị hành động có hậu quả; Giữa review và execution có thời gian"
+    },
+    {
+      "id": "ai-instruction:I",
+      "title": "Input: Prompt Injection and Authority",
+      "phenomenon": "Trang web, tài liệu, email hoặc tool output",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Agent đọc nội dung bên ngoài"
+    },
+    {
+      "id": "ai-instruction:O",
+      "title": "Output: Prompt Injection and Authority",
+      "phenomenon": "Không thực hiện hành động vượt nhiệm vụ",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Agent đọc nội dung bên ngoài"
+    },
+    {
+      "id": "ai-memory:I",
+      "title": "Input: Memory, Retrieval, and Feedback",
+      "phenomenon": "Documents, previous outputs và reviewer feedback",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Agent lưu thông tin qua nhiều lượt"
+    },
+    {
+      "id": "ai-memory:O",
+      "title": "Output: Memory, Retrieval, and Feedback",
+      "phenomenon": "Memory không nâng suy đoán thành sự thật",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Agent lưu thông tin qua nhiều lượt"
+    },
+    {
+      "id": "ai-tool:I",
+      "title": "Input: Agent Tool Invocation",
+      "phenomenon": "Tool args, user intent và current state",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi"
+    },
+    {
+      "id": "ai-tool:O",
+      "title": "Output: Agent Tool Invocation",
+      "phenomenon": "Hành động đúng phạm vi hoặc bị từ chối",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi"
+    },
+    {
+      "id": "api-abuse:I",
+      "title": "Input: Abuse of Legitimate Functionality",
+      "phenomenon": "Nhiều yêu cầu hợp quyền",
+      "frame": "API đồng bộ/bất đồng bộ; product team; Endpoint đúng kỹ thuật nhưng có giá trị kinh tế"
+    },
+    {
+      "id": "api-abuse:O",
+      "title": "Output: Abuse of Legitimate Functionality",
+      "phenomenon": "Dịch vụ vẫn phục vụ người hợp lệ",
+      "frame": "API đồng bộ/bất đồng bộ; product team; Endpoint đúng kỹ thuật nhưng có giá trị kinh tế"
+    },
+    {
+      "id": "api-retry:I",
+      "title": "Input: Retries and Idempotency",
+      "phenomenon": "Operation ID, body và principal",
+      "frame": "API đồng bộ/bất đồng bộ; product team; Mạng timeout rồi client gửi lại"
+    },
+    {
+      "id": "api-retry:O",
+      "title": "Output: Retries and Idempotency",
+      "phenomenon": "Một hiệu ứng nghiệp vụ cho một ý định",
+      "frame": "API đồng bộ/bất đồng bộ; product team; Mạng timeout rồi client gửi lại"
+    },
+    {
+      "id": "api-state:I",
+      "title": "Input: Business Invariants",
+      "phenomenon": "Hành động và trạng thái giao dịch",
+      "frame": "API đồng bộ/bất đồng bộ; product team; Mua hàng, hoàn tiền, đặt chỗ"
+    },
+    {
+      "id": "api-state:O",
+      "title": "Output: Business Invariants",
+      "phenomenon": "Trạng thái mới hợp lệ",
+      "frame": "API đồng bộ/bất đồng bộ; product team; Mua hàng, hoàn tiền, đặt chỗ"
+    },
+    {
+      "id": "arch-blast:I",
+      "title": "Input: Blast Radius",
+      "phenomenon": "Đồ thị quyền và đường kết nối",
+      "frame": "Dịch vụ phân tán; kiến trúc sư; Một principal hoặc workload bị chiếm"
+    },
+    {
+      "id": "arch-blast:O",
+      "title": "Output: Blast Radius",
+      "phenomenon": "Tập tài sản có thể bị ảnh hưởng",
+      "frame": "Dịch vụ phân tán; kiến trúc sư; Một principal hoặc workload bị chiếm"
+    },
+    {
+      "id": "arch-boundary:I",
+      "title": "Input: Trust Boundary Enforcement",
+      "phenomenon": "Yêu cầu từ nguồn khác trust level",
+      "frame": "Dịch vụ phân tán; kiến trúc sư; Dữ liệu đi qua chủ thể hoặc miền quản trị"
+    },
+    {
+      "id": "arch-boundary:O",
+      "title": "Output: Trust Boundary Enforcement",
+      "phenomenon": "Đầu vào được giảm quyền và gắn nguồn",
+      "frame": "Dịch vụ phân tán; kiến trúc sư; Dữ liệu đi qua chủ thể hoặc miền quản trị"
+    },
+    {
+      "id": "arch-failure:I",
+      "title": "Input: Fail-Open and Fail-Closed Behavior",
+      "phenomenon": "Yêu cầu mới và timeout",
+      "frame": "Dịch vụ phân tán; kiến trúc sư; Policy service mất kết nối"
+    },
+    {
+      "id": "arch-failure:O",
+      "title": "Output: Fail-Open and Fail-Closed Behavior",
+      "phenomenon": "Cho phép, từ chối hoặc giới hạn chức năng",
+      "frame": "Dịch vụ phân tán; kiến trúc sư; Policy service mất kết nối"
+    },
+    {
+      "id": "auth-object:I",
+      "title": "Input: Object-Level Authorization",
+      "phenomenon": "Principal, object ID và action",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant"
+    },
+    {
+      "id": "auth-object:O",
+      "title": "Output: Object-Level Authorization",
+      "phenomenon": "Dữ liệu hoặc thay đổi đúng người",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant"
+    },
+    {
+      "id": "auth-policy:I",
+      "title": "Input: Effective Permissions",
+      "phenomenon": "Membership, resource policy và context",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; Nhiều role và policy chồng nhau"
+    },
+    {
+      "id": "auth-policy:O",
+      "title": "Output: Effective Permissions",
+      "phenomenon": "Effective permissions",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; Nhiều role và policy chồng nhau"
+    },
+    {
+      "id": "auth-race:I",
+      "title": "Input: Commit-Time Authorization",
+      "phenomenon": "Yêu cầu được duyệt trước và trạng thái mới",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; Ownership thay đổi khi tác vụ đang chạy"
+    },
+    {
+      "id": "auth-race:O",
+      "title": "Output: Commit-Time Authorization",
+      "phenomenon": "Commit hợp lệ hoặc rollback",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; Ownership thay đổi khi tác vụ đang chạy"
+    },
+    {
+      "id": "build-cache:I",
+      "title": "Input: CI Caches across Trust Levels",
+      "phenomenon": "Cached dependencies/artifacts và writer identity",
+      "frame": "Source, build, artifact, deploy; release team; CI nhận contribution không tin; Trusted và untrusted job dùng cache chung"
+    },
+    {
+      "id": "build-cache:O",
+      "title": "Output: CI Caches across Trust Levels",
+      "phenomenon": "Trusted job không dùng state không kiểm chứng",
+      "frame": "Source, build, artifact, deploy; release team; CI nhận contribution không tin; Trusted và untrusted job dùng cache chung"
+    },
+    {
+      "id": "build-secret:I",
+      "title": "Input: Build-Stage Secret Grants",
+      "phenomenon": "Job identity, trust level và secret request",
+      "frame": "Source, build, artifact, deploy; release team; CI nhận contribution không tin; CI có contribution từ bên ngoài"
+    },
+    {
+      "id": "build-secret:O",
+      "title": "Output: Build-Stage Secret Grants",
+      "phenomenon": "Build không tin không nhận secret release",
+      "frame": "Source, build, artifact, deploy; release team; CI nhận contribution không tin; CI có contribution từ bên ngoài"
+    },
+    {
+      "id": "cld-drift:I",
+      "title": "Input: Configuration Drift",
+      "phenomenon": "Desired state và observed state",
+      "frame": "Account/project và dịch vụ cloud; platform; IaC và console cùng sửa tài nguyên"
+    },
+    {
+      "id": "cld-drift:O",
+      "title": "Output: Configuration Drift",
+      "phenomenon": "Drift được xử lý hoặc chấp nhận có hạn",
+      "frame": "Account/project và dịch vụ cloud; platform; IaC và console cùng sửa tài nguyên"
+    },
+    {
+      "id": "cld-policy:I",
+      "title": "Input: Control Plane Authority",
+      "phenomenon": "Policy, role trust và resource access",
+      "frame": "Account/project và dịch vụ cloud; platform; Role có thể tạo/chỉnh tài nguyên"
+    },
+    {
+      "id": "cld-policy:O",
+      "title": "Output: Control Plane Authority",
+      "phenomenon": "Tập thay đổi có thể thực hiện",
+      "frame": "Account/project và dịch vụ cloud; platform; Role có thể tạo/chỉnh tài nguyên"
+    },
+    {
+      "id": "cld-responsibility:I",
+      "title": "Input: Cloud Shared Responsibility",
+      "phenomenon": "Service contract và cấu hình tenant",
+      "frame": "Account/project và dịch vụ cloud; platform; Dùng dịch vụ managed"
+    },
+    {
+      "id": "cld-responsibility:O",
+      "title": "Output: Cloud Shared Responsibility",
+      "phenomenon": "Control owner cho từng lớp",
+      "frame": "Account/project và dịch vụ cloud; platform; Dùng dịch vụ managed"
+    },
+    {
+      "id": "cry-agility:I",
+      "title": "Input: Cryptographic Agility",
+      "phenomenon": "Inventory crypto và hạn bí mật dữ liệu",
+      "frame": "Dữ liệu lưu và truyền; PKI/KMS owner; Thuật toán, chứng thư hoặc key policy đổi"
+    },
+    {
+      "id": "cry-agility:O",
+      "title": "Output: Cryptographic Agility",
+      "phenomenon": "Dịch vụ tương thích và dữ liệu còn đọc được",
+      "frame": "Dữ liệu lưu và truyền; PKI/KMS owner; Thuật toán, chứng thư hoặc key policy đổi"
+    },
+    {
+      "id": "cry-integrity:I",
+      "title": "Input: Encryption and Data Authentication",
+      "phenomenon": "Plaintext, key, nonce và context",
+      "frame": "Dữ liệu lưu và truyền; PKI/KMS owner; Dữ liệu cần bí mật lẫn toàn vẹn"
+    },
+    {
+      "id": "cry-integrity:O",
+      "title": "Output: Encryption and Data Authentication",
+      "phenomenon": "Ciphertext và kiểm tra integrity",
+      "frame": "Dữ liệu lưu và truyền; PKI/KMS owner; Dữ liệu cần bí mật lẫn toàn vẹn"
+    },
+    {
+      "id": "cry-key:I",
+      "title": "Input: Key Lifecycle Management",
+      "phenomenon": "Generate, distribute, rotate, revoke, destroy",
+      "frame": "Dữ liệu lưu và truyền; PKI/KMS owner; Khóa dùng cho nhiều tài sản"
+    },
+    {
+      "id": "cry-key:O",
+      "title": "Output: Key Lifecycle Management",
+      "phenomenon": "Khóa hoạt động trong phạm vi cho phép",
+      "frame": "Dữ liệu lưu và truyền; PKI/KMS owner; Khóa dùng cho nhiều tài sản"
+    },
+    {
+      "id": "dat-class:I",
+      "title": "Input: Data Classification by Function",
+      "phenomenon": "Content, provenance và intended use",
+      "frame": "Vòng đời dataset; data owner; Một pipeline trộn nhiều loại dữ liệu"
+    },
+    {
+      "id": "dat-class:O",
+      "title": "Output: Data Classification by Function",
+      "phenomenon": "Dữ liệu có policy xử lý đúng chức năng",
+      "frame": "Vòng đời dataset; data owner; Một pipeline trộn nhiều loại dữ liệu"
+    },
+    {
+      "id": "dat-egress:I",
+      "title": "Input: Data Leakage at Output Boundaries",
+      "phenomenon": "Data selection và destination",
+      "frame": "Vòng đời dataset; data owner; Có export, report, email và log"
+    },
+    {
+      "id": "dat-egress:O",
+      "title": "Output: Data Leakage at Output Boundaries",
+      "phenomenon": "Output đúng người và mục đích",
+      "frame": "Vòng đời dataset; data owner; Có export, report, email và log"
+    },
+    {
+      "id": "dat-retention:I",
+      "title": "Input: Retention and Deletion",
+      "phenomenon": "Purpose, thời hạn, replica/cache/backup map",
+      "frame": "Vòng đời dataset; data owner; Dữ liệu có nhiều bản sao"
+    },
+    {
+      "id": "dat-retention:O",
+      "title": "Output: Retention and Deletion",
+      "phenomenon": "Dữ liệu hết mục đích được xóa hoặc hạn chế đúng luật áp dụng",
+      "frame": "Vòng đời dataset; data owner; Dữ liệu có nhiều bản sao"
+    },
+    {
+      "id": "det-base:I",
+      "title": "Input: Base Rates and Alert Quality",
+      "phenomenon": "Alert, ground truth có giới hạn và population",
+      "frame": "Tín hiệu đến quyết định; SOC; Sự kiện thật hiếm"
+    },
+    {
+      "id": "det-base:O",
+      "title": "Output: Base Rates and Alert Quality",
+      "phenomenon": "Precision/recall theo bộ đánh giá",
+      "frame": "Tín hiệu đến quyết định; SOC; Sự kiện thật hiếm"
+    },
+    {
+      "id": "det-behavior:I",
+      "title": "Input: Behavior-Based Detection",
+      "phenomenon": "Events, actor và timing",
+      "frame": "Tín hiệu đến quyết định; SOC; Có chuỗi hành động qua nhiều hệ"
+    },
+    {
+      "id": "det-behavior:O",
+      "title": "Output: Behavior-Based Detection",
+      "phenomenon": "Tín hiệu gắn kịch bản cần điều tra",
+      "frame": "Tín hiệu đến quyết định; SOC; Có chuỗi hành động qua nhiều hệ"
+    },
+    {
+      "id": "det-queue:I",
+      "title": "Input: SOC Processing Capacity",
+      "phenomenon": "Arrival rate, complexity và analyst availability",
+      "frame": "Tín hiệu đến quyết định; SOC; Alert đến nhanh hơn khả năng review"
+    },
+    {
+      "id": "det-queue:O",
+      "title": "Output: SOC Processing Capacity",
+      "phenomenon": "Case được xử lý trước khi mất ý nghĩa",
+      "frame": "Tín hiệu đến quyết định; SOC; Alert đến nhanh hơn khả năng review"
+    },
+    {
+      "id": "end-execution:I",
+      "title": "Input: Execution Privileges and Isolation",
+      "phenomenon": "File, process, user token",
+      "frame": "Máy trạm, server; endpoint team; Ứng dụng xử lý input không tin"
+    },
+    {
+      "id": "end-execution:O",
+      "title": "Output: Execution Privileges and Isolation",
+      "phenomenon": "Process bị giới hạn khả năng",
+      "frame": "Máy trạm, server; endpoint team; Ứng dụng xử lý input không tin"
+    },
+    {
+      "id": "end-health:I",
+      "title": "Input: Endpoint Control Health",
+      "phenomenon": "Agent heartbeat, version và telemetry test",
+      "frame": "Máy trạm, server; endpoint team; Thiết bị được coi là có EDR"
+    },
+    {
+      "id": "end-health:O",
+      "title": "Output: Endpoint Control Health",
+      "phenomenon": "Trạng thái control có freshness",
+      "frame": "Máy trạm, server; endpoint team; Thiết bị được coi là có EDR"
+    },
+    {
+      "id": "end-memory:I",
+      "title": "Input: Memory Safety",
+      "phenomenon": "Buffer, length, lifetime và concurrency",
+      "frame": "Máy trạm, server; endpoint team; Native component xử lý dữ liệu"
+    },
+    {
+      "id": "end-memory:O",
+      "title": "Output: Memory Safety",
+      "phenomenon": "Kết quả không vượt vùng nhớ",
+      "frame": "Máy trạm, server; endpoint team; Native component xử lý dữ liệu"
+    },
+    {
+      "id": "gov-exception:I",
+      "title": "Input: Time-Bounded Exceptions",
+      "phenomenon": "Yêu cầu miễn trừ và lý do",
+      "frame": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ; Control không thể áp ngay"
+    },
+    {
+      "id": "gov-exception:O",
+      "title": "Output: Time-Bounded Exceptions",
+      "phenomenon": "Ngoại lệ được giới hạn",
+      "frame": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ; Control không thể áp ngay"
+    },
+    {
+      "id": "gov-loss:I",
+      "title": "Input: Loss Scenarios",
+      "phenomenon": "Tài sản, đường lỗi, hậu quả",
+      "frame": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ; Đang ưu tiên đầu tư"
+    },
+    {
+      "id": "gov-loss:O",
+      "title": "Output: Loss Scenarios",
+      "phenomenon": "Khoảng hậu quả theo kịch bản",
+      "frame": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ; Đang ưu tiên đầu tư"
+    },
+    {
+      "id": "gov-owner:I",
+      "title": "Input: Decision Accountability",
+      "phenomenon": "Finding và tác động dự kiến",
+      "frame": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ; Nhiều nhóm cùng quản một dịch vụ"
+    },
+    {
+      "id": "gov-owner:O",
+      "title": "Output: Decision Accountability",
+      "phenomenon": "Quyết định có thời hạn",
+      "frame": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ; Nhiều nhóm cùng quản một dịch vụ"
+    },
+    {
+      "id": "hum-access:I",
+      "title": "Input: Physical Access and Device Custody",
+      "phenomenon": "Visitor request, badge, device ID",
+      "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities; Có khách, sửa chữa hoặc thiết bị thất lạc"
+    },
+    {
+      "id": "hum-access:O",
+      "title": "Output: Physical Access and Device Custody",
+      "phenomenon": "Người/thiết bị đúng vùng",
+      "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities; Có khách, sửa chữa hoặc thiết bị thất lạc"
+    },
+    {
+      "id": "hum-offboard:I",
+      "title": "Input: Offboarding and Role Changes",
+      "phenomenon": "HR event và inventory quyền",
+      "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities; Nhân sự hoặc contractor đổi nhiệm vụ"
+    },
+    {
+      "id": "hum-offboard:O",
+      "title": "Output: Offboarding and Role Changes",
+      "phenomenon": "Quyền cũ kết thúc đúng hạn",
+      "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities; Nhân sự hoặc contractor đổi nhiệm vụ"
+    },
+    {
+      "id": "hum-report:I",
+      "title": "Input: Incident Reporting Accessibility",
+      "phenomenon": "Report của người dùng và bối cảnh",
+      "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities; Người dùng gặp nghi ngờ hoặc lỡ thao tác"
+    },
+    {
+      "id": "hum-report:O",
+      "title": "Output: Incident Reporting Accessibility",
+      "phenomenon": "Thông tin đến người có thể xử lý",
+      "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities; Người dùng gặp nghi ngờ hoặc lỡ thao tác"
+    },
+    {
+      "id": "id-mfa:I",
+      "title": "Input: MFA and Phishing Resistance",
+      "phenomenon": "Challenge và phản hồi authenticator",
+      "frame": "Con người và workload; IAM team; Luồng đăng nhập có nhiều cách xác thực"
+    },
+    {
+      "id": "id-mfa:O",
+      "title": "Output: MFA and Phishing Resistance",
+      "phenomenon": "Kết quả xác thực theo phương thức",
+      "frame": "Con người và workload; IAM team; Luồng đăng nhập có nhiều cách xác thực"
+    },
+    {
+      "id": "id-proof:I",
+      "title": "Input: Account-to-Subject Binding",
+      "phenomenon": "Bằng chứng định danh và yêu cầu đăng ký",
+      "frame": "Con người và workload; IAM team; Tạo hoặc liên kết tài khoản"
+    },
+    {
+      "id": "id-proof:O",
+      "title": "Output: Account-to-Subject Binding",
+      "phenomenon": "Binding tài khoản-chủ thể",
+      "frame": "Con người và workload; IAM team; Tạo hoặc liên kết tài khoản"
+    },
+    {
+      "id": "id-recovery:I",
+      "title": "Input: Account Recovery",
+      "phenomenon": "Yêu cầu recovery, bằng chứng phụ",
+      "frame": "Con người và workload; IAM team; Người dùng mất authenticator"
+    },
+    {
+      "id": "id-recovery:O",
+      "title": "Output: Account Recovery",
+      "phenomenon": "Authenticator mới hoặc từ chối",
+      "frame": "Con người và workload; IAM team; Người dùng mất authenticator"
+    },
+    {
+      "id": "inv-dependency:I",
+      "title": "Input: Critical Dependencies",
+      "phenomenon": "Trace, cấu hình, hợp đồng, phỏng vấn owner",
+      "frame": "Hạ tầng và SaaS; chủ tài sản; Một dịch vụ chứa nhiều thành phần"
+    },
+    {
+      "id": "inv-dependency:O",
+      "title": "Output: Critical Dependencies",
+      "phenomenon": "Đồ thị phụ thuộc có điều kiện",
+      "frame": "Hạ tầng và SaaS; chủ tài sản; Một dịch vụ chứa nhiều thành phần"
+    },
+    {
+      "id": "inv-discovery:I",
+      "title": "Input: Undiscovered Asset Detection",
+      "phenomenon": "CMDB, billing, DNS, endpoint và cloud API",
+      "frame": "Hạ tầng và SaaS; chủ tài sản; Có cloud, SaaS và tài sản ngắn hạn"
+    },
+    {
+      "id": "inv-discovery:O",
+      "title": "Output: Undiscovered Asset Detection",
+      "phenomenon": "Tài sản có owner hoặc chưa rõ",
+      "frame": "Hạ tầng và SaaS; chủ tài sản; Có cloud, SaaS và tài sản ngắn hạn"
+    },
+    {
+      "id": "inv-lifecycle:I",
+      "title": "Input: Asset Decommissioning",
+      "phenomenon": "Sự kiện cấp phát, thay owner, hủy dịch vụ",
+      "frame": "Hạ tầng và SaaS; chủ tài sản; Thêm, chuyển hoặc loại bỏ thiết bị"
+    },
+    {
+      "id": "inv-lifecycle:O",
+      "title": "Output: Asset Decommissioning",
+      "phenomenon": "Tài sản không còn authority dư",
+      "frame": "Hạ tầng và SaaS; chủ tài sản; Thêm, chuyển hoặc loại bỏ thiết bị"
+    },
+    {
+      "id": "ir-contain:I",
+      "title": "Input: Authorized Containment",
+      "phenomenon": "Evidence, asset owner và kill-switch scope",
+      "frame": "Sự cố đã nghi ngờ; incident commander; Sự cố nghi ngờ đang diễn tiến"
+    },
+    {
+      "id": "ir-contain:O",
+      "title": "Output: Authorized Containment",
+      "phenomenon": "Containment được quan sát hiệu lực",
+      "frame": "Sự cố đã nghi ngờ; incident commander; Sự cố nghi ngờ đang diễn tiến"
+    },
+    {
+      "id": "ir-evidence:I",
+      "title": "Input: Evidence Collection and Chain of Custody",
+      "phenomenon": "Volatile state, image, log và người thu thập",
+      "frame": "Sự cố đã nghi ngờ; incident commander; Có thể cần điều tra kỹ thuật/pháp lý"
+    },
+    {
+      "id": "ir-evidence:O",
+      "title": "Output: Evidence Collection and Chain of Custody",
+      "phenomenon": "Bằng chứng tái kiểm tra được",
+      "frame": "Sự cố đã nghi ngờ; incident commander; Có thể cần điều tra kỹ thuật/pháp lý"
+    },
+    {
+      "id": "ir-learn:I",
+      "title": "Input: Post-Incident Learning",
+      "phenomenon": "Timeline, quyết định và khoảng mù",
+      "frame": "Sự cố đã nghi ngờ; incident commander; Dịch vụ đã ổn định"
+    },
+    {
+      "id": "ir-learn:O",
+      "title": "Output: Post-Incident Learning",
+      "phenomenon": "Thay đổi control có owner",
+      "frame": "Sự cố đã nghi ngờ; incident commander; Dịch vụ đã ổn định"
+    },
+    {
+      "id": "J01:S0",
+      "title": "Initial State: End-to-End Authorization Revocation",
+      "phenomenon": "Trạng thái đầu cho mục tiêu: Một chủ thể bị thu hồi không còn thực hiện hành động thuộc scope sau bound được chấp thuận.",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:S1",
+      "title": "Identify Active Identity Bindings",
+      "phenomenon": "Identify Active Identity Bindings",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:S2",
+      "title": "Inventory Credentials and Grants",
+      "phenomenon": "Inventory Credentials and Grants",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:S3",
+      "title": "Commit the Revocation Epoch",
+      "phenomenon": "Commit the Revocation Epoch",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:S4",
+      "title": "Propagate State to Consumers",
+      "phenomenon": "Propagate State to Consumers",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:S5",
+      "title": "Invalidate Stale Authorization Caches",
+      "phenomenon": "Invalidate Stale Authorization Caches",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:S6",
+      "title": "Prevent Refresh from Restoring Authority",
+      "phenomenon": "Prevent Refresh from Restoring Authority",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:S7",
+      "title": "Verify Denial across Tested Paths",
+      "phenomenon": "Verify Denial across Tested Paths",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:S8",
+      "title": "Assess Consequences and False Denials",
+      "phenomenon": "Assess Consequences and False Denials",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J02:S0",
+      "title": "Initial State: Cross-Tenant Authorization across Requests, Caches, and Jobs",
+      "phenomenon": "Trạng thái đầu cho mục tiêu: Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:S1",
+      "title": "Establish Actor and Tenant Claims",
+      "phenomenon": "Establish Actor and Tenant Claims",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:S2",
+      "title": "Resolve Objects within the Correct Domain",
+      "phenomenon": "Resolve Objects within the Correct Domain",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:S3",
+      "title": "Evaluate Read, Write, and Share Permissions",
+      "phenomenon": "Evaluate Read, Write, and Share Permissions",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:S4",
+      "title": "Preserve Preconditions through Commit",
+      "phenomenon": "Preserve Preconditions through Commit",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:S5",
+      "title": "Prevent Cross-Tenant Cache Reuse",
+      "phenomenon": "Prevent Cross-Tenant Cache Reuse",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:S6",
+      "title": "Carry Scoped Authority into Asynchronous Jobs",
+      "phenomenon": "Carry Scoped Authority into Asynchronous Jobs",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:S7",
+      "title": "Authorize Output Recipients",
+      "phenomenon": "Authorize Output Recipients",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:S8",
+      "title": "Retain Evidence Linking Actors to Actions",
+      "phenomenon": "Retain Evidence Linking Actors to Actions",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J03:S0",
+      "title": "Initial State: Supply Chain Integrity from Source to Runtime",
+      "phenomenon": "Trạng thái đầu cho mục tiêu: Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:S1",
+      "title": "Pin Release Intent",
+      "phenomenon": "Pin Release Intent",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:S2",
+      "title": "Resolve Dependencies and Sources",
+      "phenomenon": "Resolve Dependencies and Sources",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:S3",
+      "title": "Scope Builder Privileges",
+      "phenomenon": "Scope Builder Privileges",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:S4",
+      "title": "Bind Artifacts to Their Build Process",
+      "phenomenon": "Bind Artifacts to Their Build Process",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:S5",
+      "title": "Evaluate Signing Trust and Residual Risk",
+      "phenomenon": "Evaluate Signing Trust and Residual Risk",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:S6",
+      "title": "Preserve Approved Artifact Identity",
+      "phenomenon": "Preserve Approved Artifact Identity",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:S7",
+      "title": "Enforce Policy at the Point of Use",
+      "phenomenon": "Enforce Policy at the Point of Use",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:S8",
+      "title": "Connect Runtime Inventory to Revocation",
+      "phenomenon": "Connect Runtime Inventory to Revocation",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J04:S0",
+      "title": "Initial State: Ransomware Recovery and Shared Failure Domains",
+      "phenomenon": "Trạng thái đầu cho mục tiêu: Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:S1",
+      "title": "Define Critical Business Transactions",
+      "phenomenon": "Define Critical Business Transactions",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:S2",
+      "title": "Identify Common Failure Domains",
+      "phenomenon": "Identify Common Failure Domains",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:S3",
+      "title": "Select a Suitable Recovery Point",
+      "phenomenon": "Select a Suitable Recovery Point",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:S4",
+      "title": "Bootstrap a Clean Recovery Environment",
+      "phenomenon": "Bootstrap a Clean Recovery Environment",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:S5",
+      "title": "Recover Keys and Data",
+      "phenomenon": "Recover Keys and Data",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:S6",
+      "title": "Reconcile Data Stores",
+      "phenomenon": "Reconcile Data Stores",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:S7",
+      "title": "Verify Business Operations End to End",
+      "phenomenon": "Verify Business Operations End to End",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:S8",
+      "title": "Feed Recovery Findings into Design",
+      "phenomenon": "Feed Recovery Findings into Design",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J05:S0",
+      "title": "Initial State: From Events to Verified Response",
+      "phenomenon": "Trạng thái đầu cho mục tiêu: Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:S1",
+      "title": "Define the Observation Population",
+      "phenomenon": "Define the Observation Population",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:S2",
+      "title": "Verify Sensor Signal Generation",
+      "phenomenon": "Verify Sensor Signal Generation",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:S3",
+      "title": "Detect Transport Loss",
+      "phenomenon": "Detect Transport Loss",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:S4",
+      "title": "Preserve Event Semantics through Parsing",
+      "phenomenon": "Preserve Event Semantics through Parsing",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:S5",
+      "title": "Test Detection with Discriminating Cases",
+      "phenomenon": "Test Detection with Discriminating Cases",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:S6",
+      "title": "Manage Finite Alert Queues",
+      "phenomenon": "Manage Finite Alert Queues",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:S7",
+      "title": "Verify Response Effectiveness",
+      "phenomenon": "Verify Response Effectiveness",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:S8",
+      "title": "Close the Observability Feedback Loop",
+      "phenomenon": "Close the Observability Feedback Loop",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J06:S0",
+      "title": "Initial State: Agent Authority from Untrusted Input to Observed Effects",
+      "phenomenon": "Trạng thái đầu cho mục tiêu: Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:S1",
+      "title": "Define Task Authorization Scope",
+      "phenomenon": "Define Task Authorization Scope",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:S2",
+      "title": "Keep External Sources Classified as Data",
+      "phenomenon": "Keep External Sources Classified as Data",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:S3",
+      "title": "Treat Model Actions as Proposals",
+      "phenomenon": "Treat Model Actions as Proposals",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:S4",
+      "title": "Enforce Authorization outside the Model",
+      "phenomenon": "Enforce Authorization outside the Model",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:S5",
+      "title": "Bind Review to Immutable Action Content",
+      "phenomenon": "Bind Review to Immutable Action Content",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:S6",
+      "title": "Execute Tools within Resource Boundaries",
+      "phenomenon": "Execute Tools within Resource Boundaries",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:S7",
+      "title": "Observe and Classify Outcomes",
+      "phenomenon": "Observe and Classify Outcomes",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:S8",
+      "title": "Prevent Unsupported Trust Promotion in Memory",
+      "phenomenon": "Prevent Unsupported Trust Promotion in Memory",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J07:S0",
+      "title": "Initial State: From Scanner Findings to Contextual Priorities",
+      "phenomenon": "Trạng thái đầu cho mục tiêu: Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:S1",
+      "title": "Bind Findings to the Correct Assets",
+      "phenomenon": "Bind Findings to the Correct Assets",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:S2",
+      "title": "Verify Affected Components",
+      "phenomenon": "Verify Affected Components",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:S3",
+      "title": "Decompose Triggering Conditions",
+      "phenomenon": "Decompose Triggering Conditions",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:S4",
+      "title": "Establish Reachability Paths",
+      "phenomenon": "Establish Reachability Paths",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:S5",
+      "title": "Connect Controls to Consequences",
+      "phenomenon": "Connect Controls to Consequences",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:S6",
+      "title": "Compare Remediation Options",
+      "phenomenon": "Compare Remediation Options",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:S7",
+      "title": "Verify Post-Remediation State",
+      "phenomenon": "Verify Post-Remediation State",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:S8",
+      "title": "Preserve Exposure History and Unknown Intervals",
+      "phenomenon": "Preserve Exposure History and Unknown Intervals",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J08:S0",
+      "title": "Initial State: OT Commands and Physical State Transitions",
+      "phenomenon": "Trạng thái đầu cho mục tiêu: Giữ quy trình trong envelope an toàn khi gặp sai lệch số, với quyết định do chuyên gia vận hành xác nhận.",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:S1",
+      "title": "Define the Process and Safety Envelope",
+      "phenomenon": "Define the Process and Safety Envelope",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:S2",
+      "title": "Bound Trust in Sensor Readings",
+      "phenomenon": "Bound Trust in Sensor Readings",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:S3",
+      "title": "Bind Commands to Actors and Purpose",
+      "phenomenon": "Bind Commands to Actors and Purpose",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:S4",
+      "title": "Constrain Maintenance Access",
+      "phenomenon": "Constrain Maintenance Access",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:S5",
+      "title": "Observe Controller and Actuator Effects",
+      "phenomenon": "Observe Controller and Actuator Effects",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:S6",
+      "title": "Define Safe Loss-of-Communication Behavior",
+      "phenomenon": "Define Safe Loss-of-Communication Behavior",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:S7",
+      "title": "Avoid New Hazards during Response",
+      "phenomenon": "Avoid New Hazards during Response",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:S8",
+      "title": "Verify Physical and Digital Recovery",
+      "phenomenon": "Verify Physical and Digital Recovery",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "k8s-admission:I",
+      "title": "Input: Workload Creation and Admission",
+      "phenomenon": "Pod spec và RBAC permission",
+      "frame": "Cluster và workload; platform/SRE; Principal được tạo Pod/deployment"
+    },
+    {
+      "id": "k8s-admission:O",
+      "title": "Output: Workload Creation and Admission",
+      "phenomenon": "Workload được giới hạn trên node",
+      "frame": "Cluster và workload; platform/SRE; Principal được tạo Pod/deployment"
+    },
+    {
+      "id": "k8s-identity:I",
+      "title": "Input: Workload Identity",
+      "phenomenon": "Service account token và audience",
+      "frame": "Cluster và workload; platform/SRE; Pod cần gọi API hay cloud"
+    },
+    {
+      "id": "k8s-identity:O",
+      "title": "Output: Workload Identity",
+      "phenomenon": "Workload chỉ dùng quyền cần thiết",
+      "frame": "Cluster và workload; platform/SRE; Pod cần gọi API hay cloud"
+    },
+    {
+      "id": "k8s-network:I",
+      "title": "Input: NetworkPolicy Enforcement",
+      "phenomenon": "Pod labels, policy và traffic",
+      "frame": "Cluster và workload; platform/SRE; Nhiều workload dùng chung cluster"
+    },
+    {
+      "id": "k8s-network:O",
+      "title": "Output: NetworkPolicy Enforcement",
+      "phenomenon": "Luồng bị giới hạn như intent",
+      "frame": "Cluster và workload; platform/SRE; Nhiều workload dùng chung cluster"
+    },
+    {
+      "id": "msg-dns:I",
+      "title": "Input: DNS Control Authority",
+      "phenomenon": "Đề nghị đổi record hoặc registrar setting",
+      "frame": "Tên miền và hộp thư; IT/messaging; Tên miền dẫn tới dịch vụ nhạy cảm"
+    },
+    {
+      "id": "msg-dns:O",
+      "title": "Output: DNS Control Authority",
+      "phenomenon": "Resolution đúng dịch vụ",
+      "frame": "Tên miền và hộp thư; IT/messaging; Tên miền dẫn tới dịch vụ nhạy cảm"
+    },
+    {
+      "id": "msg-domain:I",
+      "title": "Input: Sender Domain Authentication",
+      "phenomenon": "Envelope, headers, chữ ký và DNS policy",
+      "frame": "Tên miền và hộp thư; IT/messaging; Nhiều dịch vụ gửi email"
+    },
+    {
+      "id": "msg-domain:O",
+      "title": "Output: Sender Domain Authentication",
+      "phenomenon": "Tín hiệu xác thực miền",
+      "frame": "Tên miền và hộp thư; IT/messaging; Nhiều dịch vụ gửi email"
+    },
+    {
+      "id": "msg-payment:I",
+      "title": "Input: Payment Destination Changes",
+      "phenomenon": "Yêu cầu và thông tin người gửi",
+      "frame": "Tên miền và hộp thư; IT/messaging; Email yêu cầu chuyển tiền/đổi beneficiary"
+    },
+    {
+      "id": "msg-payment:O",
+      "title": "Output: Payment Destination Changes",
+      "phenomenon": "Thay đổi có kiểm soát",
+      "frame": "Tên miền và hộp thư; IT/messaging; Email yêu cầu chuyển tiền/đổi beneficiary"
+    },
+    {
+      "id": "net-dos:I",
+      "title": "Input: Resource Exhaustion and DDoS",
+      "phenomenon": "Request volume, size, thời gian xử lý",
+      "frame": "Lưu lượng giữa dịch vụ; network team; Traffic vượt capacity hoặc cost budget"
+    },
+    {
+      "id": "net-dos:O",
+      "title": "Output: Resource Exhaustion and DDoS",
+      "phenomenon": "Dịch vụ ưu tiên còn hoạt động",
+      "frame": "Lưu lượng giữa dịch vụ; network team; Traffic vượt capacity hoặc cost budget"
+    },
+    {
+      "id": "net-egress:I",
+      "title": "Input: Outbound Connection Control",
+      "phenomenon": "Destination, DNS result và request context",
+      "frame": "Lưu lượng giữa dịch vụ; network team; Service cần gọi tài nguyên ngoài"
+    },
+    {
+      "id": "net-egress:O",
+      "title": "Output: Outbound Connection Control",
+      "phenomenon": "Kết nối đúng đích hoặc bị chặn",
+      "frame": "Lưu lượng giữa dịch vụ; network team; Service cần gọi tài nguyên ngoài"
+    },
+    {
+      "id": "net-segment:I",
+      "title": "Input: Effective Network Segmentation",
+      "phenomenon": "Source identity, destination và port/protocol",
+      "frame": "Lưu lượng giữa dịch vụ; network team; Một workload bị compromise"
+    },
+    {
+      "id": "net-segment:O",
+      "title": "Output: Effective Network Segmentation",
+      "phenomenon": "Kết nối cần thiết qua; kết nối khác bị chặn",
+      "frame": "Lưu lượng giữa dịch vụ; network team; Một workload bị compromise"
+    },
+    {
+      "id": "ot-legacy:I",
+      "title": "Input: Legacy Devices and Patch Constraints",
+      "phenomenon": "Firmware, network paths và maintenance plan",
+      "frame": "Thiết bị và quy trình vật lý; kỹ sư vận hành; Thiết bị không thể cập nhật thường xuyên"
+    },
+    {
+      "id": "ot-legacy:O",
+      "title": "Output: Legacy Devices and Patch Constraints",
+      "phenomenon": "Phơi nhiễm giảm trong giới hạn vận hành",
+      "frame": "Thiết bị và quy trình vật lý; kỹ sư vận hành; Thiết bị không thể cập nhật thường xuyên"
+    },
+    {
+      "id": "ot-remote:I",
+      "title": "Input: Remote Maintenance",
+      "phenomenon": "Yêu cầu support và phiên truy cập",
+      "frame": "Thiết bị và quy trình vật lý; kỹ sư vận hành; Vendor cần can thiệp thiết bị"
+    },
+    {
+      "id": "ot-remote:O",
+      "title": "Output: Remote Maintenance",
+      "phenomenon": "Phiên chỉ tác động tài sản đã duyệt",
+      "frame": "Thiết bị và quy trình vật lý; kỹ sư vận hành; Vendor cần can thiệp thiết bị"
+    },
+    {
+      "id": "ot-safety:I",
+      "title": "Input: Safety under System Failure",
+      "phenomenon": "Sensor, setpoint và control command",
+      "frame": "Thiết bị và quy trình vật lý; kỹ sư vận hành; Lệnh số tác động thiết bị vật lý"
+    },
+    {
+      "id": "ot-safety:O",
+      "title": "Output: Safety under System Failure",
+      "phenomenon": "Hành động trong envelope an toàn",
+      "frame": "Thiết bị và quy trình vật lý; kỹ sư vận hành; Lệnh số tác động thiết bị vật lý"
+    },
+    {
+      "id": "rec-backup:I",
+      "title": "Input: Backup versus Recoverability",
+      "phenomenon": "Backup, keys, identity và môi trường sạch",
+      "frame": "Dịch vụ đầu cuối; business continuity; Dữ liệu và control plane bị hỏng"
+    },
+    {
+      "id": "rec-backup:O",
+      "title": "Output: Backup versus Recoverability",
+      "phenomenon": "Dịch vụ có thể dùng thật",
+      "frame": "Dịch vụ đầu cuối; business continuity; Dữ liệu và control plane bị hỏng"
+    },
+    {
+      "id": "rec-consistency:I",
+      "title": "Input: Recovery Consistency",
+      "phenomenon": "Snapshots, event log và business ledger",
+      "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc"
+    },
+    {
+      "id": "rec-consistency:O",
+      "title": "Output: Recovery Consistency",
+      "phenomenon": "Trạng thái không nhân đôi/mất nghĩa vụ",
+      "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc"
+    },
+    {
+      "id": "rec-objective:I",
+      "title": "Input: RTO, RPO, and Business Verification",
+      "phenomenon": "Mốc gián đoạn, điểm dữ liệu và mục tiêu đã duyệt",
+      "frame": "Dịch vụ đầu cuối; business continuity; Khôi phục dịch vụ nhiều thành phần"
+    },
+    {
+      "id": "rec-objective:O",
+      "title": "Output: RTO, RPO, and Business Verification",
+      "phenomenon": "Thời gian hồi phục và mất dữ liệu thực",
+      "frame": "Dịch vụ đầu cuối; business continuity; Khôi phục dịch vụ nhiều thành phần"
+    },
+    {
+      "id": "restore-cut:I",
+      "title": "Input: Consistent Recovery Cuts across Stores",
+      "phenomenon": "Snapshots và event/transaction positions",
+      "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc; Backup được chụp ở các thời điểm khác nhau"
+    },
+    {
+      "id": "restore-cut:O",
+      "title": "Output: Consistent Recovery Cuts across Stores",
+      "phenomenon": "State liên hệ không thiếu/nhân đôi giao dịch",
+      "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc; Backup được chụp ở các thời điểm khác nhau"
+    },
+    {
+      "id": "restore-external:I",
+      "title": "Input: External Side Effects during Recovery",
+      "phenomenon": "Local recovered state và external receipts",
+      "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc; Email, tiền hoặc lệnh vật lý đã gửi trước sự cố"
+    },
+    {
+      "id": "restore-external:O",
+      "title": "Output: External Side Effects during Recovery",
+      "phenomenon": "Không lặp hoặc bỏ nghĩa vụ ngoài ý định",
+      "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc; Email, tiền hoặc lệnh vật lý đã gửi trước sự cố"
+    },
+    {
+      "id": "restore-reconcile:I",
+      "title": "Input: Semantic Reconciliation after Restore",
+      "phenomenon": "Ledgers, domain invariants và exception rules",
+      "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc; Dữ liệu kỹ thuật đã load thành công"
+    },
+    {
+      "id": "restore-reconcile:O",
+      "title": "Output: Semantic Reconciliation after Restore",
+      "phenomenon": "State hợp lệ hoặc backlog cần xử lý",
+      "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc; Dữ liệu kỹ thuật đã load thành công"
+    },
+    {
+      "id": "revoke-cache:I",
+      "title": "Input: Authorization Decision Caches",
+      "phenomenon": "Principal, resource, action và policy version",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency"
+    },
+    {
+      "id": "revoke-cache:O",
+      "title": "Output: Authorization Decision Caches",
+      "phenomenon": "Quyết định theo phiên bản quyền phù hợp",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency"
+    },
+    {
+      "id": "revoke-cas:I",
+      "title": "Input: Conditional Writes at Commit",
+      "phenomenon": "Expected version và new entry",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; Request đang chạy khi revoke commit; Cache/store có compare-and-set hoặc transaction"
+    },
+    {
+      "id": "revoke-cas:O",
+      "title": "Output: Conditional Writes at Commit",
+      "phenomenon": "Write bị từ chối nếu context đã đổi",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; Request đang chạy khi revoke commit; Cache/store có compare-and-set hoặc transaction"
+    },
+    {
+      "id": "revoke-fanout:I",
+      "title": "Input: Revocation Consumer Coverage",
+      "phenomenon": "Revoke event và authority graph",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyền dùng ở nhiều service/region"
+    },
+    {
+      "id": "revoke-fanout:O",
+      "title": "Output: Revocation Consumer Coverage",
+      "phenomenon": "Consumer đã cập nhật hoặc chưa rõ",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyền dùng ở nhiều service/region"
+    },
+    {
+      "id": "revoke-offline:I",
+      "title": "Input: Offline Authorization Leases",
+      "phenomenon": "Credential cũ, local clock và cached policy",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Consumer không liên lạc được authority"
+    },
+    {
+      "id": "revoke-offline:O",
+      "title": "Output: Offline Authorization Leases",
+      "phenomenon": "Quyền dừng tại bound hoặc dịch vụ bị giới hạn",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Consumer không liên lạc được authority"
+    },
+    {
+      "id": "revoke-race:I",
+      "title": "Input: Authorization Read and Cache Write Races",
+      "phenomenon": "Read cũ, revoke mới, cache write muộn",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; Request đang chạy khi revoke commit"
+    },
+    {
+      "id": "revoke-race:O",
+      "title": "Output: Authorization Read and Cache Write Races",
+      "phenomenon": "Cache không giữ allow đã lỗi thời",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; Request đang chạy khi revoke commit"
+    },
+    {
+      "id": "revoke-version:I",
+      "title": "Input: Authorization Version Monotonicity",
+      "phenomenon": "Quyền cũ/mới kèm epoch",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; State từ nhiều replica đến không theo thứ tự"
+    },
+    {
+      "id": "revoke-version:O",
+      "title": "Output: Authorization Version Monotonicity",
+      "phenomenon": "State consumer không đi lùi",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; State từ nhiều replica đến không theo thứ tự"
+    },
+    {
+      "id": "ses-concurrency:I",
+      "title": "Input: Sessions, Logout, and Devices",
+      "phenomenon": "Logout, đổi mật khẩu, đăng nhập mới",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Một người có nhiều phiên"
+    },
+    {
+      "id": "ses-concurrency:O",
+      "title": "Output: Sessions, Logout, and Devices",
+      "phenomenon": "Tập phiên còn hợp lệ được giải thích",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Một người có nhiều phiên"
+    },
+    {
+      "id": "ses-issue:I",
+      "title": "Input: Token Issuance and Audience Binding",
+      "phenomenon": "Auth result và requested audience",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Một IdP phục vụ nhiều ứng dụng"
+    },
+    {
+      "id": "ses-issue:O",
+      "title": "Output: Token Issuance and Audience Binding",
+      "phenomenon": "Token được ứng dụng đích chấp nhận đúng phạm vi",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Một IdP phục vụ nhiều ứng dụng"
+    },
+    {
+      "id": "ses-revoke:I",
+      "title": "Input: Authorization Revocation Latency",
+      "phenomenon": "Sự kiện revoke và các token/cache đang tồn tại",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token"
+    },
+    {
+      "id": "ses-revoke:O",
+      "title": "Output: Authorization Revocation Latency",
+      "phenomenon": "Hành động cũ bị từ chối ở các điểm enforcement",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token"
+    },
+    {
+      "id": "sup-builder:I",
+      "title": "Input: Build Integrity",
+      "phenomenon": "Source revision, workflow và build secrets",
+      "frame": "Source, build, artifact, deploy; release team; CI nhận contribution không tin"
+    },
+    {
+      "id": "sup-builder:O",
+      "title": "Output: Build Integrity",
+      "phenomenon": "Artifact và thông tin build",
+      "frame": "Source, build, artifact, deploy; release team; CI nhận contribution không tin"
+    },
+    {
+      "id": "sup-dependency:I",
+      "title": "Input: Dependencies and Source Trust",
+      "phenomenon": "Tên, version, checksum, registry và dependency tree",
+      "frame": "Source, build, artifact, deploy; release team; Build dùng package bên ngoài"
+    },
+    {
+      "id": "sup-dependency:O",
+      "title": "Output: Dependencies and Source Trust",
+      "phenomenon": "Dependency cụ thể được đưa vào build",
+      "frame": "Source, build, artifact, deploy; release team; Build dùng package bên ngoài"
+    },
+    {
+      "id": "sup-deploy:I",
+      "title": "Input: Verification at Deployment",
+      "phenomenon": "Digest, provenance và deployment intent",
+      "frame": "Source, build, artifact, deploy; release team; Artifact qua registry tới production"
+    },
+    {
+      "id": "sup-deploy:O",
+      "title": "Output: Verification at Deployment",
+      "phenomenon": "Chỉ artifact được phép được chạy",
+      "frame": "Source, build, artifact, deploy; release team; Artifact qua registry tới production"
+    },
+    {
+      "id": "sw-design:I",
+      "title": "Input: Security Requirements by Design",
+      "phenomenon": "Use case, abuse case và data flow",
+      "frame": "Thiết kế đến vận hành; engineering; Tính năng mới thay trust boundary"
+    },
+    {
+      "id": "sw-design:O",
+      "title": "Output: Security Requirements by Design",
+      "phenomenon": "Requirement gắn owner và acceptance",
+      "frame": "Thiết kế đến vận hành; engineering; Tính năng mới thay trust boundary"
+    },
+    {
+      "id": "sw-release:I",
+      "title": "Input: Release and Rollback",
+      "phenomenon": "Artifact, config, migration và rollout plan",
+      "frame": "Thiết kế đến vận hành; engineering; Bản mới ảnh hưởng quyền/dữ liệu"
+    },
+    {
+      "id": "sw-release:O",
+      "title": "Output: Release and Rollback",
+      "phenomenon": "Dịch vụ mới vẫn giữ invariant",
+      "frame": "Thiết kế đến vận hành; engineering; Bản mới ảnh hưởng quyền/dữ liệu"
+    },
+    {
+      "id": "sw-testing:I",
+      "title": "Input: Layered Security Testing",
+      "phenomenon": "Source, build, endpoint và test cases",
+      "frame": "Thiết kế đến vận hành; engineering; Code thay đổi thường xuyên"
+    },
+    {
+      "id": "sw-testing:O",
+      "title": "Output: Layered Security Testing",
+      "phenomenon": "Finding được xác minh và regression",
+      "frame": "Thiết kế đến vận hành; engineering; Code thay đổi thường xuyên"
+    },
+    {
+      "id": "tel-coverage:I",
+      "title": "Input: Observability Coverage",
+      "phenomenon": "Expected sources, heartbeat và event counts",
+      "frame": "Pipeline sự kiện; detection engineering; Nguồn log có thể im lặng"
+    },
+    {
+      "id": "tel-coverage:O",
+      "title": "Output: Observability Coverage",
+      "phenomenon": "Healthy/degraded/unknown cho từng nguồn",
+      "frame": "Pipeline sự kiện; detection engineering; Nguồn log có thể im lặng"
+    },
+    {
+      "id": "tel-integrity:I",
+      "title": "Input: Evidence Integrity",
+      "phenomenon": "Log và metadata nguồn",
+      "frame": "Pipeline sự kiện; detection engineering; Nguồn bị đối thủ kiểm soát"
+    },
+    {
+      "id": "tel-integrity:O",
+      "title": "Output: Evidence Integrity",
+      "phenomenon": "Bằng chứng có mức tin cậy nêu rõ",
+      "frame": "Pipeline sự kiện; detection engineering; Nguồn bị đối thủ kiểm soát"
+    },
+    {
+      "id": "tel-schema:I",
+      "title": "Input: Event Semantics",
+      "phenomenon": "Raw event, parser version và timestamp",
+      "frame": "Pipeline sự kiện; detection engineering; Nhiều producer dùng schema khác"
+    },
+    {
+      "id": "tel-schema:O",
+      "title": "Output: Event Semantics",
+      "phenomenon": "Event truy vấn được và hiểu đúng",
+      "frame": "Pipeline sự kiện; detection engineering; Nhiều producer dùng schema khác"
+    },
+    {
+      "id": "tenant-cache:I",
+      "title": "Input: Cache Keys and Authorization Dimensions",
+      "phenomenon": "Object local ID, tenant, role và policy epoch",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Cache dùng chung response giữa request"
+    },
+    {
+      "id": "tenant-cache:O",
+      "title": "Output: Cache Keys and Authorization Dimensions",
+      "phenomenon": "Không dùng response của người này cho người khác",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Cache dùng chung response giữa request"
+    },
+    {
+      "id": "tenant-context:I",
+      "title": "Input: Tenant Context Authority",
+      "phenomenon": "Session binding, route và client tenant claim",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Client gửi tenant_id hoặc chọn workspace"
+    },
+    {
+      "id": "tenant-context:O",
+      "title": "Output: Tenant Context Authority",
+      "phenomenon": "Context server được xác nhận",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Client gửi tenant_id hoặc chọn workspace"
+    },
+    {
+      "id": "tenant-delivery:I",
+      "title": "Input: Authorization of Asynchronous Result Delivery",
+      "phenomenon": "Output object, người nhận và thời điểm tải",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Request được xử lý sau khi người dùng đổi quyền; Report xuất ra file/link/email"
+    },
+    {
+      "id": "tenant-delivery:O",
+      "title": "Output: Authorization of Asynchronous Result Delivery",
+      "phenomenon": "Kết quả chỉ được đúng người lấy",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Request được xử lý sau khi người dùng đổi quyền; Report xuất ra file/link/email"
+    },
+    {
+      "id": "tenant-job:I",
+      "title": "Input: Authority across Job Queues",
+      "phenomenon": "Job payload và requester context",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Request được xử lý sau khi người dùng đổi quyền"
+    },
+    {
+      "id": "tenant-job:O",
+      "title": "Output: Authority across Job Queues",
+      "phenomenon": "Job chỉ xử lý phạm vi được cho phép",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Request được xử lý sau khi người dùng đổi quyền"
+    },
+    {
+      "id": "tenant-snapshot:I",
+      "title": "Input: Submission-Time versus Execution-Time Authority",
+      "phenomenon": "Quyền lúc gửi và quyền hiện tại",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Request được xử lý sau khi người dùng đổi quyền; Nghiệp vụ có độ trễ đáng kể"
+    },
+    {
+      "id": "tenant-snapshot:O",
+      "title": "Output: Submission-Time versus Execution-Time Authority",
+      "phenomenon": "Quyết định nhất quán với contract nghiệp vụ",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Request được xử lý sau khi người dùng đổi quyền; Nghiệp vụ có độ trễ đáng kể"
+    },
+    {
+      "id": "tp-concentration:I",
+      "title": "Input: Dependency Concentration",
+      "phenomenon": "Supplier/dependency graph",
+      "frame": "Quan hệ ngoài tổ chức; procurement và service owner; Nhiều dịch vụ cùng dùng một upstream"
+    },
+    {
+      "id": "tp-concentration:O",
+      "title": "Output: Dependency Concentration",
+      "phenomenon": "Kịch bản nhiều dịch vụ hỏng cùng lúc",
+      "frame": "Quan hệ ngoài tổ chức; procurement và service owner; Nhiều dịch vụ cùng dùng một upstream"
+    },
+    {
+      "id": "tp-exit:I",
+      "title": "Input: Supplier Exit Capability",
+      "phenomenon": "Export format, keys, data volume và exit terms",
+      "frame": "Quan hệ ngoài tổ chức; procurement và service owner; Chấm dứt hợp đồng hoặc supplier outage"
+    },
+    {
+      "id": "tp-exit:O",
+      "title": "Output: Supplier Exit Capability",
+      "phenomenon": "Năng lực chuyển/tiếp tục có kiểm chứng",
+      "frame": "Quan hệ ngoài tổ chức; procurement và service owner; Chấm dứt hợp đồng hoặc supplier outage"
+    },
+    {
+      "id": "tp-scope:I",
+      "title": "Input: Third-Party Permissions and Data Scope",
+      "phenomenon": "Contract, integration scopes và actual traffic",
+      "frame": "Quan hệ ngoài tổ chức; procurement và service owner; Bên ngoài xử lý dữ liệu hay hỗ trợ"
+    },
+    {
+      "id": "tp-scope:O",
+      "title": "Output: Third-Party Permissions and Data Scope",
+      "phenomenon": "Giới hạn quyền, dữ liệu và mục đích",
+      "frame": "Quan hệ ngoài tổ chức; procurement và service owner; Bên ngoài xử lý dữ liệu hay hỗ trợ"
+    },
+    {
+      "id": "verify-revocation:I",
+      "title": "Input: Signer Revocation and Running Artifacts",
+      "phenomenon": "Revocation statement và runtime inventory",
+      "frame": "Source, build, artifact, deploy; release team; Artifact qua registry tới production; Key hoặc builder bị phát hiện compromise"
+    },
+    {
+      "id": "verify-revocation:O",
+      "title": "Output: Signer Revocation and Running Artifacts",
+      "phenomenon": "Tập ảnh hưởng và remediation có owner",
+      "frame": "Source, build, artifact, deploy; release team; Artifact qua registry tới production; Key hoặc builder bị phát hiện compromise"
+    },
+    {
+      "id": "verify-root:I",
+      "title": "Input: Verifier Trust Roots",
+      "phenomenon": "Trust policy, key metadata và attestation",
+      "frame": "Source, build, artifact, deploy; release team; Artifact qua registry tới production; Verifier phải biết signer/builder nào hợp lệ"
+    },
+    {
+      "id": "verify-root:O",
+      "title": "Output: Verifier Trust Roots",
+      "phenomenon": "Quyết định dựa trên trust root được bảo vệ",
+      "frame": "Source, build, artifact, deploy; release team; Artifact qua registry tới production; Verifier phải biết signer/builder nào hợp lệ"
+    },
+    {
+      "id": "vul-context:I",
+      "title": "Input: Severity versus Contextual Risk",
+      "phenomenon": "CVSS, reachability, workload và business impact",
+      "frame": "Asset-vulnerability pair; VM team; Một CVE trên nhiều tài sản"
+    },
+    {
+      "id": "vul-context:O",
+      "title": "Output: Severity versus Contextual Risk",
+      "phenomenon": "Ưu tiên gắn kịch bản",
+      "frame": "Asset-vulnerability pair; VM team; Một CVE trên nhiều tài sản"
+    },
+    {
+      "id": "vul-exposure:I",
+      "title": "Input: Exposure Windows",
+      "phenomenon": "Vulnerability state và exposure intervals",
+      "frame": "Asset-vulnerability pair; VM team; Tài sản đổi trạng thái theo thời gian"
+    },
+    {
+      "id": "vul-exposure:O",
+      "title": "Output: Exposure Windows",
+      "phenomenon": "Exposure duration theo đối tượng",
+      "frame": "Asset-vulnerability pair; VM team; Tài sản đổi trạng thái theo thời gian"
+    },
+    {
+      "id": "vul-fix:I",
+      "title": "Input: Remediation and Retesting",
+      "phenomenon": "Patch/config và finding gốc",
+      "frame": "Asset-vulnerability pair; VM team; Ticket được đánh dấu resolved"
+    },
+    {
+      "id": "vul-fix:O",
+      "title": "Output: Remediation and Retesting",
+      "phenomenon": "Finding thật sự không tái hiện trong scope",
+      "frame": "Asset-vulnerability pair; VM team; Ticket được đánh dấu resolved"
+    },
+    {
+      "id": "web-injection:I",
+      "title": "Input: Data-to-Command Injection",
+      "phenomenon": "Giá trị từ user hoặc upstream",
+      "frame": "Parser và trình duyệt; AppSec; Input đi vào interpreter"
+    },
+    {
+      "id": "web-injection:O",
+      "title": "Output: Data-to-Command Injection",
+      "phenomenon": "Truy vấn/thao tác giữ ý định chương trình",
+      "frame": "Parser và trình duyệt; AppSec; Input đi vào interpreter"
+    },
+    {
+      "id": "web-parser:I",
+      "title": "Input: Parser Discrepancies",
+      "phenomenon": "Byte stream và metadata",
+      "frame": "Parser và trình duyệt; AppSec; Proxy và backend cùng diễn giải request"
+    },
+    {
+      "id": "web-parser:O",
+      "title": "Output: Parser Discrepancies",
+      "phenomenon": "Một cách hiểu nhất quán về request",
+      "frame": "Parser và trình duyệt; AppSec; Proxy và backend cùng diễn giải request"
+    },
+    {
+      "id": "web-xss:I",
+      "title": "Input: Browser Output Contexts",
+      "phenomenon": "Untrusted content và vị trí render",
+      "frame": "Parser và trình duyệt; AppSec; Dữ liệu hiển thị trong HTML/JS/URL"
+    },
+    {
+      "id": "web-xss:O",
+      "title": "Output: Browser Output Contexts",
+      "phenomenon": "Nội dung hiển thị không tự thực thi ngoài ý định",
+      "frame": "Parser và trình duyệt; AppSec; Dữ liệu hiển thị trong HTML/JS/URL"
+    }
+  ],
+  "edges": [
+    {
+      "id": "action-approval:flow",
+      "source": "action-approval:I",
+      "target": "action-approval:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Agent chuẩn bị hành động có hậu quả"
+    },
+    {
+      "id": "action-digest:flow",
+      "source": "action-digest:I",
+      "target": "action-digest:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Agent chuẩn bị hành động có hậu quả; Approval được bind bằng digest"
+    },
+    {
+      "id": "action-execution:flow",
+      "source": "action-execution:I",
+      "target": "action-execution:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request"
+    },
+    {
+      "id": "action-observe:flow",
+      "source": "action-observe:I",
+      "target": "action-observe:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request; Tool receipt không đủ để biết hệ đã đổi"
+    },
+    {
+      "id": "action-retry:flow",
+      "source": "action-retry:I",
+      "target": "action-retry:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request; Tool timeout có thể đã tạo side effect"
+    },
+    {
+      "id": "action-toctou:flow",
+      "source": "action-toctou:I",
+      "target": "action-toctou:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Agent chuẩn bị hành động có hậu quả; Giữa review và execution có thời gian"
+    },
+    {
+      "id": "ai-instruction:flow",
+      "source": "ai-instruction:I",
+      "target": "ai-instruction:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Agent đọc nội dung bên ngoài"
+    },
+    {
+      "id": "ai-memory:flow",
+      "source": "ai-memory:I",
+      "target": "ai-memory:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Agent lưu thông tin qua nhiều lượt"
+    },
+    {
+      "id": "ai-tool:flow",
+      "source": "ai-tool:I",
+      "target": "ai-tool:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi"
+    },
+    {
+      "id": "api-abuse:flow",
+      "source": "api-abuse:I",
+      "target": "api-abuse:O",
+      "type": "I_TO_O",
+      "frame": "API đồng bộ/bất đồng bộ; product team; Endpoint đúng kỹ thuật nhưng có giá trị kinh tế"
+    },
+    {
+      "id": "api-retry:flow",
+      "source": "api-retry:I",
+      "target": "api-retry:O",
+      "type": "I_TO_O",
+      "frame": "API đồng bộ/bất đồng bộ; product team; Mạng timeout rồi client gửi lại"
+    },
+    {
+      "id": "api-state:flow",
+      "source": "api-state:I",
+      "target": "api-state:O",
+      "type": "I_TO_O",
+      "frame": "API đồng bộ/bất đồng bộ; product team; Mua hàng, hoàn tiền, đặt chỗ"
+    },
+    {
+      "id": "arch-blast:flow",
+      "source": "arch-blast:I",
+      "target": "arch-blast:O",
+      "type": "I_TO_O",
+      "frame": "Dịch vụ phân tán; kiến trúc sư; Một principal hoặc workload bị chiếm"
+    },
+    {
+      "id": "arch-boundary:flow",
+      "source": "arch-boundary:I",
+      "target": "arch-boundary:O",
+      "type": "I_TO_O",
+      "frame": "Dịch vụ phân tán; kiến trúc sư; Dữ liệu đi qua chủ thể hoặc miền quản trị"
+    },
+    {
+      "id": "arch-failure:flow",
+      "source": "arch-failure:I",
+      "target": "arch-failure:O",
+      "type": "I_TO_O",
+      "frame": "Dịch vụ phân tán; kiến trúc sư; Policy service mất kết nối"
+    },
+    {
+      "id": "auth-object:flow",
+      "source": "auth-object:I",
+      "target": "auth-object:O",
+      "type": "I_TO_O",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant"
+    },
+    {
+      "id": "auth-policy:flow",
+      "source": "auth-policy:I",
+      "target": "auth-policy:O",
+      "type": "I_TO_O",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; Nhiều role và policy chồng nhau"
+    },
+    {
+      "id": "auth-race:flow",
+      "source": "auth-race:I",
+      "target": "auth-race:O",
+      "type": "I_TO_O",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; Ownership thay đổi khi tác vụ đang chạy"
+    },
+    {
+      "id": "build-cache:flow",
+      "source": "build-cache:I",
+      "target": "build-cache:O",
+      "type": "I_TO_O",
+      "frame": "Source, build, artifact, deploy; release team; CI nhận contribution không tin; Trusted và untrusted job dùng cache chung"
+    },
+    {
+      "id": "build-secret:flow",
+      "source": "build-secret:I",
+      "target": "build-secret:O",
+      "type": "I_TO_O",
+      "frame": "Source, build, artifact, deploy; release team; CI nhận contribution không tin; CI có contribution từ bên ngoài"
+    },
+    {
+      "id": "cld-drift:flow",
+      "source": "cld-drift:I",
+      "target": "cld-drift:O",
+      "type": "I_TO_O",
+      "frame": "Account/project và dịch vụ cloud; platform; IaC và console cùng sửa tài nguyên"
+    },
+    {
+      "id": "cld-policy:flow",
+      "source": "cld-policy:I",
+      "target": "cld-policy:O",
+      "type": "I_TO_O",
+      "frame": "Account/project và dịch vụ cloud; platform; Role có thể tạo/chỉnh tài nguyên"
+    },
+    {
+      "id": "cld-responsibility:flow",
+      "source": "cld-responsibility:I",
+      "target": "cld-responsibility:O",
+      "type": "I_TO_O",
+      "frame": "Account/project và dịch vụ cloud; platform; Dùng dịch vụ managed"
+    },
+    {
+      "id": "cry-agility:flow",
+      "source": "cry-agility:I",
+      "target": "cry-agility:O",
+      "type": "I_TO_O",
+      "frame": "Dữ liệu lưu và truyền; PKI/KMS owner; Thuật toán, chứng thư hoặc key policy đổi"
+    },
+    {
+      "id": "cry-integrity:flow",
+      "source": "cry-integrity:I",
+      "target": "cry-integrity:O",
+      "type": "I_TO_O",
+      "frame": "Dữ liệu lưu và truyền; PKI/KMS owner; Dữ liệu cần bí mật lẫn toàn vẹn"
+    },
+    {
+      "id": "cry-key:flow",
+      "source": "cry-key:I",
+      "target": "cry-key:O",
+      "type": "I_TO_O",
+      "frame": "Dữ liệu lưu và truyền; PKI/KMS owner; Khóa dùng cho nhiều tài sản"
+    },
+    {
+      "id": "dat-class:flow",
+      "source": "dat-class:I",
+      "target": "dat-class:O",
+      "type": "I_TO_O",
+      "frame": "Vòng đời dataset; data owner; Một pipeline trộn nhiều loại dữ liệu"
+    },
+    {
+      "id": "dat-egress:flow",
+      "source": "dat-egress:I",
+      "target": "dat-egress:O",
+      "type": "I_TO_O",
+      "frame": "Vòng đời dataset; data owner; Có export, report, email và log"
+    },
+    {
+      "id": "dat-retention:flow",
+      "source": "dat-retention:I",
+      "target": "dat-retention:O",
+      "type": "I_TO_O",
+      "frame": "Vòng đời dataset; data owner; Dữ liệu có nhiều bản sao"
+    },
+    {
+      "id": "det-base:flow",
+      "source": "det-base:I",
+      "target": "det-base:O",
+      "type": "I_TO_O",
+      "frame": "Tín hiệu đến quyết định; SOC; Sự kiện thật hiếm"
+    },
+    {
+      "id": "det-behavior:flow",
+      "source": "det-behavior:I",
+      "target": "det-behavior:O",
+      "type": "I_TO_O",
+      "frame": "Tín hiệu đến quyết định; SOC; Có chuỗi hành động qua nhiều hệ"
+    },
+    {
+      "id": "det-queue:flow",
+      "source": "det-queue:I",
+      "target": "det-queue:O",
+      "type": "I_TO_O",
+      "frame": "Tín hiệu đến quyết định; SOC; Alert đến nhanh hơn khả năng review"
+    },
+    {
+      "id": "end-execution:flow",
+      "source": "end-execution:I",
+      "target": "end-execution:O",
+      "type": "I_TO_O",
+      "frame": "Máy trạm, server; endpoint team; Ứng dụng xử lý input không tin"
+    },
+    {
+      "id": "end-health:flow",
+      "source": "end-health:I",
+      "target": "end-health:O",
+      "type": "I_TO_O",
+      "frame": "Máy trạm, server; endpoint team; Thiết bị được coi là có EDR"
+    },
+    {
+      "id": "end-memory:flow",
+      "source": "end-memory:I",
+      "target": "end-memory:O",
+      "type": "I_TO_O",
+      "frame": "Máy trạm, server; endpoint team; Native component xử lý dữ liệu"
+    },
+    {
+      "id": "gov-exception:flow",
+      "source": "gov-exception:I",
+      "target": "gov-exception:O",
+      "type": "I_TO_O",
+      "frame": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ; Control không thể áp ngay"
+    },
+    {
+      "id": "gov-loss:flow",
+      "source": "gov-loss:I",
+      "target": "gov-loss:O",
+      "type": "I_TO_O",
+      "frame": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ; Đang ưu tiên đầu tư"
+    },
+    {
+      "id": "gov-owner:flow",
+      "source": "gov-owner:I",
+      "target": "gov-owner:O",
+      "type": "I_TO_O",
+      "frame": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ; Nhiều nhóm cùng quản một dịch vụ"
+    },
+    {
+      "id": "hum-access:flow",
+      "source": "hum-access:I",
+      "target": "hum-access:O",
+      "type": "I_TO_O",
+      "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities; Có khách, sửa chữa hoặc thiết bị thất lạc"
+    },
+    {
+      "id": "hum-offboard:flow",
+      "source": "hum-offboard:I",
+      "target": "hum-offboard:O",
+      "type": "I_TO_O",
+      "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities; Nhân sự hoặc contractor đổi nhiệm vụ"
+    },
+    {
+      "id": "hum-report:flow",
+      "source": "hum-report:I",
+      "target": "hum-report:O",
+      "type": "I_TO_O",
+      "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities; Người dùng gặp nghi ngờ hoặc lỡ thao tác"
+    },
+    {
+      "id": "id-mfa:flow",
+      "source": "id-mfa:I",
+      "target": "id-mfa:O",
+      "type": "I_TO_O",
+      "frame": "Con người và workload; IAM team; Luồng đăng nhập có nhiều cách xác thực"
+    },
+    {
+      "id": "id-proof:flow",
+      "source": "id-proof:I",
+      "target": "id-proof:O",
+      "type": "I_TO_O",
+      "frame": "Con người và workload; IAM team; Tạo hoặc liên kết tài khoản"
+    },
+    {
+      "id": "id-recovery:flow",
+      "source": "id-recovery:I",
+      "target": "id-recovery:O",
+      "type": "I_TO_O",
+      "frame": "Con người và workload; IAM team; Người dùng mất authenticator"
+    },
+    {
+      "id": "inv-dependency:flow",
+      "source": "inv-dependency:I",
+      "target": "inv-dependency:O",
+      "type": "I_TO_O",
+      "frame": "Hạ tầng và SaaS; chủ tài sản; Một dịch vụ chứa nhiều thành phần"
+    },
+    {
+      "id": "inv-discovery:flow",
+      "source": "inv-discovery:I",
+      "target": "inv-discovery:O",
+      "type": "I_TO_O",
+      "frame": "Hạ tầng và SaaS; chủ tài sản; Có cloud, SaaS và tài sản ngắn hạn"
+    },
+    {
+      "id": "inv-lifecycle:flow",
+      "source": "inv-lifecycle:I",
+      "target": "inv-lifecycle:O",
+      "type": "I_TO_O",
+      "frame": "Hạ tầng và SaaS; chủ tài sản; Thêm, chuyển hoặc loại bỏ thiết bị"
+    },
+    {
+      "id": "ir-contain:flow",
+      "source": "ir-contain:I",
+      "target": "ir-contain:O",
+      "type": "I_TO_O",
+      "frame": "Sự cố đã nghi ngờ; incident commander; Sự cố nghi ngờ đang diễn tiến"
+    },
+    {
+      "id": "ir-evidence:flow",
+      "source": "ir-evidence:I",
+      "target": "ir-evidence:O",
+      "type": "I_TO_O",
+      "frame": "Sự cố đã nghi ngờ; incident commander; Có thể cần điều tra kỹ thuật/pháp lý"
+    },
+    {
+      "id": "ir-learn:flow",
+      "source": "ir-learn:I",
+      "target": "ir-learn:O",
+      "type": "I_TO_O",
+      "frame": "Sự cố đã nghi ngờ; incident commander; Dịch vụ đã ổn định"
+    },
+    {
+      "id": "J01:flow1",
+      "source": "J01:S0",
+      "target": "J01:S1",
+      "type": "I_TO_O",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:flow2",
+      "source": "J01:S1",
+      "target": "J01:S2",
+      "type": "I_TO_O",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:flow3",
+      "source": "J01:S2",
+      "target": "J01:S3",
+      "type": "I_TO_O",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:flow4",
+      "source": "J01:S3",
+      "target": "J01:S4",
+      "type": "I_TO_O",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:flow5",
+      "source": "J01:S4",
+      "target": "J01:S5",
+      "type": "I_TO_O",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:flow6",
+      "source": "J01:S5",
+      "target": "J01:S6",
+      "type": "I_TO_O",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:flow7",
+      "source": "J01:S6",
+      "target": "J01:S7",
+      "type": "I_TO_O",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J01:flow8",
+      "source": "J01:S7",
+      "target": "J01:S8",
+      "type": "I_TO_O",
+      "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online."
+    },
+    {
+      "id": "J02:flow1",
+      "source": "J02:S0",
+      "target": "J02:S1",
+      "type": "I_TO_O",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:flow2",
+      "source": "J02:S1",
+      "target": "J02:S2",
+      "type": "I_TO_O",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:flow3",
+      "source": "J02:S2",
+      "target": "J02:S3",
+      "type": "I_TO_O",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:flow4",
+      "source": "J02:S3",
+      "target": "J02:S4",
+      "type": "I_TO_O",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:flow5",
+      "source": "J02:S4",
+      "target": "J02:S5",
+      "type": "I_TO_O",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:flow6",
+      "source": "J02:S5",
+      "target": "J02:S6",
+      "type": "I_TO_O",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:flow7",
+      "source": "J02:S6",
+      "target": "J02:S7",
+      "type": "I_TO_O",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J02:flow8",
+      "source": "J02:S7",
+      "target": "J02:S8",
+      "type": "I_TO_O",
+      "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+    },
+    {
+      "id": "J03:flow1",
+      "source": "J03:S0",
+      "target": "J03:S1",
+      "type": "I_TO_O",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:flow2",
+      "source": "J03:S1",
+      "target": "J03:S2",
+      "type": "I_TO_O",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:flow3",
+      "source": "J03:S2",
+      "target": "J03:S3",
+      "type": "I_TO_O",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:flow4",
+      "source": "J03:S3",
+      "target": "J03:S4",
+      "type": "I_TO_O",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:flow5",
+      "source": "J03:S4",
+      "target": "J03:S5",
+      "type": "I_TO_O",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:flow6",
+      "source": "J03:S5",
+      "target": "J03:S6",
+      "type": "I_TO_O",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:flow7",
+      "source": "J03:S6",
+      "target": "J03:S7",
+      "type": "I_TO_O",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J03:flow8",
+      "source": "J03:S7",
+      "target": "J03:S8",
+      "type": "I_TO_O",
+      "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng."
+    },
+    {
+      "id": "J04:flow1",
+      "source": "J04:S0",
+      "target": "J04:S1",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:flow2",
+      "source": "J04:S1",
+      "target": "J04:S2",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:flow3",
+      "source": "J04:S2",
+      "target": "J04:S3",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:flow4",
+      "source": "J04:S3",
+      "target": "J04:S4",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:flow5",
+      "source": "J04:S4",
+      "target": "J04:S5",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:flow6",
+      "source": "J04:S5",
+      "target": "J04:S6",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:flow7",
+      "source": "J04:S6",
+      "target": "J04:S7",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J04:flow8",
+      "source": "J04:S7",
+      "target": "J04:S8",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+    },
+    {
+      "id": "J05:flow1",
+      "source": "J05:S0",
+      "target": "J05:S1",
+      "type": "I_TO_O",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:flow2",
+      "source": "J05:S1",
+      "target": "J05:S2",
+      "type": "I_TO_O",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:flow3",
+      "source": "J05:S2",
+      "target": "J05:S3",
+      "type": "I_TO_O",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:flow4",
+      "source": "J05:S3",
+      "target": "J05:S4",
+      "type": "I_TO_O",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:flow5",
+      "source": "J05:S4",
+      "target": "J05:S5",
+      "type": "I_TO_O",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:flow6",
+      "source": "J05:S5",
+      "target": "J05:S6",
+      "type": "I_TO_O",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:flow7",
+      "source": "J05:S6",
+      "target": "J05:S7",
+      "type": "I_TO_O",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J05:flow8",
+      "source": "J05:S7",
+      "target": "J05:S8",
+      "type": "I_TO_O",
+      "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ."
+    },
+    {
+      "id": "J06:flow1",
+      "source": "J06:S0",
+      "target": "J06:S1",
+      "type": "I_TO_O",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:flow2",
+      "source": "J06:S1",
+      "target": "J06:S2",
+      "type": "I_TO_O",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:flow3",
+      "source": "J06:S2",
+      "target": "J06:S3",
+      "type": "I_TO_O",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:flow4",
+      "source": "J06:S3",
+      "target": "J06:S4",
+      "type": "I_TO_O",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:flow5",
+      "source": "J06:S4",
+      "target": "J06:S5",
+      "type": "I_TO_O",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:flow6",
+      "source": "J06:S5",
+      "target": "J06:S6",
+      "type": "I_TO_O",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:flow7",
+      "source": "J06:S6",
+      "target": "J06:S7",
+      "type": "I_TO_O",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J06:flow8",
+      "source": "J06:S7",
+      "target": "J06:S8",
+      "type": "I_TO_O",
+      "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất."
+    },
+    {
+      "id": "J07:flow1",
+      "source": "J07:S0",
+      "target": "J07:S1",
+      "type": "I_TO_O",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:flow2",
+      "source": "J07:S1",
+      "target": "J07:S2",
+      "type": "I_TO_O",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:flow3",
+      "source": "J07:S2",
+      "target": "J07:S3",
+      "type": "I_TO_O",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:flow4",
+      "source": "J07:S3",
+      "target": "J07:S4",
+      "type": "I_TO_O",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:flow5",
+      "source": "J07:S4",
+      "target": "J07:S5",
+      "type": "I_TO_O",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:flow6",
+      "source": "J07:S5",
+      "target": "J07:S6",
+      "type": "I_TO_O",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:flow7",
+      "source": "J07:S6",
+      "target": "J07:S7",
+      "type": "I_TO_O",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J07:flow8",
+      "source": "J07:S7",
+      "target": "J07:S8",
+      "type": "I_TO_O",
+      "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context."
+    },
+    {
+      "id": "J08:flow1",
+      "source": "J08:S0",
+      "target": "J08:S1",
+      "type": "I_TO_O",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:flow2",
+      "source": "J08:S1",
+      "target": "J08:S2",
+      "type": "I_TO_O",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:flow3",
+      "source": "J08:S2",
+      "target": "J08:S3",
+      "type": "I_TO_O",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:flow4",
+      "source": "J08:S3",
+      "target": "J08:S4",
+      "type": "I_TO_O",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:flow5",
+      "source": "J08:S4",
+      "target": "J08:S5",
+      "type": "I_TO_O",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:flow6",
+      "source": "J08:S5",
+      "target": "J08:S6",
+      "type": "I_TO_O",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:flow7",
+      "source": "J08:S6",
+      "target": "J08:S7",
+      "type": "I_TO_O",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "J08:flow8",
+      "source": "J08:S7",
+      "target": "J08:S8",
+      "type": "I_TO_O",
+      "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety."
+    },
+    {
+      "id": "k8s-admission:flow",
+      "source": "k8s-admission:I",
+      "target": "k8s-admission:O",
+      "type": "I_TO_O",
+      "frame": "Cluster và workload; platform/SRE; Principal được tạo Pod/deployment"
+    },
+    {
+      "id": "k8s-identity:flow",
+      "source": "k8s-identity:I",
+      "target": "k8s-identity:O",
+      "type": "I_TO_O",
+      "frame": "Cluster và workload; platform/SRE; Pod cần gọi API hay cloud"
+    },
+    {
+      "id": "k8s-network:flow",
+      "source": "k8s-network:I",
+      "target": "k8s-network:O",
+      "type": "I_TO_O",
+      "frame": "Cluster và workload; platform/SRE; Nhiều workload dùng chung cluster"
+    },
+    {
+      "id": "msg-dns:flow",
+      "source": "msg-dns:I",
+      "target": "msg-dns:O",
+      "type": "I_TO_O",
+      "frame": "Tên miền và hộp thư; IT/messaging; Tên miền dẫn tới dịch vụ nhạy cảm"
+    },
+    {
+      "id": "msg-domain:flow",
+      "source": "msg-domain:I",
+      "target": "msg-domain:O",
+      "type": "I_TO_O",
+      "frame": "Tên miền và hộp thư; IT/messaging; Nhiều dịch vụ gửi email"
+    },
+    {
+      "id": "msg-payment:flow",
+      "source": "msg-payment:I",
+      "target": "msg-payment:O",
+      "type": "I_TO_O",
+      "frame": "Tên miền và hộp thư; IT/messaging; Email yêu cầu chuyển tiền/đổi beneficiary"
+    },
+    {
+      "id": "net-dos:flow",
+      "source": "net-dos:I",
+      "target": "net-dos:O",
+      "type": "I_TO_O",
+      "frame": "Lưu lượng giữa dịch vụ; network team; Traffic vượt capacity hoặc cost budget"
+    },
+    {
+      "id": "net-egress:flow",
+      "source": "net-egress:I",
+      "target": "net-egress:O",
+      "type": "I_TO_O",
+      "frame": "Lưu lượng giữa dịch vụ; network team; Service cần gọi tài nguyên ngoài"
+    },
+    {
+      "id": "net-segment:flow",
+      "source": "net-segment:I",
+      "target": "net-segment:O",
+      "type": "I_TO_O",
+      "frame": "Lưu lượng giữa dịch vụ; network team; Một workload bị compromise"
+    },
+    {
+      "id": "ot-legacy:flow",
+      "source": "ot-legacy:I",
+      "target": "ot-legacy:O",
+      "type": "I_TO_O",
+      "frame": "Thiết bị và quy trình vật lý; kỹ sư vận hành; Thiết bị không thể cập nhật thường xuyên"
+    },
+    {
+      "id": "ot-remote:flow",
+      "source": "ot-remote:I",
+      "target": "ot-remote:O",
+      "type": "I_TO_O",
+      "frame": "Thiết bị và quy trình vật lý; kỹ sư vận hành; Vendor cần can thiệp thiết bị"
+    },
+    {
+      "id": "ot-safety:flow",
+      "source": "ot-safety:I",
+      "target": "ot-safety:O",
+      "type": "I_TO_O",
+      "frame": "Thiết bị và quy trình vật lý; kỹ sư vận hành; Lệnh số tác động thiết bị vật lý"
+    },
+    {
+      "id": "rec-backup:flow",
+      "source": "rec-backup:I",
+      "target": "rec-backup:O",
+      "type": "I_TO_O",
+      "frame": "Dịch vụ đầu cuối; business continuity; Dữ liệu và control plane bị hỏng"
+    },
+    {
+      "id": "rec-consistency:flow",
+      "source": "rec-consistency:I",
+      "target": "rec-consistency:O",
+      "type": "I_TO_O",
+      "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc"
+    },
+    {
+      "id": "rec-objective:flow",
+      "source": "rec-objective:I",
+      "target": "rec-objective:O",
+      "type": "I_TO_O",
+      "frame": "Dịch vụ đầu cuối; business continuity; Khôi phục dịch vụ nhiều thành phần"
+    },
+    {
+      "id": "restore-cut:flow",
+      "source": "restore-cut:I",
+      "target": "restore-cut:O",
+      "type": "I_TO_O",
+      "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc; Backup được chụp ở các thời điểm khác nhau"
+    },
+    {
+      "id": "restore-external:flow",
+      "source": "restore-external:I",
+      "target": "restore-external:O",
+      "type": "I_TO_O",
+      "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc; Email, tiền hoặc lệnh vật lý đã gửi trước sự cố"
+    },
+    {
+      "id": "restore-reconcile:flow",
+      "source": "restore-reconcile:I",
+      "target": "restore-reconcile:O",
+      "type": "I_TO_O",
+      "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc; Dữ liệu kỹ thuật đã load thành công"
+    },
+    {
+      "id": "revoke-cache:flow",
+      "source": "revoke-cache:I",
+      "target": "revoke-cache:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency"
+    },
+    {
+      "id": "revoke-cas:flow",
+      "source": "revoke-cas:I",
+      "target": "revoke-cas:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; Request đang chạy khi revoke commit; Cache/store có compare-and-set hoặc transaction"
+    },
+    {
+      "id": "revoke-fanout:flow",
+      "source": "revoke-fanout:I",
+      "target": "revoke-fanout:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyền dùng ở nhiều service/region"
+    },
+    {
+      "id": "revoke-offline:flow",
+      "source": "revoke-offline:I",
+      "target": "revoke-offline:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Consumer không liên lạc được authority"
+    },
+    {
+      "id": "revoke-race:flow",
+      "source": "revoke-race:I",
+      "target": "revoke-race:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; Request đang chạy khi revoke commit"
+    },
+    {
+      "id": "revoke-version:flow",
+      "source": "revoke-version:I",
+      "target": "revoke-version:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; State từ nhiều replica đến không theo thứ tự"
+    },
+    {
+      "id": "ses-concurrency:flow",
+      "source": "ses-concurrency:I",
+      "target": "ses-concurrency:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Một người có nhiều phiên"
+    },
+    {
+      "id": "ses-issue:flow",
+      "source": "ses-issue:I",
+      "target": "ses-issue:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Một IdP phục vụ nhiều ứng dụng"
+    },
+    {
+      "id": "ses-revoke:flow",
+      "source": "ses-revoke:I",
+      "target": "ses-revoke:O",
+      "type": "I_TO_O",
+      "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token"
+    },
+    {
+      "id": "sup-builder:flow",
+      "source": "sup-builder:I",
+      "target": "sup-builder:O",
+      "type": "I_TO_O",
+      "frame": "Source, build, artifact, deploy; release team; CI nhận contribution không tin"
+    },
+    {
+      "id": "sup-dependency:flow",
+      "source": "sup-dependency:I",
+      "target": "sup-dependency:O",
+      "type": "I_TO_O",
+      "frame": "Source, build, artifact, deploy; release team; Build dùng package bên ngoài"
+    },
+    {
+      "id": "sup-deploy:flow",
+      "source": "sup-deploy:I",
+      "target": "sup-deploy:O",
+      "type": "I_TO_O",
+      "frame": "Source, build, artifact, deploy; release team; Artifact qua registry tới production"
+    },
+    {
+      "id": "sw-design:flow",
+      "source": "sw-design:I",
+      "target": "sw-design:O",
+      "type": "I_TO_O",
+      "frame": "Thiết kế đến vận hành; engineering; Tính năng mới thay trust boundary"
+    },
+    {
+      "id": "sw-release:flow",
+      "source": "sw-release:I",
+      "target": "sw-release:O",
+      "type": "I_TO_O",
+      "frame": "Thiết kế đến vận hành; engineering; Bản mới ảnh hưởng quyền/dữ liệu"
+    },
+    {
+      "id": "sw-testing:flow",
+      "source": "sw-testing:I",
+      "target": "sw-testing:O",
+      "type": "I_TO_O",
+      "frame": "Thiết kế đến vận hành; engineering; Code thay đổi thường xuyên"
+    },
+    {
+      "id": "tel-coverage:flow",
+      "source": "tel-coverage:I",
+      "target": "tel-coverage:O",
+      "type": "I_TO_O",
+      "frame": "Pipeline sự kiện; detection engineering; Nguồn log có thể im lặng"
+    },
+    {
+      "id": "tel-integrity:flow",
+      "source": "tel-integrity:I",
+      "target": "tel-integrity:O",
+      "type": "I_TO_O",
+      "frame": "Pipeline sự kiện; detection engineering; Nguồn bị đối thủ kiểm soát"
+    },
+    {
+      "id": "tel-schema:flow",
+      "source": "tel-schema:I",
+      "target": "tel-schema:O",
+      "type": "I_TO_O",
+      "frame": "Pipeline sự kiện; detection engineering; Nhiều producer dùng schema khác"
+    },
+    {
+      "id": "tenant-cache:flow",
+      "source": "tenant-cache:I",
+      "target": "tenant-cache:O",
+      "type": "I_TO_O",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Cache dùng chung response giữa request"
+    },
+    {
+      "id": "tenant-context:flow",
+      "source": "tenant-context:I",
+      "target": "tenant-context:O",
+      "type": "I_TO_O",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Client gửi tenant_id hoặc chọn workspace"
+    },
+    {
+      "id": "tenant-delivery:flow",
+      "source": "tenant-delivery:I",
+      "target": "tenant-delivery:O",
+      "type": "I_TO_O",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Request được xử lý sau khi người dùng đổi quyền; Report xuất ra file/link/email"
+    },
+    {
+      "id": "tenant-job:flow",
+      "source": "tenant-job:I",
+      "target": "tenant-job:O",
+      "type": "I_TO_O",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Request được xử lý sau khi người dùng đổi quyền"
+    },
+    {
+      "id": "tenant-snapshot:flow",
+      "source": "tenant-snapshot:I",
+      "target": "tenant-snapshot:O",
+      "type": "I_TO_O",
+      "frame": "API và kho dữ liệu; chủ sản phẩm; API xử lý ID của nhiều người/tenant; Request được xử lý sau khi người dùng đổi quyền; Nghiệp vụ có độ trễ đáng kể"
+    },
+    {
+      "id": "tp-concentration:flow",
+      "source": "tp-concentration:I",
+      "target": "tp-concentration:O",
+      "type": "I_TO_O",
+      "frame": "Quan hệ ngoài tổ chức; procurement và service owner; Nhiều dịch vụ cùng dùng một upstream"
+    },
+    {
+      "id": "tp-exit:flow",
+      "source": "tp-exit:I",
+      "target": "tp-exit:O",
+      "type": "I_TO_O",
+      "frame": "Quan hệ ngoài tổ chức; procurement và service owner; Chấm dứt hợp đồng hoặc supplier outage"
+    },
+    {
+      "id": "tp-scope:flow",
+      "source": "tp-scope:I",
+      "target": "tp-scope:O",
+      "type": "I_TO_O",
+      "frame": "Quan hệ ngoài tổ chức; procurement và service owner; Bên ngoài xử lý dữ liệu hay hỗ trợ"
+    },
+    {
+      "id": "verify-revocation:flow",
+      "source": "verify-revocation:I",
+      "target": "verify-revocation:O",
+      "type": "I_TO_O",
+      "frame": "Source, build, artifact, deploy; release team; Artifact qua registry tới production; Key hoặc builder bị phát hiện compromise"
+    },
+    {
+      "id": "verify-root:flow",
+      "source": "verify-root:I",
+      "target": "verify-root:O",
+      "type": "I_TO_O",
+      "frame": "Source, build, artifact, deploy; release team; Artifact qua registry tới production; Verifier phải biết signer/builder nào hợp lệ"
+    },
+    {
+      "id": "vul-context:flow",
+      "source": "vul-context:I",
+      "target": "vul-context:O",
+      "type": "I_TO_O",
+      "frame": "Asset-vulnerability pair; VM team; Một CVE trên nhiều tài sản"
+    },
+    {
+      "id": "vul-exposure:flow",
+      "source": "vul-exposure:I",
+      "target": "vul-exposure:O",
+      "type": "I_TO_O",
+      "frame": "Asset-vulnerability pair; VM team; Tài sản đổi trạng thái theo thời gian"
+    },
+    {
+      "id": "vul-fix:flow",
+      "source": "vul-fix:I",
+      "target": "vul-fix:O",
+      "type": "I_TO_O",
+      "frame": "Asset-vulnerability pair; VM team; Ticket được đánh dấu resolved"
+    },
+    {
+      "id": "web-injection:flow",
+      "source": "web-injection:I",
+      "target": "web-injection:O",
+      "type": "I_TO_O",
+      "frame": "Parser và trình duyệt; AppSec; Input đi vào interpreter"
+    },
+    {
+      "id": "web-parser:flow",
+      "source": "web-parser:I",
+      "target": "web-parser:O",
+      "type": "I_TO_O",
+      "frame": "Parser và trình duyệt; AppSec; Proxy và backend cùng diễn giải request"
+    },
+    {
+      "id": "web-xss:flow",
+      "source": "web-xss:I",
+      "target": "web-xss:O",
+      "type": "I_TO_O",
+      "frame": "Parser và trình duyệt; AppSec; Dữ liệu hiển thị trong HTML/JS/URL"
+    }
+  ]
+}

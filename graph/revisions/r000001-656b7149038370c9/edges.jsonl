@@ -1,0 +1,432 @@
+{"id":"e-01714448d2b1452047c3","layer":"containment","relation":"contains","source":"agents","target":"ai-instruction"}
+{"id":"e-023484e4219e4f1fdf7d","layer":"containment","relation":"contains","source":"J02","target":"J02.6"}
+{"condition":"Cùng hỏi dữ liệu có thành lệnh không; cơ chế LLM không đồng nhất parser SQL.","id":"e-02ea1ec8d0fe61ba01fa","layer":"crosslink","provenance":"analyst_proposed","relation":"analogy_only","source":"web-injection","target":"ai-instruction"}
+{"id":"e-03dc570b9dd6de6ad187","layer":"containment","relation":"contains","source":"ses-revoke","target":"revoke-offline"}
+{"id":"e-04712a2b09d735ba1588","layer":"containment","relation":"contains","source":"vulnerability","target":"vul-exposure"}
+{"id":"e-062cbb01ff329d058a48","layer":"containment","relation":"contains","source":"root","target":"software"}
+{"id":"e-06a002f490ffc9442b5c","layer":"containment","relation":"contains","source":"inventory","target":"inv-discovery"}
+{"id":"e-0736d23207619d056263","layer":"containment","relation":"contains","source":"J01","target":"J01.8"}
+{"condition":"Giữ quy trình trong envelope an toàn khi gặp sai lệch số, với quyết định do chuyên gia vận hành xác nhận.","id":"e-077d9ee90cd2063d5741","layer":"crosslink","relation":"uses_mechanism","source":"J08","target":"ot-legacy"}
+{"id":"e-07c1eb2da30101788335","layer":"containment","relation":"contains","source":"J04","target":"J04.2"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-08c52d0e9143bf79f503","layer":"process_navigation","relation":"enables_next","source":"J08.2","target":"J08.3"}
+{"id":"e-08e5dffccf8fa9ceceb0","layer":"containment","relation":"contains","source":"agents","target":"ai-memory"}
+{"id":"e-0a4edc655c6f6817cd5a","layer":"containment","relation":"contains","source":"J01","target":"J01.6"}
+{"id":"e-0acedb0b12d44b92be14","layer":"containment","relation":"contains","source":"J08","target":"J08.2"}
+{"condition":"Runner không tin cần quyền và state tách biệt.","id":"e-0b66c668c8759ef01727","layer":"crosslink","provenance":"analyst_proposed","relation":"same_boundary_pattern","source":"end-execution","target":"sup-builder"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-0b8e2a2c6d3fdc2754e5","layer":"process_navigation","relation":"enables_next","source":"J02.4","target":"J02.5"}
+{"id":"e-0c4b9db8a5cb35113dc2","layer":"containment","relation":"contains","source":"crypto","target":"F03"}
+{"id":"e-0c5ba79a794a030d3e6d","layer":"containment","relation":"contains","source":"J05","target":"J05.6"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-0d4650c500c95e5dc529","layer":"process_navigation","relation":"enables_next","source":"J04.6","target":"J04.7"}
+{"condition":"Request hợp lệ vẫn có thể cạn tài nguyên và ngân sách.","id":"e-0e21e615d339fdc74e0b","layer":"crosslink","provenance":"analyst_proposed","relation":"same_resource_loop","source":"net-dos","target":"api-abuse"}
+{"condition":"Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.","id":"e-0ed152059db23bab38b8","layer":"crosslink","relation":"uses_mechanism","source":"J03","target":"sup-builder"}
+{"id":"e-0efd0452eb8c6a97c77a","layer":"containment","relation":"contains","source":"J07","target":"J07.8"}
+{"id":"e-0f3bfbb4623dd51bd030","layer":"containment","relation":"contains","source":"cloud","target":"F13"}
+{"id":"e-11192b3db225a840bb40","layer":"containment","relation":"contains","source":"rec-consistency","target":"restore-reconcile"}
+{"condition":"Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.","id":"e-11f62ccd45b7269eacbe","layer":"crosslink","relation":"uses_mechanism","source":"J03","target":"inv-lifecycle"}
+{"condition":"Một chủ thể bị thu hồi không còn thực hiện hành động thuộc scope sau bound được chấp thuận.","id":"e-11f704217d2961f2e383","layer":"crosslink","relation":"uses_mechanism","source":"J01","target":"ses-concurrency"}
+{"condition":"Chuẩn hóa URL sai có thể làm policy và connector hiểu khác đích.","id":"e-124aca97a7bd92814221","layer":"crosslink","provenance":"analyst_proposed","relation":"conditions","source":"web-parser","target":"net-egress"}
+{"condition":"Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.","id":"e-12ad23a2f7c0d6e9cacd","layer":"crosslink","relation":"uses_mechanism","source":"J06","target":"dat-egress"}
+{"id":"e-12fdf1ddc4e09d96a886","layer":"containment","relation":"contains","source":"J04","target":"J04.1"}
+{"id":"e-1302326a6c2e59fb103f","layer":"containment","relation":"contains","source":"J06","target":"J06.7"}
+{"id":"e-133d48f1fc3da7e91d0f","layer":"containment","relation":"contains","source":"agents","target":"J06"}
+{"condition":"Webhook timeout cần policy lỗi rõ ràng.","id":"e-1557b06bde799c91bc00","layer":"crosslink","provenance":"analyst_proposed","relation":"conditions","source":"arch-failure","target":"k8s-admission"}
+{"id":"e-165c71b85b0ceb46145f","layer":"containment","relation":"contains","source":"root","target":"architecture"}
+{"condition":"Attestation xác nhận binary/config nào, ai cung cấp freshness và ai được giải phóng secret?","id":"e-16723002ebff26053e83","layer":"crosslink","relation":"opens_question","source":"cry-key","target":"F02"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-16b4a1eab45aed4dfbd7","layer":"process_navigation","relation":"enables_next","source":"J01.4","target":"J01.5"}
+{"condition":"Remote support là authority của vendor cần scope và expiry.","id":"e-1751d7a98ba5076058e9","layer":"crosslink","provenance":"analyst_proposed","relation":"specializes","source":"ot-remote","target":"tp-scope"}
+{"condition":"Fail-closed mạng chưa chắc an toàn cho quy trình vật lý.","id":"e-175ffa105e3e236fe8ca","layer":"crosslink","provenance":"analyst_proposed","relation":"constrains","source":"ot-safety","target":"arch-failure"}
+{"id":"e-188ccfd7c7b9a1a087f9","layer":"containment","relation":"contains","source":"J01","target":"J01.5"}
+{"condition":"Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.","id":"e-189ddf405bedb975b586","layer":"crosslink","relation":"uses_mechanism","source":"J02","target":"auth-object"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-195f616f27ab75668264","layer":"process_navigation","relation":"enables_next","source":"J06.7","target":"J06.8"}
+{"condition":"Containment account cần xử lý toàn bộ phiên thuộc scope.","id":"e-197103ce26d9590f00c8","layer":"crosslink","provenance":"analyst_proposed","relation":"enables","source":"ses-concurrency","target":"ir-contain"}
+{"id":"e-1a3b1601e67bfdcc4d88","layer":"containment","relation":"contains","source":"agents","target":"F30"}
+{"condition":"Đơn vị bảo vệ, composition và utility tradeoff được định nghĩa ra sao trước khi chọn epsilon?","id":"e-1a72501504f654d42d3a","layer":"crosslink","relation":"opens_question","source":"dat-egress","target":"F17"}
+{"id":"e-1b8e0836f391db327026","layer":"containment","relation":"contains","source":"root","target":"thirdparty"}
+{"id":"e-1c910a8b7a10934f8c39","layer":"containment","relation":"contains","source":"auth-object","target":"tenant-cache"}
+{"id":"e-1d7f8f98e07e1fb38ceb","layer":"containment","relation":"contains","source":"root","target":"telemetry"}
+{"condition":"Audience/subject sai có thể làm token workload dùng vượt mục đích.","id":"e-1d994a81d3fa908aebe4","layer":"crosslink","provenance":"analyst_proposed","relation":"same_failure_pattern","source":"ses-issue","target":"k8s-identity"}
+{"id":"e-1dd6d07d0df364e0169e","layer":"containment","relation":"contains","source":"action-execution","target":"action-observe"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-1dd8a7ce9cd87bbc9342","layer":"process_navigation","relation":"enables_next","source":"J06.5","target":"J06.6"}
+{"id":"e-1e281be406bce199f44d","layer":"containment","relation":"contains","source":"messaging","target":"msg-dns"}
+{"condition":"Nội dung từ miền thấp trust bị nâng thành quyền ở boundary.","id":"e-1e6df592a64cb238ea4c","layer":"crosslink","provenance":"analyst_proposed","relation":"same_failure_pattern","source":"arch-boundary","target":"ai-instruction"}
+{"condition":"Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.","id":"e-1e8a4287e2c2b243818d","layer":"crosslink","relation":"uses_mechanism","source":"J04","target":"rec-objective"}
+{"id":"e-200c1351d4cd6394796e","layer":"containment","relation":"contains","source":"sup-deploy","target":"verify-revocation"}
+{"id":"e-20c993443200a922d497","layer":"containment","relation":"contains","source":"agents","target":"F29"}
+{"condition":"Quyền tạo workload có thể mở đường tới node nếu thiếu admission phù hợp.","id":"e-21284bc63bb8e9e9286f","layer":"crosslink","provenance":"analyst_proposed","relation":"constrains","source":"k8s-admission","target":"arch-blast"}
+{"id":"e-2220e5c4166168558f9e","layer":"containment","relation":"contains","source":"supply","target":"sup-deploy"}
+{"id":"e-22486ed1ae2b5bdfb7e0","layer":"containment","relation":"contains","source":"inventory","target":"inv-dependency"}
+{"condition":"Một chủ thể bị thu hồi không còn thực hiện hành động thuộc scope sau bound được chấp thuận.","id":"e-23206c2a2d1c157f2893","layer":"crosslink","relation":"uses_mechanism","source":"J01","target":"ses-revoke"}
+{"id":"e-2456786ed56e2fa715cf","layer":"containment","relation":"contains","source":"J02","target":"J02.1"}
+{"condition":"Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.","id":"e-24da7a0dac846d08c6cb","layer":"crosslink","relation":"uses_mechanism","source":"J02","target":"tel-schema"}
+{"condition":"Provenance và trạng thái kiểm chứng phải đi cùng dữ liệu qua memory.","id":"e-2512ba1e77f1c9280584","layer":"crosslink","provenance":"analyst_proposed","relation":"constrains","source":"dat-class","target":"ai-memory"}
+{"id":"e-25c6096e337efc9dc2d8","layer":"containment","relation":"contains","source":"crypto","target":"cry-agility"}
+{"condition":"Origin/site, cookie, storage và messaging tạo ranh giới khác nhau thế nào?","id":"e-25f353b80a4b44d6acce","layer":"crosslink","relation":"opens_question","source":"web-xss","target":"F09"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-26378bc9e154710ca8d2","layer":"process_navigation","relation":"enables_next","source":"J07.3","target":"J07.4"}
+{"condition":"Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.","id":"e-28041cb39f27011825f3","layer":"crosslink","relation":"uses_mechanism","source":"J05","target":"det-behavior"}
+{"id":"e-28b28c9cd94502d53911","layer":"containment","relation":"contains","source":"root","target":"supply"}
+{"id":"e-28eeb3a69822d2f7482c","layer":"containment","relation":"contains","source":"ot","target":"J08"}
+{"id":"e-29c459ca83445bed3c94","layer":"containment","relation":"contains","source":"messaging","target":"msg-domain"}
+{"id":"e-29e95d4ffa7f3df168f7","layer":"containment","relation":"contains","source":"J08","target":"J08.5"}
+{"condition":"Regression test hỗ trợ xác nhận sửa trong frame đã thử.","id":"e-2a103dddd3d73c200b1b","layer":"crosslink","provenance":"analyst_proposed","relation":"verifies_conditionally","source":"sw-testing","target":"vul-fix"}
+{"id":"e-2a17b84147a3332adabb","layer":"containment","relation":"contains","source":"root","target":"recovery"}
+{"condition":"Phạm vi lan truyền chịu quyền sửa/cấp quyền của control plane.","id":"e-2a77be0720e9f9e9138c","layer":"crosslink","provenance":"analyst_proposed","relation":"depends_on","source":"arch-blast","target":"cld-policy"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-2ba7c23b645d9ac25869","layer":"process_navigation","relation":"enables_next","source":"J03.6","target":"J03.7"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-2c91e48b066b1a215ed2","layer":"process_navigation","relation":"enables_next","source":"J02.6","target":"J02.7"}
+{"condition":"Sai lệch route đến từ cấu hình, authority hay compromise; nguồn nào đủ độc lập để nhận biết?","id":"e-2cd2ba12f28d25053387","layer":"crosslink","relation":"opens_question","source":"msg-dns","target":"F05"}
+{"condition":"Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.","id":"e-2ded80eb834158659818","layer":"crosslink","relation":"uses_mechanism","source":"J03","target":"sup-deploy"}
+{"condition":"Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.","id":"e-2e2bf3cd167a60506f40","layer":"crosslink","relation":"uses_mechanism","source":"J05","target":"det-base"}
+{"id":"e-2e9ce18086a847def492","layer":"containment","relation":"contains","source":"J03","target":"J03.3"}
+{"condition":"Kết quả thực tế sau deploy phản hồi về rollout và rollback.","id":"e-2f5f58f5cc45f0ecaefc","layer":"crosslink","provenance":"analyst_proposed","relation":"feedback","source":"cld-drift","target":"sw-release"}
+{"id":"e-30264761daecf1007d31","layer":"containment","relation":"contains","source":"root","target":"api"}
+{"id":"e-30e1be8e2d5eacbc5f58","layer":"containment","relation":"contains","source":"action-execution","target":"action-retry"}
+{"id":"e-32b1cebbef9cda2f145c","layer":"containment","relation":"contains","source":"J05","target":"J05.8"}
+{"id":"e-33565131c70727ecda9a","layer":"containment","relation":"contains","source":"web","target":"F09"}
+{"id":"e-35f13f6ae300d9c7d55a","layer":"containment","relation":"contains","source":"crypto","target":"F01"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-363c9946c0905a7085b3","layer":"process_navigation","relation":"enables_next","source":"J01.5","target":"J01.6"}
+{"id":"e-364a53496de73638966b","layer":"containment","relation":"contains","source":"detection","target":"det-behavior"}
+{"id":"e-36b344656b91eb409a28","layer":"containment","relation":"contains","source":"endpoint","target":"end-memory"}
+{"condition":"Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.","id":"e-370d05a981b321fa7f1a","layer":"crosslink","relation":"uses_mechanism","source":"J04","target":"cry-key"}
+{"condition":"Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.","id":"e-3753fee58303e6bc12b0","layer":"crosslink","relation":"uses_mechanism","source":"J02","target":"auth-race"}
+{"id":"e-37d54302dcfcf41b7726","layer":"containment","relation":"contains","source":"J01","target":"J01.1"}
+{"condition":"Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.","id":"e-38b23a6ed08c0bbf3ddf","layer":"crosslink","relation":"uses_mechanism","source":"J05","target":"tel-schema"}
+{"id":"e-397eae96113b6aed5bf8","layer":"containment","relation":"contains","source":"recovery","target":"rec-objective"}
+{"id":"e-3992aaa4ec50b223a079","layer":"containment","relation":"contains","source":"J03","target":"J03.8"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-3a829edc4f6e46e3044b","layer":"process_navigation","relation":"enables_next","source":"J07.4","target":"J07.5"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-3b0b02b49e925cd864ce","layer":"process_navigation","relation":"enables_next","source":"J02.5","target":"J02.6"}
+{"id":"e-3c8137f1f6d091b5b085","layer":"containment","relation":"contains","source":"J07","target":"J07.4"}
+{"id":"e-3ca9f3a2f029ca7449c2","layer":"containment","relation":"contains","source":"ai-tool","target":"action-execution"}
+{"id":"e-3d25117333411c4c5e7d","layer":"containment","relation":"contains","source":"telemetry","target":"tel-coverage"}
+{"id":"e-3e5a29f261943d0054d1","layer":"containment","relation":"contains","source":"vulnerability","target":"vul-fix"}
+{"id":"e-3ffa3e5e96c2233b07d3","layer":"containment","relation":"contains","source":"governance","target":"gov-owner"}
+{"condition":"Một chủ thể bị thu hồi không còn thực hiện hành động thuộc scope sau bound được chấp thuận.","id":"e-4008d10270e77748e7d1","layer":"crosslink","relation":"uses_mechanism","source":"J01","target":"ses-issue"}
+{"id":"e-406fb4259240d2c31825","layer":"containment","relation":"contains","source":"rec-consistency","target":"restore-cut"}
+{"condition":"Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.","id":"e-40897558866a077435ab","layer":"crosslink","relation":"uses_mechanism","source":"J06","target":"ai-memory"}
+{"id":"e-40a50863323dad3886f7","layer":"containment","relation":"contains","source":"human","target":"F26"}
+{"condition":"Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.","id":"e-4153dda7881f20481bda","layer":"crosslink","relation":"uses_mechanism","source":"J06","target":"ai-instruction"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-4193076a502de7cb8bf9","layer":"process_navigation","relation":"enables_next","source":"J05.7","target":"J05.8"}
+{"id":"e-41ce0e2fa551070a6814","layer":"containment","relation":"contains","source":"api","target":"F12"}
+{"condition":"Permission thực tế, sandbox, SDK và đường export dữ liệu trên từng platform là gì?","id":"e-41e17eb6bb35488edb4a","layer":"crosslink","relation":"opens_question","source":"end-execution","target":"F06"}
+{"condition":"Failure domain, đặc quyền vận hành và time horizon khác enterprise thông thường thế nào?","id":"e-42559ac0d69b7e6ea8a3","layer":"crosslink","relation":"opens_question","source":"tp-concentration","target":"F27"}
+{"id":"e-42a290627227089bf390","layer":"containment","relation":"contains","source":"J05","target":"J05.3"}
+{"condition":"Byzantine faults, finality và khả năng quan sát thay đổi invariant giao dịch thế nào?","id":"e-42feee6427493b5c6b33","layer":"crosslink","relation":"opens_question","source":"api-state","target":"F12"}
+{"id":"e-438ea1c57f8ea7e605bc","layer":"containment","relation":"contains","source":"J04","target":"J04.5"}
+{"condition":"Một chủ thể bị thu hồi không còn thực hiện hành động thuộc scope sau bound được chấp thuận.","id":"e-4410273f3ccc12c792a3","layer":"crosslink","relation":"uses_mechanism","source":"J01","target":"id-mfa"}
+{"condition":"Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.","id":"e-446fcdef6b993ad4c669","layer":"crosslink","relation":"uses_mechanism","source":"J05","target":"tel-integrity"}
+{"id":"e-44ed583bc6a176e4a51d","layer":"containment","relation":"contains","source":"thirdparty","target":"tp-exit"}
+{"condition":"Giữ quy trình trong envelope an toàn khi gặp sai lệch số, với quyết định do chuyên gia vận hành xác nhận.","id":"e-45099cdd9cfca3af6346","layer":"crosslink","relation":"uses_mechanism","source":"J08","target":"ot-safety"}
+{"id":"e-451143ac58daf468ba73","layer":"containment","relation":"contains","source":"cloud","target":"cld-policy"}
+{"condition":"Ai được nói điều gì với mức chắc chắn nào khi scope sự cố còn chưa biết?","id":"e-45b4ebd79776c70205d8","layer":"crosslink","relation":"opens_question","source":"ir-learn","target":"F22"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-4616466dcc92eb4e21be","layer":"process_navigation","relation":"enables_next","source":"J04.2","target":"J04.3"}
+{"condition":"Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.","id":"e-464eccb66032bafbd63c","layer":"crosslink","relation":"uses_mechanism","source":"J02","target":"dat-egress"}
+{"condition":"Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.","id":"e-472deff0451163eab0c5","layer":"crosslink","relation":"uses_mechanism","source":"J07","target":"inv-discovery"}
+{"id":"e-485922d58f7a5de2becd","layer":"containment","relation":"contains","source":"web","target":"web-xss"}
+{"id":"e-49338bf6c1ecf730e3a5","layer":"containment","relation":"contains","source":"J05","target":"J05.4"}
+{"id":"e-4998002347cc547ec1aa","layer":"containment","relation":"contains","source":"sup-builder","target":"build-cache"}
+{"condition":"Jurisdiction, loại dữ liệu, nghĩa vụ báo cáo và bằng chứng đáp ứng cụ thể là gì?","id":"e-4aa416c38504a58b33a3","layer":"crosslink","relation":"opens_question","source":"gov-owner","target":"F24"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-4cdc6c1d37274af047f5","layer":"process_navigation","relation":"enables_next","source":"J03.1","target":"J03.2"}
+{"condition":"Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.","id":"e-4d3a4393e59af2eb1780","layer":"crosslink","relation":"uses_mechanism","source":"J06","target":"net-egress"}
+{"condition":"Sự cố tạo yêu cầu thiết kế mới và kịch bản kiểm thử lại.","id":"e-4e9b026e68edad1bf1d5","layer":"crosslink","provenance":"analyst_proposed","relation":"feedback","source":"ir-learn","target":"sw-design"}
+{"id":"e-4ecff9d5fea65cd8e6f7","layer":"containment","relation":"contains","source":"auth-object","target":"tenant-job"}
+{"condition":"Managed service cần owner cho cả phần vendor lẫn customer.","id":"e-4ef69d79e6b35422ee68","layer":"crosslink","provenance":"analyst_proposed","relation":"requires","source":"cld-responsibility","target":"tp-scope"}
+{"id":"e-4f46ed835c9415af10ec","layer":"containment","relation":"contains","source":"crypto","target":"F02"}
+{"id":"e-4f91efbdcbdd811eabc6","layer":"containment","relation":"contains","source":"J05","target":"J05.5"}
+{"id":"e-4fb920a7414e517eb714","layer":"containment","relation":"contains","source":"J08","target":"J08.3"}
+{"id":"e-5108679990d84794cbed","layer":"containment","relation":"contains","source":"J04","target":"J04.8"}
+{"id":"e-51a0e14917940aa1b5bb","layer":"containment","relation":"contains","source":"J04","target":"J04.4"}
+{"id":"e-52059f13853d17f5fe4f","layer":"containment","relation":"contains","source":"containers","target":"k8s-admission"}
+{"id":"e-520d0b76a30472410273","layer":"containment","relation":"contains","source":"root","target":"session"}
+{"id":"e-5270fa3efc9aa9168f7b","layer":"containment","relation":"contains","source":"J07","target":"J07.6"}
+{"id":"e-533d8d4da10be7c052de","layer":"containment","relation":"contains","source":"J01","target":"J01.2"}
+{"id":"e-5342f80ceba413acb414","layer":"containment","relation":"contains","source":"J02","target":"J02.3"}
+{"condition":"Fallback yếu có thể làm luồng xác thực mạnh mất hiệu quả toàn hành trình.","id":"e-53e30be2c8e2becc3ef9","layer":"crosslink","provenance":"analyst_proposed","relation":"can_be_bypassed_by","source":"id-mfa","target":"id-recovery"}
+{"id":"e-548dbe804149a2f689c5","layer":"containment","relation":"contains","source":"response","target":"ir-contain"}
+{"id":"e-54b22e8c19a8b7b75c8f","layer":"containment","relation":"contains","source":"identity","target":"J01"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-551817f824aeacc826c1","layer":"process_navigation","relation":"enables_next","source":"J06.4","target":"J06.5"}
+{"condition":"Scope, phối hợp vá, bằng chứng không gây hại và thời gian disclosure được quyết định thế nào?","id":"e-556e10b2d0616487ecfe","layer":"crosslink","relation":"opens_question","source":"vul-fix","target":"F19"}
+{"condition":"Giữ quy trình trong envelope an toàn khi gặp sai lệch số, với quyết định do chuyên gia vận hành xác nhận.","id":"e-558b9721ad738929dc80","layer":"crosslink","relation":"uses_mechanism","source":"J08","target":"ot-remote"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-55ed6590f104a1678046","layer":"process_navigation","relation":"enables_next","source":"J03.3","target":"J03.4"}
+{"condition":"Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.","id":"e-56bf5ca27de3fd317df8","layer":"crosslink","relation":"uses_mechanism","source":"J06","target":"dat-class"}
+{"condition":"Giữ quy trình trong envelope an toàn khi gặp sai lệch số, với quyết định do chuyên gia vận hành xác nhận.","id":"e-56f87dae906d78500a66","layer":"crosslink","relation":"uses_mechanism","source":"J08","target":"arch-failure"}
+{"id":"e-57400efbe0015992fe41","layer":"containment","relation":"contains","source":"architecture","target":"arch-blast"}
+{"id":"e-5796f9fdb420370c1bca","layer":"containment","relation":"contains","source":"vulnerability","target":"J07"}
+{"id":"e-57d58eaeb46143964322","layer":"containment","relation":"contains","source":"data","target":"F16"}
+{"condition":"Ai có thể chạm honeypot hợp lệ, và tín hiệu phản ánh môi trường thật đến đâu?","id":"e-581e261b405a9fd623d9","layer":"crosslink","relation":"opens_question","source":"det-base","target":"F21"}
+{"condition":"Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.","id":"e-58cc6f303dc016b7dd31","layer":"crosslink","relation":"uses_mechanism","source":"J04","target":"rec-backup"}
+{"id":"e-58e4ce12c55d1c0e6cba","layer":"containment","relation":"contains","source":"J07","target":"J07.2"}
+{"id":"e-594f62bfa2d21a3bac50","layer":"containment","relation":"contains","source":"containers","target":"k8s-network"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-5af83e38699e36673f48","layer":"process_navigation","relation":"enables_next","source":"J03.4","target":"J03.5"}
+{"condition":"Tool outbound cần destination policy ngoài quyết định model.","id":"e-5ca7846cc8eb4d337ef0","layer":"crosslink","provenance":"analyst_proposed","relation":"constrains","source":"net-egress","target":"ai-tool"}
+{"id":"e-5d5a3335f67b2673c50f","layer":"containment","relation":"contains","source":"root","target":"authorization"}
+{"id":"e-5d732d562035b8c53020","layer":"containment","relation":"contains","source":"root","target":"ot"}
+{"id":"e-5ecd8e069c0820669ccd","layer":"containment","relation":"contains","source":"supply","target":"sup-builder"}
+{"condition":"Control loại người dùng nào khỏi dịch vụ, có phương án giữ assurance mà giảm loại trừ không?","id":"e-5ee88b414c3bd4878750","layer":"crosslink","relation":"opens_question","source":"id-recovery","target":"F26"}
+{"condition":"Chuỗi nguồn và integrity là đầu vào đánh giá bằng chứng, không thay mọi thủ tục pháp lý.","id":"e-5f1da27af793b0bb9aaf","layer":"crosslink","provenance":"analyst_proposed","relation":"supports","source":"tel-integrity","target":"ir-evidence"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-5fa753f7a8b2c4cad3d9","layer":"process_navigation","relation":"enables_next","source":"J08.5","target":"J08.6"}
+{"id":"e-60640829675c4b1ad771","layer":"containment","relation":"contains","source":"root","target":"data"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-6064e2b945d5e2c3d417","layer":"process_navigation","relation":"enables_next","source":"J03.7","target":"J03.8"}
+{"id":"e-633a6fe0f028e678dcf7","layer":"containment","relation":"contains","source":"session","target":"ses-concurrency"}
+{"id":"e-633f12be5608ffc576e6","layer":"containment","relation":"contains","source":"supply","target":"F15"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-6359361fd6cc18511f31","layer":"process_navigation","relation":"enables_next","source":"J08.4","target":"J08.5"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-636c6f556f74ae5721d4","layer":"process_navigation","relation":"enables_next","source":"J06.3","target":"J06.4"}
+{"id":"e-6515eb84641dce22282b","layer":"containment","relation":"contains","source":"root","target":"messaging"}
+{"condition":"Trust boundary thay khi kênh truyền dùng chung môi trường vật lý ra sao?","id":"e-6570f07e1ae8c1df60a5","layer":"crosslink","relation":"opens_question","source":"net-segment","target":"F04"}
+{"id":"e-65cfbed91c75883801ac","layer":"containment","relation":"contains","source":"endpoint","target":"F07"}
+{"condition":"Indicator hết hạn khi nào, nguồn có độc lập không và intelligence có đổi quyết định thực tế không?","id":"e-662cabf425f6ea434497","layer":"crosslink","relation":"opens_question","source":"det-behavior","target":"F20"}
+{"id":"e-668625b126e034282116","layer":"containment","relation":"contains","source":"network","target":"net-egress"}
+{"id":"e-66acb760aa6ad711d933","layer":"containment","relation":"contains","source":"J08","target":"J08.8"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-66e4c2c0964f5baa92cb","layer":"process_navigation","relation":"enables_next","source":"J04.3","target":"J04.4"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-675cee8fb391b75927ab","layer":"process_navigation","relation":"enables_next","source":"J05.6","target":"J05.7"}
+{"condition":"False positives và complexity quyết định workload, không chỉ alert count.","id":"e-6925832c4eeba77d9760","layer":"crosslink","provenance":"analyst_proposed","relation":"drives_load","source":"det-base","target":"det-queue"}
+{"id":"e-6a193979f7c3090096a0","layer":"containment","relation":"contains","source":"auth-object","target":"tenant-context"}
+{"id":"e-6a1cb7a4aa3e11bc6384","layer":"containment","relation":"contains","source":"agents","target":"ai-tool"}
+{"id":"e-6ba827a8311c0ab984ee","layer":"containment","relation":"contains","source":"revoke-race","target":"revoke-cas"}
+{"id":"e-6be89001506a6befa943","layer":"containment","relation":"contains","source":"network","target":"net-segment"}
+{"condition":"Ngoại lệ đã duyệt có hạn khác với drift không được phép.","id":"e-6c7e2bd68d9080ca62ba","layer":"crosslink","provenance":"analyst_proposed","relation":"conditions","source":"gov-exception","target":"cld-drift"}
+{"id":"e-6e24b6d69c0f67f304a7","layer":"containment","relation":"contains","source":"telemetry","target":"J05"}
+{"id":"e-6ee5bb30f36cbdeb0117","layer":"containment","relation":"contains","source":"data","target":"F18"}
+{"condition":"Sandbox quan sát được hành vi nào, và hành vi né môi trường làm giới hạn kết luận ra sao?","id":"e-702d28e5eff61cf8f747","layer":"crosslink","relation":"opens_question","source":"det-behavior","target":"F08"}
+{"condition":"Export cũng phải kiểm quyền đối tượng và quyền xuất dữ liệu.","id":"e-71a9760d0aec2b52255f","layer":"crosslink","provenance":"analyst_proposed","relation":"constrains","source":"auth-object","target":"dat-egress"}
+{"id":"e-71ca0250b7e0228567a7","layer":"containment","relation":"contains","source":"human","target":"hum-access"}
+{"condition":"Một chủ thể bị thu hồi không còn thực hiện hành động thuộc scope sau bound được chấp thuận.","id":"e-721988e1f2e6cb555bbb","layer":"crosslink","relation":"uses_mechanism","source":"J01","target":"id-recovery"}
+{"id":"e-72344f6c981f453f6672","layer":"containment","relation":"contains","source":"detection","target":"det-base"}
+{"id":"e-7241e962bba8ee2f2eba","layer":"containment","relation":"contains","source":"supply","target":"sup-dependency"}
+{"id":"e-72c6c46f24364399fa4f","layer":"containment","relation":"contains","source":"response","target":"ir-evidence"}
+{"id":"e-73378a1823ecb6247199","layer":"containment","relation":"contains","source":"session","target":"ses-issue"}
+{"id":"e-73a6ef7f6707c3548604","layer":"containment","relation":"contains","source":"governance","target":"gov-exception"}
+{"condition":"Mất thiết bị/custody có thể thay đổi giả định bí mật khóa.","id":"e-742be2fbb890e5ecb786","layer":"crosslink","provenance":"analyst_proposed","relation":"can_affect","source":"hum-access","target":"cry-key"}
+{"id":"e-745c950050a91233bdc9","layer":"containment","relation":"contains","source":"identity","target":"id-recovery"}
+{"id":"e-74ff6bcde034941de74b","layer":"containment","relation":"contains","source":"J02","target":"J02.2"}
+{"condition":"Chi phí và hậu quả giúp phân biệt traffic với thiệt hại có ý nghĩa.","id":"e-75334e6dc198920afc4d","layer":"crosslink","provenance":"analyst_proposed","relation":"informs","source":"api-abuse","target":"gov-loss"}
+{"condition":"Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.","id":"e-759d81d5614d3da67acb","layer":"crosslink","relation":"uses_mechanism","source":"J05","target":"tel-coverage"}
+{"id":"e-75b84fc7ba9778362d8d","layer":"containment","relation":"contains","source":"human","target":"hum-report"}
+{"id":"e-76227fc488799b0136a7","layer":"containment","relation":"contains","source":"root","target":"web"}
+{"id":"e-7772a529e25aaa41d1aa","layer":"containment","relation":"contains","source":"identity","target":"id-mfa"}
+{"id":"e-77da1722c53a55715a69","layer":"containment","relation":"contains","source":"messaging","target":"msg-payment"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-7811a39a2199269634be","layer":"process_navigation","relation":"enables_next","source":"J08.1","target":"J08.2"}
+{"id":"e-7865c8329f3b836e8ba5","layer":"containment","relation":"contains","source":"J05","target":"J05.1"}
+{"id":"e-78e272b252a0b14b50f6","layer":"containment","relation":"contains","source":"recovery","target":"rec-consistency"}
+{"id":"e-7999c41de36ac6121cc5","layer":"containment","relation":"contains","source":"J04","target":"J04.7"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-7b1f13dffe7189ed0c6b","layer":"process_navigation","relation":"enables_next","source":"J01.2","target":"J01.3"}
+{"id":"e-7b61a56cfaa6ec5e428f","layer":"containment","relation":"contains","source":"crypto","target":"cry-key"}
+{"id":"e-7bafe990045b00e80ad5","layer":"containment","relation":"contains","source":"cloud","target":"cld-drift"}
+{"id":"e-7bddbd7d32d1af06432c","layer":"containment","relation":"contains","source":"telemetry","target":"tel-schema"}
+{"id":"e-7bfa64a2bbe28889d290","layer":"containment","relation":"contains","source":"architecture","target":"J04"}
+{"id":"e-7c2e9c7fed737f37bcd6","layer":"containment","relation":"contains","source":"J08","target":"J08.7"}
+{"id":"e-7d1136fccb5c523b532f","layer":"containment","relation":"contains","source":"web","target":"web-injection"}
+{"id":"e-7d4efab65ced1aece69f","layer":"containment","relation":"contains","source":"identity","target":"id-proof"}
+{"id":"e-7dc2460becc95391594a","layer":"containment","relation":"contains","source":"root","target":"human"}
+{"condition":"Offboarding chỉ xong khi quyền hiệu lực không còn ở các điểm dùng.","id":"e-7e9ae80eabf0d616ebcd","layer":"crosslink","provenance":"analyst_proposed","relation":"enables","source":"ses-revoke","target":"hum-offboard"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-80edf9404b35dc20b2f2","layer":"process_navigation","relation":"enables_next","source":"J08.3","target":"J08.4"}
+{"condition":"Nguồn cần quan sát phải xuất phát từ inventory; thiếu inventory làm coverage bị phóng đại.","id":"e-819972a8fb948f5e5aaf","layer":"crosslink","provenance":"analyst_proposed","relation":"defines_denominator","source":"inv-discovery","target":"tel-coverage"}
+{"id":"e-81dc41c88d1b3a7d7912","layer":"containment","relation":"contains","source":"software","target":"sw-design"}
+{"condition":"Quyền hợp lệ, động cơ, thiếu hỗ trợ và bị ép buộc tạo các giả thuyết phân biệt nào?","id":"e-8251ed6ff3217b8ed7ab","layer":"crosslink","relation":"opens_question","source":"hum-report","target":"F25"}
+{"id":"e-8284fb2875a2f3e1178b","layer":"containment","relation":"contains","source":"root","target":"endpoint"}
+{"id":"e-8296d9e8477ed1d155da","layer":"containment","relation":"contains","source":"J03","target":"J03.2"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-82abf5f3f890cb49dc0b","layer":"process_navigation","relation":"enables_next","source":"J05.1","target":"J05.2"}
+{"condition":"Containment có thể kéo dài outage để giảm lan truyền; cần mục tiêu rõ.","id":"e-83486e9c00e2baacae2a","layer":"crosslink","provenance":"analyst_proposed","relation":"tradeoff","source":"ir-contain","target":"rec-objective"}
+{"condition":"Provenance chỉ hữu ích khi điểm dùng xác minh identity và policy.","id":"e-8388d7ee77645ff3e6d0","layer":"crosslink","provenance":"analyst_proposed","relation":"feeds","source":"sup-builder","target":"sup-deploy"}
+{"condition":"Inventory dependency giúp biết CVE có nằm trong artifact đang chạy.","id":"e-83c997ce0c924672dcc7","layer":"crosslink","provenance":"analyst_proposed","relation":"informs","source":"sup-dependency","target":"vul-context"}
+{"condition":"Hợp đồng chuyển loại tổn thất nào, còn incentive và correlated loss nào ở lại?","id":"e-840180c3696910e8e43a","layer":"crosslink","relation":"opens_question","source":"gov-loss","target":"F23"}
+{"id":"e-841e32b0bb5a1a3628d6","layer":"containment","relation":"contains","source":"root","target":"response"}
+{"condition":"Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.","id":"e-8475c2638e5a132e2000","layer":"crosslink","relation":"uses_mechanism","source":"J06","target":"ai-tool"}
+{"id":"e-84c9ce2f7a17b885687a","layer":"containment","relation":"contains","source":"J04","target":"J04.3"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-8519499cdeacfe09f9cb","layer":"process_navigation","relation":"enables_next","source":"J02.7","target":"J02.8"}
+{"id":"e-8553a68925077432be6d","layer":"containment","relation":"contains","source":"vulnerability","target":"vul-context"}
+{"id":"e-86e21ddd1bd4fe6df5fd","layer":"containment","relation":"contains","source":"thirdparty","target":"F27"}
+{"id":"e-872baf7e1d024c883fa2","layer":"containment","relation":"contains","source":"J06","target":"J06.2"}
+{"condition":"Nguồn được lặp lại không trở thành xác minh độc lập.","id":"e-876ee67cb5d1fb4cce0c","layer":"crosslink","provenance":"analyst_proposed","relation":"same_evidence_question","source":"ai-memory","target":"tel-integrity"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-87bece9ad2efc294526a","layer":"process_navigation","relation":"enables_next","source":"J07.7","target":"J07.8"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-87d4ebcb0ee8345ce0c9","layer":"process_navigation","relation":"enables_next","source":"J04.4","target":"J04.5"}
+{"condition":"Exit drill cần dữ liệu, key và khả năng dựng lại chứ không chỉ hợp đồng.","id":"e-888fbd9284a709dde925","layer":"crosslink","provenance":"analyst_proposed","relation":"complements","source":"tp-exit","target":"rec-backup"}
+{"condition":"Ai truy cập output gì, budget truy vấn bao nhiêu, thiệt hại được định nghĩa thế nào?","id":"e-89ec6e30b4c356693ac9","layer":"crosslink","relation":"opens_question","source":"dat-egress","target":"F30"}
+{"id":"e-8a00089c44a622932f8d","layer":"containment","relation":"contains","source":"sup-builder","target":"build-secret"}
+{"condition":"Retry, tool recursion, memory growth và budget exhaustion có stop condition nào ngoài model?","id":"e-8b64406f13f9ab86e69b","layer":"crosslink","relation":"opens_question","source":"api-retry","target":"F32"}
+{"id":"e-8b7e1799b103129d0225","layer":"containment","relation":"contains","source":"containers","target":"k8s-identity"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-8bc74b147e3563ec51d3","layer":"process_navigation","relation":"enables_next","source":"J01.7","target":"J01.8"}
+{"id":"e-8bd410cffd650537eb7b","layer":"containment","relation":"contains","source":"J06","target":"J06.4"}
+{"id":"e-8bea4dfe38454bdb7cfd","layer":"containment","relation":"contains","source":"root","target":"detection"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-8caea13b7be166a3c8ff","layer":"process_navigation","relation":"enables_next","source":"J04.7","target":"J04.8"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-8cee4d41cecd60c338e2","layer":"process_navigation","relation":"enables_next","source":"J07.6","target":"J07.7"}
+{"condition":"Ai có thể collude, output vẫn tiết lộ gì, và protocol bảo vệ khâu nào?","id":"e-8e24cd3937bebf716d4a","layer":"crosslink","relation":"opens_question","source":"dat-class","target":"F18"}
+{"id":"e-8ec5f2ad2da5959a2c51","layer":"containment","relation":"contains","source":"human","target":"F25"}
+{"id":"e-8ece1d8773c19fa82541","layer":"containment","relation":"contains","source":"endpoint","target":"end-health"}
+{"id":"e-8ef35d301fcf5d41ff96","layer":"containment","relation":"contains","source":"J08","target":"J08.1"}
+{"id":"e-902611652567c144ecaf","layer":"containment","relation":"contains","source":"agents","target":"F31"}
+{"condition":"Khoảng không có sensor phải được báo unknown, không tính zero exposure.","id":"e-907aa08835955e662538","layer":"crosslink","provenance":"analyst_proposed","relation":"depends_on","source":"vul-exposure","target":"tel-coverage"}
+{"id":"e-91d26d6f4fd577b8d62f","layer":"containment","relation":"contains","source":"data","target":"F17"}
+{"id":"e-923720666ed8b9069fa4","layer":"containment","relation":"contains","source":"J03","target":"J03.4"}
+{"condition":"Migration cần biết mọi consumer và protocol bị ảnh hưởng.","id":"e-925962a70a2d942ab188","layer":"crosslink","provenance":"analyst_proposed","relation":"requires","source":"cry-agility","target":"inv-dependency"}
+{"condition":"Recovery tạo binding mới nên không được quên mức đảm bảo cần thiết.","id":"e-93261e0f6bf05455fb24","layer":"crosslink","provenance":"analyst_proposed","relation":"constrains","source":"id-proof","target":"id-recovery"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-933f72f9ca7ca9576e24","layer":"process_navigation","relation":"enables_next","source":"J02.3","target":"J02.4"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-9406730d39960b4f69d7","layer":"process_navigation","relation":"enables_next","source":"J01.3","target":"J01.4"}
+{"condition":"Actor/resource sai phá correlation dù rule đúng.","id":"e-9498ee79eb56ee33b1b6","layer":"crosslink","provenance":"analyst_proposed","relation":"enables","source":"tel-schema","target":"det-behavior"}
+{"id":"e-95670f25a0d6f8a1cd24","layer":"containment","relation":"contains","source":"supply","target":"J03"}
+{"id":"e-95ce4d22bef4a89d8daa","layer":"containment","relation":"contains","source":"J01","target":"J01.3"}
+{"id":"e-962d5441c5121d0be3b9","layer":"containment","relation":"contains","source":"ses-revoke","target":"revoke-cache"}
+{"id":"e-96b904e440bda9aa5bdd","layer":"containment","relation":"contains","source":"ai-tool","target":"action-approval"}
+{"condition":"Retention và legal hold cần được hòa giải với mục tiêu điều tra theo luật áp dụng.","id":"e-96e07ba2260172c795e1","layer":"crosslink","provenance":"analyst_proposed","relation":"conditions","source":"ir-evidence","target":"dat-retention"}
+{"id":"e-977a33a48197ce4dfd13","layer":"containment","relation":"contains","source":"J02","target":"J02.5"}
+{"condition":"Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.","id":"e-986ae3b6260a3240b224","layer":"crosslink","relation":"uses_mechanism","source":"J04","target":"rec-consistency"}
+{"id":"e-989848721c8c377fccc5","layer":"containment","relation":"contains","source":"endpoint","target":"end-execution"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-98e6e5bd8bac040991ee","layer":"process_navigation","relation":"enables_next","source":"J07.1","target":"J07.2"}
+{"id":"e-9920c5c1a1230241d3c1","layer":"containment","relation":"contains","source":"detection","target":"F21"}
+{"id":"e-998e23d7a667908f3e1f","layer":"containment","relation":"contains","source":"tenant-job","target":"tenant-snapshot"}
+{"condition":"Quyền hiệu lực phụ thuộc kết hợp policy và đường cấp quyền.","id":"e-9a59ecdc67631ce9ecd5","layer":"crosslink","provenance":"analyst_proposed","relation":"same_failure_pattern","source":"auth-policy","target":"cld-policy"}
+{"condition":"Trạng thái sau approval có thể khác trạng thái khi thực thi.","id":"e-9aa2c2d45d4eba7c7e14","layer":"crosslink","provenance":"analyst_proposed","relation":"same_failure_pattern","source":"auth-race","target":"ai-tool"}
+{"id":"e-9af5fe33bb6476245971","layer":"containment","relation":"contains","source":"human","target":"hum-offboard"}
+{"condition":"Script ngoài ý định có thể hành động bằng phiên người dùng dù cookie khó đọc.","id":"e-9b3acb6fa38a74ab3ca7","layer":"crosslink","provenance":"analyst_proposed","relation":"can_affect","source":"web-xss","target":"ses-concurrency"}
+{"condition":"Integrity sau ghi không chứng minh event ban đầu là sự thật.","id":"e-9c4306b43b0ef7525bd2","layer":"crosslink","provenance":"analyst_proposed","relation":"does_not_imply","source":"cry-integrity","target":"tel-integrity"}
+{"id":"e-9cadb35882bcdd01f69b","layer":"containment","relation":"contains","source":"network","target":"F05"}
+{"id":"e-9cb0b3a371344c968436","layer":"containment","relation":"contains","source":"root","target":"governance"}
+{"condition":"Giữ quy trình trong envelope an toàn khi gặp sai lệch số, với quyết định do chuyên gia vận hành xác nhận.","id":"e-9cf9b370185d802030fe","layer":"crosslink","relation":"uses_mechanism","source":"J08","target":"ir-contain"}
+{"condition":"Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.","id":"e-9e3a8bbe0f075eefd827","layer":"crosslink","relation":"uses_mechanism","source":"J03","target":"sw-release"}
+{"condition":"Chống phishing lúc login không giải quyết mọi phiên bị lộ sau đó.","id":"e-9e3c3a5b86fc0eb72f13","layer":"crosslink","provenance":"analyst_proposed","relation":"does_not_imply","source":"id-mfa","target":"ses-revoke"}
+{"id":"e-9e5f47580e099a119562","layer":"containment","relation":"contains","source":"J08","target":"J08.6"}
+{"condition":"Ưu tiên sửa cần hậu quả ở đúng hệ và cửa sổ thời gian.","id":"e-9e9e761b2d87a85e7270","layer":"crosslink","provenance":"analyst_proposed","relation":"informs","source":"gov-loss","target":"vul-context"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-a155446fd8894f9d79a3","layer":"process_navigation","relation":"enables_next","source":"J06.1","target":"J06.2"}
+{"id":"e-a2cfa49fa93bd47f556c","layer":"containment","relation":"contains","source":"web","target":"web-parser"}
+{"id":"e-a39f0ce857f07e455a0f","layer":"containment","relation":"contains","source":"data","target":"dat-class"}
+{"id":"e-a6020df58eb4def14fb1","layer":"containment","relation":"contains","source":"telemetry","target":"tel-integrity"}
+{"id":"e-a6846bbcc15c9d3bd53d","layer":"containment","relation":"contains","source":"root","target":"identity"}
+{"id":"e-a72d7fe07367815296b0","layer":"containment","relation":"contains","source":"sup-deploy","target":"verify-root"}
+{"id":"e-a78b4fabd4fed02fe629","layer":"containment","relation":"contains","source":"root","target":"cloud"}
+{"id":"e-a8815adaef0b916daab0","layer":"containment","relation":"contains","source":"governance","target":"F23"}
+{"id":"e-a8a37885b60faba004b0","layer":"containment","relation":"contains","source":"detection","target":"F20"}
+{"condition":"Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.","id":"e-a8fb9b40690166feb608","layer":"crosslink","relation":"uses_mechanism","source":"J07","target":"gov-loss"}
+{"id":"e-a9378dba159da285a98e","layer":"containment","relation":"contains","source":"J03","target":"J03.1"}
+{"id":"e-a9b2dde4116ad61ef4e7","layer":"containment","relation":"contains","source":"J06","target":"J06.5"}
+{"condition":"Query hợp lệ có thể gây chi phí không tuyến tính hoặc lấy trường vượt quyền thế nào?","id":"e-a9f916e5aa40188e74d3","layer":"crosslink","relation":"opens_question","source":"api-abuse","target":"F11"}
+{"id":"e-aa066a7468c6db84617a","layer":"containment","relation":"contains","source":"cloud","target":"cld-responsibility"}
+{"id":"e-ab51ddf9b0d19b18eb11","layer":"containment","relation":"contains","source":"J03","target":"J03.6"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-ac4aadb3a75c4bb7d444","layer":"process_navigation","relation":"enables_next","source":"J05.2","target":"J05.3"}
+{"condition":"Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.","id":"e-ac6847a7991dcf3af857","layer":"crosslink","relation":"uses_mechanism","source":"J07","target":"arch-blast"}
+{"id":"e-ad38bd48b79a379e0881","layer":"containment","relation":"contains","source":"detection","target":"det-queue"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-adaace65af56e682ebbc","layer":"process_navigation","relation":"enables_next","source":"J02.2","target":"J02.3"}
+{"condition":"Tự động ứng phó cần tránh retry gây hiệu ứng lặp ngoài ý định.","id":"e-ae109c3c75768670b8a5","layer":"crosslink","provenance":"analyst_proposed","relation":"conditions","source":"api-retry","target":"ir-contain"}
+{"condition":"Human review dày đặc có thể tạo queue và giảm chất lượng phê duyệt.","id":"e-b19fa6e6d1b750dbc82f","layer":"crosslink","provenance":"analyst_proposed","relation":"tradeoff","source":"ai-tool","target":"det-queue"}
+{"id":"e-b1b80da7bcf093c45cf5","layer":"containment","relation":"contains","source":"J06","target":"J06.1"}
+{"condition":"Email từ domain xác thực không chứng minh yêu cầu chuyển tiền hợp lệ.","id":"e-b2dd24395f362e4d6965","layer":"crosslink","provenance":"analyst_proposed","relation":"does_not_imply","source":"msg-domain","target":"msg-payment"}
+{"id":"e-b35f4b6486491bf17500","layer":"containment","relation":"contains","source":"J02","target":"J02.4"}
+{"condition":"Sensor không hoạt động phải tạo tín hiệu thiếu quan sát.","id":"e-b4477bda5a5b1a3d69c4","layer":"crosslink","provenance":"analyst_proposed","relation":"depends_on","source":"end-health","target":"tel-coverage"}
+{"condition":"Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.","id":"e-b4d15367c10764ebce92","layer":"crosslink","relation":"uses_mechanism","source":"J02","target":"auth-policy"}
+{"condition":"Triage chậm và phản hồi kém có thể làm người dùng ngừng báo cáo.","id":"e-b4f3dca5d3f36b05b085","layer":"crosslink","provenance":"analyst_proposed","relation":"feedback","source":"det-queue","target":"hum-report"}
+{"condition":"Signer bị compromise làm thay đổi mức tin vào artifact đã ký.","id":"e-b5600041b7ab1c58f630","layer":"crosslink","provenance":"analyst_proposed","relation":"depends_on","source":"sup-deploy","target":"cry-key"}
+{"id":"e-b5bbbbc0eecdbb36a196","layer":"containment","relation":"contains","source":"authorization","target":"auth-policy"}
+{"id":"e-b685647f17bda6abde57","layer":"containment","relation":"contains","source":"J07","target":"J07.3"}
+{"condition":"Parser, converter, metadata và antivirus tạo những process con với quyền gì?","id":"e-b6dd007a01028734e70f","layer":"crosslink","relation":"opens_question","source":"web-parser","target":"F10"}
+{"id":"e-b714011d79ef61b9a3d3","layer":"containment","relation":"contains","source":"J01","target":"J01.4"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-b7c0ebf3eb8b0fab96fa","layer":"process_navigation","relation":"enables_next","source":"J06.2","target":"J06.3"}
+{"condition":"Safety case, vòng đời hỗ trợ và authority update thay đổi tiêu chí triển khai ra sao?","id":"e-b868f8464d47f390092d","layer":"crosslink","relation":"opens_question","source":"ot-safety","target":"F28"}
+{"condition":"Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.","id":"e-b8d91aee4d1bf82b8b7d","layer":"crosslink","relation":"uses_mechanism","source":"J05","target":"det-queue"}
+{"condition":"Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.","id":"e-b91079988fe4b4e840ca","layer":"crosslink","relation":"uses_mechanism","source":"J07","target":"vul-context"}
+{"condition":"Các dataset riêng không nhạy cảm có thể kết hợp để suy ra điều gì, với đối thủ nào?","id":"e-b92bf9ff9a8a2e4dc170","layer":"crosslink","relation":"opens_question","source":"dat-class","target":"F16"}
+{"id":"e-b9a506f6465efd6f25fa","layer":"containment","relation":"contains","source":"api","target":"api-state"}
+{"condition":"Dataset, checkpoint và evaluation provenance khác binary provenance ở chỗ nào?","id":"e-ba238cff780dbb1cb8cf","layer":"crosslink","relation":"opens_question","source":"sup-dependency","target":"F15"}
+{"id":"e-ba76068e96a7ed6939e9","layer":"containment","relation":"contains","source":"J07","target":"J07.7"}
+{"id":"e-ba87aae2a4a2b2ceac22","layer":"containment","relation":"contains","source":"architecture","target":"arch-failure"}
+{"id":"e-badef863a6601fe2aafe","layer":"containment","relation":"contains","source":"action-approval","target":"action-toctou"}
+{"condition":"Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.","id":"e-bb0a9e41679ca6ddcdac","layer":"crosslink","relation":"uses_mechanism","source":"J03","target":"sup-dependency"}
+{"condition":"RTO đầu cuối phụ thuộc các dịch vụ nền, không chỉ database.","id":"e-bbdf552329ed30df9d34","layer":"crosslink","provenance":"analyst_proposed","relation":"conditions","source":"inv-dependency","target":"rec-objective"}
+{"id":"e-bc2d7d19f0b682b4d93d","layer":"containment","relation":"contains","source":"J08","target":"J08.4"}
+{"condition":"Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.","id":"e-bcdaaa01f72ed068688e","layer":"crosslink","relation":"uses_mechanism","source":"J07","target":"vul-fix"}
+{"id":"e-bd8a4bd8a26bbce3d402","layer":"containment","relation":"contains","source":"J01","target":"J01.7"}
+{"id":"e-be0242bd494a9d233220","layer":"containment","relation":"contains","source":"J06","target":"J06.8"}
+{"condition":"Khôi phục phải giữ invariant nghiệp vụ chứ không chỉ bảng dữ liệu.","id":"e-bed0532a78ef8a5b514e","layer":"crosslink","provenance":"analyst_proposed","relation":"requires","source":"api-state","target":"rec-consistency"}
+{"condition":"Backup trên cùng identity/provider có thể cùng failure domain.","id":"e-beefd4e227ecd89da42e","layer":"crosslink","provenance":"analyst_proposed","relation":"depends_on","source":"rec-backup","target":"tp-concentration"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-c018df9d51103e4cfa35","layer":"process_navigation","relation":"enables_next","source":"J06.6","target":"J06.7"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-c0dc7be2a85cd478ad85","layer":"process_navigation","relation":"enables_next","source":"J07.2","target":"J07.3"}
+{"id":"e-c15f2720b6bfb2adf301","layer":"containment","relation":"contains","source":"agents","target":"F32"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-c353811536be7d419696","layer":"process_navigation","relation":"enables_next","source":"J05.3","target":"J05.4"}
+{"id":"e-c40dab4d4cc0a210d086","layer":"containment","relation":"contains","source":"J07","target":"J07.5"}
+{"id":"e-c42bde5faa1d1fc3ae12","layer":"containment","relation":"contains","source":"revoke-cache","target":"revoke-race"}
+{"id":"e-c45f887272e267a57aac","layer":"containment","relation":"contains","source":"network","target":"F04"}
+{"condition":"Log quá nhiều để quan sát có thể tự tạo kênh rò dữ liệu.","id":"e-c460abe0fd2d984f7fd5","layer":"crosslink","provenance":"analyst_proposed","relation":"tradeoff","source":"dat-egress","target":"tel-schema"}
+{"condition":"Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.","id":"e-c60aa05d5b852adb3980","layer":"crosslink","relation":"uses_mechanism","source":"J04","target":"tp-concentration"}
+{"id":"e-c6a1f732b6faeeebb532","layer":"containment","relation":"contains","source":"J02","target":"J02.8"}
+{"condition":"Backup mã hóa chỉ dùng được khi khôi phục đúng khóa.","id":"e-c6afafaf348dd903bf08","layer":"crosslink","provenance":"analyst_proposed","relation":"depends_for_recovery","source":"cry-key","target":"rec-backup"}
+{"condition":"Authority có được cộng dồn sai khi output agent này làm input agent khác không?","id":"e-c6b613a3fa4ecbab4eea","layer":"crosslink","relation":"opens_question","source":"ai-tool","target":"F31"}
+{"id":"e-c767562f0c8532d73407","layer":"containment","relation":"contains","source":"containers","target":"F14"}
+{"id":"e-c82b3643135ca1492edf","layer":"containment","relation":"contains","source":"root","target":"containers"}
+{"id":"e-c84798b1e941a2037443","layer":"containment","relation":"contains","source":"J03","target":"J03.5"}
+{"condition":"Identity, telemetry và residual state được theo dõi thế nào khi vòng đời ngắn hơn scan cadence?","id":"e-c8aeaa6719e07c81eecd","layer":"crosslink","relation":"opens_question","source":"cld-drift","target":"F13"}
+{"id":"e-cb71a03200eabb261460","layer":"containment","relation":"contains","source":"tenant-job","target":"tenant-delivery"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-cc5b6d3d82318f72c317","layer":"process_navigation","relation":"enables_next","source":"J01.6","target":"J01.7"}
+{"id":"e-ccd7bac4f3793d7e55b7","layer":"containment","relation":"contains","source":"rec-consistency","target":"restore-external"}
+{"condition":"Phân biệt training poisoning, retrieval poisoning và memory poisoning bằng cơ chế/observable nào?","id":"e-ccf44386fed4e220afb1","layer":"crosslink","relation":"opens_question","source":"ai-memory","target":"F29"}
+{"id":"e-ce3bf471df4f175bb214","layer":"containment","relation":"contains","source":"root","target":"crypto"}
+{"id":"e-ce6450855e285048c231","layer":"containment","relation":"contains","source":"authorization","target":"auth-object"}
+{"id":"e-cf29a113f22a0c6dfe1f","layer":"containment","relation":"contains","source":"ses-revoke","target":"revoke-fanout"}
+{"id":"e-cfd78ca37dd2a443fc68","layer":"containment","relation":"contains","source":"ot","target":"ot-remote"}
+{"id":"e-d052f3a5d3c07af8db2e","layer":"containment","relation":"contains","source":"J06","target":"J06.6"}
+{"id":"e-d126c01c87f023a5b9b7","layer":"containment","relation":"contains","source":"root","target":"agents"}
+{"id":"e-d13e78446bf5dd743619","layer":"containment","relation":"contains","source":"data","target":"dat-egress"}
+{"id":"e-d1d2b636493c7281aa4c","layer":"containment","relation":"contains","source":"api","target":"api-abuse"}
+{"id":"e-d217862b66ebb18dab91","layer":"containment","relation":"contains","source":"J06","target":"J06.3"}
+{"id":"e-d34c45bf184a57788a9d","layer":"containment","relation":"contains","source":"governance","target":"gov-loss"}
+{"id":"e-d42419442751b4d60552","layer":"containment","relation":"contains","source":"architecture","target":"arch-boundary"}
+{"id":"e-d46320834741e81aa255","layer":"containment","relation":"contains","source":"endpoint","target":"F08"}
+{"id":"e-d4d6f7d40e6515acdb79","layer":"containment","relation":"contains","source":"root","target":"network"}
+{"condition":"Trust bundle và identity federation làm tăng hay giảm blast radius khi một control plane bị chiếm?","id":"e-d5c26ecf0f5a63a12fc2","layer":"crosslink","relation":"opens_question","source":"k8s-identity","target":"F14"}
+{"condition":"Phát hiện chỉ tạo giá trị khi thông tin đủ cho quyết định và hành động.","id":"e-d8a6d284dfffb61d7a98","layer":"crosslink","provenance":"analyst_proposed","relation":"feeds","source":"det-behavior","target":"ir-contain"}
+{"condition":"Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.","id":"e-d8d87dafb361f59b3e00","layer":"crosslink","relation":"uses_mechanism","source":"J03","target":"cry-key"}
+{"id":"e-d8e7fe0f1f5dfe6a3151","layer":"containment","relation":"contains","source":"network","target":"net-dos"}
+{"id":"e-d924ab8a61dfbc8e871b","layer":"containment","relation":"contains","source":"J02","target":"J02.7"}
+{"condition":"Inventory dữ liệu bí mật dài hạn và protocol hybrid cần cách đo migration/compatibility nào?","id":"e-d982f3aa752b0aad4527","layer":"crosslink","relation":"opens_question","source":"cry-agility","target":"F03"}
+{"id":"e-dc12ccc6736c83924eb6","layer":"containment","relation":"contains","source":"web","target":"F10"}
+{"condition":"Restore không được vô tình hồi sinh dữ liệu cần xóa ngoài ngoại lệ áp dụng.","id":"e-dcb5a6b918c94a2ef2e8","layer":"crosslink","provenance":"analyst_proposed","relation":"conditions","source":"dat-retention","target":"rec-consistency"}
+{"id":"e-dccea17477b916045eaa","layer":"containment","relation":"contains","source":"thirdparty","target":"tp-concentration"}
+{"id":"e-dda48a8517853047b3e9","layer":"containment","relation":"contains","source":"inventory","target":"inv-lifecycle"}
+{"condition":"Giữ quy trình trong envelope an toàn khi gặp sai lệch số, với quyết định do chuyên gia vận hành xác nhận.","id":"e-de67503fae116443f893","layer":"crosslink","relation":"uses_mechanism","source":"J08","target":"net-segment"}
+{"id":"e-dec09ee701f741546f80","layer":"containment","relation":"contains","source":"J04","target":"J04.6"}
+{"id":"e-df155e706909af5211fb","layer":"containment","relation":"contains","source":"revoke-cache","target":"revoke-version"}
+{"id":"e-df6e63d6a16f165e66eb","layer":"containment","relation":"contains","source":"response","target":"ir-learn"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-df73af89745a55927caf","layer":"process_navigation","relation":"enables_next","source":"J08.6","target":"J08.7"}
+{"id":"e-df78dd2192aabf07f546","layer":"containment","relation":"contains","source":"root","target":"inventory"}
+{"condition":"Abuse case nghiệp vụ sinh invariant và test transition.","id":"e-e0affda957e629964374","layer":"crosslink","provenance":"analyst_proposed","relation":"generates","source":"sw-design","target":"api-state"}
+{"id":"e-e0da4c7286a6b0adcc51","layer":"containment","relation":"contains","source":"crypto","target":"cry-integrity"}
+{"condition":"Chuỗi tin cậy từ boot tới runtime đứt ở đâu khi một thành phần firmware bị sửa?","id":"e-e1af5616b8b2837c3d51","layer":"crosslink","relation":"opens_question","source":"end-execution","target":"F07"}
+{"condition":"Một chủ thể bị thu hồi không còn thực hiện hành động thuộc scope sau bound được chấp thuận.","id":"e-e23feb180520bb8ef81d","layer":"crosslink","relation":"uses_mechanism","source":"J01","target":"hum-offboard"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-e28220006ccc74df73d3","layer":"process_navigation","relation":"enables_next","source":"J08.7","target":"J08.8"}
+{"id":"e-e2fc04b6c00b4555db40","layer":"containment","relation":"contains","source":"software","target":"sw-testing"}
+{"id":"e-e37512fef79a56ec4fb9","layer":"containment","relation":"contains","source":"J07","target":"J07.1"}
+{"id":"e-e543e84b4c26f1458086","layer":"containment","relation":"contains","source":"J05","target":"J05.2"}
+{"condition":"Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.","id":"e-e7ab7ce66151b4bd1eb6","layer":"crosslink","relation":"uses_mechanism","source":"J02","target":"api-state"}
+{"id":"e-e8e19e15c6f438cc9f26","layer":"containment","relation":"contains","source":"ot","target":"ot-safety"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-e99bba7e15d87c70e881","layer":"process_navigation","relation":"enables_next","source":"J02.1","target":"J02.2"}
+{"id":"e-e9b175e8388deeae35fd","layer":"containment","relation":"contains","source":"recovery","target":"rec-backup"}
+{"id":"e-ea87fd5211da91a4d5c3","layer":"containment","relation":"contains","source":"thirdparty","target":"tp-scope"}
+{"condition":"Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.","id":"e-eb3965a8c8357420d1bc","layer":"crosslink","relation":"uses_mechanism","source":"J06","target":"auth-race"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-eba8ac893742b569c3b0","layer":"process_navigation","relation":"enables_next","source":"J05.5","target":"J05.6"}
+{"id":"e-ec3be1cf7cb108992b1b","layer":"containment","relation":"contains","source":"response","target":"F22"}
+{"condition":"Policy cluster là một lớp phân vùng có giới hạn plugin và traffic.","id":"e-ec88e32e266363f02866","layer":"crosslink","provenance":"analyst_proposed","relation":"specializes","source":"k8s-network","target":"net-segment"}
+{"id":"e-ec94dd6b35132d583d60","layer":"containment","relation":"contains","source":"root","target":"vulnerability"}
+{"id":"e-eda02b65b264cc36ae99","layer":"containment","relation":"contains","source":"session","target":"ses-revoke"}
+{"id":"e-ee56ace2d3581f0d8bb1","layer":"containment","relation":"contains","source":"data","target":"dat-retention"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-eff7d326c594e82bd7d2","layer":"process_navigation","relation":"enables_next","source":"J05.4","target":"J05.5"}
+{"condition":"Quyền điều khiển nguồn phân phối có thể đổi đích tải phần mềm.","id":"e-f07433355ab0fcb3ad79","layer":"crosslink","provenance":"analyst_proposed","relation":"conditions","source":"msg-dns","target":"sup-dependency"}
+{"id":"e-f0f168659a7f55422f5d","layer":"containment","relation":"contains","source":"vulnerability","target":"F19"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-f126245afd840b36603b","layer":"process_navigation","relation":"enables_next","source":"J01.1","target":"J01.2"}
+{"condition":"Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.","id":"e-f171b04cf5c2e4840bae","layer":"crosslink","relation":"uses_mechanism","source":"J05","target":"ir-contain"}
+{"id":"e-f1bf66159e81db8c9c0e","layer":"containment","relation":"contains","source":"ot","target":"ot-legacy"}
+{"id":"e-f43ccda4baf4f6ffe52d","layer":"containment","relation":"contains","source":"api","target":"F11"}
+{"condition":"Fuzz/sanitizer cần corpus và regression riêng cho lỗi lifetime.","id":"e-f4ec8774cf2eb97a5750","layer":"crosslink","provenance":"analyst_proposed","relation":"informs","source":"end-memory","target":"sw-testing"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-f519553acb39c1b626d9","layer":"process_navigation","relation":"enables_next","source":"J04.1","target":"J04.2"}
+{"id":"e-f58555e5a2d3e9c10c66","layer":"containment","relation":"contains","source":"governance","target":"F24"}
+{"id":"e-f6169bfa79b9fec99966","layer":"containment","relation":"contains","source":"ot","target":"F28"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-f617460907eceaa3253a","layer":"process_navigation","relation":"enables_next","source":"J04.5","target":"J04.6"}
+{"id":"e-f6bf6ba0122c8e11b798","layer":"containment","relation":"contains","source":"J05","target":"J05.7"}
+{"id":"e-f737d01c9292f25ffe38","layer":"containment","relation":"contains","source":"api","target":"api-retry"}
+{"condition":"Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.","id":"e-f8b2dedbc01576c3538d","layer":"crosslink","relation":"uses_mechanism","source":"J07","target":"vul-exposure"}
+{"id":"e-f92c6628f2e95477825a","layer":"containment","relation":"contains","source":"action-approval","target":"action-digest"}
+{"id":"e-f9923eafb1bd3f1d6c37","layer":"containment","relation":"contains","source":"software","target":"sw-release"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-f9a30d9d0a126dd7ec47","layer":"process_navigation","relation":"enables_next","source":"J07.5","target":"J07.6"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-fa8a859b5c3d8a93c7da","layer":"process_navigation","relation":"enables_next","source":"J03.5","target":"J03.6"}
+{"condition":"Đối thủ quan sát timing/power/cache trong mô hình truy cập nào, và control có tác dụng ở lớp nào?","id":"e-faeba75ca2e5ea82d6cb","layer":"crosslink","relation":"opens_question","source":"cry-integrity","target":"F01"}
+{"id":"e-fb9db7eccf50aa71cb61","layer":"containment","relation":"contains","source":"J03","target":"J03.7"}
+{"condition":"Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.","id":"e-fce1b3b6565d311c892c","layer":"crosslink","relation":"uses_mechanism","source":"J04","target":"arch-blast"}
+{"condition":"Cắt đường tiếp cận hỗ trợ thiết bị khó vá; không sửa lỗi nội tại.","id":"e-fd12980d47e0eb5eeac2","layer":"crosslink","provenance":"analyst_proposed","relation":"compensates_conditionally","source":"net-segment","target":"ot-legacy"}
+{"condition":"Chỉ tiếp khi trạng thái trước có bằng chứng phù hợp; nếu không giữ unresolved.","id":"e-fd75bdae19e61f9ef9fa","layer":"process_navigation","relation":"enables_next","source":"J03.2","target":"J03.3"}
+{"id":"e-fe1f70494a53421e897e","layer":"containment","relation":"contains","source":"authorization","target":"auth-race"}
+{"id":"e-fe5bd3cd73952aeb0483","layer":"containment","relation":"contains","source":"endpoint","target":"F06"}
+{"id":"e-fe7711630420e12363c0","layer":"containment","relation":"contains","source":"authorization","target":"J02"}
+{"condition":"Credential workload có lifecycle và custody riêng.","id":"e-feac9e1ca490e915e863","layer":"crosslink","provenance":"analyst_proposed","relation":"requires","source":"k8s-identity","target":"cry-key"}

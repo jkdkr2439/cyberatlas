@@ -1,0 +1,18 @@
+{
+  "id": "F18",
+  "title": "Multiparty Computation and Federated Learning",
+  "type": "frontier",
+  "parent": "data",
+  "domain": "data",
+  "status": "OPEN",
+  "question": "Ai có thể collude, output vẫn tiết lộ gì, và protocol bảo vệ khâu nào?",
+  "related": "dat-class",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Vòng đời dataset; data owner",
+  "aliases": [
+    "MPC và federated learning"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

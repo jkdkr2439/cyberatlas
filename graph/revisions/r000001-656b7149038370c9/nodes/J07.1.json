@@ -1,0 +1,15 @@
+{
+  "id": "J07.1",
+  "title": "Finding gắn đúng asset",
+  "type": "step",
+  "parent": "J07",
+  "domain": "vulnerability",
+  "journey": "J07",
+  "order": 1,
+  "process": "IP tái sử dụng hoặc container đã biến mất có thể làm nhầm host. Gắn stable ID và thời điểm quan sát.",
+  "observable": "Asset ID, image/version, scan timestamp, confidence.",
+  "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context.",
+  "goal": "Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

@@ -1,0 +1,12 @@
+{
+  "revision": "r000002-fc8033e2e4fc67f3",
+  "parent_revision": "r000001-656b7149038370c9",
+  "reason": "User requested English node names. Preserve IDs, relationships and analytical content; retain previous labels as search aliases. Source references sanitized for standalone repository.",
+  "counts": {
+    "valid": true,
+    "nodes": 233,
+    "edges": 432,
+    "metrics": 8,
+    "observations": 0
+  }
+}

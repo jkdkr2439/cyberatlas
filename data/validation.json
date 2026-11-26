@@ -1,0 +1,7 @@
+{
+  "checks_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "status": "pass",
+  "scope": "Artifact integrity and synthetic metric logic only; no production security validation."
+}

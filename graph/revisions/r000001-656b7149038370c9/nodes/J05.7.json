@@ -1,0 +1,15 @@
+{
+  "id": "J05.7",
+  "title": "Hành động được kiểm hiệu lực",
+  "type": "step",
+  "parent": "J05",
+  "domain": "telemetry",
+  "journey": "J05",
+  "order": 7,
+  "process": "Actuator success receipt không đảm bảo kết nối bị cắt hay quyền bị thu hồi.",
+  "observable": "Read-back/probe từ đường độc lập và residual paths.",
+  "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ.",
+  "goal": "Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

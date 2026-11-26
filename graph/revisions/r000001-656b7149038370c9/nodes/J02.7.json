@@ -1,0 +1,15 @@
+{
+  "id": "J02.7",
+  "title": "Output được kiểm theo người nhận",
+  "type": "step",
+  "parent": "J02",
+  "domain": "authorization",
+  "journey": "J02",
+  "order": 7,
+  "process": "Link tải, email, object storage export có vòng đời riêng; kiểm người nhận và hết hạn, không chỉ bước tạo report.",
+  "observable": "Export ACL, signed-link policy, destination và thời điểm dùng.",
+  "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền.",
+  "goal": "Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

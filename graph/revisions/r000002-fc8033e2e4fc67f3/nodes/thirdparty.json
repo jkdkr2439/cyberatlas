@@ -1,0 +1,29 @@
+{
+  "id": "thirdparty",
+  "title": "Third Parties and Concentration Risk",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Quan hệ ngoài tổ chức; procurement và service owner",
+  "goal": "Authority, dữ liệu và khả năng phục hồi không mất kiểm soát",
+  "variables": "Subprocessor; outage chung; remote support; exit cost",
+  "resources": "Hợp đồng; test; quyền xuất dữ liệu; nguồn thay thế",
+  "book_part": 5,
+  "book_anchor": {
+    "id": "B5510",
+    "line": 5510,
+    "level": 2,
+    "title": "Phần 05 — Ontology rủi ro: Threat, Vulnerability, Likelihood, Impact, Risk",
+    "end_line": 6625
+  },
+  "source_refs": [
+    "csf"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Quan hệ ngoài tổ chức; procurement và service owner",
+  "aliases": [
+    "Nhà cung cấp và rủi ro tập trung"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

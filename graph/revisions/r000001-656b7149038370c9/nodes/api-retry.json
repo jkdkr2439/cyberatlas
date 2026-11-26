@@ -1,0 +1,63 @@
+{
+  "id": "api-retry",
+  "title": "Retry và idempotency",
+  "condition": "Mạng timeout rồi client gửi lại",
+  "input": "Operation ID, body và principal",
+  "process": "Deduplicate nguyên tử theo đúng scope",
+  "output": "Một hiệu ứng nghiệp vụ cho một ý định",
+  "data": "Idempotency record và kết quả gốc",
+  "invariant": "Cùng key khác nội dung phải có cách xử lý rõ",
+  "failure": "Retry nhân đôi thanh toán hoặc key dùng xuyên tenant",
+  "control": "Atomic uniqueness, body binding, TTL đủ dài",
+  "measure": "Hiệu ứng thừa / nhóm retry trong test",
+  "test": "Gửi đồng thời và mô phỏng crash sau commit trước response",
+  "tradeoff": "Giữ record lâu tốn storage và dữ liệu",
+  "open": "Exactly-once ở đâu chỉ là giả định của ứng dụng?",
+  "type": "mechanism",
+  "parent": "api",
+  "domain": "api",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "API đồng bộ/bất đồng bộ; product team; Mạng timeout rồi client gửi lại",
+  "goal": "Giao dịch giữ đúng quyền, thứ tự và giới hạn",
+  "variables": "Retry; concurrency; tenant; giá; số lượng",
+  "resources": "Transaction store; rate budget; test nghiệp vụ",
+  "book_anchor": {
+    "id": "B3534",
+    "line": 3534,
+    "level": 2,
+    "title": "Phần 04 — Phân loại lỗi bảo mật bằng hai trục IPOD và hằng/biến",
+    "end_line": 5509
+  },
+  "source_refs": [
+    "book",
+    "api"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Exactly-once ở đâu chỉ là giả định của ứng dụng? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Hiệu ứng thừa / nhóm retry trong test",
+    "domain": "API đồng bộ/bất đồng bộ; product team; Mạng timeout rồi client gửi lại",
+    "conditions": "Mạng timeout rồi client gửi lại",
+    "goal": "Giao dịch giữ đúng quyền, thứ tự và giới hạn",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Idempotency record và kết quả gốc; bằng chứng test: Gửi đồng thời và mô phỏng crash sau commit trước response",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Giữ record lâu tốn storage và dữ liệu; Exactly-once ở đâu chỉ là giả định của ứng dụng?",
+    "binding": "api-retry → điểm thực thi: Deduplicate nguyên tử theo đúng scope"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Một hiệu ứng nghiệp vụ cho một ý định / Retry nhân đôi thanh toán hoặc key dùng xuyên tenant",
+    "domain": "Chốt population và giới hạn: API đồng bộ/bất đồng bộ; product team; Mạng timeout rồi client gửi lại",
+    "mechanism": "Control có giữ invariant này không? Cùng key khác nội dung phải có cách xử lý rõ",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Gửi đồng thời và mô phỏng crash sau commit trước response",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Transaction store; rate budget; test nghiệp vụ; Retry; concurrency; tenant; giá; số lượng",
+    "consequence": "Đạt Giao dịch giữ đúng quyền, thứ tự và giới hạn nhưng phải theo dõi Giữ record lâu tốn storage và dữ liệu"
+  }
+}

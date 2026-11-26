@@ -1,0 +1,42 @@
+{
+  "id": "J05",
+  "title": "From Events to Verified Response",
+  "cards": [
+    "tel-coverage",
+    "tel-schema",
+    "tel-integrity",
+    "det-base",
+    "det-behavior",
+    "det-queue",
+    "ir-contain"
+  ],
+  "goal": "Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.",
+  "boundary": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ.",
+  "branches": [
+    "Thu mọi log: thêm quan sát nhưng tăng chi phí, rò dữ liệu và triage.",
+    "Thu chọn lọc: nhẹ hơn nhưng phải ghi lớp hành vi không còn quan sát.",
+    "OPEN: không có nhãn FN production thì không công bố recall production."
+  ],
+  "reopen": "Đổi schema, sensor, traffic mix, attack behavior, rule version hoặc nhân sự trực.",
+  "type": "journey",
+  "parent": "telemetry",
+  "domain": "telemetry",
+  "status": "analyst_process_model",
+  "provenance": "analyst_expansion",
+  "steps": [
+    "J05.1",
+    "J05.2",
+    "J05.3",
+    "J05.4",
+    "J05.5",
+    "J05.6",
+    "J05.7",
+    "J05.8"
+  ],
+  "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ.",
+  "aliases": [
+    "Từ sự kiện đến phản ứng: nơi dashboard dễ nói dối"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

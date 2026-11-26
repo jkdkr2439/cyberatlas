@@ -1,0 +1,63 @@
+{
+  "id": "hum-report",
+  "title": "Khả năng báo cáo sai sót",
+  "condition": "Người dùng gặp nghi ngờ hoặc lỡ thao tác",
+  "input": "Report của người dùng và bối cảnh",
+  "process": "Tiếp nhận không đổ lỗi, hướng dẫn và triage",
+  "output": "Thông tin đến người có thể xử lý",
+  "data": "Report timeline và feedback",
+  "invariant": "Không báo không chứng minh không có sự kiện",
+  "failure": "Phạt người báo khiến sự cố bị giấu",
+  "control": "Kênh đơn giản, phản hồi hữu ích và diễn tập",
+  "measure": "Thời gian từ nhận biết đến báo trong diễn tập; không suy ra production",
+  "test": "Thử báo cáo ngoài giờ và kiểm phản hồi",
+  "tradeoff": "Thu nhiều report tăng tải triage",
+  "open": "Người yếu thế/contractor có kênh an toàn tương đương?",
+  "type": "mechanism",
+  "parent": "human",
+  "domain": "human",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities; Người dùng gặp nghi ngờ hoặc lỡ thao tác",
+  "goal": "Quy trình có thể dùng an toàn trong áp lực thực tế",
+  "variables": "Mệt mỏi; động cơ; accessibility; contractor; offboarding",
+  "resources": "Đào tạo theo vai; hỗ trợ; kiểm soát ra vào",
+  "book_anchor": {
+    "id": "B470",
+    "line": 470,
+    "level": 2,
+    "title": "Phần 02 — Cơ chế gốc: hằng và biến trong bảo mật",
+    "end_line": 1603
+  },
+  "source_refs": [
+    "book",
+    "csf"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Người yếu thế/contractor có kênh an toàn tương đương? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Thời gian từ nhận biết đến báo trong diễn tập; không suy ra production",
+    "domain": "Nhân viên, khách, thiết bị; HR/IT/facilities; Người dùng gặp nghi ngờ hoặc lỡ thao tác",
+    "conditions": "Người dùng gặp nghi ngờ hoặc lỡ thao tác",
+    "goal": "Quy trình có thể dùng an toàn trong áp lực thực tế",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Report timeline và feedback; bằng chứng test: Thử báo cáo ngoài giờ và kiểm phản hồi",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Thu nhiều report tăng tải triage; Người yếu thế/contractor có kênh an toàn tương đương?",
+    "binding": "hum-report → điểm thực thi: Tiếp nhận không đổ lỗi, hướng dẫn và triage"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Thông tin đến người có thể xử lý / Phạt người báo khiến sự cố bị giấu",
+    "domain": "Chốt population và giới hạn: Nhân viên, khách, thiết bị; HR/IT/facilities; Người dùng gặp nghi ngờ hoặc lỡ thao tác",
+    "mechanism": "Control có giữ invariant này không? Không báo không chứng minh không có sự kiện",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Thử báo cáo ngoài giờ và kiểm phản hồi",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Đào tạo theo vai; hỗ trợ; kiểm soát ra vào; Mệt mỏi; động cơ; accessibility; contractor; offboarding",
+    "consequence": "Đạt Quy trình có thể dùng an toàn trong áp lực thực tế nhưng phải theo dõi Thu nhiều report tăng tải triage"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "ai-memory",
+  "title": "Memory, retrieval và feedback",
+  "condition": "Agent lưu thông tin qua nhiều lượt",
+  "input": "Documents, previous outputs và reviewer feedback",
+  "process": "Ghi provenance, version và mức kiểm chứng",
+  "output": "Memory không nâng suy đoán thành sự thật",
+  "data": "Memory lineage và sửa/xóa",
+  "invariant": "Lặp lại một claim không phải nguồn độc lập mới",
+  "failure": "Hallucination được lưu rồi tự viện dẫn",
+  "control": "Typed memory, source-linked retrieval và correction path",
+  "measure": "Claim quyết định không truy nguồn / claim được audit",
+  "test": "Gieo một memory sai có nhãn uncertain; kiểm có bị nâng cấp",
+  "tradeoff": "Giữ nhiều provenance tốn token/storage và riêng tư",
+  "open": "Quy tắc quên, hết hạn và sửa ký ức xung đột ra sao?",
+  "type": "mechanism",
+  "parent": "agents",
+  "domain": "agents",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Ứng dụng LLM và automation; AI/platform owner; Agent lưu thông tin qua nhiều lượt",
+  "goal": "Nội dung không đáng tin không được nâng thành authority",
+  "variables": "Prompt; retrieval; memory; tool; chi phí; model change",
+  "resources": "Policy ngoài model; sandbox; review; provenance",
+  "book_anchor": {
+    "id": "B10086",
+    "line": 10086,
+    "level": 2,
+    "title": "Phần 09 — Agent ontology: từ chatbot đến hệ vận hành",
+    "end_line": 11374
+  },
+  "source_refs": [
+    "book",
+    "llm"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Quy tắc quên, hết hạn và sửa ký ức xung đột ra sao? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Claim quyết định không truy nguồn / claim được audit",
+    "domain": "Ứng dụng LLM và automation; AI/platform owner; Agent lưu thông tin qua nhiều lượt",
+    "conditions": "Agent lưu thông tin qua nhiều lượt",
+    "goal": "Nội dung không đáng tin không được nâng thành authority",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Memory lineage và sửa/xóa; bằng chứng test: Gieo một memory sai có nhãn uncertain; kiểm có bị nâng cấp",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Giữ nhiều provenance tốn token/storage và riêng tư; Quy tắc quên, hết hạn và sửa ký ức xung đột ra sao?",
+    "binding": "ai-memory → điểm thực thi: Ghi provenance, version và mức kiểm chứng"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Memory không nâng suy đoán thành sự thật / Hallucination được lưu rồi tự viện dẫn",
+    "domain": "Chốt population và giới hạn: Ứng dụng LLM và automation; AI/platform owner; Agent lưu thông tin qua nhiều lượt",
+    "mechanism": "Control có giữ invariant này không? Lặp lại một claim không phải nguồn độc lập mới",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Gieo một memory sai có nhãn uncertain; kiểm có bị nâng cấp",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Policy ngoài model; sandbox; review; provenance; Prompt; retrieval; memory; tool; chi phí; model change",
+    "consequence": "Đạt Nội dung không đáng tin không được nâng thành authority nhưng phải theo dõi Giữ nhiều provenance tốn token/storage và riêng tư"
+  }
+}

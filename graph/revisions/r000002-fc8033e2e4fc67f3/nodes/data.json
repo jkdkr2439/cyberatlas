@@ -1,0 +1,29 @@
+{
+  "id": "data",
+  "title": "Data, Privacy, and Retention",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Vòng đời dataset; data owner",
+  "goal": "Dùng đúng loại dữ liệu, mục đích và thời hạn",
+  "variables": "Bản sao; cache; log; lineage; miền pháp lý",
+  "resources": "Catalog; redaction; xóa; khôi phục; pháp chế",
+  "book_part": 8,
+  "book_anchor": {
+    "id": "B8536",
+    "line": 8536,
+    "level": 2,
+    "title": "Phần 08 — Data ontology cho agent bảo mật",
+    "end_line": 10085
+  },
+  "source_refs": [
+    "csf"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Vòng đời dataset; data owner",
+  "aliases": [
+    "Dữ liệu, riêng tư và lưu giữ"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

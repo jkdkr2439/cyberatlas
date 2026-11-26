@@ -1,0 +1,13 @@
+{
+  "id": "F13",
+  "title": "Serverless và ephemeral workloads",
+  "type": "frontier",
+  "parent": "cloud",
+  "domain": "cloud",
+  "status": "OPEN",
+  "question": "Identity, telemetry và residual state được theo dõi thế nào khi vòng đời ngắn hơn scan cadence?",
+  "related": "cld-drift",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Account/project và dịch vụ cloud; platform"
+}

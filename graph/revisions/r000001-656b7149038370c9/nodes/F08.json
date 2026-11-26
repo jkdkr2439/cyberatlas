@@ -1,0 +1,13 @@
+{
+  "id": "F08",
+  "title": "Malware analysis và reverse engineering",
+  "type": "frontier",
+  "parent": "endpoint",
+  "domain": "endpoint",
+  "status": "OPEN",
+  "question": "Sandbox quan sát được hành vi nào, và hành vi né môi trường làm giới hạn kết luận ra sao?",
+  "related": "det-behavior",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Máy trạm, server; endpoint team"
+}

@@ -1,0 +1,17 @@
+{
+  "domains": 26,
+  "mechanism_cards": 102,
+  "journeys": 8,
+  "process_steps": 64,
+  "base_mechanism_cards": 78,
+  "recursive_refinements": 24,
+  "frontiers": 32,
+  "concept_nodes_including_root": 233,
+  "atlas_edges": 432,
+  "authored_mechanism_crosslinks": 62,
+  "metric_sketches": 102,
+  "detailed_metric_contracts": 8,
+  "io_phenomena": 276,
+  "conditional_io_edges": 166,
+  "book_headings_indexed": 502
+}

@@ -1,0 +1,63 @@
+{
+  "id": "web-injection",
+  "title": "Dữ liệu thành lệnh",
+  "condition": "Input đi vào interpreter",
+  "input": "Giá trị từ user hoặc upstream",
+  "process": "Tách cú pháp lệnh khỏi tham số dữ liệu",
+  "output": "Truy vấn/thao tác giữ ý định chương trình",
+  "data": "Query template và validation result",
+  "invariant": "Kiểm tra chuỗi không thay thế ranh giới code-data",
+  "failure": "Concatenation vào SQL, shell hoặc template",
+  "control": "Parameterized API; tránh interpreter khi không cần",
+  "measure": "Sink dùng ranh giới code-data được kiểm chứng / sink đã inventory",
+  "test": "Đổi dữ liệu đầu vào; cấu trúc lệnh phải không đổi",
+  "tradeoff": "API an toàn vẫn có giới hạn cho identifier động",
+  "open": "Second-order input từ DB có đi lại vào sink?",
+  "type": "mechanism",
+  "parent": "web",
+  "domain": "web",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Parser và trình duyệt; AppSec; Input đi vào interpreter",
+  "goal": "Dữ liệu không chuyển thành lệnh ngoài ý định",
+  "variables": "Encoding; context; proxy; framework; phiên bản",
+  "resources": "Secure API; code review; kiểm thử ngữ cảnh",
+  "book_anchor": {
+    "id": "B1604",
+    "line": 1604,
+    "level": 2,
+    "title": "Phần 03 — IPOD của bảo mật: Input, Process, Output, Data",
+    "end_line": 3533
+  },
+  "source_refs": [
+    "book",
+    "asvs"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Second-order input từ DB có đi lại vào sink? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Sink dùng ranh giới code-data được kiểm chứng / sink đã inventory",
+    "domain": "Parser và trình duyệt; AppSec; Input đi vào interpreter",
+    "conditions": "Input đi vào interpreter",
+    "goal": "Dữ liệu không chuyển thành lệnh ngoài ý định",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Query template và validation result; bằng chứng test: Đổi dữ liệu đầu vào; cấu trúc lệnh phải không đổi",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "API an toàn vẫn có giới hạn cho identifier động; Second-order input từ DB có đi lại vào sink?",
+    "binding": "web-injection → điểm thực thi: Tách cú pháp lệnh khỏi tham số dữ liệu"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Truy vấn/thao tác giữ ý định chương trình / Concatenation vào SQL, shell hoặc template",
+    "domain": "Chốt population và giới hạn: Parser và trình duyệt; AppSec; Input đi vào interpreter",
+    "mechanism": "Control có giữ invariant này không? Kiểm tra chuỗi không thay thế ranh giới code-data",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Đổi dữ liệu đầu vào; cấu trúc lệnh phải không đổi",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Secure API; code review; kiểm thử ngữ cảnh; Encoding; context; proxy; framework; phiên bản",
+    "consequence": "Đạt Dữ liệu không chuyển thành lệnh ngoài ý định nhưng phải theo dõi API an toàn vẫn có giới hạn cho identifier động"
+  }
+}

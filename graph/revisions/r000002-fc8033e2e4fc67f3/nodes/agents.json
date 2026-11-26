@@ -1,0 +1,29 @@
+{
+  "id": "agents",
+  "title": "AI Models and Tool-Using Agents",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Ứng dụng LLM và automation; AI/platform owner",
+  "goal": "Nội dung không đáng tin không được nâng thành authority",
+  "variables": "Prompt; retrieval; memory; tool; chi phí; model change",
+  "resources": "Policy ngoài model; sandbox; review; provenance",
+  "book_part": 9,
+  "book_anchor": {
+    "id": "B10086",
+    "line": 10086,
+    "level": 2,
+    "title": "Phần 09 — Agent ontology: từ chatbot đến hệ vận hành",
+    "end_line": 11374
+  },
+  "source_refs": [
+    "llm"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Ứng dụng LLM và automation; AI/platform owner",
+  "aliases": [
+    "AI, mô hình và agent có công cụ"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

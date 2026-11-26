@@ -1,0 +1,13 @@
+{
+  "id": "F06",
+  "title": "Mobile và browser extension",
+  "type": "frontier",
+  "parent": "endpoint",
+  "domain": "endpoint",
+  "status": "OPEN",
+  "question": "Permission thực tế, sandbox, SDK và đường export dữ liệu trên từng platform là gì?",
+  "related": "end-execution",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Máy trạm, server; endpoint team"
+}

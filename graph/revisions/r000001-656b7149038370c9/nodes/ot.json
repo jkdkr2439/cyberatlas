@@ -1,0 +1,24 @@
+{
+  "id": "ot",
+  "title": "OT, IoT và an toàn vật lý",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Thiết bị và quy trình vật lý; kỹ sư vận hành",
+  "goal": "An toàn con người và tiến trình trong điều kiện tấn công/lỗi",
+  "variables": "Chu kỳ điều khiển; tuổi thiết bị; vendor; maintenance window",
+  "resources": "Kỹ sư safety; lab; spare parts; vận hành tại chỗ",
+  "book_part": 1,
+  "book_anchor": {
+    "id": "B30",
+    "line": 30,
+    "level": 2,
+    "title": "Phần 01 — ONTOLOGY CỦA BẢO MẬT",
+    "end_line": 469
+  },
+  "source_refs": [
+    "ot"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Thiết bị và quy trình vật lý; kỹ sư vận hành"
+}

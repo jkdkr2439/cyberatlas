@@ -1,0 +1,20 @@
+{
+  "id": "J02.8",
+  "title": "Retain Evidence Linking Actors to Actions",
+  "type": "step",
+  "parent": "J02",
+  "domain": "authorization",
+  "journey": "J02",
+  "order": 8,
+  "process": "Log chỉ ghi URL/status không đủ chứng minh boundary. Dùng negative cases và legitimate sharing cases; không suy recall từ log thiếu nhãn.",
+  "observable": "Ma trận action × tenant relation × object state × delivery path; kết quả và gaps.",
+  "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền.",
+  "goal": "Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Bằng chứng đủ nối hành động"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

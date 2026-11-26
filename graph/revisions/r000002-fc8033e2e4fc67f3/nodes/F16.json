@@ -1,0 +1,18 @@
+{
+  "id": "F16",
+  "title": "Privacy Inference and Re-Identification",
+  "type": "frontier",
+  "parent": "data",
+  "domain": "data",
+  "status": "OPEN",
+  "question": "Các dataset riêng không nhạy cảm có thể kết hợp để suy ra điều gì, với đối thủ nào?",
+  "related": "dat-class",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Vòng đời dataset; data owner",
+  "aliases": [
+    "Suy diễn riêng tư và tái định danh"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

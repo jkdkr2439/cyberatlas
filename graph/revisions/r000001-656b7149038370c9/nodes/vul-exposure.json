@@ -1,0 +1,63 @@
+{
+  "id": "vul-exposure",
+  "title": "Cửa sổ phơi nhiễm",
+  "condition": "Tài sản đổi trạng thái theo thời gian",
+  "input": "Vulnerability state và exposure intervals",
+  "process": "Ghép khoảng thời gian bằng asset identity",
+  "output": "Exposure duration theo đối tượng",
+  "data": "Timeline có gaps/unknowns",
+  "invariant": "Không quan sát không được tính thành an toàn",
+  "failure": "Scanner hàng tuần bỏ khoảng phơi nhiễm ngắn",
+  "control": "Event-based inventory bổ sung scan",
+  "measure": "Tổng giờ phơi nhiễm quan sát; unknown-hours báo riêng",
+  "test": "Ẩn một đoạn telemetry; metric phải tăng unknown",
+  "tradeoff": "Lấy mẫu dày tăng chi phí",
+  "open": "Khoảng trước lần phát hiện đầu được xử lý ra sao?",
+  "type": "mechanism",
+  "parent": "vulnerability",
+  "domain": "vulnerability",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Asset-vulnerability pair; VM team; Tài sản đổi trạng thái theo thời gian",
+  "goal": "Giảm đường gây hại có ý nghĩa trong scope",
+  "variables": "Reachability; exploitability; control; tuổi tồn tại",
+  "resources": "Scanner; inventory; change window; kiểm chứng sửa",
+  "book_anchor": {
+    "id": "B5510",
+    "line": 5510,
+    "level": 2,
+    "title": "Phần 05 — Ontology rủi ro: Threat, Vulnerability, Likelihood, Impact, Risk",
+    "end_line": 6625
+  },
+  "source_refs": [
+    "book",
+    "cvss"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Khoảng trước lần phát hiện đầu được xử lý ra sao? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Tổng giờ phơi nhiễm quan sát; unknown-hours báo riêng",
+    "domain": "Asset-vulnerability pair; VM team; Tài sản đổi trạng thái theo thời gian",
+    "conditions": "Tài sản đổi trạng thái theo thời gian",
+    "goal": "Giảm đường gây hại có ý nghĩa trong scope",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Timeline có gaps/unknowns; bằng chứng test: Ẩn một đoạn telemetry; metric phải tăng unknown",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Lấy mẫu dày tăng chi phí; Khoảng trước lần phát hiện đầu được xử lý ra sao?",
+    "binding": "vul-exposure → điểm thực thi: Ghép khoảng thời gian bằng asset identity"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Exposure duration theo đối tượng / Scanner hàng tuần bỏ khoảng phơi nhiễm ngắn",
+    "domain": "Chốt population và giới hạn: Asset-vulnerability pair; VM team; Tài sản đổi trạng thái theo thời gian",
+    "mechanism": "Control có giữ invariant này không? Không quan sát không được tính thành an toàn",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Ẩn một đoạn telemetry; metric phải tăng unknown",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Scanner; inventory; change window; kiểm chứng sửa; Reachability; exploitability; control; tuổi tồn tại",
+    "consequence": "Đạt Giảm đường gây hại có ý nghĩa trong scope nhưng phải theo dõi Lấy mẫu dày tăng chi phí"
+  }
+}

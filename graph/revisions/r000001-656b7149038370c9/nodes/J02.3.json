@@ -1,0 +1,15 @@
+{
+  "id": "J02.3",
+  "title": "Quyền read/write/share được xét",
+  "type": "step",
+  "parent": "J02",
+  "domain": "authorization",
+  "journey": "J02",
+  "order": 3,
+  "process": "Read permission không tự cấp export hoặc change-owner. Service account và admin support cần đường policy riêng.",
+  "observable": "Decision tuple actor,action,object,tenant,policy-version.",
+  "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền.",
+  "goal": "Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

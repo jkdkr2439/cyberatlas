@@ -1,0 +1,24 @@
+{
+  "id": "identity",
+  "title": "Danh tính và xác thực",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Con người và workload; IAM team",
+  "goal": "Gắn yêu cầu với đúng chủ thể trong mức bảo đảm đã chọn",
+  "variables": "Authenticator; mất thiết bị; federation; tài khoản máy",
+  "resources": "IdP; quy trình hỗ trợ; thiết bị; khả năng thu hồi",
+  "book_part": 6,
+  "book_anchor": {
+    "id": "B6626",
+    "line": 6626,
+    "level": 2,
+    "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+    "end_line": 7585
+  },
+  "source_refs": [
+    "identity"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Con người và workload; IAM team"
+}

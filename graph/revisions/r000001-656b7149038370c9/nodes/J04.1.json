@@ -1,0 +1,15 @@
+{
+  "id": "J04.1",
+  "title": "Dịch vụ trọng yếu được định nghĩa",
+  "type": "step",
+  "parent": "J04",
+  "domain": "architecture",
+  "journey": "J04",
+  "order": 1,
+  "process": "Tên app quá rộng; chọn giao dịch: đăng nhập, tìm đơn, thanh toán, xuất hóa đơn. Đặt RTO/RPO và điều kiện dữ liệu theo từng loại.",
+  "observable": "Business acceptance, owner và mốc bắt đầu đo.",
+  "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc.",
+  "goal": "Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

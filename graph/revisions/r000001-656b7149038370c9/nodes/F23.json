@@ -1,0 +1,13 @@
+{
+  "id": "F23",
+  "title": "Cyber insurance và economics",
+  "type": "frontier",
+  "parent": "governance",
+  "domain": "governance",
+  "status": "OPEN",
+  "question": "Hợp đồng chuyển loại tổn thất nào, còn incentive và correlated loss nào ở lại?",
+  "related": "gov-loss",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ"
+}

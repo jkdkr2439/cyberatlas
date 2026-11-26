@@ -1,0 +1,20 @@
+{
+  "id": "J06.3",
+  "title": "Treat Model Actions as Proposals",
+  "type": "step",
+  "parent": "J06",
+  "domain": "agents",
+  "journey": "J06",
+  "order": 3,
+  "process": "Model có thể bị nội dung dẫn lệch. Tool request phải được xem như input cần validate, không như quyết định đã được phê duyệt.",
+  "observable": "Proposed action và lý do gắn với user intent.",
+  "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất.",
+  "goal": "Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Đề xuất model là đề xuất"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

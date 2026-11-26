@@ -1,0 +1,69 @@
+{
+  "id": "tel-integrity",
+  "title": "Evidence Integrity",
+  "condition": "Nguồn bị đối thủ kiểm soát",
+  "input": "Log và metadata nguồn",
+  "process": "Truyền, bảo vệ lưu trữ và đối soát nguồn khác",
+  "output": "Bằng chứng có mức tin cậy nêu rõ",
+  "data": "Hash, access log và chain metadata",
+  "invariant": "Hash chứng minh dữ liệu không đổi sau mốc, không chứng minh sự thật ban đầu",
+  "failure": "Máy bị chiếm tự tạo log sai",
+  "control": "Remote logging và corroboration độc lập",
+  "measure": "Sự kiện trọng yếu có nguồn đối soát / sự kiện mẫu",
+  "test": "Thay log nguồn và xem có phát hiện chênh",
+  "tradeoff": "Nhiều nguồn có thể cùng phụ thuộc một clock/agent",
+  "open": "Độc lập của hai nguồn được kiểm tra ra sao?",
+  "type": "mechanism",
+  "parent": "telemetry",
+  "domain": "telemetry",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Pipeline sự kiện; detection engineering; Nguồn bị đối thủ kiểm soát",
+  "goal": "Không nhầm thiếu dữ liệu với không có sự kiện",
+  "variables": "Sampling; clock; drops; parser; retention",
+  "resources": "Collector; storage; schema; sức người điều tra",
+  "book_anchor": {
+    "id": "B8536",
+    "line": 8536,
+    "level": 2,
+    "title": "Phần 08 — Data ontology cho agent bảo mật",
+    "end_line": 10085
+  },
+  "source_refs": [
+    "book",
+    "ir",
+    "measure"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Độc lập của hai nguồn được kiểm tra ra sao? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Sự kiện trọng yếu có nguồn đối soát / sự kiện mẫu",
+    "domain": "Pipeline sự kiện; detection engineering; Nguồn bị đối thủ kiểm soát",
+    "conditions": "Nguồn bị đối thủ kiểm soát",
+    "goal": "Không nhầm thiếu dữ liệu với không có sự kiện",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Hash, access log và chain metadata; bằng chứng test: Thay log nguồn và xem có phát hiện chênh",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Nhiều nguồn có thể cùng phụ thuộc một clock/agent; Độc lập của hai nguồn được kiểm tra ra sao?",
+    "binding": "tel-integrity → điểm thực thi: Truyền, bảo vệ lưu trữ và đối soát nguồn khác"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Bằng chứng có mức tin cậy nêu rõ / Máy bị chiếm tự tạo log sai",
+    "domain": "Chốt population và giới hạn: Pipeline sự kiện; detection engineering; Nguồn bị đối thủ kiểm soát",
+    "mechanism": "Control có giữ invariant này không? Hash chứng minh dữ liệu không đổi sau mốc, không chứng minh sự thật ban đầu",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Thay log nguồn và xem có phát hiện chênh",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Collector; storage; schema; sức người điều tra; Sampling; clock; drops; parser; retention",
+    "consequence": "Đạt Không nhầm thiếu dữ liệu với không có sự kiện nhưng phải theo dõi Nhiều nguồn có thể cùng phụ thuộc một clock/agent"
+  },
+  "aliases": [
+    "Toàn vẹn bằng chứng"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

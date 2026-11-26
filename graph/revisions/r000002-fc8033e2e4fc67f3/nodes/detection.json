@@ -1,0 +1,30 @@
+{
+  "id": "detection",
+  "title": "Detection and Signal Investigation",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Tín hiệu đến quyết định; SOC",
+  "goal": "Nhận ra sự kiện cần xử lý với chi phí chấp nhận được",
+  "variables": "Base rate; adversary drift; queue; nhãn chưa đầy đủ",
+  "resources": "Analyst; rules; ground truth; diễn tập",
+  "book_part": 7,
+  "book_anchor": {
+    "id": "B7586",
+    "line": 7586,
+    "level": 2,
+    "title": "Phần 07 — MITRE ATT&CK: ontology của hành vi attacker",
+    "end_line": 8535
+  },
+  "source_refs": [
+    "attack",
+    "ir"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Tín hiệu đến quyết định; SOC",
+  "aliases": [
+    "Phát hiện và điều tra tín hiệu"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

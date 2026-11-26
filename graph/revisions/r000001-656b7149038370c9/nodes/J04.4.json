@@ -1,0 +1,15 @@
+{
+  "id": "J04.4",
+  "title": "Môi trường sạch có thể khởi động",
+  "type": "step",
+  "parent": "J04",
+  "domain": "architecture",
+  "journey": "J04",
+  "order": 4,
+  "process": "Recovery phải dùng identity, network và công cụ không phụ thuộc hoàn toàn vào hệ đã mất. Break-glass cần kiểm soát và diễn tập.",
+  "observable": "Clean-room prerequisites, custody và kết quả bootstrap.",
+  "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc.",
+  "goal": "Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "F05",
+  "title": "Interdomain Routing and BGP",
+  "type": "frontier",
+  "parent": "network",
+  "domain": "network",
+  "status": "OPEN",
+  "question": "Sai lệch route đến từ cấu hình, authority hay compromise; nguồn nào đủ độc lập để nhận biết?",
+  "related": "msg-dns",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Lưu lượng giữa dịch vụ; network team",
+  "aliases": [
+    "Định tuyến liên miền và BGP"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

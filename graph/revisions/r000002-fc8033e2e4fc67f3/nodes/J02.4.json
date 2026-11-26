@@ -1,0 +1,20 @@
+{
+  "id": "J02.4",
+  "title": "Preserve Preconditions through Commit",
+  "type": "step",
+  "parent": "J02",
+  "domain": "authorization",
+  "journey": "J02",
+  "order": 4,
+  "process": "Ownership có thể đổi sau check. Dùng atomic predicate hoặc version guard để precondition gắn với thay đổi.",
+  "observable": "State version trước/sau; kết quả race test có barrier.",
+  "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền.",
+  "goal": "Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Điều kiện được giữ tới commit"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

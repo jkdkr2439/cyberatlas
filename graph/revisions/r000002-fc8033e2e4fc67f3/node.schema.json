@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cybersecurity concept node v1",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "title",
+    "parent",
+    "status",
+    "provenance",
+    "frame"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "frame": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "enum": [
+        "root",
+        "domain",
+        "mechanism",
+        "journey",
+        "step",
+        "frontier"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "domain"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "goal",
+          "scope",
+          "variables",
+          "resources"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "mechanism"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "domain",
+          "condition",
+          "input",
+          "process",
+          "output",
+          "data",
+          "invariant",
+          "failure",
+          "control",
+          "measure",
+          "test",
+          "tradeoff",
+          "open",
+          "reopen",
+          "metric_sketch",
+          "source_refs",
+          "evidence_status"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "journey"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "goal",
+          "boundary",
+          "cards",
+          "steps",
+          "branches",
+          "reopen"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "step"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "journey",
+          "order",
+          "process",
+          "observable",
+          "goal"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "frontier"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "question",
+          "related",
+          "reopen"
+        ]
+      }
+    }
+  ]
+}

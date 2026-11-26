@@ -1,0 +1,63 @@
+{
+  "id": "cry-integrity",
+  "title": "Mã hóa và xác thực dữ liệu",
+  "condition": "Dữ liệu cần bí mật lẫn toàn vẹn",
+  "input": "Plaintext, key, nonce và context",
+  "process": "Dùng primitive được thẩm định đúng điều kiện",
+  "output": "Ciphertext và kiểm tra integrity",
+  "data": "Key/nonce metadata theo thiết kế",
+  "invariant": "Bí mật không tự suy ra toàn vẹn hay đúng người gửi",
+  "failure": "Nonce reuse hoặc bỏ kiểm tra tag",
+  "control": "Thư viện chuẩn; quản nonce; bind context",
+  "measure": "Vi phạm uniqueness nonce theo key / thao tác có kiểm kê",
+  "test": "Thử đổi ciphertext/context và yêu cầu từ chối",
+  "tradeoff": "Lưu metadata và xoay khóa có chi phí",
+  "open": "Randomness, restart và nhiều node có làm trùng nonce?",
+  "type": "mechanism",
+  "parent": "crypto",
+  "domain": "crypto",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Dữ liệu lưu và truyền; PKI/KMS owner; Dữ liệu cần bí mật lẫn toàn vẹn",
+  "goal": "Bí mật và toàn vẹn theo mô hình đối thủ cụ thể",
+  "variables": "Thuật toán; khóa; nonce; chứng thư; thời hạn bí mật",
+  "resources": "KMS/HSM; backup khóa; năng lực chuyển đổi",
+  "book_anchor": {
+    "id": "B8536",
+    "line": 8536,
+    "level": 2,
+    "title": "Phần 08 — Data ontology cho agent bảo mật",
+    "end_line": 10085
+  },
+  "source_refs": [
+    "book",
+    "asvs"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Randomness, restart và nhiều node có làm trùng nonce? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Vi phạm uniqueness nonce theo key / thao tác có kiểm kê",
+    "domain": "Dữ liệu lưu và truyền; PKI/KMS owner; Dữ liệu cần bí mật lẫn toàn vẹn",
+    "conditions": "Dữ liệu cần bí mật lẫn toàn vẹn",
+    "goal": "Bí mật và toàn vẹn theo mô hình đối thủ cụ thể",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Key/nonce metadata theo thiết kế; bằng chứng test: Thử đổi ciphertext/context và yêu cầu từ chối",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Lưu metadata và xoay khóa có chi phí; Randomness, restart và nhiều node có làm trùng nonce?",
+    "binding": "cry-integrity → điểm thực thi: Dùng primitive được thẩm định đúng điều kiện"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Ciphertext và kiểm tra integrity / Nonce reuse hoặc bỏ kiểm tra tag",
+    "domain": "Chốt population và giới hạn: Dữ liệu lưu và truyền; PKI/KMS owner; Dữ liệu cần bí mật lẫn toàn vẹn",
+    "mechanism": "Control có giữ invariant này không? Bí mật không tự suy ra toàn vẹn hay đúng người gửi",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Thử đổi ciphertext/context và yêu cầu từ chối",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? KMS/HSM; backup khóa; năng lực chuyển đổi; Thuật toán; khóa; nonce; chứng thư; thời hạn bí mật",
+    "consequence": "Đạt Bí mật và toàn vẹn theo mô hình đối thủ cụ thể nhưng phải theo dõi Lưu metadata và xoay khóa có chi phí"
+  }
+}

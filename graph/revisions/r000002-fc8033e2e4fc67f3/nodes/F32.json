@@ -1,0 +1,18 @@
+{
+  "id": "F32",
+  "title": "Costs, Stop Conditions, and Automated Loops",
+  "type": "frontier",
+  "parent": "agents",
+  "domain": "agents",
+  "status": "OPEN",
+  "question": "Retry, tool recursion, memory growth và budget exhaustion có stop condition nào ngoài model?",
+  "related": "api-retry",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Ứng dụng LLM và automation; AI/platform owner",
+  "aliases": [
+    "Chi phí, dừng và vòng lặp tự động"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

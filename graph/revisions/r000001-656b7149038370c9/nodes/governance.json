@@ -1,0 +1,25 @@
+{
+  "id": "governance",
+  "title": "Quản trị, trách nhiệm và quyết định",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ",
+  "goal": "Quyết định có người chịu trách nhiệm và có giới hạn",
+  "variables": "Khẩu vị rủi ro; quy mô; thời hạn; nghĩa vụ",
+  "resources": "Thẩm quyền; thời gian đánh giá; ngân sách sửa sai",
+  "book_part": 5,
+  "book_anchor": {
+    "id": "B5510",
+    "line": 5510,
+    "level": 2,
+    "title": "Phần 05 — Ontology rủi ro: Threat, Vulnerability, Likelihood, Impact, Risk",
+    "end_line": 6625
+  },
+  "source_refs": [
+    "csf",
+    "measure"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ"
+}

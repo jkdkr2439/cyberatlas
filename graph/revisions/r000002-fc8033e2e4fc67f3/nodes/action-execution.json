@@ -1,0 +1,68 @@
+{
+  "id": "action-execution",
+  "parent": "ai-tool",
+  "title": "Tool Execution Contracts",
+  "condition": "Gateway đã cho phép request",
+  "input": "Capability, tool args và resource budget",
+  "process": "Thực thi trong quyền/budget được cấp, kiểm trạng thái đích",
+  "output": "Hậu quả cụ thể hoặc lỗi có phân loại",
+  "data": "Execution ID, side effects và outcome",
+  "invariant": "Authorization không chứng minh execution đúng",
+  "failure": "Tool trả success nhưng tác động khác hoặc một phần",
+  "control": "Narrow executor, structured result và read-back",
+  "measure": "Outcome lệch intent / executions có verification",
+  "test": "Mock tool trả success nhưng không đổi state; phải detected",
+  "tradeoff": "Read-back có chi phí và eventual consistency",
+  "open": "Khi kết quả không đọc lại được thì mức bằng chứng là gì?",
+  "domain": "agents",
+  "goal": "Nội dung không đáng tin không được nâng thành authority",
+  "variables": "Prompt; retrieval; memory; tool; chi phí; model change",
+  "resources": "Policy ngoài model; sandbox; review; provenance",
+  "book_anchor": {
+    "id": "B10086",
+    "line": 10086,
+    "level": 2,
+    "title": "Phần 09 — Agent ontology: từ chatbot đến hệ vận hành",
+    "end_line": 11374
+  },
+  "source_refs": [
+    "book",
+    "llm"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "type": "mechanism",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_recursive_expansion",
+  "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request",
+  "reopen": "Khi kết quả không đọc lại được thì mức bằng chứng là gì?",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Outcome lệch intent / executions có verification",
+    "domain": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request",
+    "conditions": "Gateway đã cho phép request",
+    "goal": "Nội dung không đáng tin không được nâng thành authority",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Execution ID, side effects và outcome",
+    "method": "Mock tool trả success nhưng không đổi state; phải detected",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Read-back có chi phí và eventual consistency; Khi kết quả không đọc lại được thì mức bằng chứng là gì?",
+    "binding": "action-execution → Thực thi trong quyền/budget được cấp, kiểm trạng thái đích"
+  },
+  "six_regions": {
+    "meaning": "Authorization không chứng minh execution đúng",
+    "domain": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request",
+    "mechanism": "Thực thi trong quyền/budget được cấp, kiểm trạng thái đích; failure: Tool trả success nhưng tác động khác hoặc một phần",
+    "evidence": "Mock tool trả success nhưng không đổi state; phải detected",
+    "operational": "Policy ngoài model; sandbox; review; provenance; Read-back có chi phí và eventual consistency",
+    "consequence": "Nội dung không đáng tin không được nâng thành authority; Khi kết quả không đọc lại được thì mức bằng chứng là gì?"
+  },
+  "aliases": [
+    "Hợp đồng thực thi tool"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

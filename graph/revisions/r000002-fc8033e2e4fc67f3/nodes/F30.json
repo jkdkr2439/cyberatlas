@@ -1,0 +1,18 @@
+{
+  "id": "F30",
+  "title": "Model Extraction and Inference Leakage",
+  "type": "frontier",
+  "parent": "agents",
+  "domain": "agents",
+  "status": "OPEN",
+  "question": "Ai truy cập output gì, budget truy vấn bao nhiêu, thiệt hại được định nghĩa thế nào?",
+  "related": "dat-egress",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Ứng dụng LLM và automation; AI/platform owner",
+  "aliases": [
+    "Model extraction và inference leakage"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

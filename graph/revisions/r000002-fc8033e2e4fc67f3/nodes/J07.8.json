@@ -1,0 +1,20 @@
+{
+  "id": "J07.8",
+  "title": "Preserve Exposure History and Unknown Intervals",
+  "type": "step",
+  "parent": "J07",
+  "domain": "vulnerability",
+  "journey": "J07",
+  "order": 8,
+  "process": "Ghép các interval observed vulnerable/reachable; gaps là unknown, không nối mặc định thành an toàn.",
+  "observable": "Exposure-hours theo lớp quan trọng; unknown-hours và censoring.",
+  "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context.",
+  "goal": "Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Exposure window được giữ"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

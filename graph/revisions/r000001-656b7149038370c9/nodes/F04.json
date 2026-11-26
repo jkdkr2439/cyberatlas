@@ -1,0 +1,13 @@
+{
+  "id": "F04",
+  "title": "Wi-Fi, Bluetooth và mạng không dây",
+  "type": "frontier",
+  "parent": "network",
+  "domain": "network",
+  "status": "OPEN",
+  "question": "Trust boundary thay khi kênh truyền dùng chung môi trường vật lý ra sao?",
+  "related": "net-segment",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Lưu lượng giữa dịch vụ; network team"
+}

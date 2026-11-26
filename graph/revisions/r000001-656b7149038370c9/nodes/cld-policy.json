@@ -1,0 +1,63 @@
+{
+  "id": "cld-policy",
+  "title": "Authority control plane",
+  "condition": "Role có thể tạo/chỉnh tài nguyên",
+  "input": "Policy, role trust và resource access",
+  "process": "Tính quyền trực tiếp lẫn khả năng cấp quyền tiếp",
+  "output": "Tập thay đổi có thể thực hiện",
+  "data": "Role chain và audit control plane",
+  "invariant": "Quyền tạo role có thể quan trọng hơn quyền đọc data",
+  "failure": "Quyền tưởng nhỏ cho phép tự mở quyền lớn",
+  "control": "Tách quyền quản policy và dùng dữ liệu; test effective access",
+  "measure": "Đường tới quyền đặc biệt ngoài intent / đường đã mô hình hóa",
+  "test": "Kiểm tra cả role assumption và quyền sửa trust",
+  "tradeoff": "Policy cứng khó xử lý vận hành khẩn cấp",
+  "open": "Service-linked role và cross-account được xét ra sao?",
+  "type": "mechanism",
+  "parent": "cloud",
+  "domain": "cloud",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Account/project và dịch vụ cloud; platform; Role có thể tạo/chỉnh tài nguyên",
+  "goal": "Chỉ thay đổi tài nguyên bằng authority được kiểm soát",
+  "variables": "Shared responsibility; role chain; policy inheritance",
+  "resources": "Inventory đa account; audit log; sandbox test",
+  "book_anchor": {
+    "id": "B6626",
+    "line": 6626,
+    "level": 2,
+    "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+    "end_line": 7585
+  },
+  "source_refs": [
+    "book",
+    "zt"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Service-linked role và cross-account được xét ra sao? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Đường tới quyền đặc biệt ngoài intent / đường đã mô hình hóa",
+    "domain": "Account/project và dịch vụ cloud; platform; Role có thể tạo/chỉnh tài nguyên",
+    "conditions": "Role có thể tạo/chỉnh tài nguyên",
+    "goal": "Chỉ thay đổi tài nguyên bằng authority được kiểm soát",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Role chain và audit control plane; bằng chứng test: Kiểm tra cả role assumption và quyền sửa trust",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Policy cứng khó xử lý vận hành khẩn cấp; Service-linked role và cross-account được xét ra sao?",
+    "binding": "cld-policy → điểm thực thi: Tính quyền trực tiếp lẫn khả năng cấp quyền tiếp"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Tập thay đổi có thể thực hiện / Quyền tưởng nhỏ cho phép tự mở quyền lớn",
+    "domain": "Chốt population và giới hạn: Account/project và dịch vụ cloud; platform; Role có thể tạo/chỉnh tài nguyên",
+    "mechanism": "Control có giữ invariant này không? Quyền tạo role có thể quan trọng hơn quyền đọc data",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Kiểm tra cả role assumption và quyền sửa trust",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Inventory đa account; audit log; sandbox test; Shared responsibility; role chain; policy inheritance",
+    "consequence": "Đạt Chỉ thay đổi tài nguyên bằng authority được kiểm soát nhưng phải theo dõi Policy cứng khó xử lý vận hành khẩn cấp"
+  }
+}

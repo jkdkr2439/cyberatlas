@@ -1,0 +1,68 @@
+{
+  "id": "ses-concurrency",
+  "title": "Sessions, Logout, and Devices",
+  "condition": "Một người có nhiều phiên",
+  "input": "Logout, đổi mật khẩu, đăng nhập mới",
+  "process": "Áp chính sách hủy phiên theo thiết bị và rủi ro",
+  "output": "Tập phiên còn hợp lệ được giải thích",
+  "data": "Session inventory và lý do kết thúc",
+  "invariant": "Đóng giao diện không đồng nghĩa kết thúc phiên server",
+  "failure": "Cookie còn dùng được sau logout",
+  "control": "Hủy phiên phía server và kiểm tra replay an toàn",
+  "measure": "Phiên thuộc diện hủy còn dùng được / phiên đã thử",
+  "test": "Logout một thiết bị rồi kiểm tra chính sách trên thiết bị khác",
+  "tradeoff": "Hủy toàn bộ dễ gián đoạn công việc",
+  "open": "Khi nào cần step-up thay vì hủy phiên?",
+  "type": "mechanism",
+  "parent": "session",
+  "domain": "session",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Một người có nhiều phiên",
+  "goal": "Quyền không tồn tại vượt điều kiện được cấp",
+  "variables": "TTL; cache; offline; refresh token; nhiều vùng",
+  "resources": "Kho phiên; đồng hồ; kênh invalidation; telemetry",
+  "book_anchor": {
+    "id": "B6626",
+    "line": 6626,
+    "level": 2,
+    "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+    "end_line": 7585
+  },
+  "source_refs": [
+    "book",
+    "identity"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Khi nào cần step-up thay vì hủy phiên? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Phiên thuộc diện hủy còn dùng được / phiên đã thử",
+    "domain": "Ứng dụng sau đăng nhập; IAM và app owner; Một người có nhiều phiên",
+    "conditions": "Một người có nhiều phiên",
+    "goal": "Quyền không tồn tại vượt điều kiện được cấp",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Session inventory và lý do kết thúc; bằng chứng test: Logout một thiết bị rồi kiểm tra chính sách trên thiết bị khác",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Hủy toàn bộ dễ gián đoạn công việc; Khi nào cần step-up thay vì hủy phiên?",
+    "binding": "ses-concurrency → điểm thực thi: Áp chính sách hủy phiên theo thiết bị và rủi ro"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Tập phiên còn hợp lệ được giải thích / Cookie còn dùng được sau logout",
+    "domain": "Chốt population và giới hạn: Ứng dụng sau đăng nhập; IAM và app owner; Một người có nhiều phiên",
+    "mechanism": "Control có giữ invariant này không? Đóng giao diện không đồng nghĩa kết thúc phiên server",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Logout một thiết bị rồi kiểm tra chính sách trên thiết bị khác",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Kho phiên; đồng hồ; kênh invalidation; telemetry; TTL; cache; offline; refresh token; nhiều vùng",
+    "consequence": "Đạt Quyền không tồn tại vượt điều kiện được cấp nhưng phải theo dõi Hủy toàn bộ dễ gián đoạn công việc"
+  },
+  "aliases": [
+    "Phiên, logout và thiết bị"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

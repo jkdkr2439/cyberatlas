@@ -1,0 +1,15 @@
+{
+  "id": "J07.6",
+  "title": "Phương án sửa được so sánh",
+  "type": "step",
+  "parent": "J07",
+  "domain": "vulnerability",
+  "journey": "J07",
+  "order": 6,
+  "process": "Patch, isolate, disable feature, rotate key hoặc retire có thời gian và rủi ro vận hành khác nhau.",
+  "observable": "Cost, deadline, residual path và rollback option.",
+  "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context.",
+  "goal": "Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

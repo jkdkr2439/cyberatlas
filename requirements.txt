@@ -1,0 +1,2 @@
+# Runtime observed and tested locally: CPython 3.12.10
+jsonschema==4.23.0

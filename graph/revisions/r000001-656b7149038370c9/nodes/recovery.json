@@ -1,0 +1,24 @@
+{
+  "id": "recovery",
+  "title": "Khôi phục và khả năng tiếp tục",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Dịch vụ đầu cuối; business continuity",
+  "goal": "Phục hồi trạng thái kinh doanh chấp nhận được",
+  "variables": "RTO; RPO; dependency; corruption; identity outage",
+  "resources": "Backup; clean room; key custody; người kiểm tra",
+  "book_part": 5,
+  "book_anchor": {
+    "id": "B5510",
+    "line": 5510,
+    "level": 2,
+    "title": "Phần 05 — Ontology rủi ro: Threat, Vulnerability, Likelihood, Impact, Risk",
+    "end_line": 6625
+  },
+  "source_refs": [
+    "ir"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Dịch vụ đầu cuối; business continuity"
+}

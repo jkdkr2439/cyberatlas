@@ -1,0 +1,29 @@
+{
+  "id": "inventory",
+  "title": "Assets and Dependencies",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Hạ tầng và SaaS; chủ tài sản",
+  "goal": "Biết đối tượng nào cần bảo vệ và nó phụ thuộc gì",
+  "variables": "Tài sản ngắn hạn; shadow IT; mua bán doanh nghiệp",
+  "resources": "Đầu nối inventory; quyền đọc; người xác nhận owner",
+  "book_part": 1,
+  "book_anchor": {
+    "id": "B30",
+    "line": 30,
+    "level": 2,
+    "title": "Phần 01 — ONTOLOGY CỦA BẢO MẬT",
+    "end_line": 469
+  },
+  "source_refs": [
+    "csf"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Hạ tầng và SaaS; chủ tài sản",
+  "aliases": [
+    "Tài sản và phụ thuộc"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

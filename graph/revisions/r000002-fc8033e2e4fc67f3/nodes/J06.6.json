@@ -1,0 +1,20 @@
+{
+  "id": "J06.6",
+  "title": "Execute Tools within Resource Boundaries",
+  "type": "step",
+  "parent": "J06",
+  "domain": "agents",
+  "journey": "J06",
+  "order": 6,
+  "process": "Giới hạn filesystem, network, credentials, thời gian và budget theo tác vụ; sandbox không sửa được policy sai nhưng hạn chế phạm vi.",
+  "observable": "Effective capability, output scope, timeout/cost và denied operations.",
+  "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất.",
+  "goal": "Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Tool chạy trong resource boundary"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

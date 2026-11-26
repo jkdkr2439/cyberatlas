@@ -1,0 +1,63 @@
+{
+  "id": "revoke-race",
+  "parent": "revoke-cache",
+  "title": "Race giữa đọc quyền và ghi cache",
+  "condition": "Request đang chạy khi revoke commit",
+  "input": "Read cũ, revoke mới, cache write muộn",
+  "process": "Ràng write-back với version còn hiệu lực",
+  "output": "Cache không giữ allow đã lỗi thời",
+  "data": "Timeline read/check/write và version",
+  "invariant": "Kiểm freshness trước process chưa đủ cho write-back",
+  "failure": "Request đọc allow cũ rồi ghi đè deny mới",
+  "control": "Commit-time version guard",
+  "measure": "Write-back cũ được nhận / lịch race thử",
+  "test": "Dùng barrier ép thứ tự read-old → revoke → write-old",
+  "tradeoff": "Đồng bộ hóa tăng latency và contention",
+  "open": "Library cache có hỗ trợ conditional write không?",
+  "domain": "session",
+  "goal": "Quyền không tồn tại vượt điều kiện được cấp",
+  "variables": "TTL; cache; offline; refresh token; nhiều vùng",
+  "resources": "Kho phiên; đồng hồ; kênh invalidation; telemetry",
+  "book_anchor": {
+    "id": "B6626",
+    "line": 6626,
+    "level": 2,
+    "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+    "end_line": 7585
+  },
+  "source_refs": [
+    "book",
+    "identity"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "type": "mechanism",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_recursive_expansion",
+  "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; Request đang chạy khi revoke commit",
+  "reopen": "Library cache có hỗ trợ conditional write không?",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Write-back cũ được nhận / lịch race thử",
+    "domain": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; Request đang chạy khi revoke commit",
+    "conditions": "Request đang chạy khi revoke commit",
+    "goal": "Quyền không tồn tại vượt điều kiện được cấp",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Timeline read/check/write và version",
+    "method": "Dùng barrier ép thứ tự read-old → revoke → write-old",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Đồng bộ hóa tăng latency và contention; Library cache có hỗ trợ conditional write không?",
+    "binding": "revoke-race → Ràng write-back với version còn hiệu lực"
+  },
+  "six_regions": {
+    "meaning": "Kiểm freshness trước process chưa đủ cho write-back",
+    "domain": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; Request đang chạy khi revoke commit",
+    "mechanism": "Ràng write-back với version còn hiệu lực; failure: Request đọc allow cũ rồi ghi đè deny mới",
+    "evidence": "Dùng barrier ép thứ tự read-old → revoke → write-old",
+    "operational": "Kho phiên; đồng hồ; kênh invalidation; telemetry; Đồng bộ hóa tăng latency và contention",
+    "consequence": "Quyền không tồn tại vượt điều kiện được cấp; Library cache có hỗ trợ conditional write không?"
+  }
+}

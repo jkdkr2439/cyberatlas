@@ -1,0 +1,20 @@
+{
+  "id": "J04.8",
+  "title": "Feed Recovery Findings into Design",
+  "type": "step",
+  "parent": "J04",
+  "domain": "architecture",
+  "journey": "J04",
+  "order": 8,
+  "process": "Lưu bottleneck và chi phí, sửa dependency hoặc mục tiêu nếu không khả thi; lần sau kiểm lại đúng chỗ từng fail.",
+  "observable": "RTO/RPO deviation, missing dependencies, action owner và retest.",
+  "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc.",
+  "goal": "Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Recovery trở thành phản hồi thiết kế"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "web",
+  "title": "Web Applications and Input Interpretation",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Parser và trình duyệt; AppSec",
+  "goal": "Dữ liệu không chuyển thành lệnh ngoài ý định",
+  "variables": "Encoding; context; proxy; framework; phiên bản",
+  "resources": "Secure API; code review; kiểm thử ngữ cảnh",
+  "book_part": 3,
+  "book_anchor": {
+    "id": "B1604",
+    "line": 1604,
+    "level": 2,
+    "title": "Phần 03 — IPOD của bảo mật: Input, Process, Output, Data",
+    "end_line": 3533
+  },
+  "source_refs": [
+    "asvs"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Parser và trình duyệt; AppSec",
+  "aliases": [
+    "Ứng dụng web và diễn giải input"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

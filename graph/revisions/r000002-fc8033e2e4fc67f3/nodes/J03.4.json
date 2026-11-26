@@ -1,0 +1,20 @@
+{
+  "id": "J03.4",
+  "title": "Bind Artifacts to Their Build Process",
+  "type": "step",
+  "parent": "J03",
+  "domain": "supply",
+  "journey": "J03",
+  "order": 4,
+  "process": "Lưu provenance với subject digest và builder/source inputs theo khả năng hệ. Metadata tự khai từ runner bị chiếm có mức tin hạn chế.",
+  "observable": "Attestation identity và policy về builder được tin.",
+  "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng.",
+  "goal": "Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Artifact gắn với quá trình tạo"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

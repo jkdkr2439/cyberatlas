@@ -1,0 +1,30 @@
+{
+  "id": "telemetry",
+  "title": "Observability and Evidence Reliability",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Pipeline sự kiện; detection engineering",
+  "goal": "Không nhầm thiếu dữ liệu với không có sự kiện",
+  "variables": "Sampling; clock; drops; parser; retention",
+  "resources": "Collector; storage; schema; sức người điều tra",
+  "book_part": 8,
+  "book_anchor": {
+    "id": "B8536",
+    "line": 8536,
+    "level": 2,
+    "title": "Phần 08 — Data ontology cho agent bảo mật",
+    "end_line": 10085
+  },
+  "source_refs": [
+    "ir",
+    "measure"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Pipeline sự kiện; detection engineering",
+  "aliases": [
+    "Quan sát và độ tin cậy bằng chứng"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

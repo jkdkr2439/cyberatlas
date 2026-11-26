@@ -1,0 +1,68 @@
+{
+  "id": "hum-access",
+  "title": "Physical Access and Device Custody",
+  "condition": "Có khách, sửa chữa hoặc thiết bị thất lạc",
+  "input": "Visitor request, badge, device ID",
+  "process": "Xác nhận quyền và ghi chain custody",
+  "output": "Người/thiết bị đúng vùng",
+  "data": "Access/custody events",
+  "invariant": "Có badge không chứng minh đúng mục đích mọi vùng",
+  "failure": "Tailgating hoặc thiết bị rời tổ chức chưa wipe",
+  "control": "Escort theo risk, custody và remote lock phù hợp",
+  "measure": "Ngoại lệ custody chưa giải quyết / ngoại lệ phát sinh",
+  "test": "Diễn tập thất lạc thiết bị không chứa dữ liệu thật",
+  "tradeoff": "Giám sát vật lý tác động riêng tư và trải nghiệm",
+  "open": "Khả năng mở khóa khi khẩn cấp có conflict gì?",
+  "type": "mechanism",
+  "parent": "human",
+  "domain": "human",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities; Có khách, sửa chữa hoặc thiết bị thất lạc",
+  "goal": "Quy trình có thể dùng an toàn trong áp lực thực tế",
+  "variables": "Mệt mỏi; động cơ; accessibility; contractor; offboarding",
+  "resources": "Đào tạo theo vai; hỗ trợ; kiểm soát ra vào",
+  "book_anchor": {
+    "id": "B470",
+    "line": 470,
+    "level": 2,
+    "title": "Phần 02 — Cơ chế gốc: hằng và biến trong bảo mật",
+    "end_line": 1603
+  },
+  "source_refs": [
+    "book",
+    "csf"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Khả năng mở khóa khi khẩn cấp có conflict gì? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Ngoại lệ custody chưa giải quyết / ngoại lệ phát sinh",
+    "domain": "Nhân viên, khách, thiết bị; HR/IT/facilities; Có khách, sửa chữa hoặc thiết bị thất lạc",
+    "conditions": "Có khách, sửa chữa hoặc thiết bị thất lạc",
+    "goal": "Quy trình có thể dùng an toàn trong áp lực thực tế",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Access/custody events; bằng chứng test: Diễn tập thất lạc thiết bị không chứa dữ liệu thật",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Giám sát vật lý tác động riêng tư và trải nghiệm; Khả năng mở khóa khi khẩn cấp có conflict gì?",
+    "binding": "hum-access → điểm thực thi: Xác nhận quyền và ghi chain custody"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Người/thiết bị đúng vùng / Tailgating hoặc thiết bị rời tổ chức chưa wipe",
+    "domain": "Chốt population và giới hạn: Nhân viên, khách, thiết bị; HR/IT/facilities; Có khách, sửa chữa hoặc thiết bị thất lạc",
+    "mechanism": "Control có giữ invariant này không? Có badge không chứng minh đúng mục đích mọi vùng",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Diễn tập thất lạc thiết bị không chứa dữ liệu thật",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Đào tạo theo vai; hỗ trợ; kiểm soát ra vào; Mệt mỏi; động cơ; accessibility; contractor; offboarding",
+    "consequence": "Đạt Quy trình có thể dùng an toàn trong áp lực thực tế nhưng phải theo dõi Giám sát vật lý tác động riêng tư và trải nghiệm"
+  },
+  "aliases": [
+    "Ra vào và custody thiết bị"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

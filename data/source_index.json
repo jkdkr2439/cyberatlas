@@ -1,0 +1,3661 @@
+{
+  "book": "urn:cyber-atlas:source:book",
+  "sha256": "f5037432e708a0a2e84b7e2d123fb406f27aae81a3eb16a0eb3b028455ef197b",
+  "headings": [
+    {
+      "id": "B1",
+      "line": 1,
+      "level": 1,
+      "title": "HỆ MIỄN DỊCH CỦA THẾ GIỚI SỐ",
+      "end_line": 14983
+    },
+    {
+      "id": "B11",
+      "line": 11,
+      "level": 2,
+      "title": "Mục lục",
+      "end_line": 29
+    },
+    {
+      "id": "B30",
+      "line": 30,
+      "level": 2,
+      "title": "Phần 01 — ONTOLOGY CỦA BẢO MẬT",
+      "end_line": 469
+    },
+    {
+      "id": "B32",
+      "line": 32,
+      "level": 3,
+      "title": "Mở đầu — Trước khi làm AI agent bảo mật, phải hiểu bảo mật là gì",
+      "end_line": 75
+    },
+    {
+      "id": "B76",
+      "line": 76,
+      "level": 3,
+      "title": "I. Bảo mật là bảo mật cái gì?",
+      "end_line": 245
+    },
+    {
+      "id": "B78",
+      "line": 78,
+      "level": 4,
+      "title": "1. Bảo mật không phải là “chống hacker”",
+      "end_line": 107
+    },
+    {
+      "id": "B108",
+      "line": 108,
+      "level": 4,
+      "title": "2. Bảo mật cái gì?",
+      "end_line": 117
+    },
+    {
+      "id": "B118",
+      "line": 118,
+      "level": 4,
+      "title": "3. Bảo mật dữ liệu",
+      "end_line": 137
+    },
+    {
+      "id": "B138",
+      "line": 138,
+      "level": 4,
+      "title": "4. Bảo mật danh tính",
+      "end_line": 157
+    },
+    {
+      "id": "B158",
+      "line": 158,
+      "level": 4,
+      "title": "5. Bảo mật quyền lực",
+      "end_line": 179
+    },
+    {
+      "id": "B180",
+      "line": 180,
+      "level": 4,
+      "title": "6. Bảo mật hoạt động",
+      "end_line": 197
+    },
+    {
+      "id": "B198",
+      "line": 198,
+      "level": 4,
+      "title": "7. Bảo mật cấu hình",
+      "end_line": 217
+    },
+    {
+      "id": "B218",
+      "line": 218,
+      "level": 4,
+      "title": "8. Bảo mật log, evidence và khả năng quan sát",
+      "end_line": 233
+    },
+    {
+      "id": "B234",
+      "line": 234,
+      "level": 4,
+      "title": "9. Bảo mật niềm tin",
+      "end_line": 245
+    },
+    {
+      "id": "B246",
+      "line": 246,
+      "level": 3,
+      "title": "II. Bảo mật khỏi cái gì?",
+      "end_line": 469
+    },
+    {
+      "id": "B256",
+      "line": 256,
+      "level": 4,
+      "title": "1. Khỏi tác nhân bên ngoài",
+      "end_line": 269
+    },
+    {
+      "id": "B270",
+      "line": 270,
+      "level": 4,
+      "title": "2. Khỏi tác nhân bên trong",
+      "end_line": 285
+    },
+    {
+      "id": "B286",
+      "line": 286,
+      "level": 4,
+      "title": "3. Khỏi lỗi của chính hệ",
+      "end_line": 305
+    },
+    {
+      "id": "B306",
+      "line": 306,
+      "level": 4,
+      "title": "4. Khỏi lỗi thiết kế",
+      "end_line": 323
+    },
+    {
+      "id": "B324",
+      "line": 324,
+      "level": 4,
+      "title": "5. Khỏi lỗi từ hệ khác đi vào",
+      "end_line": 343
+    },
+    {
+      "id": "B344",
+      "line": 344,
+      "level": 4,
+      "title": "6. Khỏi môi trường thay đổi",
+      "end_line": 359
+    },
+    {
+      "id": "B360",
+      "line": 360,
+      "level": 4,
+      "title": "7. Trạng thái an toàn là gì?",
+      "end_line": 405
+    },
+    {
+      "id": "B406",
+      "line": 406,
+      "level": 4,
+      "title": "8. Công thức nền của Phần I",
+      "end_line": 427
+    },
+    {
+      "id": "B428",
+      "line": 428,
+      "level": 4,
+      "title": "9. Kết đoạn: vì sao phần này là nền cho agent?",
+      "end_line": 469
+    },
+    {
+      "id": "B470",
+      "line": 470,
+      "level": 2,
+      "title": "Phần 02 — Cơ chế gốc: hằng và biến trong bảo mật",
+      "end_line": 1603
+    },
+    {
+      "id": "B500",
+      "line": 500,
+      "level": 3,
+      "title": "I. Hằng là gì trong bảo mật?",
+      "end_line": 557
+    },
+    {
+      "id": "B558",
+      "line": 558,
+      "level": 3,
+      "title": "II. Hằng không chỉ là rule kỹ thuật",
+      "end_line": 829
+    },
+    {
+      "id": "B566",
+      "line": 566,
+      "level": 4,
+      "title": "1. Hằng nhận diện",
+      "end_line": 601
+    },
+    {
+      "id": "B602",
+      "line": 602,
+      "level": 4,
+      "title": "2. Hằng trạng thái an toàn",
+      "end_line": 639
+    },
+    {
+      "id": "B640",
+      "line": 640,
+      "level": 4,
+      "title": "3. Hằng quyền",
+      "end_line": 673
+    },
+    {
+      "id": "B674",
+      "line": 674,
+      "level": 4,
+      "title": "4. Hằng biên giới",
+      "end_line": 711
+    },
+    {
+      "id": "B712",
+      "line": 712,
+      "level": 4,
+      "title": "5. Hằng quan sát",
+      "end_line": 743
+    },
+    {
+      "id": "B744",
+      "line": 744,
+      "level": 4,
+      "title": "6. Hằng phục hồi",
+      "end_line": 775
+    },
+    {
+      "id": "B776",
+      "line": 776,
+      "level": 4,
+      "title": "7. Biến là gì trong bảo mật?",
+      "end_line": 829
+    },
+    {
+      "id": "B830",
+      "line": 830,
+      "level": 3,
+      "title": "III. Bốn trạng thái của input trước hằng/biến",
+      "end_line": 1029
+    },
+    {
+      "id": "B834",
+      "line": 834,
+      "level": 4,
+      "title": "1. Hằng rõ",
+      "end_line": 857
+    },
+    {
+      "id": "B858",
+      "line": 858,
+      "level": 4,
+      "title": "2. Hằng mờ",
+      "end_line": 885
+    },
+    {
+      "id": "B886",
+      "line": 886,
+      "level": 4,
+      "title": "3. Biến lạ",
+      "end_line": 927
+    },
+    {
+      "id": "B928",
+      "line": 928,
+      "level": 4,
+      "title": "4. Hằng giả",
+      "end_line": 959
+    },
+    {
+      "id": "B960",
+      "line": 960,
+      "level": 4,
+      "title": "5. Biến làm hệ lệch như thế nào?",
+      "end_line": 1029
+    },
+    {
+      "id": "B1030",
+      "line": 1030,
+      "level": 3,
+      "title": "IV. Cơ chế gốc của bảo mật: biến cái lạ thành cái xử lý được",
+      "end_line": 1381
+    },
+    {
+      "id": "B1042",
+      "line": 1042,
+      "level": 4,
+      "title": "1. Quy biến về hằng",
+      "end_line": 1063
+    },
+    {
+      "id": "B1064",
+      "line": 1064,
+      "level": 4,
+      "title": "2. Giới hạn biên độ biến",
+      "end_line": 1097
+    },
+    {
+      "id": "B1098",
+      "line": 1098,
+      "level": 4,
+      "title": "3. Cô lập biến",
+      "end_line": 1121
+    },
+    {
+      "id": "B1122",
+      "line": 1122,
+      "level": 4,
+      "title": "4. Phục hồi sau khi biến vượt ngưỡng",
+      "end_line": 1151
+    },
+    {
+      "id": "B1152",
+      "line": 1152,
+      "level": 4,
+      "title": "5. Công thức hằng/biến của bảo mật",
+      "end_line": 1173
+    },
+    {
+      "id": "B1174",
+      "line": 1174,
+      "level": 4,
+      "title": "6. Vì sao thiếu data làm sinh lỗi?",
+      "end_line": 1215
+    },
+    {
+      "id": "B1216",
+      "line": 1216,
+      "level": 4,
+      "title": "7. Biến, hằng giả và vòng lặp Data",
+      "end_line": 1253
+    },
+    {
+      "id": "B1254",
+      "line": 1254,
+      "level": 4,
+      "title": "8. Control là hằng chống biến",
+      "end_line": 1347
+    },
+    {
+      "id": "B1348",
+      "line": 1348,
+      "level": 4,
+      "title": "9. Defense in depth là nhiều hằng ở nhiều tầng",
+      "end_line": 1381
+    },
+    {
+      "id": "B1382",
+      "line": 1382,
+      "level": 3,
+      "title": "V. Khi biến lớn hơn hằng",
+      "end_line": 1431
+    },
+    {
+      "id": "B1388",
+      "line": 1388,
+      "level": 4,
+      "title": "1. Vượt nhận diện",
+      "end_line": 1393
+    },
+    {
+      "id": "B1394",
+      "line": 1394,
+      "level": 4,
+      "title": "2. Vượt quyền",
+      "end_line": 1399
+    },
+    {
+      "id": "B1400",
+      "line": 1400,
+      "level": 4,
+      "title": "3. Vượt chi phí xử lý",
+      "end_line": 1405
+    },
+    {
+      "id": "B1406",
+      "line": 1406,
+      "level": 4,
+      "title": "4. Vượt biên",
+      "end_line": 1411
+    },
+    {
+      "id": "B1412",
+      "line": 1412,
+      "level": 4,
+      "title": "5. Vượt thời gian",
+      "end_line": 1417
+    },
+    {
+      "id": "B1418",
+      "line": 1418,
+      "level": 4,
+      "title": "6. Vượt quan sát",
+      "end_line": 1423
+    },
+    {
+      "id": "B1424",
+      "line": 1424,
+      "level": 4,
+      "title": "7. Vượt phục hồi",
+      "end_line": 1431
+    },
+    {
+      "id": "B1432",
+      "line": 1432,
+      "level": 3,
+      "title": "VI. Hằng cấp thấp và hằng cấp cao",
+      "end_line": 1603
+    },
+    {
+      "id": "B1438",
+      "line": 1438,
+      "level": 4,
+      "title": "1. Hằng cấp thấp",
+      "end_line": 1461
+    },
+    {
+      "id": "B1462",
+      "line": 1462,
+      "level": 4,
+      "title": "2. Hằng cấp cao",
+      "end_line": 1509
+    },
+    {
+      "id": "B1510",
+      "line": 1510,
+      "level": 4,
+      "title": "3. Kết nối với OWASP Top 10 2025",
+      "end_line": 1537
+    },
+    {
+      "id": "B1538",
+      "line": 1538,
+      "level": 4,
+      "title": "4. Kết nối với MITRE ATT&CK",
+      "end_line": 1571
+    },
+    {
+      "id": "B1572",
+      "line": 1572,
+      "level": 4,
+      "title": "5. Kết luận Phần II",
+      "end_line": 1603
+    },
+    {
+      "id": "B1604",
+      "line": 1604,
+      "level": 2,
+      "title": "Phần 03 — IPOD của bảo mật: Input, Process, Output, Data",
+      "end_line": 3533
+    },
+    {
+      "id": "B1630",
+      "line": 1630,
+      "level": 3,
+      "title": "I. Vì sao cần nhìn bảo mật bằng IPOD?",
+      "end_line": 1789
+    },
+    {
+      "id": "B1706",
+      "line": 1706,
+      "level": 4,
+      "title": "1. Input trong bảo mật là gì?",
+      "end_line": 1789
+    },
+    {
+      "id": "B1790",
+      "line": 1790,
+      "level": 3,
+      "title": "II. Các chức năng của Input",
+      "end_line": 2319
+    },
+    {
+      "id": "B1794",
+      "line": 1794,
+      "level": 4,
+      "title": "1. Input định danh",
+      "end_line": 1843
+    },
+    {
+      "id": "B1844",
+      "line": 1844,
+      "level": 4,
+      "title": "2. Input định quyền",
+      "end_line": 1891
+    },
+    {
+      "id": "B1892",
+      "line": 1892,
+      "level": 4,
+      "title": "3. Input định vị",
+      "end_line": 1939
+    },
+    {
+      "id": "B1940",
+      "line": 1940,
+      "level": 4,
+      "title": "4. Input điều khiển",
+      "end_line": 1983
+    },
+    {
+      "id": "B1984",
+      "line": 1984,
+      "level": 4,
+      "title": "5. Input dữ liệu",
+      "end_line": 2021
+    },
+    {
+      "id": "B2022",
+      "line": 2022,
+      "level": 4,
+      "title": "6. Input cấu hình",
+      "end_line": 2071
+    },
+    {
+      "id": "B2072",
+      "line": 2072,
+      "level": 4,
+      "title": "7. Input quan sát",
+      "end_line": 2111
+    },
+    {
+      "id": "B2112",
+      "line": 2112,
+      "level": 4,
+      "title": "8. Input tích hợp",
+      "end_line": 2153
+    },
+    {
+      "id": "B2154",
+      "line": 2154,
+      "level": 4,
+      "title": "9. I nhỏ và I lớn",
+      "end_line": 2225
+    },
+    {
+      "id": "B2226",
+      "line": 2226,
+      "level": 4,
+      "title": "10. Process trong bảo mật là gì?",
+      "end_line": 2319
+    },
+    {
+      "id": "B2320",
+      "line": 2320,
+      "level": 3,
+      "title": "III. Process có thể bị phá như thế nào?",
+      "end_line": 2601
+    },
+    {
+      "id": "B2324",
+      "line": 2324,
+      "level": 4,
+      "title": "1. Process hiểu nhầm dữ liệu thành lệnh",
+      "end_line": 2363
+    },
+    {
+      "id": "B2364",
+      "line": 2364,
+      "level": 4,
+      "title": "2. Process thiếu kiểm tra quyền",
+      "end_line": 2399
+    },
+    {
+      "id": "B2400",
+      "line": 2400,
+      "level": 4,
+      "title": "3. Process sai thứ tự",
+      "end_line": 2433
+    },
+    {
+      "id": "B2434",
+      "line": 2434,
+      "level": 4,
+      "title": "4. Process tin nguồn không nên tin",
+      "end_line": 2471
+    },
+    {
+      "id": "B2472",
+      "line": 2472,
+      "level": 4,
+      "title": "5. Process không có nhánh ngoại lệ an toàn",
+      "end_line": 2511
+    },
+    {
+      "id": "B2512",
+      "line": 2512,
+      "level": 4,
+      "title": "6. Output trong bảo mật là gì?",
+      "end_line": 2601
+    },
+    {
+      "id": "B2602",
+      "line": 2602,
+      "level": 3,
+      "title": "IV. Output bị phá như thế nào?",
+      "end_line": 2795
+    },
+    {
+      "id": "B2604",
+      "line": 2604,
+      "level": 4,
+      "title": "1. Output rò rỉ",
+      "end_line": 2637
+    },
+    {
+      "id": "B2638",
+      "line": 2638,
+      "level": 4,
+      "title": "2. Output độc",
+      "end_line": 2667
+    },
+    {
+      "id": "B2668",
+      "line": 2668,
+      "level": 4,
+      "title": "3. Output sai nhưng trông hợp lệ",
+      "end_line": 2701
+    },
+    {
+      "id": "B2702",
+      "line": 2702,
+      "level": 4,
+      "title": "4. Output tạo hành động ngoài ý muốn",
+      "end_line": 2733
+    },
+    {
+      "id": "B2734",
+      "line": 2734,
+      "level": 4,
+      "title": "5. Data trong bảo mật là gì?",
+      "end_line": 2795
+    },
+    {
+      "id": "B2796",
+      "line": 2796,
+      "level": 3,
+      "title": "V. Data bị phá như thế nào?",
+      "end_line": 3281
+    },
+    {
+      "id": "B2798",
+      "line": 2798,
+      "level": 4,
+      "title": "1. Data bị lộ",
+      "end_line": 2833
+    },
+    {
+      "id": "B2834",
+      "line": 2834,
+      "level": 4,
+      "title": "2. Data bị sửa sai",
+      "end_line": 2871
+    },
+    {
+      "id": "B2872",
+      "line": 2872,
+      "level": 4,
+      "title": "3. Data bị dùng sai ngữ cảnh",
+      "end_line": 2903
+    },
+    {
+      "id": "B2904",
+      "line": 2904,
+      "level": 4,
+      "title": "4. Data trở thành hằng giả",
+      "end_line": 2937
+    },
+    {
+      "id": "B2938",
+      "line": 2938,
+      "level": 4,
+      "title": "5. IPOD loop: khi Output trở thành Input",
+      "end_line": 3011
+    },
+    {
+      "id": "B3012",
+      "line": 3012,
+      "level": 4,
+      "title": "6. Stored attack: biến ngủ trong Data",
+      "end_line": 3053
+    },
+    {
+      "id": "B3054",
+      "line": 3054,
+      "level": 4,
+      "title": "7. I lớn trong IPOD loop",
+      "end_line": 3095
+    },
+    {
+      "id": "B3096",
+      "line": 3096,
+      "level": 4,
+      "title": "8. IPOD và OWASP Top 10 2025",
+      "end_line": 3121
+    },
+    {
+      "id": "B3122",
+      "line": 3122,
+      "level": 4,
+      "title": "9. IPOD và NIST CSF",
+      "end_line": 3141
+    },
+    {
+      "id": "B3142",
+      "line": 3142,
+      "level": 4,
+      "title": "10. IPOD và MITRE ATT&CK",
+      "end_line": 3171
+    },
+    {
+      "id": "B3172",
+      "line": 3172,
+      "level": 4,
+      "title": "11. IPOD và AI agent bảo mật",
+      "end_line": 3281
+    },
+    {
+      "id": "B3282",
+      "line": 3282,
+      "level": 3,
+      "title": "VI. Công thức phân tích một lỗi bằng IPOD",
+      "end_line": 3533
+    },
+    {
+      "id": "B3286",
+      "line": 3286,
+      "level": 4,
+      "title": "1. Input là gì?",
+      "end_line": 3289
+    },
+    {
+      "id": "B3290",
+      "line": 3290,
+      "level": 4,
+      "title": "2. Input có chức năng gì?",
+      "end_line": 3293
+    },
+    {
+      "id": "B3294",
+      "line": 3294,
+      "level": 4,
+      "title": "3. Input là I nhỏ hay I lớn?",
+      "end_line": 3297
+    },
+    {
+      "id": "B3298",
+      "line": 3298,
+      "level": 4,
+      "title": "4. Process nào xử lý nó?",
+      "end_line": 3301
+    },
+    {
+      "id": "B3302",
+      "line": 3302,
+      "level": 4,
+      "title": "5. Hằng nào được dùng?",
+      "end_line": 3305
+    },
+    {
+      "id": "B3306",
+      "line": 3306,
+      "level": 4,
+      "title": "6. Hằng nào bị thiếu hoặc bị mù?",
+      "end_line": 3309
+    },
+    {
+      "id": "B3310",
+      "line": 3310,
+      "level": 4,
+      "title": "7. Output sai là gì?",
+      "end_line": 3313
+    },
+    {
+      "id": "B3314",
+      "line": 3314,
+      "level": 4,
+      "title": "8. Data có bị ảnh hưởng không?",
+      "end_line": 3317
+    },
+    {
+      "id": "B3318",
+      "line": 3318,
+      "level": 4,
+      "title": "9. Sai lệch có lan không?",
+      "end_line": 3321
+    },
+    {
+      "id": "B3322",
+      "line": 3322,
+      "level": 4,
+      "title": "10. Control đúng nên đặt ở đâu?",
+      "end_line": 3327
+    },
+    {
+      "id": "B3328",
+      "line": 3328,
+      "level": 4,
+      "title": "11. Ví dụ tổng hợp: IDOR theo IPOD",
+      "end_line": 3369
+    },
+    {
+      "id": "B3370",
+      "line": 3370,
+      "level": 4,
+      "title": "12. Ví dụ tổng hợp: SSRF theo IPOD",
+      "end_line": 3413
+    },
+    {
+      "id": "B3414",
+      "line": 3414,
+      "level": 4,
+      "title": "13. Ví dụ tổng hợp: Stored XSS theo IPOD",
+      "end_line": 3457
+    },
+    {
+      "id": "B3458",
+      "line": 3458,
+      "level": 4,
+      "title": "14. Ví dụ tổng hợp: supply chain theo IPOD",
+      "end_line": 3505
+    },
+    {
+      "id": "B3506",
+      "line": 3506,
+      "level": 4,
+      "title": "15. Kết luận Phần III",
+      "end_line": 3533
+    },
+    {
+      "id": "B3534",
+      "line": 3534,
+      "level": 2,
+      "title": "Phần 04 — Phân loại lỗi bảo mật bằng hai trục IPOD và hằng/biến",
+      "end_line": 5509
+    },
+    {
+      "id": "B3556",
+      "line": 3556,
+      "level": 3,
+      "title": "I. Vì sao không nên chỉ phân loại lỗi theo tên?",
+      "end_line": 3579
+    },
+    {
+      "id": "B3580",
+      "line": 3580,
+      "level": 3,
+      "title": "II. Trục thứ nhất: hằng/biến",
+      "end_line": 3695
+    },
+    {
+      "id": "B3588",
+      "line": 3588,
+      "level": 4,
+      "title": "1. Hằng rõ",
+      "end_line": 3609
+    },
+    {
+      "id": "B3610",
+      "line": 3610,
+      "level": 4,
+      "title": "2. Hằng mờ",
+      "end_line": 3635
+    },
+    {
+      "id": "B3636",
+      "line": 3636,
+      "level": 4,
+      "title": "3. Biến lạ",
+      "end_line": 3663
+    },
+    {
+      "id": "B3664",
+      "line": 3664,
+      "level": 4,
+      "title": "4. Hằng giả",
+      "end_line": 3695
+    },
+    {
+      "id": "B3696",
+      "line": 3696,
+      "level": 3,
+      "title": "III. Trục thứ hai: IPOD",
+      "end_line": 3881
+    },
+    {
+      "id": "B3704",
+      "line": 3704,
+      "level": 4,
+      "title": "1. Lệch ở Input",
+      "end_line": 3745
+    },
+    {
+      "id": "B3746",
+      "line": 3746,
+      "level": 4,
+      "title": "2. Lệch ở Process",
+      "end_line": 3787
+    },
+    {
+      "id": "B3788",
+      "line": 3788,
+      "level": 4,
+      "title": "3. Lệch ở Output",
+      "end_line": 3829
+    },
+    {
+      "id": "B3830",
+      "line": 3830,
+      "level": 4,
+      "title": "4. Lệch ở Data",
+      "end_line": 3881
+    },
+    {
+      "id": "B3882",
+      "line": 3882,
+      "level": 3,
+      "title": "IV. Ma trận hằng/biến × IPOD",
+      "end_line": 4225
+    },
+    {
+      "id": "B3888",
+      "line": 3888,
+      "level": 4,
+      "title": "1. Hằng rõ × Input",
+      "end_line": 3903
+    },
+    {
+      "id": "B3904",
+      "line": 3904,
+      "level": 4,
+      "title": "2. Hằng mờ × Input",
+      "end_line": 3921
+    },
+    {
+      "id": "B3922",
+      "line": 3922,
+      "level": 4,
+      "title": "3. Biến lạ × Input",
+      "end_line": 3943
+    },
+    {
+      "id": "B3944",
+      "line": 3944,
+      "level": 4,
+      "title": "4. Hằng giả × Input",
+      "end_line": 3963
+    },
+    {
+      "id": "B3964",
+      "line": 3964,
+      "level": 4,
+      "title": "5. Hằng rõ × Process",
+      "end_line": 3981
+    },
+    {
+      "id": "B3982",
+      "line": 3982,
+      "level": 4,
+      "title": "6. Hằng mờ × Process",
+      "end_line": 4003
+    },
+    {
+      "id": "B4004",
+      "line": 4004,
+      "level": 4,
+      "title": "7. Biến lạ × Process",
+      "end_line": 4027
+    },
+    {
+      "id": "B4028",
+      "line": 4028,
+      "level": 4,
+      "title": "8. Hằng giả × Process",
+      "end_line": 4049
+    },
+    {
+      "id": "B4050",
+      "line": 4050,
+      "level": 4,
+      "title": "9. Hằng rõ × Output",
+      "end_line": 4067
+    },
+    {
+      "id": "B4068",
+      "line": 4068,
+      "level": 4,
+      "title": "10. Hằng mờ × Output",
+      "end_line": 4089
+    },
+    {
+      "id": "B4090",
+      "line": 4090,
+      "level": 4,
+      "title": "11. Biến lạ × Output",
+      "end_line": 4113
+    },
+    {
+      "id": "B4114",
+      "line": 4114,
+      "level": 4,
+      "title": "12. Hằng giả × Output",
+      "end_line": 4137
+    },
+    {
+      "id": "B4138",
+      "line": 4138,
+      "level": 4,
+      "title": "13. Hằng rõ × Data",
+      "end_line": 4153
+    },
+    {
+      "id": "B4154",
+      "line": 4154,
+      "level": 4,
+      "title": "14. Hằng mờ × Data",
+      "end_line": 4177
+    },
+    {
+      "id": "B4178",
+      "line": 4178,
+      "level": 4,
+      "title": "15. Biến lạ × Data",
+      "end_line": 4201
+    },
+    {
+      "id": "B4202",
+      "line": 4202,
+      "level": 4,
+      "title": "16. Hằng giả × Data",
+      "end_line": 4225
+    },
+    {
+      "id": "B4226",
+      "line": 4226,
+      "level": 3,
+      "title": "V. Mười bốn nhóm lỗi phổ biến nhìn theo IPOD và hằng/biến",
+      "end_line": 5233
+    },
+    {
+      "id": "B4232",
+      "line": 4232,
+      "level": 4,
+      "title": "1. Nhóm 1 — Input dữ liệu biến thành lệnh",
+      "end_line": 4289
+    },
+    {
+      "id": "B4290",
+      "line": 4290,
+      "level": 4,
+      "title": "2. Nhóm 2 — Input danh tính bị giả hoặc bị hiểu sai",
+      "end_line": 4347
+    },
+    {
+      "id": "B4348",
+      "line": 4348,
+      "level": 4,
+      "title": "3. Nhóm 3 — Input định vị tài nguyên thiếu kiểm tra quyền",
+      "end_line": 4399
+    },
+    {
+      "id": "B4400",
+      "line": 4400,
+      "level": 4,
+      "title": "4. Nhóm 4 — Input hợp lệ cục bộ nhưng sai workflow",
+      "end_line": 4457
+    },
+    {
+      "id": "B4458",
+      "line": 4458,
+      "level": 4,
+      "title": "5. Nhóm 5 — Input vượt chi phí xử lý của Process",
+      "end_line": 4517
+    },
+    {
+      "id": "B4518",
+      "line": 4518,
+      "level": 4,
+      "title": "6. Nhóm 6 — File/I lớn bị xử như I nhỏ",
+      "end_line": 4583
+    },
+    {
+      "id": "B4584",
+      "line": 4584,
+      "level": 4,
+      "title": "7. Nhóm 7 — Input điều hướng Process đi sai chỗ",
+      "end_line": 4643
+    },
+    {
+      "id": "B4644",
+      "line": 4644,
+      "level": 4,
+      "title": "8. Nhóm 8 — Config là hằng vận hành bị ghi sai",
+      "end_line": 4703
+    },
+    {
+      "id": "B4704",
+      "line": 4704,
+      "level": 4,
+      "title": "9. Nhóm 9 — Data quan sát bị thiếu hoặc bị nhiễm",
+      "end_line": 4761
+    },
+    {
+      "id": "B4762",
+      "line": 4762,
+      "level": 4,
+      "title": "10. Nhóm 10 — Dependency/package là I lớn nhập vào hệ",
+      "end_line": 4827
+    },
+    {
+      "id": "B4828",
+      "line": 4828,
+      "level": 4,
+      "title": "11. Nhóm 11 — Software/Data integrity bị phá",
+      "end_line": 4889
+    },
+    {
+      "id": "B4890",
+      "line": 4890,
+      "level": 4,
+      "title": "12. Nhóm 12 — Exceptional condition bị xử lý sai",
+      "end_line": 4947
+    },
+    {
+      "id": "B4948",
+      "line": 4948,
+      "level": 4,
+      "title": "13. Nhóm 13 — Output được lưu để nổ ở vòng sau",
+      "end_line": 5005
+    },
+    {
+      "id": "B5006",
+      "line": 5006,
+      "level": 4,
+      "title": "14. Nhóm 14 — Prompt/instruction điều khiển agent hoặc AI system",
+      "end_line": 5065
+    },
+    {
+      "id": "B5066",
+      "line": 5066,
+      "level": 4,
+      "title": "15. Đọc lại OWASP Top 10 2025 bằng hai trục",
+      "end_line": 5111
+    },
+    {
+      "id": "B5112",
+      "line": 5112,
+      "level": 4,
+      "title": "16. Đọc lại WSTG bằng hai trục",
+      "end_line": 5155
+    },
+    {
+      "id": "B5156",
+      "line": 5156,
+      "level": 4,
+      "title": "17. Đọc lại MITRE ATT&CK bằng hai trục",
+      "end_line": 5233
+    },
+    {
+      "id": "B5234",
+      "line": 5234,
+      "level": 3,
+      "title": "VI. Từ phân loại lỗi sang phân loại control",
+      "end_line": 5361
+    },
+    {
+      "id": "B5240",
+      "line": 5240,
+      "level": 4,
+      "title": "1. Nếu lệch ở Input",
+      "end_line": 5263
+    },
+    {
+      "id": "B5264",
+      "line": 5264,
+      "level": 4,
+      "title": "2. Nếu lệch ở Process",
+      "end_line": 5287
+    },
+    {
+      "id": "B5288",
+      "line": 5288,
+      "level": 4,
+      "title": "3. Nếu lệch ở Output",
+      "end_line": 5309
+    },
+    {
+      "id": "B5310",
+      "line": 5310,
+      "level": 4,
+      "title": "4. Nếu lệch ở Data",
+      "end_line": 5335
+    },
+    {
+      "id": "B5336",
+      "line": 5336,
+      "level": 4,
+      "title": "5. Nếu lệch ở Loop",
+      "end_line": 5361
+    },
+    {
+      "id": "B5362",
+      "line": 5362,
+      "level": 3,
+      "title": "VII. Mô hình phân loại cho agent sau này",
+      "end_line": 5509
+    },
+    {
+      "id": "B5370",
+      "line": 5370,
+      "level": 4,
+      "title": "1. Đây là loại Input gì?",
+      "end_line": 5373
+    },
+    {
+      "id": "B5374",
+      "line": 5374,
+      "level": 4,
+      "title": "2. Đây là I nhỏ hay I lớn?",
+      "end_line": 5377
+    },
+    {
+      "id": "B5378",
+      "line": 5378,
+      "level": 4,
+      "title": "3. Trạng thái hằng/biến là gì?",
+      "end_line": 5381
+    },
+    {
+      "id": "B5382",
+      "line": 5382,
+      "level": 4,
+      "title": "4. Tầng IPOD bị tác động là gì?",
+      "end_line": 5385
+    },
+    {
+      "id": "B5386",
+      "line": 5386,
+      "level": 4,
+      "title": "5. Hằng nào bị thiếu?",
+      "end_line": 5389
+    },
+    {
+      "id": "B5390",
+      "line": 5390,
+      "level": 4,
+      "title": "6. Sai lệch có lan không?",
+      "end_line": 5393
+    },
+    {
+      "id": "B5394",
+      "line": 5394,
+      "level": 4,
+      "title": "7. Evidence đủ chưa?",
+      "end_line": 5397
+    },
+    {
+      "id": "B5398",
+      "line": 5398,
+      "level": 4,
+      "title": "8. Control đề xuất là gì?",
+      "end_line": 5401
+    },
+    {
+      "id": "B5402",
+      "line": 5402,
+      "level": 4,
+      "title": "9. Có cần human review không?",
+      "end_line": 5407
+    },
+    {
+      "id": "B5408",
+      "line": 5408,
+      "level": 4,
+      "title": "10. Output chuẩn của một phân tích lỗi",
+      "end_line": 5477
+    },
+    {
+      "id": "B5478",
+      "line": 5478,
+      "level": 4,
+      "title": "11. Kết luận Phần IV",
+      "end_line": 5509
+    },
+    {
+      "id": "B5510",
+      "line": 5510,
+      "level": 2,
+      "title": "Phần 05 — Ontology rủi ro: Threat, Vulnerability, Likelihood, Impact, Risk",
+      "end_line": 6625
+    },
+    {
+      "id": "B5534",
+      "line": 5534,
+      "level": 3,
+      "title": "I. Vì sao một lỗi chưa chắc là một rủi ro cao?",
+      "end_line": 5907
+    },
+    {
+      "id": "B5558",
+      "line": 5558,
+      "level": 4,
+      "title": "1. Threat là gì?",
+      "end_line": 5607
+    },
+    {
+      "id": "B5608",
+      "line": 5608,
+      "level": 4,
+      "title": "2. Vulnerability là gì?",
+      "end_line": 5671
+    },
+    {
+      "id": "B5672",
+      "line": 5672,
+      "level": 4,
+      "title": "3. Predisposing condition: điều kiện khiến hệ dễ tổn thương",
+      "end_line": 5713
+    },
+    {
+      "id": "B5714",
+      "line": 5714,
+      "level": 4,
+      "title": "4. Likelihood là gì?",
+      "end_line": 5767
+    },
+    {
+      "id": "B5768",
+      "line": 5768,
+      "level": 4,
+      "title": "5. Impact là gì?",
+      "end_line": 5827
+    },
+    {
+      "id": "B5828",
+      "line": 5828,
+      "level": 4,
+      "title": "6. Risk là gì?",
+      "end_line": 5881
+    },
+    {
+      "id": "B5882",
+      "line": 5882,
+      "level": 4,
+      "title": "7. Severity khác risk như thế nào?",
+      "end_line": 5907
+    },
+    {
+      "id": "B5908",
+      "line": 5908,
+      "level": 3,
+      "title": "II. Risk theo IPOD",
+      "end_line": 6137
+    },
+    {
+      "id": "B5912",
+      "line": 5912,
+      "level": 4,
+      "title": "1. Input risk",
+      "end_line": 5959
+    },
+    {
+      "id": "B5960",
+      "line": 5960,
+      "level": 4,
+      "title": "2. Process risk",
+      "end_line": 6005
+    },
+    {
+      "id": "B6006",
+      "line": 6006,
+      "level": 4,
+      "title": "3. Output risk",
+      "end_line": 6049
+    },
+    {
+      "id": "B6050",
+      "line": 6050,
+      "level": 4,
+      "title": "4. Data risk",
+      "end_line": 6099
+    },
+    {
+      "id": "B6100",
+      "line": 6100,
+      "level": 4,
+      "title": "5. Loop risk",
+      "end_line": 6137
+    },
+    {
+      "id": "B6138",
+      "line": 6138,
+      "level": 3,
+      "title": "III. Risk theo hằng/biến",
+      "end_line": 6401
+    },
+    {
+      "id": "B6142",
+      "line": 6142,
+      "level": 4,
+      "title": "1. Biến nhỏ, hằng mạnh",
+      "end_line": 6149
+    },
+    {
+      "id": "B6150",
+      "line": 6150,
+      "level": 4,
+      "title": "2. Biến nhỏ, hằng yếu ở quyền cao",
+      "end_line": 6161
+    },
+    {
+      "id": "B6162",
+      "line": 6162,
+      "level": 4,
+      "title": "3. Biến lớn, hằng quan sát yếu",
+      "end_line": 6173
+    },
+    {
+      "id": "B6174",
+      "line": 6174,
+      "level": 4,
+      "title": "4. Biến vào Data",
+      "end_line": 6189
+    },
+    {
+      "id": "B6190",
+      "line": 6190,
+      "level": 4,
+      "title": "5. Biến thành hằng giả",
+      "end_line": 6209
+    },
+    {
+      "id": "B6210",
+      "line": 6210,
+      "level": 4,
+      "title": "6. Risk và quyền lực",
+      "end_line": 6249
+    },
+    {
+      "id": "B6250",
+      "line": 6250,
+      "level": 4,
+      "title": "7. Risk và data sensitivity",
+      "end_line": 6283
+    },
+    {
+      "id": "B6284",
+      "line": 6284,
+      "level": 4,
+      "title": "8. Risk và khả năng phát hiện",
+      "end_line": 6321
+    },
+    {
+      "id": "B6322",
+      "line": 6322,
+      "level": 4,
+      "title": "9. Risk và khả năng phục hồi",
+      "end_line": 6363
+    },
+    {
+      "id": "B6364",
+      "line": 6364,
+      "level": 4,
+      "title": "10. Risk trong hệ agent",
+      "end_line": 6401
+    },
+    {
+      "id": "B6402",
+      "line": 6402,
+      "level": 3,
+      "title": "IV. Risk rating theo ontology này",
+      "end_line": 6625
+    },
+    {
+      "id": "B6406",
+      "line": 6406,
+      "level": 4,
+      "title": "1. Asset",
+      "end_line": 6411
+    },
+    {
+      "id": "B6412",
+      "line": 6412,
+      "level": 4,
+      "title": "2. Input",
+      "end_line": 6417
+    },
+    {
+      "id": "B6418",
+      "line": 6418,
+      "level": 4,
+      "title": "3. Missing constant",
+      "end_line": 6423
+    },
+    {
+      "id": "B6424",
+      "line": 6424,
+      "level": 4,
+      "title": "4. IPOD impact",
+      "end_line": 6429
+    },
+    {
+      "id": "B6430",
+      "line": 6430,
+      "level": 4,
+      "title": "5. Threat",
+      "end_line": 6435
+    },
+    {
+      "id": "B6436",
+      "line": 6436,
+      "level": 4,
+      "title": "6. Likelihood",
+      "end_line": 6441
+    },
+    {
+      "id": "B6442",
+      "line": 6442,
+      "level": 4,
+      "title": "7. Impact",
+      "end_line": 6447
+    },
+    {
+      "id": "B6448",
+      "line": 6448,
+      "level": 4,
+      "title": "8. Detection",
+      "end_line": 6453
+    },
+    {
+      "id": "B6454",
+      "line": 6454,
+      "level": 4,
+      "title": "9. Recovery",
+      "end_line": 6459
+    },
+    {
+      "id": "B6460",
+      "line": 6460,
+      "level": 4,
+      "title": "10. Review requirement",
+      "end_line": 6467
+    },
+    {
+      "id": "B6468",
+      "line": 6468,
+      "level": 4,
+      "title": "11. Ví dụ: secret leak",
+      "end_line": 6513
+    },
+    {
+      "id": "B6514",
+      "line": 6514,
+      "level": 4,
+      "title": "12. Ví dụ: IDOR",
+      "end_line": 6559
+    },
+    {
+      "id": "B6560",
+      "line": 6560,
+      "level": 4,
+      "title": "13. Ví dụ: prompt injection trong agent bảo mật",
+      "end_line": 6605
+    },
+    {
+      "id": "B6606",
+      "line": 6606,
+      "level": 4,
+      "title": "14. Kết luận Phần V",
+      "end_line": 6625
+    },
+    {
+      "id": "B6626",
+      "line": 6626,
+      "level": 2,
+      "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+      "end_line": 7585
+    },
+    {
+      "id": "B6654",
+      "line": 6654,
+      "level": 3,
+      "title": "I. Trust là gì trong hệ bảo mật?",
+      "end_line": 7027
+    },
+    {
+      "id": "B6686",
+      "line": 6686,
+      "level": 4,
+      "title": "1. Niềm tin mặc định là nguồn lỗi lớn",
+      "end_line": 6723
+    },
+    {
+      "id": "B6724",
+      "line": 6724,
+      "level": 4,
+      "title": "2. Internal không đồng nghĩa Trusted",
+      "end_line": 6763
+    },
+    {
+      "id": "B6764",
+      "line": 6764,
+      "level": 4,
+      "title": "3. Trust boundary: biên giới của niềm tin",
+      "end_line": 6819
+    },
+    {
+      "id": "B6820",
+      "line": 6820,
+      "level": 4,
+      "title": "4. Identity là hằng trung tâm của Zero Trust",
+      "end_line": 6887
+    },
+    {
+      "id": "B6888",
+      "line": 6888,
+      "level": 4,
+      "title": "5. Authorization: từ identity sang quyền",
+      "end_line": 6953
+    },
+    {
+      "id": "B6954",
+      "line": 6954,
+      "level": 4,
+      "title": "6. Least privilege: giới hạn biên độ biến",
+      "end_line": 6989
+    },
+    {
+      "id": "B6990",
+      "line": 6990,
+      "level": 4,
+      "title": "7. Continuous evaluation: tin cậy không phải một lần",
+      "end_line": 7027
+    },
+    {
+      "id": "B7028",
+      "line": 7028,
+      "level": 3,
+      "title": "II. Zero Trust và IPOD",
+      "end_line": 7585
+    },
+    {
+      "id": "B7032",
+      "line": 7032,
+      "level": 4,
+      "title": "1. Input",
+      "end_line": 7039
+    },
+    {
+      "id": "B7040",
+      "line": 7040,
+      "level": 4,
+      "title": "2. Process",
+      "end_line": 7045
+    },
+    {
+      "id": "B7046",
+      "line": 7046,
+      "level": 4,
+      "title": "3. Output",
+      "end_line": 7055
+    },
+    {
+      "id": "B7056",
+      "line": 7056,
+      "level": 4,
+      "title": "4. Data",
+      "end_line": 7067
+    },
+    {
+      "id": "B7068",
+      "line": 7068,
+      "level": 4,
+      "title": "5. Loop",
+      "end_line": 7083
+    },
+    {
+      "id": "B7084",
+      "line": 7084,
+      "level": 4,
+      "title": "6. Zero Trust và hằng/biến",
+      "end_line": 7123
+    },
+    {
+      "id": "B7124",
+      "line": 7124,
+      "level": 4,
+      "title": "7. Zero Trust không có nghĩa là không tin ai",
+      "end_line": 7147
+    },
+    {
+      "id": "B7148",
+      "line": 7148,
+      "level": 4,
+      "title": "8. Zero Trust và supply chain",
+      "end_line": 7189
+    },
+    {
+      "id": "B7190",
+      "line": 7190,
+      "level": 4,
+      "title": "9. Zero Trust và AI agent",
+      "end_line": 7271
+    },
+    {
+      "id": "B7272",
+      "line": 7272,
+      "level": 4,
+      "title": "10. Trust label cho data agent",
+      "end_line": 7335
+    },
+    {
+      "id": "B7336",
+      "line": 7336,
+      "level": 4,
+      "title": "11. Policy decision point và policy enforcement point",
+      "end_line": 7369
+    },
+    {
+      "id": "B7370",
+      "line": 7370,
+      "level": 4,
+      "title": "12. Zero Trust không thay thế các control khác",
+      "end_line": 7405
+    },
+    {
+      "id": "B7406",
+      "line": 7406,
+      "level": 4,
+      "title": "13. Ví dụ: internal API không auth",
+      "end_line": 7455
+    },
+    {
+      "id": "B7456",
+      "line": 7456,
+      "level": 4,
+      "title": "14. Ví dụ: agent có quyền đọc tất cả log",
+      "end_line": 7511
+    },
+    {
+      "id": "B7512",
+      "line": 7512,
+      "level": 4,
+      "title": "15. Ví dụ: RAG document chứa instruction độc",
+      "end_line": 7563
+    },
+    {
+      "id": "B7564",
+      "line": 7564,
+      "level": 4,
+      "title": "16. Kết luận Phần VII",
+      "end_line": 7585
+    },
+    {
+      "id": "B7586",
+      "line": 7586,
+      "level": 2,
+      "title": "Phần 07 — MITRE ATT&CK: ontology của hành vi attacker",
+      "end_line": 8535
+    },
+    {
+      "id": "B7604",
+      "line": 7604,
+      "level": 3,
+      "title": "I. Vì sao cần MITRE ATT&CK?",
+      "end_line": 7663
+    },
+    {
+      "id": "B7664",
+      "line": 7664,
+      "level": 3,
+      "title": "II. Tactic, Technique, Procedure",
+      "end_line": 8535
+    },
+    {
+      "id": "B7668",
+      "line": 7668,
+      "level": 4,
+      "title": "1. Tactic",
+      "end_line": 7703
+    },
+    {
+      "id": "B7704",
+      "line": 7704,
+      "level": 4,
+      "title": "2. Technique",
+      "end_line": 7725
+    },
+    {
+      "id": "B7726",
+      "line": 7726,
+      "level": 4,
+      "title": "3. Procedure",
+      "end_line": 7749
+    },
+    {
+      "id": "B7750",
+      "line": 7750,
+      "level": 4,
+      "title": "4. ATT&CK theo IPOD",
+      "end_line": 7781
+    },
+    {
+      "id": "B7782",
+      "line": 7782,
+      "level": 4,
+      "title": "5. Reconnaissance: attacker học hằng của hệ",
+      "end_line": 7841
+    },
+    {
+      "id": "B7842",
+      "line": 7842,
+      "level": 4,
+      "title": "6. Initial Access: đưa biến vào hệ",
+      "end_line": 7907
+    },
+    {
+      "id": "B7908",
+      "line": 7908,
+      "level": 4,
+      "title": "7. Execution: biến làm Process chạy hành động",
+      "end_line": 7961
+    },
+    {
+      "id": "B7962",
+      "line": 7962,
+      "level": 4,
+      "title": "8. Persistence: biến đi vào Data để sống lâu",
+      "end_line": 8021
+    },
+    {
+      "id": "B8022",
+      "line": 8022,
+      "level": 4,
+      "title": "9. Privilege Escalation: biến chạm vào hằng quyền",
+      "end_line": 8083
+    },
+    {
+      "id": "B8084",
+      "line": 8084,
+      "level": 4,
+      "title": "10. Defense Evasion: làm mù hằng quan sát",
+      "end_line": 8141
+    },
+    {
+      "id": "B8142",
+      "line": 8142,
+      "level": 4,
+      "title": "11. Credential Access: chiếm Input danh tính/quyền",
+      "end_line": 8201
+    },
+    {
+      "id": "B8202",
+      "line": 8202,
+      "level": 4,
+      "title": "12. Discovery: attacker đọc bản đồ hệ từ bên trong",
+      "end_line": 8257
+    },
+    {
+      "id": "B8258",
+      "line": 8258,
+      "level": 4,
+      "title": "13. Lateral Movement: dùng Output của hệ này làm Input cho hệ khác",
+      "end_line": 8317
+    },
+    {
+      "id": "B8318",
+      "line": 8318,
+      "level": 4,
+      "title": "14. Collection và Exfiltration: Data thành Output ra ngoài",
+      "end_line": 8373
+    },
+    {
+      "id": "B8374",
+      "line": 8374,
+      "level": 4,
+      "title": "15. Impact: làm hệ mất Data, Process, Output hoặc Trust",
+      "end_line": 8443
+    },
+    {
+      "id": "B8444",
+      "line": 8444,
+      "level": 4,
+      "title": "16. MITRE ATT&CK giúp đánh risk tốt hơn",
+      "end_line": 8465
+    },
+    {
+      "id": "B8466",
+      "line": 8466,
+      "level": 4,
+      "title": "17. MITRE ATT&CK và agent bảo mật",
+      "end_line": 8517
+    },
+    {
+      "id": "B8518",
+      "line": 8518,
+      "level": 4,
+      "title": "18. Kết luận Phần VIII",
+      "end_line": 8535
+    },
+    {
+      "id": "B8536",
+      "line": 8536,
+      "level": 2,
+      "title": "Phần 08 — Data ontology cho agent bảo mật",
+      "end_line": 10085
+    },
+    {
+      "id": "B8580",
+      "line": 8580,
+      "level": 3,
+      "title": "I. Data không phải một khối đồng nhất",
+      "end_line": 9037
+    },
+    {
+      "id": "B8636",
+      "line": 8636,
+      "level": 4,
+      "title": "1. Data là grounding",
+      "end_line": 8709
+    },
+    {
+      "id": "B8710",
+      "line": 8710,
+      "level": 4,
+      "title": "2. Data là evidence",
+      "end_line": 8773
+    },
+    {
+      "id": "B8774",
+      "line": 8774,
+      "level": 4,
+      "title": "3. Data là state",
+      "end_line": 8823
+    },
+    {
+      "id": "B8824",
+      "line": 8824,
+      "level": 4,
+      "title": "4. Data là memory",
+      "end_line": 8893
+    },
+    {
+      "id": "B8894",
+      "line": 8894,
+      "level": 4,
+      "title": "5. Data là quyền lực",
+      "end_line": 8971
+    },
+    {
+      "id": "B8972",
+      "line": 8972,
+      "level": 4,
+      "title": "6. Data là hằng hoặc biến",
+      "end_line": 9037
+    },
+    {
+      "id": "B9038",
+      "line": 9038,
+      "level": 3,
+      "title": "II. Phân loại data theo chức năng",
+      "end_line": 9483
+    },
+    {
+      "id": "B9042",
+      "line": 9042,
+      "level": 4,
+      "title": "1. Asset data",
+      "end_line": 9103
+    },
+    {
+      "id": "B9104",
+      "line": 9104,
+      "level": 4,
+      "title": "2. Policy data",
+      "end_line": 9157
+    },
+    {
+      "id": "B9158",
+      "line": 9158,
+      "level": 4,
+      "title": "3. Evidence data",
+      "end_line": 9211
+    },
+    {
+      "id": "B9212",
+      "line": 9212,
+      "level": 4,
+      "title": "4. Operational data",
+      "end_line": 9267
+    },
+    {
+      "id": "B9268",
+      "line": 9268,
+      "level": 4,
+      "title": "5. Privileged/secret data",
+      "end_line": 9321
+    },
+    {
+      "id": "B9322",
+      "line": 9322,
+      "level": 4,
+      "title": "6. Customer/PII data",
+      "end_line": 9373
+    },
+    {
+      "id": "B9374",
+      "line": 9374,
+      "level": 4,
+      "title": "7. Observability data",
+      "end_line": 9425
+    },
+    {
+      "id": "B9426",
+      "line": 9426,
+      "level": 4,
+      "title": "8. Agent-generated data",
+      "end_line": 9483
+    },
+    {
+      "id": "B9484",
+      "line": 9484,
+      "level": 3,
+      "title": "III. Phân loại data theo mức bảo mật",
+      "end_line": 10085
+    },
+    {
+      "id": "B9490",
+      "line": 9490,
+      "level": 4,
+      "title": "1. Level 0 — Public",
+      "end_line": 9507
+    },
+    {
+      "id": "B9508",
+      "line": 9508,
+      "level": 4,
+      "title": "2. Level 1 — Internal",
+      "end_line": 9523
+    },
+    {
+      "id": "B9524",
+      "line": 9524,
+      "level": 4,
+      "title": "3. Level 2 — Confidential",
+      "end_line": 9543
+    },
+    {
+      "id": "B9544",
+      "line": 9544,
+      "level": 4,
+      "title": "4. Level 3 — Restricted",
+      "end_line": 9565
+    },
+    {
+      "id": "B9566",
+      "line": 9566,
+      "level": 4,
+      "title": "5. Level 4 — Secret/Privileged",
+      "end_line": 9611
+    },
+    {
+      "id": "B9612",
+      "line": 9612,
+      "level": 4,
+      "title": "6. Allowed use: data này được dùng cho việc gì?",
+      "end_line": 9655
+    },
+    {
+      "id": "B9656",
+      "line": 9656,
+      "level": 4,
+      "title": "7. Provenance: data này từ đâu ra?",
+      "end_line": 9701
+    },
+    {
+      "id": "B9702",
+      "line": 9702,
+      "level": 4,
+      "title": "8. Trust label cho data",
+      "end_line": 9771
+    },
+    {
+      "id": "B9772",
+      "line": 9772,
+      "level": 4,
+      "title": "9. Agent output không phải ground truth",
+      "end_line": 9837
+    },
+    {
+      "id": "B9838",
+      "line": 9838,
+      "level": 4,
+      "title": "10. Data access guardrail",
+      "end_line": 9891
+    },
+    {
+      "id": "B9892",
+      "line": 9892,
+      "level": 4,
+      "title": "11. Review packet cho data nhạy cảm",
+      "end_line": 9955
+    },
+    {
+      "id": "B9956",
+      "line": 9956,
+      "level": 4,
+      "title": "12. Data schema tối thiểu cho agent",
+      "end_line": 9979
+    },
+    {
+      "id": "B9980",
+      "line": 9980,
+      "level": 4,
+      "title": "13. Data ontology và incident response",
+      "end_line": 10021
+    },
+    {
+      "id": "B10022",
+      "line": 10022,
+      "level": 4,
+      "title": "14. Data ontology và Zero Trust",
+      "end_line": 10041
+    },
+    {
+      "id": "B10042",
+      "line": 10042,
+      "level": 4,
+      "title": "15. Data ontology và control",
+      "end_line": 10065
+    },
+    {
+      "id": "B10066",
+      "line": 10066,
+      "level": 4,
+      "title": "16. Kết luận Phần X",
+      "end_line": 10085
+    },
+    {
+      "id": "B10086",
+      "line": 10086,
+      "level": 2,
+      "title": "Phần 09 — Agent ontology: từ chatbot đến hệ vận hành",
+      "end_line": 11374
+    },
+    {
+      "id": "B10110",
+      "line": 10110,
+      "level": 3,
+      "title": "I. Vì sao phải có ontology riêng cho agent?",
+      "end_line": 10257
+    },
+    {
+      "id": "B10152",
+      "line": 10152,
+      "level": 4,
+      "title": "1. Chatbot là IPOD một vòng",
+      "end_line": 10183
+    },
+    {
+      "id": "B10184",
+      "line": 10184,
+      "level": 4,
+      "title": "2. Agent là IPOD nhiều vòng",
+      "end_line": 10257
+    },
+    {
+      "id": "B10258",
+      "line": 10258,
+      "level": 3,
+      "title": "II. Thành phần tối thiểu của agent",
+      "end_line": 10629
+    },
+    {
+      "id": "B10262",
+      "line": 10262,
+      "level": 4,
+      "title": "1. Goal",
+      "end_line": 10309
+    },
+    {
+      "id": "B10310",
+      "line": 10310,
+      "level": 4,
+      "title": "2. Context",
+      "end_line": 10349
+    },
+    {
+      "id": "B10350",
+      "line": 10350,
+      "level": 4,
+      "title": "3. Grounding",
+      "end_line": 10395
+    },
+    {
+      "id": "B10396",
+      "line": 10396,
+      "level": 4,
+      "title": "4. Planner",
+      "end_line": 10429
+    },
+    {
+      "id": "B10430",
+      "line": 10430,
+      "level": 4,
+      "title": "5. Skill/module",
+      "end_line": 10477
+    },
+    {
+      "id": "B10478",
+      "line": 10478,
+      "level": 4,
+      "title": "6. Tool",
+      "end_line": 10523
+    },
+    {
+      "id": "B10524",
+      "line": 10524,
+      "level": 4,
+      "title": "7. State",
+      "end_line": 10553
+    },
+    {
+      "id": "B10554",
+      "line": 10554,
+      "level": 4,
+      "title": "8. Memory",
+      "end_line": 10573
+    },
+    {
+      "id": "B10574",
+      "line": 10574,
+      "level": 4,
+      "title": "9. Evaluator",
+      "end_line": 10597
+    },
+    {
+      "id": "B10598",
+      "line": 10598,
+      "level": 4,
+      "title": "10. Stop condition",
+      "end_line": 10629
+    },
+    {
+      "id": "B10630",
+      "line": 10630,
+      "level": 3,
+      "title": "III. Harness và skill",
+      "end_line": 10887
+    },
+    {
+      "id": "B10638",
+      "line": 10638,
+      "level": 4,
+      "title": "1. Harness là gì?",
+      "end_line": 10679
+    },
+    {
+      "id": "B10680",
+      "line": 10680,
+      "level": 4,
+      "title": "2. Skill là gì?",
+      "end_line": 10703
+    },
+    {
+      "id": "B10704",
+      "line": 10704,
+      "level": 4,
+      "title": "3. Harness điều phối skill",
+      "end_line": 10733
+    },
+    {
+      "id": "B10734",
+      "line": 10734,
+      "level": 4,
+      "title": "4. Context, attention và grounding",
+      "end_line": 10775
+    },
+    {
+      "id": "B10776",
+      "line": 10776,
+      "level": 4,
+      "title": "5. Agent drift: khi agent trôi khỏi mục tiêu",
+      "end_line": 10837
+    },
+    {
+      "id": "B10838",
+      "line": 10838,
+      "level": 4,
+      "title": "6. Agent loop amplification: khuếch đại sai lệch qua vòng lặp",
+      "end_line": 10887
+    },
+    {
+      "id": "B10888",
+      "line": 10888,
+      "level": 3,
+      "title": "IV. Agent và tool risk",
+      "end_line": 11277
+    },
+    {
+      "id": "B10938",
+      "line": 10938,
+      "level": 4,
+      "title": "1. Read-only low sensitivity",
+      "end_line": 10947
+    },
+    {
+      "id": "B10948",
+      "line": 10948,
+      "level": 4,
+      "title": "2. Read-only high sensitivity",
+      "end_line": 10959
+    },
+    {
+      "id": "B10960",
+      "line": 10960,
+      "level": 4,
+      "title": "3. Write low impact",
+      "end_line": 10971
+    },
+    {
+      "id": "B10972",
+      "line": 10972,
+      "level": 4,
+      "title": "4. Write high impact",
+      "end_line": 10989
+    },
+    {
+      "id": "B10990",
+      "line": 10990,
+      "level": 4,
+      "title": "5. Privileged/destructive",
+      "end_line": 11011
+    },
+    {
+      "id": "B11012",
+      "line": 11012,
+      "level": 4,
+      "title": "6. Agent và policy enforcement",
+      "end_line": 11035
+    },
+    {
+      "id": "B11036",
+      "line": 11036,
+      "level": 4,
+      "title": "7. Agent output schema",
+      "end_line": 11127
+    },
+    {
+      "id": "B11128",
+      "line": 11128,
+      "level": 4,
+      "title": "8. Agent audit log",
+      "end_line": 11181
+    },
+    {
+      "id": "B11182",
+      "line": 11182,
+      "level": 4,
+      "title": "9. Agent memory hygiene",
+      "end_line": 11229
+    },
+    {
+      "id": "B11230",
+      "line": 11230,
+      "level": 4,
+      "title": "10. Agent trong bảo mật khác agent thông thường thế nào?",
+      "end_line": 11277
+    },
+    {
+      "id": "B11278",
+      "line": 11278,
+      "level": 3,
+      "title": "V. Agent maturity levels",
+      "end_line": 11374
+    },
+    {
+      "id": "B11282",
+      "line": 11282,
+      "level": 4,
+      "title": "1. Level 0 — Chat assistant",
+      "end_line": 11287
+    },
+    {
+      "id": "B11288",
+      "line": 11288,
+      "level": 4,
+      "title": "2. Level 1 — Draft assistant",
+      "end_line": 11295
+    },
+    {
+      "id": "B11296",
+      "line": 11296,
+      "level": 4,
+      "title": "3. Level 2 — Read-only analyst",
+      "end_line": 11303
+    },
+    {
+      "id": "B11304",
+      "line": 11304,
+      "level": 4,
+      "title": "4. Level 3 — Tool-assisted workflow",
+      "end_line": 11311
+    },
+    {
+      "id": "B11312",
+      "line": 11312,
+      "level": 4,
+      "title": "5. Level 4 — Controlled action agent",
+      "end_line": 11317
+    },
+    {
+      "id": "B11318",
+      "line": 11318,
+      "level": 4,
+      "title": "6. Level 5 — High-impact autonomous agent",
+      "end_line": 11329
+    },
+    {
+      "id": "B11330",
+      "line": 11330,
+      "level": 4,
+      "title": "7. Agent pipeline an toàn",
+      "end_line": 11354
+    },
+    {
+      "id": "B11355",
+      "line": 11355,
+      "level": 4,
+      "title": "8. Kết luận Phần XI",
+      "end_line": 11374
+    },
+    {
+      "id": "B11375",
+      "line": 11375,
+      "level": 2,
+      "title": "Phần 10 — Agent bảo mật: quyền, data và human review",
+      "end_line": 12408
+    },
+    {
+      "id": "B11415",
+      "line": 11415,
+      "level": 3,
+      "title": "I. Agent cũng là một tác nhân trong hệ bảo mật",
+      "end_line": 11536
+    },
+    {
+      "id": "B11465",
+      "line": 11465,
+      "level": 4,
+      "title": "1. Quyền của agent phải là quyền tối thiểu",
+      "end_line": 11494
+    },
+    {
+      "id": "B11495",
+      "line": 11495,
+      "level": 4,
+      "title": "2. Quyền phải gắn với task, không gắn vĩnh viễn với agent",
+      "end_line": 11536
+    },
+    {
+      "id": "B11537",
+      "line": 11537,
+      "level": 3,
+      "title": "II. Phân loại quyền của agent",
+      "end_line": 12408
+    },
+    {
+      "id": "B11541",
+      "line": 11541,
+      "level": 4,
+      "title": "1. Quyền đọc public/internal thấp",
+      "end_line": 11554
+    },
+    {
+      "id": "B11555",
+      "line": 11555,
+      "level": 4,
+      "title": "2. Quyền đọc confidential",
+      "end_line": 11570
+    },
+    {
+      "id": "B11571",
+      "line": 11571,
+      "level": 4,
+      "title": "3. Quyền đọc restricted",
+      "end_line": 11588
+    },
+    {
+      "id": "B11589",
+      "line": 11589,
+      "level": 4,
+      "title": "4. Quyền đọc secret/privileged",
+      "end_line": 11608
+    },
+    {
+      "id": "B11609",
+      "line": 11609,
+      "level": 4,
+      "title": "5. Quyền ghi thấp",
+      "end_line": 11622
+    },
+    {
+      "id": "B11623",
+      "line": 11623,
+      "level": 4,
+      "title": "6. Quyền ghi có tác động workflow",
+      "end_line": 11638
+    },
+    {
+      "id": "B11639",
+      "line": 11639,
+      "level": 4,
+      "title": "7. Quyền hành động high-impact",
+      "end_line": 11662
+    },
+    {
+      "id": "B11663",
+      "line": 11663,
+      "level": 4,
+      "title": "8. Quyền destructive/production",
+      "end_line": 11686
+    },
+    {
+      "id": "B11687",
+      "line": 11687,
+      "level": 4,
+      "title": "9. Data access của agent phải qua guardrail",
+      "end_line": 11730
+    },
+    {
+      "id": "B11731",
+      "line": 11731,
+      "level": 4,
+      "title": "10. Khi nào agent phải dừng?",
+      "end_line": 11774
+    },
+    {
+      "id": "B11775",
+      "line": 11775,
+      "level": 4,
+      "title": "11. Human review là hằng cuối",
+      "end_line": 11822
+    },
+    {
+      "id": "B11823",
+      "line": 11823,
+      "level": 4,
+      "title": "12. Human review phải có review packet",
+      "end_line": 11898
+    },
+    {
+      "id": "B11899",
+      "line": 11899,
+      "level": 4,
+      "title": "13. Approval phải có phạm vi và thời hạn",
+      "end_line": 11946
+    },
+    {
+      "id": "B11947",
+      "line": 11947,
+      "level": 4,
+      "title": "14. Agent không được nhìn raw secret",
+      "end_line": 11996
+    },
+    {
+      "id": "B11997",
+      "line": 11997,
+      "level": 4,
+      "title": "15. Agent không được tự nâng cấp output thành verified",
+      "end_line": 12046
+    },
+    {
+      "id": "B12047",
+      "line": 12047,
+      "level": 4,
+      "title": "16. Agent không được tự ý mở rộng scope",
+      "end_line": 12098
+    },
+    {
+      "id": "B12099",
+      "line": 12099,
+      "level": 4,
+      "title": "17. Agent không được dùng external tool/model với data nhạy cảm nếu chưa có policy",
+      "end_line": 12138
+    },
+    {
+      "id": "B12139",
+      "line": 12139,
+      "level": 4,
+      "title": "18. Agent action phải có dry-run nếu có thể",
+      "end_line": 12198
+    },
+    {
+      "id": "B12199",
+      "line": 12199,
+      "level": 4,
+      "title": "19. Agent phải có audit trail đầy đủ",
+      "end_line": 12246
+    },
+    {
+      "id": "B12247",
+      "line": 12247,
+      "level": 4,
+      "title": "20. Agent phải có rollback hoặc recovery path",
+      "end_line": 12272
+    },
+    {
+      "id": "B12273",
+      "line": 12273,
+      "level": 4,
+      "title": "21. Agent và escalation",
+      "end_line": 12326
+    },
+    {
+      "id": "B12327",
+      "line": 12327,
+      "level": 4,
+      "title": "22. Agent và separation of duties",
+      "end_line": 12366
+    },
+    {
+      "id": "B12367",
+      "line": 12367,
+      "level": 4,
+      "title": "23. Agent policy nên được viết như luật hệ thống, không phải lời khuyên",
+      "end_line": 12394
+    },
+    {
+      "id": "B12395",
+      "line": 12395,
+      "level": 4,
+      "title": "24. Kết luận Phần XII",
+      "end_line": 12408
+    },
+    {
+      "id": "B12409",
+      "line": 12409,
+      "level": 2,
+      "title": "Phần 11 — Từ ontology sang hệ thống AI security agent",
+      "end_line": 14030
+    },
+    {
+      "id": "B12447",
+      "line": 12447,
+      "level": 3,
+      "title": "I. Nếu không có ontology, agent chỉ là checklist bot",
+      "end_line": 12532
+    },
+    {
+      "id": "B12533",
+      "line": 12533,
+      "level": 3,
+      "title": "II. Kiến trúc khái niệm của AI security agent",
+      "end_line": 12806
+    },
+    {
+      "id": "B12537",
+      "line": 12537,
+      "level": 4,
+      "title": "1. Goal layer",
+      "end_line": 12572
+    },
+    {
+      "id": "B12573",
+      "line": 12573,
+      "level": 4,
+      "title": "2. Scope layer",
+      "end_line": 12600
+    },
+    {
+      "id": "B12601",
+      "line": 12601,
+      "level": 4,
+      "title": "3. Data classification layer",
+      "end_line": 12628
+    },
+    {
+      "id": "B12629",
+      "line": 12629,
+      "level": 4,
+      "title": "4. Policy layer",
+      "end_line": 12650
+    },
+    {
+      "id": "B12651",
+      "line": 12651,
+      "level": 4,
+      "title": "5. Planner layer",
+      "end_line": 12680
+    },
+    {
+      "id": "B12681",
+      "line": 12681,
+      "level": 4,
+      "title": "6. Skill layer",
+      "end_line": 12714
+    },
+    {
+      "id": "B12715",
+      "line": 12715,
+      "level": 4,
+      "title": "7. Tool gateway layer",
+      "end_line": 12740
+    },
+    {
+      "id": "B12741",
+      "line": 12741,
+      "level": 4,
+      "title": "8. Evaluator layer",
+      "end_line": 12764
+    },
+    {
+      "id": "B12765",
+      "line": 12765,
+      "level": 4,
+      "title": "9. Human review layer",
+      "end_line": 12772
+    },
+    {
+      "id": "B12773",
+      "line": 12773,
+      "level": 4,
+      "title": "10. Memory/state layer",
+      "end_line": 12794
+    },
+    {
+      "id": "B12795",
+      "line": 12795,
+      "level": 4,
+      "title": "11. Audit layer",
+      "end_line": 12806
+    },
+    {
+      "id": "B12807",
+      "line": 12807,
+      "level": 3,
+      "title": "III. Pipeline vận hành tổng quát",
+      "end_line": 12996
+    },
+    {
+      "id": "B12811",
+      "line": 12811,
+      "level": 4,
+      "title": "1. Nhận yêu cầu",
+      "end_line": 12820
+    },
+    {
+      "id": "B12821",
+      "line": 12821,
+      "level": 4,
+      "title": "2. Kiểm scope",
+      "end_line": 12836
+    },
+    {
+      "id": "B12837",
+      "line": 12837,
+      "level": 4,
+      "title": "3. Phân loại input/data",
+      "end_line": 12860
+    },
+    {
+      "id": "B12861",
+      "line": 12861,
+      "level": 4,
+      "title": "4. Phân rã task",
+      "end_line": 12880
+    },
+    {
+      "id": "B12881",
+      "line": 12881,
+      "level": 4,
+      "title": "5. Chọn skill",
+      "end_line": 12888
+    },
+    {
+      "id": "B12889",
+      "line": 12889,
+      "level": 4,
+      "title": "6. Gọi tool qua gateway nếu cần",
+      "end_line": 12910
+    },
+    {
+      "id": "B12911",
+      "line": 12911,
+      "level": 4,
+      "title": "7. Tạo output trung gian",
+      "end_line": 12928
+    },
+    {
+      "id": "B12929",
+      "line": 12929,
+      "level": 4,
+      "title": "8. Evaluator kiểm output",
+      "end_line": 12946
+    },
+    {
+      "id": "B12947",
+      "line": 12947,
+      "level": 4,
+      "title": "9. Human review nếu vượt ngưỡng",
+      "end_line": 12952
+    },
+    {
+      "id": "B12953",
+      "line": 12953,
+      "level": 4,
+      "title": "10. Output cuối",
+      "end_line": 12966
+    },
+    {
+      "id": "B12967",
+      "line": 12967,
+      "level": 4,
+      "title": "11. Ghi memory có kiểm soát",
+      "end_line": 12974
+    },
+    {
+      "id": "B12975",
+      "line": 12975,
+      "level": 4,
+      "title": "12. Audit và stop reason",
+      "end_line": 12996
+    },
+    {
+      "id": "B12997",
+      "line": 12997,
+      "level": 3,
+      "title": "IV. Ontology-driven finding analysis",
+      "end_line": 13164
+    },
+    {
+      "id": "B13011",
+      "line": 13011,
+      "level": 4,
+      "title": "1. Asset",
+      "end_line": 13022
+    },
+    {
+      "id": "B13023",
+      "line": 13023,
+      "level": 4,
+      "title": "2. Input",
+      "end_line": 13034
+    },
+    {
+      "id": "B13035",
+      "line": 13035,
+      "level": 4,
+      "title": "3. Process",
+      "end_line": 13056
+    },
+    {
+      "id": "B13057",
+      "line": 13057,
+      "level": 4,
+      "title": "4. Missing constant",
+      "end_line": 13078
+    },
+    {
+      "id": "B13079",
+      "line": 13079,
+      "level": 4,
+      "title": "5. Output",
+      "end_line": 13094
+    },
+    {
+      "id": "B13095",
+      "line": 13095,
+      "level": 4,
+      "title": "6. Data",
+      "end_line": 13116
+    },
+    {
+      "id": "B13117",
+      "line": 13117,
+      "level": 4,
+      "title": "7. Loop",
+      "end_line": 13130
+    },
+    {
+      "id": "B13131",
+      "line": 13131,
+      "level": 4,
+      "title": "8. Risk",
+      "end_line": 13144
+    },
+    {
+      "id": "B13145",
+      "line": 13145,
+      "level": 4,
+      "title": "9. Mapping",
+      "end_line": 13152
+    },
+    {
+      "id": "B13153",
+      "line": 13153,
+      "level": 4,
+      "title": "10. Review status",
+      "end_line": 13164
+    },
+    {
+      "id": "B13165",
+      "line": 13165,
+      "level": 3,
+      "title": "V. Ontology-driven risk scoring",
+      "end_line": 13348
+    },
+    {
+      "id": "B13171",
+      "line": 13171,
+      "level": 4,
+      "title": "1. Asset criticality",
+      "end_line": 13178
+    },
+    {
+      "id": "B13179",
+      "line": 13179,
+      "level": 4,
+      "title": "2. Data sensitivity",
+      "end_line": 13186
+    },
+    {
+      "id": "B13187",
+      "line": 13187,
+      "level": 4,
+      "title": "3. Permission impact",
+      "end_line": 13192
+    },
+    {
+      "id": "B13193",
+      "line": 13193,
+      "level": 4,
+      "title": "4. Exploitability",
+      "end_line": 13204
+    },
+    {
+      "id": "B13205",
+      "line": 13205,
+      "level": 4,
+      "title": "5. IPOD impact",
+      "end_line": 13210
+    },
+    {
+      "id": "B13211",
+      "line": 13211,
+      "level": 4,
+      "title": "6. Control hiện có",
+      "end_line": 13214
+    },
+    {
+      "id": "B13215",
+      "line": 13215,
+      "level": 4,
+      "title": "7. Detection",
+      "end_line": 13220
+    },
+    {
+      "id": "B13221",
+      "line": 13221,
+      "level": 4,
+      "title": "8. Recovery",
+      "end_line": 13224
+    },
+    {
+      "id": "B13225",
+      "line": 13225,
+      "level": 4,
+      "title": "9. ATT&CK path",
+      "end_line": 13240
+    },
+    {
+      "id": "B13241",
+      "line": 13241,
+      "level": 4,
+      "title": "10. Evidence confidence",
+      "end_line": 13252
+    },
+    {
+      "id": "B13253",
+      "line": 13253,
+      "level": 4,
+      "title": "11. Ontology-driven control recommendation",
+      "end_line": 13348
+    },
+    {
+      "id": "B13349",
+      "line": 13349,
+      "level": 3,
+      "title": "VI. Agent không nên tự động hóa mọi thứ ngay",
+      "end_line": 13446
+    },
+    {
+      "id": "B13365",
+      "line": 13365,
+      "level": 4,
+      "title": "1. Giai đoạn 1 — Knowledge/reporting assistant",
+      "end_line": 13386
+    },
+    {
+      "id": "B13387",
+      "line": 13387,
+      "level": 4,
+      "title": "2. Giai đoạn 2 — Triage assistant",
+      "end_line": 13402
+    },
+    {
+      "id": "B13403",
+      "line": 13403,
+      "level": 4,
+      "title": "3. Giai đoạn 3 — Read-only security analyst",
+      "end_line": 13420
+    },
+    {
+      "id": "B13421",
+      "line": 13421,
+      "level": 4,
+      "title": "4. Giai đoạn 4 — Controlled workflow agent",
+      "end_line": 13426
+    },
+    {
+      "id": "B13427",
+      "line": 13427,
+      "level": 4,
+      "title": "5. Giai đoạn 5 — High-impact action agent",
+      "end_line": 13446
+    },
+    {
+      "id": "B13447",
+      "line": 13447,
+      "level": 3,
+      "title": "VII. Wedge sản phẩm hợp lý cho startup",
+      "end_line": 13622
+    },
+    {
+      "id": "B13457",
+      "line": 13457,
+      "level": 4,
+      "title": "1. AI pentest report assistant",
+      "end_line": 13496
+    },
+    {
+      "id": "B13497",
+      "line": 13497,
+      "level": 4,
+      "title": "2. Vulnerability triage assistant",
+      "end_line": 13528
+    },
+    {
+      "id": "B13529",
+      "line": 13529,
+      "level": 4,
+      "title": "3. Security evidence manager",
+      "end_line": 13558
+    },
+    {
+      "id": "B13559",
+      "line": 13559,
+      "level": 4,
+      "title": "4. Remediation tracking agent",
+      "end_line": 13590
+    },
+    {
+      "id": "B13591",
+      "line": 13591,
+      "level": 4,
+      "title": "5. Data-aware agent guardrail platform",
+      "end_line": 13622
+    },
+    {
+      "id": "B13623",
+      "line": 13623,
+      "level": 3,
+      "title": "VIII. System modules cho AI security agent",
+      "end_line": 13694
+    },
+    {
+      "id": "B13627",
+      "line": 13627,
+      "level": 4,
+      "title": "1. Asset module",
+      "end_line": 13630
+    },
+    {
+      "id": "B13631",
+      "line": 13631,
+      "level": 4,
+      "title": "2. Data classification module",
+      "end_line": 13634
+    },
+    {
+      "id": "B13635",
+      "line": 13635,
+      "level": 4,
+      "title": "3. Policy module",
+      "end_line": 13638
+    },
+    {
+      "id": "B13639",
+      "line": 13639,
+      "level": 4,
+      "title": "4. Evidence module",
+      "end_line": 13642
+    },
+    {
+      "id": "B13643",
+      "line": 13643,
+      "level": 4,
+      "title": "5. Finding module",
+      "end_line": 13662
+    },
+    {
+      "id": "B13663",
+      "line": 13663,
+      "level": 4,
+      "title": "6. Risk module",
+      "end_line": 13666
+    },
+    {
+      "id": "B13667",
+      "line": 13667,
+      "level": 4,
+      "title": "7. Control mapping module",
+      "end_line": 13670
+    },
+    {
+      "id": "B13671",
+      "line": 13671,
+      "level": 4,
+      "title": "8. ATT&CK/OWASP/NIST mapping module",
+      "end_line": 13674
+    },
+    {
+      "id": "B13675",
+      "line": 13675,
+      "level": 4,
+      "title": "9. Tool gateway",
+      "end_line": 13678
+    },
+    {
+      "id": "B13679",
+      "line": 13679,
+      "level": 4,
+      "title": "10. Human review module",
+      "end_line": 13682
+    },
+    {
+      "id": "B13683",
+      "line": 13683,
+      "level": 4,
+      "title": "11. Memory/state module",
+      "end_line": 13686
+    },
+    {
+      "id": "B13687",
+      "line": 13687,
+      "level": 4,
+      "title": "12. Audit module",
+      "end_line": 13694
+    },
+    {
+      "id": "B13695",
+      "line": 13695,
+      "level": 3,
+      "title": "IX. Finding lifecycle",
+      "end_line": 14030
+    },
+    {
+      "id": "B13701",
+      "line": 13701,
+      "level": 4,
+      "title": "1. Observed",
+      "end_line": 13706
+    },
+    {
+      "id": "B13707",
+      "line": 13707,
+      "level": 4,
+      "title": "2. Parsed",
+      "end_line": 13710
+    },
+    {
+      "id": "B13711",
+      "line": 13711,
+      "level": 4,
+      "title": "3. Classified",
+      "end_line": 13714
+    },
+    {
+      "id": "B13715",
+      "line": 13715,
+      "level": 4,
+      "title": "4. Evidence-needed",
+      "end_line": 13718
+    },
+    {
+      "id": "B13719",
+      "line": 13719,
+      "level": 4,
+      "title": "5. Evidence-attached",
+      "end_line": 13722
+    },
+    {
+      "id": "B13723",
+      "line": 13723,
+      "level": 4,
+      "title": "6. Verified",
+      "end_line": 13726
+    },
+    {
+      "id": "B13727",
+      "line": 13727,
+      "level": 4,
+      "title": "7. Risk-scored",
+      "end_line": 13730
+    },
+    {
+      "id": "B13731",
+      "line": 13731,
+      "level": 4,
+      "title": "8. Drafted",
+      "end_line": 13734
+    },
+    {
+      "id": "B13735",
+      "line": 13735,
+      "level": 4,
+      "title": "9. Human-reviewed",
+      "end_line": 13738
+    },
+    {
+      "id": "B13739",
+      "line": 13739,
+      "level": 4,
+      "title": "10. Published/Assigned",
+      "end_line": 13742
+    },
+    {
+      "id": "B13743",
+      "line": 13743,
+      "level": 4,
+      "title": "11. Fixed",
+      "end_line": 13746
+    },
+    {
+      "id": "B13747",
+      "line": 13747,
+      "level": 4,
+      "title": "12. Retested",
+      "end_line": 13750
+    },
+    {
+      "id": "B13751",
+      "line": 13751,
+      "level": 4,
+      "title": "13. Closed",
+      "end_line": 13754
+    },
+    {
+      "id": "B13755",
+      "line": 13755,
+      "level": 4,
+      "title": "14. Accepted risk",
+      "end_line": 13762
+    },
+    {
+      "id": "B13763",
+      "line": 13763,
+      "level": 4,
+      "title": "15. Evidence-first security agent",
+      "end_line": 13818
+    },
+    {
+      "id": "B13819",
+      "line": 13819,
+      "level": 4,
+      "title": "16. Agent-safe report output",
+      "end_line": 13876
+    },
+    {
+      "id": "B13877",
+      "line": 13877,
+      "level": 4,
+      "title": "17. Agent-safe ticket output",
+      "end_line": 13918
+    },
+    {
+      "id": "B13919",
+      "line": 13919,
+      "level": 4,
+      "title": "18. Agent-safe dashboard",
+      "end_line": 13952
+    },
+    {
+      "id": "B13953",
+      "line": 13953,
+      "level": 4,
+      "title": "19. Từ ontology sang implementation rule",
+      "end_line": 13984
+    },
+    {
+      "id": "B13985",
+      "line": 13985,
+      "level": 4,
+      "title": "20. Kết luận Phần XIII",
+      "end_line": 14030
+    },
+    {
+      "id": "B14031",
+      "line": 14031,
+      "level": 2,
+      "title": "Phần 12 — Nhìn lại toàn bộ bản đồ",
+      "end_line": 14983
+    },
+    {
+      "id": "B14039",
+      "line": 14039,
+      "level": 3,
+      "title": "I. Bảo mật không bắt đầu từ tên lỗi",
+      "end_line": 14983
+    },
+    {
+      "id": "B14085",
+      "line": 14085,
+      "level": 4,
+      "title": "1. Bảo mật là giữ hệ không lệch khỏi trạng thái an toàn",
+      "end_line": 14122
+    },
+    {
+      "id": "B14123",
+      "line": 14123,
+      "level": 4,
+      "title": "2. Hằng là cấu trúc ổn định giúp hệ xử lý biến",
+      "end_line": 14168
+    },
+    {
+      "id": "B14169",
+      "line": 14169,
+      "level": 4,
+      "title": "3. Biến là thứ có khả năng làm hệ lệch",
+      "end_line": 14200
+    },
+    {
+      "id": "B14201",
+      "line": 14201,
+      "level": 4,
+      "title": "4. Bảo mật là biến cái lạ thành cái xử lý được",
+      "end_line": 14222
+    },
+    {
+      "id": "B14223",
+      "line": 14223,
+      "level": 4,
+      "title": "5. Control là hằng bảo mật",
+      "end_line": 14248
+    },
+    {
+      "id": "B14249",
+      "line": 14249,
+      "level": 4,
+      "title": "6. Defense in depth là nhiều hằng ở nhiều tầng",
+      "end_line": 14288
+    },
+    {
+      "id": "B14289",
+      "line": 14289,
+      "level": 4,
+      "title": "7. IPOD cho biết sai lệch nằm ở đâu",
+      "end_line": 14314
+    },
+    {
+      "id": "B14315",
+      "line": 14315,
+      "level": 4,
+      "title": "8. IPOD phụ là I lớn của IPOD gốc",
+      "end_line": 14340
+    },
+    {
+      "id": "B14341",
+      "line": 14341,
+      "level": 4,
+      "title": "9. Exploit là biến được thiết kế để đi vào điểm hằng bị mù",
+      "end_line": 14364
+    },
+    {
+      "id": "B14365",
+      "line": 14365,
+      "level": 4,
+      "title": "10. Risk không nằm trong tên lỗi",
+      "end_line": 14386
+    },
+    {
+      "id": "B14387",
+      "line": 14387,
+      "level": 4,
+      "title": "11. Quyền lực khuếch đại rủi ro",
+      "end_line": 14412
+    },
+    {
+      "id": "B14413",
+      "line": 14413,
+      "level": 4,
+      "title": "12. Zero Trust là hằng chống hằng giả",
+      "end_line": 14434
+    },
+    {
+      "id": "B14435",
+      "line": 14435,
+      "level": 4,
+      "title": "13. Data không phải một khối text",
+      "end_line": 14474
+    },
+    {
+      "id": "B14475",
+      "line": 14475,
+      "level": 4,
+      "title": "14. Secret là quyền lực được nén thành data",
+      "end_line": 14504
+    },
+    {
+      "id": "B14505",
+      "line": 14505,
+      "level": 4,
+      "title": "15. Agent output không tự động là ground truth",
+      "end_line": 14536
+    },
+    {
+      "id": "B14537",
+      "line": 14537,
+      "level": 4,
+      "title": "16. Chatbot trả lời, agent vận hành vòng lặp",
+      "end_line": 14562
+    },
+    {
+      "id": "B14563",
+      "line": 14563,
+      "level": 4,
+      "title": "17. Agent nguy hiểm khi nó có tool, memory và quyền rộng",
+      "end_line": 14586
+    },
+    {
+      "id": "B14587",
+      "line": 14587,
+      "level": 4,
+      "title": "18. Harness là khung neo, skill là đường hầm attention",
+      "end_line": 14636
+    },
+    {
+      "id": "B14637",
+      "line": 14637,
+      "level": 4,
+      "title": "19. Context mở vùng nhìn, grounding giữ điểm nhìn",
+      "end_line": 14660
+    },
+    {
+      "id": "B14661",
+      "line": 14661,
+      "level": 4,
+      "title": "20. Agent phải biết dừng",
+      "end_line": 14698
+    },
+    {
+      "id": "B14699",
+      "line": 14699,
+      "level": 4,
+      "title": "21. Human review là control, không phải trang trí",
+      "end_line": 14754
+    },
+    {
+      "id": "B14755",
+      "line": 14755,
+      "level": 4,
+      "title": "22. Policy phải enforce ngoài model",
+      "end_line": 14776
+    },
+    {
+      "id": "B14777",
+      "line": 14777,
+      "level": 4,
+      "title": "23. Finding phải đi từ evidence đến kết luận",
+      "end_line": 14808
+    },
+    {
+      "id": "B14809",
+      "line": 14809,
+      "level": 4,
+      "title": "24. MITRE ATT&CK là ontology hành vi của biến đối nghịch",
+      "end_line": 14844
+    },
+    {
+      "id": "B14845",
+      "line": 14845,
+      "level": 4,
+      "title": "25. Incident response là hệ miễn dịch khi biến vượt hằng",
+      "end_line": 14888
+    },
+    {
+      "id": "B14889",
+      "line": 14889,
+      "level": 4,
+      "title": "26. Agent maturity phải tăng theo control maturity",
+      "end_line": 14926
+    },
+    {
+      "id": "B14927",
+      "line": 14927,
+      "level": 4,
+      "title": "27. Tổng kết toàn bộ bản outline",
+      "end_line": 14983
+    }
+  ],
+  "sources": [
+    {
+      "id": "book",
+      "title": "Hệ miễn dịch của thế giới số — Kevin T.N.",
+      "url": "urn:cyber-atlas:source:book",
+      "location": "urn:cyber-atlas:source:book",
+      "checked": "2026-11-26",
+      "read_scope": "Local seed; toàn bộ heading được index, đọc các đoạn nền và các phần mẫu. Không tuyên bố thẩm định từng câu trong sách.",
+      "sha256": "f5037432e708a0a2e84b7e2d123fb406f27aae81a3eb16a0eb3b028455ef197b"
+    },
+    {
+      "id": "metric",
+      "title": "A Fractal Model for Metric Generation",
+      "url": "urn:cyber-atlas:source:metric",
+      "location": "urn:cyber-atlas:source:metric",
+      "checked": "2026-11-26",
+      "read_scope": "Local method, 46 trang; phương pháp mở context trước khi sinh metric.",
+      "sha256": "8b6b291416049310fd5605811a5d249ab5a06cdeadd0b10b03ce2ec861cdffd5"
+    },
+    {
+      "id": "lens",
+      "title": "Lens framework",
+      "url": "urn:cyber-atlas:source:lens",
+      "location": "urn:cyber-atlas:source:lens",
+      "checked": "2026-11-26",
+      "read_scope": "Đã đọc protocol/framework/template; vận dụng NMF, IPOD, C/V, resources, tradeoffs.",
+      "sha256": "bad41ea02251147a535518fe761743e08e6bbbe1fd6eed1d51f2f36cad34a5c4"
+    },
+    {
+      "id": "csf",
+      "title": "NIST Cybersecurity Framework",
+      "url": "https://www.nist.gov/cyberframework",
+      "location": "https://www.nist.gov/cyberframework",
+      "checked": "2026-11-26",
+      "read_scope": "Trang tổng quan chính thức; dùng làm khung định hướng, không tuyên bố crosswalk mọi subcategory."
+    },
+    {
+      "id": "measure",
+      "title": "NIST SP 800-55 Vol. 1 (2024)",
+      "url": "https://csrc.nist.gov/pubs/sp/800/55/v1/final",
+      "location": "https://csrc.nist.gov/pubs/sp/800/55/v1/final",
+      "checked": "2026-11-26",
+      "read_scope": "Trang xuất bản và abstract: lựa chọn/đánh giá phép đo. Các công thức atlas do tác giả bản đồ đề xuất, không gán cho NIST."
+    },
+    {
+      "id": "zt",
+      "title": "NIST SP 800-207 (2020)",
+      "url": "https://csrc.nist.gov/pubs/sp/800/207/final",
+      "location": "https://csrc.nist.gov/pubs/sp/800/207/final",
+      "checked": "2026-11-26",
+      "read_scope": "Trang xuất bản/tổng quan Zero Trust; khung liên quan, không claim từng card là yêu cầu tiêu chuẩn."
+    },
+    {
+      "id": "identity",
+      "title": "NIST SP 800-63B-4 (2025)",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "location": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "checked": "2026-11-26",
+      "read_scope": "Đọc cụ thể §3.2.5 phishing resistance và đoạn replay resistance. Tách OTP khỏi protocol chống phishing; các kịch bản lifecycle là phần mở rộng phân tích."
+    },
+    {
+      "id": "asvs",
+      "title": "OWASP ASVS 5.0.0",
+      "url": "https://asvs.owasp.org/",
+      "location": "https://asvs.owasp.org/",
+      "checked": "2026-11-26",
+      "read_scope": "Trang dự án, stable release 2025-05-30; tài liệu để đào tiếp. Chưa map đến requirement ID."
+    },
+    {
+      "id": "api",
+      "title": "OWASP API Security Top 10 (2023)",
+      "url": "https://api-security.owasp.org/editions/2023/en/0x11-t10/",
+      "location": "https://api-security.owasp.org/editions/2023/en/0x11-t10/",
+      "checked": "2026-11-26",
+      "read_scope": "Đọc danh sách rủi ro cấp tổng quan; các tình huống cache/race/async là mở rộng phân tích."
+    },
+    {
+      "id": "attack",
+      "title": "MITRE ATT&CK",
+      "url": "https://attack.mitre.org/",
+      "location": "https://attack.mitre.org/",
+      "checked": "2026-11-26",
+      "read_scope": "Trang matrix trực tiếp; dùng như vocabulary hành vi, không copy toàn matrix hay khẳng định detection coverage. Taxonomy thay đổi nên cần pin release khi triển khai."
+    },
+    {
+      "id": "ir",
+      "title": "NIST SP 800-61 Rev. 3 (2025)",
+      "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+      "location": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+      "checked": "2026-11-26",
+      "read_scope": "Trang xuất bản/abstract; bản 2025 thay rev2. Các drill trong atlas là đề xuất riêng."
+    },
+    {
+      "id": "ssdf",
+      "title": "NIST SP 800-218, SSDF v1.1 (2022)",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+      "location": "https://csrc.nist.gov/pubs/sp/800/218/final",
+      "checked": "2026-11-26",
+      "read_scope": "Pinned edition; trang xuất bản/tổng quan. Không tuyên bố đã rà mọi phiên bản draft mới."
+    },
+    {
+      "id": "ot",
+      "title": "NIST SP 800-82 Rev. 3 (2023)",
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "location": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "checked": "2026-11-26",
+      "read_scope": "Trang xuất bản nhấn mạnh performance/reliability/safety. Ngày rà có note Rev4 initial public draft, hạn góp ý 2026-11-30; atlas pin rev3, không trộn draft."
+    },
+    {
+      "id": "cvss",
+      "title": "FIRST CVSS v4.0 specification",
+      "url": "https://www.first.org/cvss/v4.0/specification-document",
+      "location": "https://www.first.org/cvss/v4.0/specification-document",
+      "checked": "2026-11-26",
+      "read_scope": "Đọc Metrics/Assessment: CVSS là đầu vào, các yếu tố tổn thất kinh doanh ngoài phạm vi CVSS. Các công thức exposure-hours là đề xuất atlas."
+    },
+    {
+      "id": "llm",
+      "title": "OWASP Top 10 for LLM Applications (2025)",
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "location": "https://genai.owasp.org/llm-top-10/",
+      "checked": "2026-11-26",
+      "read_scope": "Trang tổng quan các loại rủi ro; không coi danh sách này là threat model đầy đủ cho mọi agent."
+    },
+    {
+      "id": "k8s",
+      "title": "Kubernetes Security Checklist",
+      "url": "https://kubernetes.io/docs/concepts/security/security-checklist/",
+      "location": "https://kubernetes.io/docs/concepts/security/security-checklist/",
+      "checked": "2026-11-26",
+      "read_scope": "Đọc cụ thể Pod security: RBAC và admission khác nhau; warn/audit khác enforce. Trang online thay đổi, cần pin version cluster khi áp dụng."
+    },
+    {
+      "id": "slsa",
+      "title": "SLSA v1.2",
+      "url": "https://slsa.dev/spec/v1.2/",
+      "location": "https://slsa.dev/spec/v1.2/",
+      "checked": "2026-11-26",
+      "read_scope": "Trang approved specification overview/tracks/provenance; chưa thẩm định đủ điều kiện từng level. Không cấp chứng nhận SLSA qua atlas."
+    }
+  ]
+}

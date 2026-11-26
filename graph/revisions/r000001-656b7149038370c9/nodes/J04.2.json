@@ -1,0 +1,15 @@
+{
+  "id": "J04.2",
+  "title": "Common failure domain được mở",
+  "type": "step",
+  "parent": "J04",
+  "domain": "architecture",
+  "journey": "J04",
+  "order": 2,
+  "process": "Primary và backup khác bucket nhưng cùng admin/key/IdP vẫn có điểm chết chung. Map cả quyền xóa và khả năng đổi retention.",
+  "observable": "Authority graph tới data, backup và recovery credentials.",
+  "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc.",
+  "goal": "Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

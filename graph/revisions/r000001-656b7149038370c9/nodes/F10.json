@@ -1,0 +1,13 @@
+{
+  "id": "F10",
+  "title": "File upload và đa phương tiện",
+  "type": "frontier",
+  "parent": "web",
+  "domain": "web",
+  "status": "OPEN",
+  "question": "Parser, converter, metadata và antivirus tạo những process con với quyền gì?",
+  "related": "web-parser",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Parser và trình duyệt; AppSec"
+}

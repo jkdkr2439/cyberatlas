@@ -1,0 +1,63 @@
+{
+  "id": "k8s-admission",
+  "title": "Quyền tạo workload",
+  "condition": "Principal được tạo Pod/deployment",
+  "input": "Pod spec và RBAC permission",
+  "process": "Kiểm tra trường security-sensitive ở admission",
+  "output": "Workload được giới hạn trên node",
+  "data": "Admission decision và spec thực",
+  "invariant": "RBAC create không tự ràng mọi trường Pod",
+  "failure": "Workload có quyền truy host hay identity ngoài intent",
+  "control": "Admission enforce và policy theo namespace",
+  "measure": "Spec trái policy được nhận / spec trái policy thử",
+  "test": "So warn/audit với enforce trong cluster lab",
+  "tradeoff": "Policy có thể chặn ứng dụng legacy",
+  "open": "Webhook mất kết nối thì admission làm gì?",
+  "type": "mechanism",
+  "parent": "containers",
+  "domain": "containers",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Cluster và workload; platform/SRE; Principal được tạo Pod/deployment",
+  "goal": "Quyền workload không mặc nhiên thành quyền node",
+  "variables": "Admission mode; RBAC; CNI; token; runtime",
+  "resources": "Admission; runtime telemetry; đội vận hành",
+  "book_anchor": {
+    "id": "B3534",
+    "line": 3534,
+    "level": 2,
+    "title": "Phần 04 — Phân loại lỗi bảo mật bằng hai trục IPOD và hằng/biến",
+    "end_line": 5509
+  },
+  "source_refs": [
+    "book",
+    "k8s"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Webhook mất kết nối thì admission làm gì? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Spec trái policy được nhận / spec trái policy thử",
+    "domain": "Cluster và workload; platform/SRE; Principal được tạo Pod/deployment",
+    "conditions": "Principal được tạo Pod/deployment",
+    "goal": "Quyền workload không mặc nhiên thành quyền node",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Admission decision và spec thực; bằng chứng test: So warn/audit với enforce trong cluster lab",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Policy có thể chặn ứng dụng legacy; Webhook mất kết nối thì admission làm gì?",
+    "binding": "k8s-admission → điểm thực thi: Kiểm tra trường security-sensitive ở admission"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Workload được giới hạn trên node / Workload có quyền truy host hay identity ngoài intent",
+    "domain": "Chốt population và giới hạn: Cluster và workload; platform/SRE; Principal được tạo Pod/deployment",
+    "mechanism": "Control có giữ invariant này không? RBAC create không tự ràng mọi trường Pod",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? So warn/audit với enforce trong cluster lab",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Admission; runtime telemetry; đội vận hành; Admission mode; RBAC; CNI; token; runtime",
+    "consequence": "Đạt Quyền workload không mặc nhiên thành quyền node nhưng phải theo dõi Policy có thể chặn ứng dụng legacy"
+  }
+}

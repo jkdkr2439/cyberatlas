@@ -1,0 +1,18 @@
+{
+  "id": "F28",
+  "title": "Medical Devices and Vehicles",
+  "type": "frontier",
+  "parent": "ot",
+  "domain": "ot",
+  "status": "OPEN",
+  "question": "Safety case, vòng đời hỗ trợ và authority update thay đổi tiêu chí triển khai ra sao?",
+  "related": "ot-safety",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Thiết bị và quy trình vật lý; kỹ sư vận hành",
+  "aliases": [
+    "Thiết bị y tế và phương tiện"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

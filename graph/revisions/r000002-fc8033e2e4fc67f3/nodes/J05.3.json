@@ -1,0 +1,20 @@
+{
+  "id": "J05.3",
+  "title": "Detect Transport Loss",
+  "type": "step",
+  "parent": "J05",
+  "domain": "telemetry",
+  "journey": "J05",
+  "order": 3,
+  "process": "Queue overflow, sampling và rate limit có thể bỏ đúng giai đoạn traffic lớn.",
+  "observable": "Drop counters, sequence gaps, buffer age và load condition.",
+  "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ.",
+  "goal": "Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Transport không âm thầm mất"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

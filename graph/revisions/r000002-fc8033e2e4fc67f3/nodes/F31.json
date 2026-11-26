@@ -1,0 +1,18 @@
+{
+  "id": "F31",
+  "title": "Multi-Step and Multi-Principal Agents",
+  "type": "frontier",
+  "parent": "agents",
+  "domain": "agents",
+  "status": "OPEN",
+  "question": "Authority có được cộng dồn sai khi output agent này làm input agent khác không?",
+  "related": "ai-tool",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Ứng dụng LLM và automation; AI/platform owner",
+  "aliases": [
+    "Agent nhiều bước và nhiều chủ thể"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "J02",
+  "title": "Cross-tenant: từ ID đầu vào đến cache và job bất đồng bộ",
+  "cards": [
+    "auth-object",
+    "auth-policy",
+    "auth-race",
+    "api-state",
+    "dat-egress",
+    "tel-schema"
+  ],
+  "goal": "Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.",
+  "boundary": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền.",
+  "branches": [
+    "Tenant filter trong DB: giảm bỏ sót query, nhưng background/admin path vẫn phải xét.",
+    "App policy: biểu đạt nghiệp vụ tốt hơn nhưng mọi điểm gọi phải áp nhất quán.",
+    "OPEN: cross-tenant sharing và data migration cần semantic contract riêng."
+  ],
+  "reopen": "Thêm report/export, cache layer, support role, tenant merge hoặc job queue.",
+  "type": "journey",
+  "parent": "authorization",
+  "domain": "authorization",
+  "status": "analyst_process_model",
+  "provenance": "analyst_expansion",
+  "steps": [
+    "J02.1",
+    "J02.2",
+    "J02.3",
+    "J02.4",
+    "J02.5",
+    "J02.6",
+    "J02.7",
+    "J02.8"
+  ],
+  "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền."
+}

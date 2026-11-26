@@ -1,0 +1,24 @@
+{
+  "id": "session",
+  "title": "Phiên và vòng đời quyền",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Ứng dụng sau đăng nhập; IAM và app owner",
+  "goal": "Quyền không tồn tại vượt điều kiện được cấp",
+  "variables": "TTL; cache; offline; refresh token; nhiều vùng",
+  "resources": "Kho phiên; đồng hồ; kênh invalidation; telemetry",
+  "book_part": 6,
+  "book_anchor": {
+    "id": "B6626",
+    "line": 6626,
+    "level": 2,
+    "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+    "end_line": 7585
+  },
+  "source_refs": [
+    "identity"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Ứng dụng sau đăng nhập; IAM và app owner"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "J01.5",
+  "title": "Invalidate Stale Authorization Caches",
+  "type": "step",
+  "parent": "J01",
+  "domain": "identity",
+  "journey": "J01",
+  "order": 5,
+  "process": "Race: request đọc version cũ, revoke commit, request ghi lại cache cũ. Version monotonic hoặc commit check phải chặn việc hồi sinh quyền.",
+  "observable": "Cache version, read/write order; test xen kẽ có lịch xác định.",
+  "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online.",
+  "goal": "Một chủ thể bị thu hồi không còn thực hiện hành động thuộc scope sau bound được chấp thuận.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Cache quyền hết cũ"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

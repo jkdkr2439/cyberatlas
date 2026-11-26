@@ -1,0 +1,68 @@
+{
+  "id": "dat-class",
+  "title": "Data Classification by Function",
+  "condition": "Một pipeline trộn nhiều loại dữ liệu",
+  "input": "Content, provenance và intended use",
+  "process": "Gắn sensitivity, authority và verified status riêng",
+  "output": "Dữ liệu có policy xử lý đúng chức năng",
+  "data": "Classification rationale và lineage",
+  "invariant": "Nhạy cảm và đáng tin là hai trục khác nhau",
+  "failure": "Text công khai bị coi là instruction; secret vào log",
+  "control": "Type/taint/provenance tách biệt và enforcement",
+  "measure": "Dataset thiếu nhãn bắt buộc / dataset trong catalog",
+  "test": "Dữ liệu công khai nhưng chứa lệnh giả phải giữ untrusted",
+  "tradeoff": "Nhãn chi tiết khó duy trì qua biến đổi",
+  "open": "Ai được đổi nhãn và theo bằng chứng gì?",
+  "type": "mechanism",
+  "parent": "data",
+  "domain": "data",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Vòng đời dataset; data owner; Một pipeline trộn nhiều loại dữ liệu",
+  "goal": "Dùng đúng loại dữ liệu, mục đích và thời hạn",
+  "variables": "Bản sao; cache; log; lineage; miền pháp lý",
+  "resources": "Catalog; redaction; xóa; khôi phục; pháp chế",
+  "book_anchor": {
+    "id": "B8536",
+    "line": 8536,
+    "level": 2,
+    "title": "Phần 08 — Data ontology cho agent bảo mật",
+    "end_line": 10085
+  },
+  "source_refs": [
+    "book",
+    "csf"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Ai được đổi nhãn và theo bằng chứng gì? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Dataset thiếu nhãn bắt buộc / dataset trong catalog",
+    "domain": "Vòng đời dataset; data owner; Một pipeline trộn nhiều loại dữ liệu",
+    "conditions": "Một pipeline trộn nhiều loại dữ liệu",
+    "goal": "Dùng đúng loại dữ liệu, mục đích và thời hạn",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Classification rationale và lineage; bằng chứng test: Dữ liệu công khai nhưng chứa lệnh giả phải giữ untrusted",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Nhãn chi tiết khó duy trì qua biến đổi; Ai được đổi nhãn và theo bằng chứng gì?",
+    "binding": "dat-class → điểm thực thi: Gắn sensitivity, authority và verified status riêng"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Dữ liệu có policy xử lý đúng chức năng / Text công khai bị coi là instruction; secret vào log",
+    "domain": "Chốt population và giới hạn: Vòng đời dataset; data owner; Một pipeline trộn nhiều loại dữ liệu",
+    "mechanism": "Control có giữ invariant này không? Nhạy cảm và đáng tin là hai trục khác nhau",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Dữ liệu công khai nhưng chứa lệnh giả phải giữ untrusted",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Catalog; redaction; xóa; khôi phục; pháp chế; Bản sao; cache; log; lineage; miền pháp lý",
+    "consequence": "Đạt Dùng đúng loại dữ liệu, mục đích và thời hạn nhưng phải theo dõi Nhãn chi tiết khó duy trì qua biến đổi"
+  },
+  "aliases": [
+    "Phân loại theo vai trò dữ liệu"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

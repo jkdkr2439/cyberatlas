@@ -1,0 +1,63 @@
+{
+  "id": "revoke-version",
+  "parent": "revoke-cache",
+  "title": "Đơn điệu của phiên bản quyền",
+  "condition": "State từ nhiều replica đến không theo thứ tự",
+  "input": "Quyền cũ/mới kèm epoch",
+  "process": "Không cho cập nhật epoch thấp thay epoch cao",
+  "output": "State consumer không đi lùi",
+  "data": "Applied epoch và discarded events",
+  "invariant": "Một event đến muộn không được hồi sinh quyền cũ",
+  "failure": "Arrival order bị coi là authority order",
+  "control": "Monotonic epoch với nguồn authority rõ",
+  "measure": "Lần state đi lùi / update sequence thử",
+  "test": "Phát revoke mới trước rồi phát event cũ sau",
+  "tradeoff": "Epoch ordering giữa nhiều authority cần thiết kế",
+  "open": "Hợp nhất nhiều nguồn quyền có một thứ tự toàn phần không?",
+  "domain": "session",
+  "goal": "Quyền không tồn tại vượt điều kiện được cấp",
+  "variables": "TTL; cache; offline; refresh token; nhiều vùng",
+  "resources": "Kho phiên; đồng hồ; kênh invalidation; telemetry",
+  "book_anchor": {
+    "id": "B6626",
+    "line": 6626,
+    "level": 2,
+    "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+    "end_line": 7585
+  },
+  "source_refs": [
+    "book",
+    "identity"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "type": "mechanism",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_recursive_expansion",
+  "frame": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; State từ nhiều replica đến không theo thứ tự",
+  "reopen": "Hợp nhất nhiều nguồn quyền có một thứ tự toàn phần không?",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Lần state đi lùi / update sequence thử",
+    "domain": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; State từ nhiều replica đến không theo thứ tự",
+    "conditions": "State từ nhiều replica đến không theo thứ tự",
+    "goal": "Quyền không tồn tại vượt điều kiện được cấp",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Applied epoch và discarded events",
+    "method": "Phát revoke mới trước rồi phát event cũ sau",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Epoch ordering giữa nhiều authority cần thiết kế; Hợp nhất nhiều nguồn quyền có một thứ tự toàn phần không?",
+    "binding": "revoke-version → Không cho cập nhật epoch thấp thay epoch cao"
+  },
+  "six_regions": {
+    "meaning": "Một event đến muộn không được hồi sinh quyền cũ",
+    "domain": "Ứng dụng sau đăng nhập; IAM và app owner; Đổi role, nghỉ việc hoặc lộ token; Quyết định được cache để giảm latency; State từ nhiều replica đến không theo thứ tự",
+    "mechanism": "Không cho cập nhật epoch thấp thay epoch cao; failure: Arrival order bị coi là authority order",
+    "evidence": "Phát revoke mới trước rồi phát event cũ sau",
+    "operational": "Kho phiên; đồng hồ; kênh invalidation; telemetry; Epoch ordering giữa nhiều authority cần thiết kế",
+    "consequence": "Quyền không tồn tại vượt điều kiện được cấp; Hợp nhất nhiều nguồn quyền có một thứ tự toàn phần không?"
+  }
+}

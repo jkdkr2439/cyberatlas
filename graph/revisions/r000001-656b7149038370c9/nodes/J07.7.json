@@ -1,0 +1,15 @@
+{
+  "id": "J07.7",
+  "title": "State sau sửa được xác nhận",
+  "type": "step",
+  "parent": "J07",
+  "domain": "vulnerability",
+  "journey": "J07",
+  "order": 7,
+  "process": "Ticket done không đủ. Kiểm đúng artifact và node, test điều kiện gốc và theo dõi rollback làm lỗi quay lại.",
+  "observable": "Read-back version, retest và residual unknown.",
+  "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context.",
+  "goal": "Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

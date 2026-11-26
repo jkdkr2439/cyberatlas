@@ -1,0 +1,15 @@
+{
+  "id": "J05.2",
+  "title": "Sensor thật sự sinh tín hiệu",
+  "type": "step",
+  "parent": "J05",
+  "domain": "telemetry",
+  "journey": "J05",
+  "order": 2,
+  "process": "Heartbeat chỉ chứng minh agent sống; test event phải đi qua đường cần quan sát.",
+  "observable": "Heartbeat age và synthetic event receipt riêng.",
+  "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ.",
+  "goal": "Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

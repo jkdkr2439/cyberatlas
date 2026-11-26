@@ -1,0 +1,68 @@
+{
+  "id": "cry-agility",
+  "title": "Cryptographic Agility",
+  "condition": "Thuật toán, chứng thư hoặc key policy đổi",
+  "input": "Inventory crypto và hạn bí mật dữ liệu",
+  "process": "Lập lộ trình thay đổi theo dependency",
+  "output": "Dịch vụ tương thích và dữ liệu còn đọc được",
+  "data": "Phiên bản protocol và migration result",
+  "invariant": "Đổi thuật toán không chỉ là sửa một tên cấu hình",
+  "failure": "Client cũ buộc downgrade hoặc mất kết nối",
+  "control": "Inventory, negotiation policy, staged migration",
+  "measure": "Dependency crypto đã thử migration / dependency nhận diện",
+  "test": "Chặn thuật toán cũ trong lab có client legacy",
+  "tradeoff": "Tương thích và chi phí phần cứng",
+  "open": "Dữ liệu giữ bí mật dài hạn cần lộ trình hậu lượng tử nào?",
+  "type": "mechanism",
+  "parent": "crypto",
+  "domain": "crypto",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Dữ liệu lưu và truyền; PKI/KMS owner; Thuật toán, chứng thư hoặc key policy đổi",
+  "goal": "Bí mật và toàn vẹn theo mô hình đối thủ cụ thể",
+  "variables": "Thuật toán; khóa; nonce; chứng thư; thời hạn bí mật",
+  "resources": "KMS/HSM; backup khóa; năng lực chuyển đổi",
+  "book_anchor": {
+    "id": "B8536",
+    "line": 8536,
+    "level": 2,
+    "title": "Phần 08 — Data ontology cho agent bảo mật",
+    "end_line": 10085
+  },
+  "source_refs": [
+    "book",
+    "asvs"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Dữ liệu giữ bí mật dài hạn cần lộ trình hậu lượng tử nào? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Dependency crypto đã thử migration / dependency nhận diện",
+    "domain": "Dữ liệu lưu và truyền; PKI/KMS owner; Thuật toán, chứng thư hoặc key policy đổi",
+    "conditions": "Thuật toán, chứng thư hoặc key policy đổi",
+    "goal": "Bí mật và toàn vẹn theo mô hình đối thủ cụ thể",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Phiên bản protocol và migration result; bằng chứng test: Chặn thuật toán cũ trong lab có client legacy",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Tương thích và chi phí phần cứng; Dữ liệu giữ bí mật dài hạn cần lộ trình hậu lượng tử nào?",
+    "binding": "cry-agility → điểm thực thi: Lập lộ trình thay đổi theo dependency"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Dịch vụ tương thích và dữ liệu còn đọc được / Client cũ buộc downgrade hoặc mất kết nối",
+    "domain": "Chốt population và giới hạn: Dữ liệu lưu và truyền; PKI/KMS owner; Thuật toán, chứng thư hoặc key policy đổi",
+    "mechanism": "Control có giữ invariant này không? Đổi thuật toán không chỉ là sửa một tên cấu hình",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Chặn thuật toán cũ trong lab có client legacy",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? KMS/HSM; backup khóa; năng lực chuyển đổi; Thuật toán; khóa; nonce; chứng thư; thời hạn bí mật",
+    "consequence": "Đạt Bí mật và toàn vẹn theo mô hình đối thủ cụ thể nhưng phải theo dõi Tương thích và chi phí phần cứng"
+  },
+  "aliases": [
+    "Chuyển đổi mật mã"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

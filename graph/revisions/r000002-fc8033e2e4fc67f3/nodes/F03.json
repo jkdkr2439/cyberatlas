@@ -1,0 +1,18 @@
+{
+  "id": "F03",
+  "title": "Post-Quantum Cryptography",
+  "type": "frontier",
+  "parent": "crypto",
+  "domain": "crypto",
+  "status": "OPEN",
+  "question": "Inventory dữ liệu bí mật dài hạn và protocol hybrid cần cách đo migration/compatibility nào?",
+  "related": "cry-agility",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Dữ liệu lưu và truyền; PKI/KMS owner",
+  "aliases": [
+    "Mật mã hậu lượng tử"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

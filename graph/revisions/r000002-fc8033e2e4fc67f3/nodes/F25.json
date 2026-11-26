@@ -1,0 +1,18 @@
+{
+  "id": "F25",
+  "title": "Insider Risk and Coercion",
+  "type": "frontier",
+  "parent": "human",
+  "domain": "human",
+  "status": "OPEN",
+  "question": "Quyền hợp lệ, động cơ, thiếu hỗ trợ và bị ép buộc tạo các giả thuyết phân biệt nào?",
+  "related": "hum-report",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Nhân viên, khách, thiết bị; HR/IT/facilities",
+  "aliases": [
+    "Insider và coercion"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

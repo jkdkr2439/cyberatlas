@@ -1,0 +1,24 @@
+{
+  "id": "endpoint",
+  "title": "Endpoint và ranh giới thực thi",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Máy trạm, server; endpoint team",
+  "goal": "Mã và quyền thực thi phù hợp công việc",
+  "variables": "BYOD; EDR health; kernel; ứng dụng cũ",
+  "resources": "Quản trị thiết bị; cập nhật; bộ nhớ; hỗ trợ người dùng",
+  "book_part": 4,
+  "book_anchor": {
+    "id": "B3534",
+    "line": 3534,
+    "level": 2,
+    "title": "Phần 04 — Phân loại lỗi bảo mật bằng hai trục IPOD và hằng/biến",
+    "end_line": 5509
+  },
+  "source_refs": [
+    "csf"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Máy trạm, server; endpoint team"
+}

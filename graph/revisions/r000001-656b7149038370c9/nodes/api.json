@@ -1,0 +1,24 @@
+{
+  "id": "api",
+  "title": "API và nghiệp vụ",
+  "type": "domain",
+  "parent": "root",
+  "scope": "API đồng bộ/bất đồng bộ; product team",
+  "goal": "Giao dịch giữ đúng quyền, thứ tự và giới hạn",
+  "variables": "Retry; concurrency; tenant; giá; số lượng",
+  "resources": "Transaction store; rate budget; test nghiệp vụ",
+  "book_part": 4,
+  "book_anchor": {
+    "id": "B3534",
+    "line": 3534,
+    "level": 2,
+    "title": "Phần 04 — Phân loại lỗi bảo mật bằng hai trục IPOD và hằng/biến",
+    "end_line": 5509
+  },
+  "source_refs": [
+    "api"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "API đồng bộ/bất đồng bộ; product team"
+}

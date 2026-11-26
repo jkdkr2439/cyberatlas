@@ -1,0 +1,15 @@
+{
+  "id": "J06.2",
+  "title": "Nguồn ngoài giữ nhãn dữ liệu",
+  "type": "step",
+  "parent": "J06",
+  "domain": "agents",
+  "journey": "J06",
+  "order": 2,
+  "process": "Retrieved text, OCR, tool output và memory cũ có provenance/mức trust. Nhãn không bảo đảm model sẽ tuân nên cần lớp thực thi.",
+  "observable": "Source chain và vị trí dữ liệu được đưa vào context.",
+  "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất.",
+  "goal": "Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

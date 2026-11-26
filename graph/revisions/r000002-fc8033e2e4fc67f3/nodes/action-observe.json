@@ -1,0 +1,68 @@
+{
+  "id": "action-observe",
+  "parent": "action-execution",
+  "title": "Independent Post-Action Observation",
+  "condition": "Tool receipt không đủ để biết hệ đã đổi",
+  "input": "Receipt và read-back từ hệ đích",
+  "process": "Đối chiếu đúng object/version, xét consistency delay",
+  "output": "Verified, contradicted hoặc unresolved outcome",
+  "data": "Read source, time, expected và observed",
+  "invariant": "Cùng chuỗi text tool trả không phải hai nguồn độc lập",
+  "failure": "Agent dùng lời tool xác nhận chính lời tool",
+  "control": "Independent read hoặc human review đúng scope",
+  "measure": "Outcome unresolved / actions cần hậu kiểm",
+  "test": "Actuator giả báo done; sensor riêng báo chưa đổi",
+  "tradeoff": "Hậu kiểm có thể chậm và cũng có lỗi sensor",
+  "open": "Nguồn đọc và nguồn ghi có common failure nào?",
+  "domain": "agents",
+  "goal": "Nội dung không đáng tin không được nâng thành authority",
+  "variables": "Prompt; retrieval; memory; tool; chi phí; model change",
+  "resources": "Policy ngoài model; sandbox; review; provenance",
+  "book_anchor": {
+    "id": "B10086",
+    "line": 10086,
+    "level": 2,
+    "title": "Phần 09 — Agent ontology: từ chatbot đến hệ vận hành",
+    "end_line": 11374
+  },
+  "source_refs": [
+    "book",
+    "llm"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "type": "mechanism",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_recursive_expansion",
+  "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request; Tool receipt không đủ để biết hệ đã đổi",
+  "reopen": "Nguồn đọc và nguồn ghi có common failure nào?",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Outcome unresolved / actions cần hậu kiểm",
+    "domain": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request; Tool receipt không đủ để biết hệ đã đổi",
+    "conditions": "Tool receipt không đủ để biết hệ đã đổi",
+    "goal": "Nội dung không đáng tin không được nâng thành authority",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Read source, time, expected và observed",
+    "method": "Actuator giả báo done; sensor riêng báo chưa đổi",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Hậu kiểm có thể chậm và cũng có lỗi sensor; Nguồn đọc và nguồn ghi có common failure nào?",
+    "binding": "action-observe → Đối chiếu đúng object/version, xét consistency delay"
+  },
+  "six_regions": {
+    "meaning": "Cùng chuỗi text tool trả không phải hai nguồn độc lập",
+    "domain": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Gateway đã cho phép request; Tool receipt không đủ để biết hệ đã đổi",
+    "mechanism": "Đối chiếu đúng object/version, xét consistency delay; failure: Agent dùng lời tool xác nhận chính lời tool",
+    "evidence": "Actuator giả báo done; sensor riêng báo chưa đổi",
+    "operational": "Policy ngoài model; sandbox; review; provenance; Hậu kiểm có thể chậm và cũng có lỗi sensor",
+    "consequence": "Nội dung không đáng tin không được nâng thành authority; Nguồn đọc và nguồn ghi có common failure nào?"
+  },
+  "aliases": [
+    "Quan sát độc lập sau tác động"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

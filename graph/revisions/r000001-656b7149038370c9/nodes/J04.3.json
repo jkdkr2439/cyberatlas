@@ -1,0 +1,15 @@
+{
+  "id": "J04.3",
+  "title": "Bản phục hồi phù hợp được chọn",
+  "type": "step",
+  "parent": "J04",
+  "domain": "architecture",
+  "journey": "J04",
+  "order": 3,
+  "process": "Snapshot gần nhất có thể chứa dữ liệu đã hỏng. Cần đánh giá tính sạch và khoảng thời gian cần quay lại, không chỉ tuổi backup.",
+  "observable": "Integrity checks, incident timeline và uncertainty về thời điểm compromise.",
+  "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc.",
+  "goal": "Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

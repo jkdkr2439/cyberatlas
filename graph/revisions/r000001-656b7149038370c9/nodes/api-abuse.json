@@ -1,0 +1,63 @@
+{
+  "id": "api-abuse",
+  "title": "Lạm dụng chức năng hợp lệ",
+  "condition": "Endpoint đúng kỹ thuật nhưng có giá trị kinh tế",
+  "input": "Nhiều yêu cầu hợp quyền",
+  "process": "Đánh giá quota theo actor, hành vi và cost",
+  "output": "Dịch vụ vẫn phục vụ người hợp lệ",
+  "data": "Cost, intent proxies và quyết định giới hạn",
+  "invariant": "Authentication không bảo đảm sử dụng không gây hại",
+  "failure": "Scraping hoặc mua vét bằng tài khoản hợp lệ",
+  "control": "Business limits, fairness và escalation",
+  "measure": "Cost theo actor cùng tỷ lệ người hợp lệ bị chặn",
+  "test": "Thử traffic count bằng nhau nhưng phân bố actor khác",
+  "tradeoff": "Định danh sâu có chi phí riêng tư",
+  "open": "Phân biệt tự động hóa được phép với abuse bằng tiêu chí nào?",
+  "type": "mechanism",
+  "parent": "api",
+  "domain": "api",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "API đồng bộ/bất đồng bộ; product team; Endpoint đúng kỹ thuật nhưng có giá trị kinh tế",
+  "goal": "Giao dịch giữ đúng quyền, thứ tự và giới hạn",
+  "variables": "Retry; concurrency; tenant; giá; số lượng",
+  "resources": "Transaction store; rate budget; test nghiệp vụ",
+  "book_anchor": {
+    "id": "B3534",
+    "line": 3534,
+    "level": 2,
+    "title": "Phần 04 — Phân loại lỗi bảo mật bằng hai trục IPOD và hằng/biến",
+    "end_line": 5509
+  },
+  "source_refs": [
+    "book",
+    "api"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Phân biệt tự động hóa được phép với abuse bằng tiêu chí nào? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Cost theo actor cùng tỷ lệ người hợp lệ bị chặn",
+    "domain": "API đồng bộ/bất đồng bộ; product team; Endpoint đúng kỹ thuật nhưng có giá trị kinh tế",
+    "conditions": "Endpoint đúng kỹ thuật nhưng có giá trị kinh tế",
+    "goal": "Giao dịch giữ đúng quyền, thứ tự và giới hạn",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Cost, intent proxies và quyết định giới hạn; bằng chứng test: Thử traffic count bằng nhau nhưng phân bố actor khác",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Định danh sâu có chi phí riêng tư; Phân biệt tự động hóa được phép với abuse bằng tiêu chí nào?",
+    "binding": "api-abuse → điểm thực thi: Đánh giá quota theo actor, hành vi và cost"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Dịch vụ vẫn phục vụ người hợp lệ / Scraping hoặc mua vét bằng tài khoản hợp lệ",
+    "domain": "Chốt population và giới hạn: API đồng bộ/bất đồng bộ; product team; Endpoint đúng kỹ thuật nhưng có giá trị kinh tế",
+    "mechanism": "Control có giữ invariant này không? Authentication không bảo đảm sử dụng không gây hại",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Thử traffic count bằng nhau nhưng phân bố actor khác",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Transaction store; rate budget; test nghiệp vụ; Retry; concurrency; tenant; giá; số lượng",
+    "consequence": "Đạt Giao dịch giữ đúng quyền, thứ tự và giới hạn nhưng phải theo dõi Định danh sâu có chi phí riêng tư"
+  }
+}

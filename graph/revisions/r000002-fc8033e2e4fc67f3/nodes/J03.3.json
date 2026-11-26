@@ -1,0 +1,20 @@
+{
+  "id": "J03.3",
+  "title": "Scope Builder Privileges",
+  "type": "step",
+  "parent": "J03",
+  "domain": "supply",
+  "journey": "J03",
+  "order": 3,
+  "process": "Contribution không tin không được cùng authority với release job. Tách persistent cache/state có thể bị đầu độc.",
+  "observable": "Runner identity, job trust, state sharing và credential exposure review.",
+  "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng.",
+  "goal": "Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Builder nhận quyền phù hợp"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

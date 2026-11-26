@@ -1,0 +1,29 @@
+{
+  "id": "architecture",
+  "title": "Architecture and Trust Boundaries",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Dịch vụ phân tán; kiến trúc sư",
+  "goal": "Sai lệch không được tự do lan sang miền khác",
+  "variables": "Tenant; đường mạng; failover; vị trí enforcement",
+  "resources": "Sơ đồ thực tế; test môi trường; năng lực vận hành",
+  "book_part": 6,
+  "book_anchor": {
+    "id": "B6626",
+    "line": 6626,
+    "level": 2,
+    "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+    "end_line": 7585
+  },
+  "source_refs": [
+    "zt"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Dịch vụ phân tán; kiến trúc sư",
+  "aliases": [
+    "Kiến trúc và ranh giới tin cậy"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

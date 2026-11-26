@@ -1,0 +1,36 @@
+{
+  "id": "J04",
+  "title": "Ransomware và phục hồi: bản sao sống trong cùng miền thất bại",
+  "cards": [
+    "arch-blast",
+    "rec-backup",
+    "rec-objective",
+    "rec-consistency",
+    "cry-key",
+    "tp-concentration"
+  ],
+  "goal": "Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.",
+  "boundary": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc.",
+  "branches": [
+    "Hot standby: phục hồi nhanh nhưng corruption/quyền xấu có thể lan đồng thời.",
+    "Bản cô lập: giảm common failure nhưng chậm lấy lại và cần key/identity độc lập.",
+    "OPEN: giao dịch với bên ngoài không thể tự ý replay hoặc đảo cần quy trình nghiệp vụ."
+  ],
+  "reopen": "Đổi key, identity, backup retention, schema, nhà cung cấp hoặc mục tiêu kinh doanh.",
+  "type": "journey",
+  "parent": "architecture",
+  "domain": "architecture",
+  "status": "analyst_process_model",
+  "provenance": "analyst_expansion",
+  "steps": [
+    "J04.1",
+    "J04.2",
+    "J04.3",
+    "J04.4",
+    "J04.5",
+    "J04.6",
+    "J04.7",
+    "J04.8"
+  ],
+  "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc."
+}

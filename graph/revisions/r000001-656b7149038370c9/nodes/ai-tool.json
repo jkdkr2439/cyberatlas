@@ -1,0 +1,63 @@
+{
+  "id": "ai-tool",
+  "title": "Agent gọi công cụ",
+  "condition": "Model có khả năng ghi hoặc gửi",
+  "input": "Tool args, user intent và current state",
+  "process": "Kiểm schema, quyền, preview và approval theo rủi ro",
+  "output": "Hành động đúng phạm vi hoặc bị từ chối",
+  "data": "Intent-action binding và observed outcome",
+  "invariant": "Approval phải gắn đúng hành động đang thực thi",
+  "failure": "Model đổi args sau review hoặc tool có quyền quá rộng",
+  "control": "Narrow capability, immutable approved intent, read-back",
+  "measure": "Hành động lệch approved intent / hành động thử",
+  "test": "Đổi destination sau approval; enforcement phải chặn",
+  "tradeoff": "Human review quá nhiều gây mệt mỏi và rubber stamp",
+  "open": "Approval hết hạn khi môi trường thay đổi thế nào?",
+  "type": "mechanism",
+  "parent": "agents",
+  "domain": "agents",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi",
+  "goal": "Nội dung không đáng tin không được nâng thành authority",
+  "variables": "Prompt; retrieval; memory; tool; chi phí; model change",
+  "resources": "Policy ngoài model; sandbox; review; provenance",
+  "book_anchor": {
+    "id": "B10086",
+    "line": 10086,
+    "level": 2,
+    "title": "Phần 09 — Agent ontology: từ chatbot đến hệ vận hành",
+    "end_line": 11374
+  },
+  "source_refs": [
+    "book",
+    "llm"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Approval hết hạn khi môi trường thay đổi thế nào? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Hành động lệch approved intent / hành động thử",
+    "domain": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi",
+    "conditions": "Model có khả năng ghi hoặc gửi",
+    "goal": "Nội dung không đáng tin không được nâng thành authority",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Intent-action binding và observed outcome; bằng chứng test: Đổi destination sau approval; enforcement phải chặn",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Human review quá nhiều gây mệt mỏi và rubber stamp; Approval hết hạn khi môi trường thay đổi thế nào?",
+    "binding": "ai-tool → điểm thực thi: Kiểm schema, quyền, preview và approval theo rủi ro"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Hành động đúng phạm vi hoặc bị từ chối / Model đổi args sau review hoặc tool có quyền quá rộng",
+    "domain": "Chốt population và giới hạn: Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi",
+    "mechanism": "Control có giữ invariant này không? Approval phải gắn đúng hành động đang thực thi",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Đổi destination sau approval; enforcement phải chặn",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Policy ngoài model; sandbox; review; provenance; Prompt; retrieval; memory; tool; chi phí; model change",
+    "consequence": "Đạt Nội dung không đáng tin không được nâng thành authority nhưng phải theo dõi Human review quá nhiều gây mệt mỏi và rubber stamp"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "F16",
+  "title": "Suy diễn riêng tư và tái định danh",
+  "type": "frontier",
+  "parent": "data",
+  "domain": "data",
+  "status": "OPEN",
+  "question": "Các dataset riêng không nhạy cảm có thể kết hợp để suy ra điều gì, với đối thủ nào?",
+  "related": "dat-class",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Vòng đời dataset; data owner"
+}

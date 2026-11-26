@@ -1,0 +1,41 @@
+{
+  "id": "J08",
+  "title": "OT Commands and Physical State Transitions",
+  "cards": [
+    "ot-safety",
+    "ot-legacy",
+    "ot-remote",
+    "arch-failure",
+    "net-segment",
+    "ir-contain"
+  ],
+  "goal": "Giữ quy trình trong envelope an toàn khi gặp sai lệch số, với quyết định do chuyên gia vận hành xác nhận.",
+  "boundary": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety.",
+  "branches": [
+    "Passive observation: ít tác động hệ cũ nhưng không thấy mọi state nội bộ.",
+    "Active validation: nhiều bằng chứng hơn nhưng phải nằm trong maintenance/safety constraints.",
+    "OPEN: hệ safety có common cause với control network hay identity không?"
+  ],
+  "reopen": "Đổi process mode, firmware, sensor, nhà cung cấp hoặc safety requirements.",
+  "type": "journey",
+  "parent": "ot",
+  "domain": "ot",
+  "status": "analyst_process_model",
+  "provenance": "analyst_expansion",
+  "steps": [
+    "J08.1",
+    "J08.2",
+    "J08.3",
+    "J08.4",
+    "J08.5",
+    "J08.6",
+    "J08.7",
+    "J08.8"
+  ],
+  "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety.",
+  "aliases": [
+    "OT: một lệnh số đi tới trạng thái vật lý"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

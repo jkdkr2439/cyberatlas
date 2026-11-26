@@ -1,0 +1,20 @@
+{
+  "id": "J03.7",
+  "title": "Enforce Policy at the Point of Use",
+  "type": "step",
+  "parent": "J03",
+  "domain": "supply",
+  "journey": "J03",
+  "order": 7,
+  "process": "Chỉ verify trong CI không ngăn người có đường deploy khác. Admission/deployer phải áp policy và ghi deny/allow.",
+  "observable": "Negative cases: sai nguồn, builder, signer, digest, policy version.",
+  "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng.",
+  "goal": "Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Enforcement xảy ra ở điểm dùng"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

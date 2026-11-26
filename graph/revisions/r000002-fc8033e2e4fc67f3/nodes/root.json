@@ -1,0 +1,14 @@
+{
+  "id": "root",
+  "type": "root",
+  "title": "Cybersecurity Mechanism Map",
+  "parent": null,
+  "status": "bounded_map",
+  "provenance": "analyst_authored",
+  "frame": "Bounded educational cybersecurity model; no organization data.",
+  "aliases": [
+    "Cybersecurity · bản đồ cơ chế"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

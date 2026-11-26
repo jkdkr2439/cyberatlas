@@ -1,0 +1,15 @@
+{
+  "id": "J01.1",
+  "title": "Binding còn hiệu lực",
+  "type": "step",
+  "parent": "J01",
+  "domain": "identity",
+  "journey": "J01",
+  "order": 1,
+  "process": "Sự kiện HR hoặc incident chỉ tên người; phải resolve ra account, workload delegated và grant cụ thể. Bỏ alias tạo false completion.",
+  "observable": "Danh sách principal và grant có owner; unknown identity ghi riêng.",
+  "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online.",
+  "goal": "Một chủ thể bị thu hồi không còn thực hiện hành động thuộc scope sau bound được chấp thuận.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

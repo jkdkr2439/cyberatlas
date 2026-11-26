@@ -1,0 +1,63 @@
+{
+  "id": "ir-evidence",
+  "title": "Thu giữ và chuỗi bảo quản",
+  "condition": "Có thể cần điều tra kỹ thuật/pháp lý",
+  "input": "Volatile state, image, log và người thu thập",
+  "process": "Thu đúng scope, ghi thao tác và kiểm integrity",
+  "output": "Bằng chứng tái kiểm tra được",
+  "data": "Custody, timestamp uncertainty và hashes",
+  "invariant": "Hành vi thu thập có thể làm thay đổi hệ",
+  "failure": "Reboot làm mất memory; copy không có nguồn",
+  "control": "Runbook theo loại bằng chứng và kiểm custody",
+  "measure": "Artifact thiếu metadata thiết yếu / artifact đã thu",
+  "test": "Đưa artifact đổi hash hoặc thiếu nguồn vào review",
+  "tradeoff": "Thu đầy đủ tốn thời gian và chạm riêng tư",
+  "open": "Chuẩn pháp lý tại nơi xử lý yêu cầu gì?",
+  "type": "mechanism",
+  "parent": "response",
+  "domain": "response",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Sự cố đã nghi ngờ; incident commander; Có thể cần điều tra kỹ thuật/pháp lý",
+  "goal": "Giới hạn thiệt hại và giữ khả năng hiểu sự kiện",
+  "variables": "Thời điểm; phạm vi; authority; nguồn chứng cứ",
+  "resources": "Runbook; đội trực; kho chứng cứ; truyền thông",
+  "book_anchor": {
+    "id": "B11375",
+    "line": 11375,
+    "level": 2,
+    "title": "Phần 10 — Agent bảo mật: quyền, data và human review",
+    "end_line": 12408
+  },
+  "source_refs": [
+    "book",
+    "ir"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Chuẩn pháp lý tại nơi xử lý yêu cầu gì? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Artifact thiếu metadata thiết yếu / artifact đã thu",
+    "domain": "Sự cố đã nghi ngờ; incident commander; Có thể cần điều tra kỹ thuật/pháp lý",
+    "conditions": "Có thể cần điều tra kỹ thuật/pháp lý",
+    "goal": "Giới hạn thiệt hại và giữ khả năng hiểu sự kiện",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Custody, timestamp uncertainty và hashes; bằng chứng test: Đưa artifact đổi hash hoặc thiếu nguồn vào review",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Thu đầy đủ tốn thời gian và chạm riêng tư; Chuẩn pháp lý tại nơi xử lý yêu cầu gì?",
+    "binding": "ir-evidence → điểm thực thi: Thu đúng scope, ghi thao tác và kiểm integrity"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Bằng chứng tái kiểm tra được / Reboot làm mất memory; copy không có nguồn",
+    "domain": "Chốt population và giới hạn: Sự cố đã nghi ngờ; incident commander; Có thể cần điều tra kỹ thuật/pháp lý",
+    "mechanism": "Control có giữ invariant này không? Hành vi thu thập có thể làm thay đổi hệ",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Đưa artifact đổi hash hoặc thiếu nguồn vào review",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Runbook; đội trực; kho chứng cứ; truyền thông; Thời điểm; phạm vi; authority; nguồn chứng cứ",
+    "consequence": "Đạt Giới hạn thiệt hại và giữ khả năng hiểu sự kiện nhưng phải theo dõi Thu đầy đủ tốn thời gian và chạm riêng tư"
+  }
+}

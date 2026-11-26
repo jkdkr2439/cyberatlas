@@ -1,0 +1,15 @@
+{
+  "id": "J01.6",
+  "title": "Refresh không cấp quyền trở lại",
+  "type": "step",
+  "parent": "J01",
+  "domain": "identity",
+  "journey": "J01",
+  "order": 6,
+  "process": "Access bị hủy nhưng refresh hoặc token exchange còn sống có thể phát hành quyền mới. Thu hồi phải đi qua chuỗi cấp lại.",
+  "observable": "Kết quả refresh/exchange sau revoke và lineage token.",
+  "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online.",
+  "goal": "Một chủ thể bị thu hồi không còn thực hiện hành động thuộc scope sau bound được chấp thuận.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

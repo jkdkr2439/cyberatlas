@@ -1,0 +1,63 @@
+{
+  "id": "restore-cut",
+  "parent": "rec-consistency",
+  "title": "Mốc cắt nhất quán giữa nhiều store",
+  "condition": "Backup được chụp ở các thời điểm khác nhau",
+  "input": "Snapshots và event/transaction positions",
+  "process": "Chọn cut hoặc dựng lại quan hệ nhân quả nghiệp vụ",
+  "output": "State liên hệ không thiếu/nhân đôi giao dịch",
+  "data": "Checkpoint IDs và recovery lineage",
+  "invariant": "Timestamp gần nhau không bảo đảm cùng transaction cut",
+  "failure": "Order được backup nhưng payment event chưa có",
+  "control": "Consistent checkpoint hoặc replay/reconcile contract",
+  "measure": "Invariant sai sau cut / records đối soát",
+  "test": "Tạo transaction đúng lúc hai snapshot lệch nhau",
+  "tradeoff": "Đồng bộ snapshot có thể gây pause hoặc tải",
+  "open": "Hệ ngoài tổ chức không tham gia snapshot thì sao?",
+  "domain": "recovery",
+  "goal": "Phục hồi trạng thái kinh doanh chấp nhận được",
+  "variables": "RTO; RPO; dependency; corruption; identity outage",
+  "resources": "Backup; clean room; key custody; người kiểm tra",
+  "book_anchor": {
+    "id": "B5510",
+    "line": 5510,
+    "level": 2,
+    "title": "Phần 05 — Ontology rủi ro: Threat, Vulnerability, Likelihood, Impact, Risk",
+    "end_line": 6625
+  },
+  "source_refs": [
+    "book",
+    "ir"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "type": "mechanism",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_recursive_expansion",
+  "frame": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc; Backup được chụp ở các thời điểm khác nhau",
+  "reopen": "Hệ ngoài tổ chức không tham gia snapshot thì sao?",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Invariant sai sau cut / records đối soát",
+    "domain": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc; Backup được chụp ở các thời điểm khác nhau",
+    "conditions": "Backup được chụp ở các thời điểm khác nhau",
+    "goal": "Phục hồi trạng thái kinh doanh chấp nhận được",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Checkpoint IDs và recovery lineage",
+    "method": "Tạo transaction đúng lúc hai snapshot lệch nhau",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Đồng bộ snapshot có thể gây pause hoặc tải; Hệ ngoài tổ chức không tham gia snapshot thì sao?",
+    "binding": "restore-cut → Chọn cut hoặc dựng lại quan hệ nhân quả nghiệp vụ"
+  },
+  "six_regions": {
+    "meaning": "Timestamp gần nhau không bảo đảm cùng transaction cut",
+    "domain": "Dịch vụ đầu cuối; business continuity; Nhiều store/queue khôi phục khác mốc; Backup được chụp ở các thời điểm khác nhau",
+    "mechanism": "Chọn cut hoặc dựng lại quan hệ nhân quả nghiệp vụ; failure: Order được backup nhưng payment event chưa có",
+    "evidence": "Tạo transaction đúng lúc hai snapshot lệch nhau",
+    "operational": "Backup; clean room; key custody; người kiểm tra; Đồng bộ snapshot có thể gây pause hoặc tải",
+    "consequence": "Phục hồi trạng thái kinh doanh chấp nhận được; Hệ ngoài tổ chức không tham gia snapshot thì sao?"
+  }
+}

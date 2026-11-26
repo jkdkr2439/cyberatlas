@@ -1,0 +1,1535 @@
+[
+  {
+    "id": "E:gov-owner",
+    "mechanism_id": "P:gov-owner",
+    "source_refs": [
+      "book",
+      "csf",
+      "measure"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi owner nhân sự rồi kiểm tra việc bàn giao",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:gov-exception",
+    "mechanism_id": "P:gov-exception",
+    "source_refs": [
+      "book",
+      "csf",
+      "measure"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Cho ngoại lệ hết hạn trong lab; kiểm tra enforcement",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:gov-loss",
+    "mechanism_id": "P:gov-loss",
+    "source_refs": [
+      "book",
+      "csf",
+      "measure"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Thay giả định phơi nhiễm, kiểm tra thứ hạng đảo hay không",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:inv-discovery",
+    "mechanism_id": "P:inv-discovery",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Cài một tài sản thử trong scope nhưng ngoài CMDB",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:inv-dependency",
+    "mechanism_id": "P:inv-dependency",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Ngắt IdP trong lab dù app server còn khỏe",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:inv-lifecycle",
+    "mechanism_id": "P:inv-lifecycle",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Xóa workload nhưng thử lại quyền máy đó trong lab",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:arch-boundary",
+    "mechanism_id": "P:arch-boundary",
+    "source_refs": [
+      "book",
+      "zt"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Cho request nội bộ mang danh tính không hợp lệ",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:arch-blast",
+    "mechanism_id": "P:arch-blast",
+    "source_refs": [
+      "book",
+      "zt"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Bỏ một cạnh quyền, tính lại phạm vi lan truyền",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:arch-failure",
+    "mechanism_id": "P:arch-failure",
+    "source_refs": [
+      "book",
+      "zt"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Gây timeout ở lab rồi thử thao tác mức rủi ro khác nhau",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:id-proof",
+    "mechanism_id": "P:id-proof",
+    "source_refs": [
+      "book",
+      "identity"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đưa trường hợp đồng tên hoặc đổi chủ tài khoản",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:id-mfa",
+    "mechanism_id": "P:id-mfa",
+    "source_refs": [
+      "book",
+      "identity"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "So sánh luồng chính và luồng fallback trong test được phép",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:id-recovery",
+    "mechanism_id": "P:id-recovery",
+    "source_refs": [
+      "book",
+      "identity"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đưa bằng chứng đúng tên nhưng không đủ quyền sở hữu",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:ses-issue",
+    "mechanism_id": "P:ses-issue",
+    "source_refs": [
+      "book",
+      "identity"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi riêng audience, giữ chữ ký hợp lệ trong lab",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:ses-revoke",
+    "mechanism_id": "P:ses-revoke",
+    "source_refs": [
+      "book",
+      "identity"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Thử cả access, refresh và đường offline sau revoke",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:ses-concurrency",
+    "mechanism_id": "P:ses-concurrency",
+    "source_refs": [
+      "book",
+      "identity"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Logout một thiết bị rồi kiểm tra chính sách trên thiết bị khác",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:auth-object",
+    "mechanism_id": "P:auth-object",
+    "source_refs": [
+      "book",
+      "api",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi object ID, giữ login hợp lệ và kiểm tra cả async export",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:auth-policy",
+    "mechanism_id": "P:auth-policy",
+    "source_refs": [
+      "book",
+      "api",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Kết hợp hai role riêng lẻ ít quyền nhưng hợp lại nguy hiểm",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:auth-race",
+    "mechanism_id": "P:auth-race",
+    "source_refs": [
+      "book",
+      "api",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi owner giữa check và commit trong môi trường test",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:cry-key",
+    "mechanism_id": "P:cry-key",
+    "source_refs": [
+      "book",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Khôi phục backup sau một lần rotation",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:cry-integrity",
+    "mechanism_id": "P:cry-integrity",
+    "source_refs": [
+      "book",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Thử đổi ciphertext/context và yêu cầu từ chối",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:cry-agility",
+    "mechanism_id": "P:cry-agility",
+    "source_refs": [
+      "book",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Chặn thuật toán cũ trong lab có client legacy",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:net-segment",
+    "mechanism_id": "P:net-segment",
+    "source_refs": [
+      "book",
+      "zt"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Thử route dự phòng, IPv6 và management plane",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:net-egress",
+    "mechanism_id": "P:net-egress",
+    "source_refs": [
+      "book",
+      "zt"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Dùng đích mô phỏng đổi resolution/redirect trong lab",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:net-dos",
+    "mechanism_id": "P:net-dos",
+    "source_refs": [
+      "book",
+      "zt"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Giữ request count, đổi workload sang loại đắt",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:msg-domain",
+    "mechanism_id": "P:msg-domain",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Thử forwarding và dịch vụ marketing được cho phép",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:msg-payment",
+    "mechanism_id": "P:msg-payment",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Email từ tài khoản thật nhưng nội dung giả trong diễn tập",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:msg-dns",
+    "mechanism_id": "P:msg-dns",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "So cấu hình thực với ý định đã duyệt",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:end-health",
+    "mechanism_id": "P:end-health",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Ngắt sensor trong lab; dashboard phải báo unknown/degraded",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:end-execution",
+    "mechanism_id": "P:end-execution",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Thử thao tác vô hại ngoài sandbox trong lab",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:end-memory",
+    "mechanism_id": "P:end-memory",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Fuzz có coverage và giữ regression case độc lập",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:web-injection",
+    "mechanism_id": "P:web-injection",
+    "source_refs": [
+      "book",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi dữ liệu đầu vào; cấu trúc lệnh phải không đổi",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:web-xss",
+    "mechanism_id": "P:web-xss",
+    "source_refs": [
+      "book",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Kiểm tra cùng input ở text, attribute và script context",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:web-parser",
+    "mechanism_id": "P:web-parser",
+    "source_refs": [
+      "book",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Corpus không chứa dữ liệu thật; so frontend/backend interpretation",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:api-state",
+    "mechanism_id": "P:api-state",
+    "source_refs": [
+      "book",
+      "api"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đảo thứ tự, lặp bước và đổi giá giữa các bước",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:api-retry",
+    "mechanism_id": "P:api-retry",
+    "source_refs": [
+      "book",
+      "api"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Gửi đồng thời và mô phỏng crash sau commit trước response",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:api-abuse",
+    "mechanism_id": "P:api-abuse",
+    "source_refs": [
+      "book",
+      "api"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Thử traffic count bằng nhau nhưng phân bố actor khác",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:cld-responsibility",
+    "mechanism_id": "P:cld-responsibility",
+    "source_refs": [
+      "book",
+      "zt"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Chuyển từ VM sang managed rồi đối soát việc còn lại",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:cld-policy",
+    "mechanism_id": "P:cld-policy",
+    "source_refs": [
+      "book",
+      "zt"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Kiểm tra cả role assumption và quyền sửa trust",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:cld-drift",
+    "mechanism_id": "P:cld-drift",
+    "source_refs": [
+      "book",
+      "zt"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Sửa cấu hình lab ngoài pipeline rồi đo phát hiện/khôi phục",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:k8s-admission",
+    "mechanism_id": "P:k8s-admission",
+    "source_refs": [
+      "book",
+      "k8s"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "So warn/audit với enforce trong cluster lab",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:k8s-identity",
+    "mechanism_id": "P:k8s-identity",
+    "source_refs": [
+      "book",
+      "k8s"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Chạy app không dùng API với token mount bị tắt",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:k8s-network",
+    "mechanism_id": "P:k8s-network",
+    "source_refs": [
+      "book",
+      "k8s"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi label và thử lại cùng đường kết nối",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:sw-design",
+    "mechanism_id": "P:sw-design",
+    "source_refs": [
+      "book",
+      "ssdf",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đưa vai trò không hợp lệ vào một use case",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:sw-testing",
+    "mechanism_id": "P:sw-testing",
+    "source_refs": [
+      "book",
+      "ssdf",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Cố ý bỏ một control trong fixture rồi test phải fail",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:sw-release",
+    "mechanism_id": "P:sw-release",
+    "source_refs": [
+      "book",
+      "ssdf",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Rollback sau migration trong staging",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:sup-dependency",
+    "mechanism_id": "P:sup-dependency",
+    "source_refs": [
+      "book",
+      "slsa",
+      "ssdf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi registry ưu tiên trong fixture không có secret",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:sup-builder",
+    "mechanism_id": "P:sup-builder",
+    "source_refs": [
+      "book",
+      "slsa",
+      "ssdf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Chạy fixture thử vượt job boundary không có credential thật",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:sup-deploy",
+    "mechanism_id": "P:sup-deploy",
+    "source_refs": [
+      "book",
+      "slsa",
+      "ssdf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Thay tag sau approve; deployment phải bám digest được duyệt",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:dat-class",
+    "mechanism_id": "P:dat-class",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Dữ liệu công khai nhưng chứa lệnh giả phải giữ untrusted",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:dat-retention",
+    "mechanism_id": "P:dat-retention",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Restore backup test rồi tái áp yêu cầu xóa",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:dat-egress",
+    "mechanism_id": "P:dat-egress",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Thử export bằng quyền chỉ xem từng record",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:vul-context",
+    "mechanism_id": "P:vul-context",
+    "source_refs": [
+      "book",
+      "cvss"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi reachability, giữ CVSS; ưu tiên phải được xem lại",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:vul-fix",
+    "mechanism_id": "P:vul-fix",
+    "source_refs": [
+      "book",
+      "cvss"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Một node cố tình chưa rollout trong lab",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:vul-exposure",
+    "mechanism_id": "P:vul-exposure",
+    "source_refs": [
+      "book",
+      "cvss"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Ẩn một đoạn telemetry; metric phải tăng unknown",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:tel-coverage",
+    "mechanism_id": "P:tel-coverage",
+    "source_refs": [
+      "book",
+      "ir",
+      "measure"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Ngắt pipeline và xem trạng thái đổi",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:tel-schema",
+    "mechanism_id": "P:tel-schema",
+    "source_refs": [
+      "book",
+      "ir",
+      "measure"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi format producer; parser phải fail rõ hoặc thích nghi đúng",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:tel-integrity",
+    "mechanism_id": "P:tel-integrity",
+    "source_refs": [
+      "book",
+      "ir",
+      "measure"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Thay log nguồn và xem có phát hiện chênh",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:det-base",
+    "mechanism_id": "P:det-base",
+    "source_refs": [
+      "book",
+      "attack",
+      "ir"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi prevalence giữ sensitivity; precision phải đổi",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:det-behavior",
+    "mechanism_id": "P:det-behavior",
+    "source_refs": [
+      "book",
+      "attack",
+      "ir"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi công cụ, giữ hành vi và kiểm detection",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:det-queue",
+    "mechanism_id": "P:det-queue",
+    "source_refs": [
+      "book",
+      "attack",
+      "ir"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Tăng tải ca khó nhưng giữ alert count",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:ir-contain",
+    "mechanism_id": "P:ir-contain",
+    "source_refs": [
+      "book",
+      "ir"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Giả lập actuator không thực thi; phải báo failure",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:ir-evidence",
+    "mechanism_id": "P:ir-evidence",
+    "source_refs": [
+      "book",
+      "ir"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đưa artifact đổi hash hoặc thiếu nguồn vào review",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:ir-learn",
+    "mechanism_id": "P:ir-learn",
+    "source_refs": [
+      "book",
+      "ir"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Lặp scenario sau sửa để kiểm nguyên nhân còn hay không",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:rec-backup",
+    "mechanism_id": "P:rec-backup",
+    "source_refs": [
+      "book",
+      "ir"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Mất cả primary lẫn identity; thử recover bằng đường độc lập",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:rec-objective",
+    "mechanism_id": "P:rec-objective",
+    "source_refs": [
+      "book",
+      "ir"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Khôi phục DB nhưng cố tình thiếu queue; chưa được tính pass",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:rec-consistency",
+    "mechanism_id": "P:rec-consistency",
+    "source_refs": [
+      "book",
+      "ir"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Restore hai store lệch thời gian trong lab",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:ot-safety",
+    "mechanism_id": "P:ot-safety",
+    "source_refs": [
+      "book",
+      "ot"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Diễn tập trên mô hình/lab theo kỹ sư safety",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:ot-legacy",
+    "mechanism_id": "P:ot-legacy",
+    "source_refs": [
+      "book",
+      "ot"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Kiểm trên digital twin/lab trước khi tác động thật",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:ot-remote",
+    "mechanism_id": "P:ot-remote",
+    "source_refs": [
+      "book",
+      "ot"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đóng work order rồi thử lại quyền trong lab",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:hum-report",
+    "mechanism_id": "P:hum-report",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Thử báo cáo ngoài giờ và kiểm phản hồi",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:hum-access",
+    "mechanism_id": "P:hum-access",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Diễn tập thất lạc thiết bị không chứa dữ liệu thật",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:hum-offboard",
+    "mechanism_id": "P:hum-offboard",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Cho người thử đổi vai, kiểm cả grant gián tiếp",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:tp-scope",
+    "mechanism_id": "P:tp-scope",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Ngừng một tính năng; quyền tương ứng phải bị giảm",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:tp-concentration",
+    "mechanism_id": "P:tp-concentration",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Cho common upstream unavailable trong tabletop",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:tp-exit",
+    "mechanism_id": "P:tp-exit",
+    "source_refs": [
+      "book",
+      "csf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Xuất rồi nhập lại với reconciliation độc lập",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:ai-instruction",
+    "mechanism_id": "P:ai-instruction",
+    "source_refs": [
+      "book",
+      "llm"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Thay chỉ nội dung retrieved; authority phải giữ nguyên",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:ai-tool",
+    "mechanism_id": "P:ai-tool",
+    "source_refs": [
+      "book",
+      "llm"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi destination sau approval; enforcement phải chặn",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:ai-memory",
+    "mechanism_id": "P:ai-memory",
+    "source_refs": [
+      "book",
+      "llm"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Gieo một memory sai có nhãn uncertain; kiểm có bị nâng cấp",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:revoke-fanout",
+    "mechanism_id": "P:revoke-fanout",
+    "source_refs": [
+      "book",
+      "identity"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Bỏ một consumer khỏi đường push nhưng giữ trong registry",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:revoke-cache",
+    "mechanism_id": "P:revoke-cache",
+    "source_refs": [
+      "book",
+      "identity"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi policy khi entry chưa hết TTL",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:revoke-version",
+    "mechanism_id": "P:revoke-version",
+    "source_refs": [
+      "book",
+      "identity"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Phát revoke mới trước rồi phát event cũ sau",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:revoke-race",
+    "mechanism_id": "P:revoke-race",
+    "source_refs": [
+      "book",
+      "identity"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Dùng barrier ép thứ tự read-old → revoke → write-old",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:revoke-cas",
+    "mechanism_id": "P:revoke-cas",
+    "source_refs": [
+      "book",
+      "identity"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Giữ cache-entry version nhưng tăng policy epoch",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:revoke-offline",
+    "mechanism_id": "P:revoke-offline",
+    "source_refs": [
+      "book",
+      "identity"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Ngắt mạng, dịch đồng hồ lab trong giới hạn test",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:tenant-context",
+    "mechanism_id": "P:tenant-context",
+    "source_refs": [
+      "book",
+      "api",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi header tenant, giữ token hợp lệ của tenant khác",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:tenant-cache",
+    "mechanism_id": "P:tenant-cache",
+    "source_refs": [
+      "book",
+      "api",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Hai tenant cùng local ID; hai role khác field quyền",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:tenant-job",
+    "mechanism_id": "P:tenant-job",
+    "source_refs": [
+      "book",
+      "api",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Gửi job rồi revoke quyền trước worker nhận",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:tenant-snapshot",
+    "mechanism_id": "P:tenant-snapshot",
+    "source_refs": [
+      "book",
+      "api",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Cùng revoke nhưng phân biệt giao dịch đã cam kết với export chưa chạy",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:tenant-delivery",
+    "mechanism_id": "P:tenant-delivery",
+    "source_refs": [
+      "book",
+      "api",
+      "asvs"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Người khác tenant dùng link từ job hợp lệ",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:build-cache",
+    "mechanism_id": "P:build-cache",
+    "source_refs": [
+      "book",
+      "slsa",
+      "ssdf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Fixture untrusted ghi marker rồi trusted job thử đọc",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:build-secret",
+    "mechanism_id": "P:build-secret",
+    "source_refs": [
+      "book",
+      "slsa",
+      "ssdf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Mock secret broker từ chối job untrusted dù workflow tên giống",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:verify-root",
+    "mechanism_id": "P:verify-root",
+    "source_refs": [
+      "book",
+      "slsa",
+      "ssdf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Artifact đề nghị thêm signer vào trust root; phải bị bỏ qua",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:verify-revocation",
+    "mechanism_id": "P:verify-revocation",
+    "source_refs": [
+      "book",
+      "slsa",
+      "ssdf"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Mock revoke signer; kiểm cả deploy mới và inventory cũ",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:action-approval",
+    "mechanism_id": "P:action-approval",
+    "source_refs": [
+      "book",
+      "llm"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Duyệt gửi bản A đến B rồi đổi file hoặc người nhận",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:action-digest",
+    "mechanism_id": "P:action-digest",
+    "source_refs": [
+      "book",
+      "llm"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi nội dung file nhưng giữ path; phải invalid approval",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:action-toctou",
+    "mechanism_id": "P:action-toctou",
+    "source_refs": [
+      "book",
+      "llm"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Đổi owner hoặc target version sau review",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:action-execution",
+    "mechanism_id": "P:action-execution",
+    "source_refs": [
+      "book",
+      "llm"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Mock tool trả success nhưng không đổi state; phải detected",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:action-retry",
+    "mechanism_id": "P:action-retry",
+    "source_refs": [
+      "book",
+      "llm"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Mock commit rồi mất response; retry không được nhân đôi",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:action-observe",
+    "mechanism_id": "P:action-observe",
+    "source_refs": [
+      "book",
+      "llm"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Actuator giả báo done; sensor riêng báo chưa đổi",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:restore-cut",
+    "mechanism_id": "P:restore-cut",
+    "source_refs": [
+      "book",
+      "ir"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Tạo transaction đúng lúc hai snapshot lệch nhau",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:restore-reconcile",
+    "mechanism_id": "P:restore-reconcile",
+    "source_refs": [
+      "book",
+      "ir"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Giữ tổng số record nhưng đổi quan hệ payment-order",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:restore-external",
+    "mechanism_id": "P:restore-external",
+    "source_refs": [
+      "book",
+      "ir"
+    ],
+    "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+    "proposed_test": "Restore trước mốc gửi nhưng provider đã nhận; phải reconcile",
+    "status": "not_tested_in_organization"
+  },
+  {
+    "id": "E:J01.1",
+    "mechanism_id": "P:J01.1",
+    "proposed_observation": "Danh sách principal và grant có owner; unknown identity ghi riêng.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J01.2",
+    "mechanism_id": "P:J01.2",
+    "proposed_observation": "Inventory credential theo loại và điểm enforcement, không chỉ số user.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J01.3",
+    "mechanism_id": "P:J01.3",
+    "proposed_observation": "t_revoke, version và nguồn đồng hồ; clock uncertainty.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J01.4",
+    "mechanism_id": "P:J01.4",
+    "proposed_observation": "Timestamp nhận version ở từng consumer; consumer offline là unresolved.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J01.5",
+    "mechanism_id": "P:J01.5",
+    "proposed_observation": "Cache version, read/write order; test xen kẽ có lịch xác định.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J01.6",
+    "mechanism_id": "P:J01.6",
+    "proposed_observation": "Kết quả refresh/exchange sau revoke và lineage token.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J01.7",
+    "mechanism_id": "P:J01.7",
+    "proposed_observation": "Last allow, first sustained deny, khoảng probe, số đường chưa kiểm.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J01.8",
+    "mechanism_id": "P:J01.8",
+    "proposed_observation": "Latency theo stratum, unknown/censored count, false revocation và recovery time.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J02.1",
+    "mechanism_id": "P:J02.1",
+    "proposed_observation": "Verified principal/tenant; input do client khai được đánh dấu không tin.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J02.2",
+    "mechanism_id": "P:J02.2",
+    "proposed_observation": "Object tenant từ storage; query scope; response behavior.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J02.3",
+    "mechanism_id": "P:J02.3",
+    "proposed_observation": "Decision tuple actor,action,object,tenant,policy-version.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J02.4",
+    "mechanism_id": "P:J02.4",
+    "proposed_observation": "State version trước/sau; kết quả race test có barrier.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J02.5",
+    "mechanism_id": "P:J02.5",
+    "proposed_observation": "Cache key contract; test cùng object-local-ID ở hai tenant.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J02.6",
+    "mechanism_id": "P:J02.6",
+    "proposed_observation": "Requester, purpose, scope, authorization epoch và expiry trên job.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J02.7",
+    "mechanism_id": "P:J02.7",
+    "proposed_observation": "Export ACL, signed-link policy, destination và thời điểm dùng.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J02.8",
+    "mechanism_id": "P:J02.8",
+    "proposed_observation": "Ma trận action × tenant relation × object state × delivery path; kết quả và gaps.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J03.1",
+    "mechanism_id": "P:J03.1",
+    "proposed_observation": "Commit/digest cụ thể và người có quyền duyệt.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J03.2",
+    "mechanism_id": "P:J03.2",
+    "proposed_observation": "Resolved digest, registry, transitive tree và install steps.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J03.3",
+    "mechanism_id": "P:J03.3",
+    "proposed_observation": "Runner identity, job trust, state sharing và credential exposure review.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J03.4",
+    "mechanism_id": "P:J03.4",
+    "proposed_observation": "Attestation identity và policy về builder được tin.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J03.5",
+    "mechanism_id": "P:J03.5",
+    "proposed_observation": "Signer scope, key validity, revocation và signing logs.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J03.6",
+    "mechanism_id": "P:J03.6",
+    "proposed_observation": "Approved digest đối chiếu digest fetched/deployed.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J03.7",
+    "mechanism_id": "P:J03.7",
+    "proposed_observation": "Negative cases: sai nguồn, builder, signer, digest, policy version.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J03.8",
+    "mechanism_id": "P:J03.8",
+    "proposed_observation": "Runtime digest inventory, affected instances và rehearsal rollback.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J04.1",
+    "mechanism_id": "P:J04.1",
+    "proposed_observation": "Business acceptance, owner và mốc bắt đầu đo.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J04.2",
+    "mechanism_id": "P:J04.2",
+    "proposed_observation": "Authority graph tới data, backup và recovery credentials.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J04.3",
+    "mechanism_id": "P:J04.3",
+    "proposed_observation": "Integrity checks, incident timeline và uncertainty về thời điểm compromise.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J04.4",
+    "mechanism_id": "P:J04.4",
+    "proposed_observation": "Clean-room prerequisites, custody và kết quả bootstrap.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J04.5",
+    "mechanism_id": "P:J04.5",
+    "proposed_observation": "Decryption/integrity result; không xuất secret ra báo cáo.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J04.6",
+    "mechanism_id": "P:J04.6",
+    "proposed_observation": "Ledger differences, unresolved records và phương án xử lý.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J04.7",
+    "mechanism_id": "P:J04.7",
+    "proposed_observation": "End-to-end checks, completion time, data-loss interval.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J04.8",
+    "mechanism_id": "P:J04.8",
+    "proposed_observation": "RTO/RPO deviation, missing dependencies, action owner và retest.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J05.1",
+    "mechanism_id": "P:J05.1",
+    "proposed_observation": "Expected registry, owner, nhóm chưa có sensor.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J05.2",
+    "mechanism_id": "P:J05.2",
+    "proposed_observation": "Heartbeat age và synthetic event receipt riêng.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J05.3",
+    "mechanism_id": "P:J05.3",
+    "proposed_observation": "Drop counters, sequence gaps, buffer age và load condition.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J05.4",
+    "mechanism_id": "P:J05.4",
+    "proposed_observation": "Fixtures có expected meaning; parser version và clock bounds.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J05.5",
+    "mechanism_id": "P:J05.5",
+    "proposed_observation": "TP/FP/FN trên bộ test có nhãn; unresolved giữ riêng.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J05.6",
+    "mechanism_id": "P:J05.6",
+    "proposed_observation": "Queue age theo cohort, pending count và complexity.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J05.7",
+    "mechanism_id": "P:J05.7",
+    "proposed_observation": "Read-back/probe từ đường độc lập và residual paths.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J05.8",
+    "mechanism_id": "P:J05.8",
+    "proposed_observation": "Versioned change, retest, cost và false-positive shift.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J06.1",
+    "mechanism_id": "P:J06.1",
+    "proposed_observation": "Intent record, assets, actions và destinations trong scope.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J06.2",
+    "mechanism_id": "P:J06.2",
+    "proposed_observation": "Source chain và vị trí dữ liệu được đưa vào context.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J06.3",
+    "mechanism_id": "P:J06.3",
+    "proposed_observation": "Proposed action và lý do gắn với user intent.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J06.4",
+    "mechanism_id": "P:J06.4",
+    "proposed_observation": "Policy decision độc lập và capability được cấp cho request.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J06.5",
+    "mechanism_id": "P:J06.5",
+    "proposed_observation": "Approved action digest/version và execute-time comparison.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J06.6",
+    "mechanism_id": "P:J06.6",
+    "proposed_observation": "Effective capability, output scope, timeout/cost và denied operations.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J06.7",
+    "mechanism_id": "P:J06.7",
+    "proposed_observation": "Observed state, discrepancies và taint/provenance output.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J06.8",
+    "mechanism_id": "P:J06.8",
+    "proposed_observation": "Claim-source graph, expiry, correction và revalidation.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J07.1",
+    "mechanism_id": "P:J07.1",
+    "proposed_observation": "Asset ID, image/version, scan timestamp, confidence.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J07.2",
+    "mechanism_id": "P:J07.2",
+    "proposed_observation": "Vendor/build evidence và scope affected component.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J07.3",
+    "mechanism_id": "P:J07.3",
+    "proposed_observation": "Preconditions có nguồn; unknown thay vì tự gán impossible.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J07.4",
+    "mechanism_id": "P:J07.4",
+    "proposed_observation": "Path evidence, segmentation test và trust assumptions.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J07.5",
+    "mechanism_id": "P:J07.5",
+    "proposed_observation": "Control test, critical assets reachable và scenario outcome.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J07.6",
+    "mechanism_id": "P:J07.6",
+    "proposed_observation": "Cost, deadline, residual path và rollback option.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J07.7",
+    "mechanism_id": "P:J07.7",
+    "proposed_observation": "Read-back version, retest và residual unknown.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J07.8",
+    "mechanism_id": "P:J07.8",
+    "proposed_observation": "Exposure-hours theo lớp quan trọng; unknown-hours và censoring.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J08.1",
+    "mechanism_id": "P:J08.1",
+    "proposed_observation": "Approved operating limits và mode definitions.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J08.2",
+    "mechanism_id": "P:J08.2",
+    "proposed_observation": "Time, calibration, quality flags và independent observations nếu có.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J08.3",
+    "mechanism_id": "P:J08.3",
+    "proposed_observation": "Command source, work order, mode và decision.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J08.4",
+    "mechanism_id": "P:J08.4",
+    "proposed_observation": "Session scope, expiry, revocation và local coordination.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J08.5",
+    "mechanism_id": "P:J08.5",
+    "proposed_observation": "Command receipt và measured response; disagreement alarm.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J08.6",
+    "mechanism_id": "P:J08.6",
+    "proposed_observation": "Safety-engineered loss-of-comms behavior và rehearsal evidence.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J08.7",
+    "mechanism_id": "P:J08.7",
+    "proposed_observation": "Approved intervention envelope và stop conditions.",
+    "status": "not_observed"
+  },
+  {
+    "id": "E:J08.8",
+    "mechanism_id": "P:J08.8",
+    "proposed_observation": "Configuration baseline, physical checks và sign-off của owner.",
+    "status": "not_observed"
+  }
+]

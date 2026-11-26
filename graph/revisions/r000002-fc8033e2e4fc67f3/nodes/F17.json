@@ -1,0 +1,18 @@
+{
+  "id": "F17",
+  "title": "Differential Privacy and Privacy Budgets",
+  "type": "frontier",
+  "parent": "data",
+  "domain": "data",
+  "status": "OPEN",
+  "question": "Đơn vị bảo vệ, composition và utility tradeoff được định nghĩa ra sao trước khi chọn epsilon?",
+  "related": "dat-egress",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Vòng đời dataset; data owner",
+  "aliases": [
+    "Differential privacy và ngân sách riêng tư"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

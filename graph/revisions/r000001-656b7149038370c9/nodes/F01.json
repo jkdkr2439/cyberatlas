@@ -1,0 +1,13 @@
+{
+  "id": "F01",
+  "title": "Side-channel và hardware root of trust",
+  "type": "frontier",
+  "parent": "crypto",
+  "domain": "crypto",
+  "status": "OPEN",
+  "question": "Đối thủ quan sát timing/power/cache trong mô hình truy cập nào, và control có tác dụng ở lớp nào?",
+  "related": "cry-integrity",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Dữ liệu lưu và truyền; PKI/KMS owner"
+}

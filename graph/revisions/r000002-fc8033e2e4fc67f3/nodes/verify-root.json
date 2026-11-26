@@ -1,0 +1,69 @@
+{
+  "id": "verify-root",
+  "parent": "sup-deploy",
+  "title": "Verifier Trust Roots",
+  "condition": "Verifier phải biết signer/builder nào hợp lệ",
+  "input": "Trust policy, key metadata và attestation",
+  "process": "Kiểm nguồn phân phối policy và thẩm quyền sửa nó",
+  "output": "Quyết định dựa trên trust root được bảo vệ",
+  "data": "Policy revision, approver và root lineage",
+  "invariant": "Không lấy trust root từ chính artifact đang cần xác minh",
+  "failure": "Artifact tự khai signer hợp lệ; attacker sửa allowlist",
+  "control": "Protected root distribution và separation of duties",
+  "measure": "Policy change không được duyệt / changes được audit",
+  "test": "Artifact đề nghị thêm signer vào trust root; phải bị bỏ qua",
+  "tradeoff": "Quản root chặt làm recovery signer khó hơn",
+  "open": "Khôi phục trust root khi chính hệ phát hành bị chiếm?",
+  "domain": "supply",
+  "goal": "Artifact triển khai đúng nguồn và chính sách cho phép",
+  "variables": "Dependency; runner; signer; registry; mutable tag",
+  "resources": "Builder cô lập; chứng thực; kiểm tra ở deploy",
+  "book_anchor": {
+    "id": "B12409",
+    "line": 12409,
+    "level": 2,
+    "title": "Phần 11 — Từ ontology sang hệ thống AI security agent",
+    "end_line": 14030
+  },
+  "source_refs": [
+    "book",
+    "slsa",
+    "ssdf"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "type": "mechanism",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_recursive_expansion",
+  "frame": "Source, build, artifact, deploy; release team; Artifact qua registry tới production; Verifier phải biết signer/builder nào hợp lệ",
+  "reopen": "Khôi phục trust root khi chính hệ phát hành bị chiếm?",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Policy change không được duyệt / changes được audit",
+    "domain": "Source, build, artifact, deploy; release team; Artifact qua registry tới production; Verifier phải biết signer/builder nào hợp lệ",
+    "conditions": "Verifier phải biết signer/builder nào hợp lệ",
+    "goal": "Artifact triển khai đúng nguồn và chính sách cho phép",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Policy revision, approver và root lineage",
+    "method": "Artifact đề nghị thêm signer vào trust root; phải bị bỏ qua",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Quản root chặt làm recovery signer khó hơn; Khôi phục trust root khi chính hệ phát hành bị chiếm?",
+    "binding": "verify-root → Kiểm nguồn phân phối policy và thẩm quyền sửa nó"
+  },
+  "six_regions": {
+    "meaning": "Không lấy trust root từ chính artifact đang cần xác minh",
+    "domain": "Source, build, artifact, deploy; release team; Artifact qua registry tới production; Verifier phải biết signer/builder nào hợp lệ",
+    "mechanism": "Kiểm nguồn phân phối policy và thẩm quyền sửa nó; failure: Artifact tự khai signer hợp lệ; attacker sửa allowlist",
+    "evidence": "Artifact đề nghị thêm signer vào trust root; phải bị bỏ qua",
+    "operational": "Builder cô lập; chứng thực; kiểm tra ở deploy; Quản root chặt làm recovery signer khó hơn",
+    "consequence": "Artifact triển khai đúng nguồn và chính sách cho phép; Khôi phục trust root khi chính hệ phát hành bị chiếm?"
+  },
+  "aliases": [
+    "Gốc tin của verifier"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

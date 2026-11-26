@@ -1,0 +1,13 @@
+{
+  "id": "F11",
+  "title": "GraphQL và query planning",
+  "type": "frontier",
+  "parent": "api",
+  "domain": "api",
+  "status": "OPEN",
+  "question": "Query hợp lệ có thể gây chi phí không tuyến tính hoặc lấy trường vượt quyền thế nào?",
+  "related": "api-abuse",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "API đồng bộ/bất đồng bộ; product team"
+}

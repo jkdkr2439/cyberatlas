@@ -1,0 +1,141 @@
+[
+  {
+    "id": "book",
+    "title": "Hệ miễn dịch của thế giới số — Kevin T.N.",
+    "url": "urn:cyber-atlas:source:book",
+    "location": "urn:cyber-atlas:source:book",
+    "checked": "2026-11-26",
+    "read_scope": "Local seed; toàn bộ heading được index, đọc các đoạn nền và các phần mẫu. Không tuyên bố thẩm định từng câu trong sách.",
+    "sha256": "f5037432e708a0a2e84b7e2d123fb406f27aae81a3eb16a0eb3b028455ef197b"
+  },
+  {
+    "id": "metric",
+    "title": "A Fractal Model for Metric Generation",
+    "url": "urn:cyber-atlas:source:metric",
+    "location": "urn:cyber-atlas:source:metric",
+    "checked": "2026-11-26",
+    "read_scope": "Local method, 46 trang; phương pháp mở context trước khi sinh metric.",
+    "sha256": "8b6b291416049310fd5605811a5d249ab5a06cdeadd0b10b03ce2ec861cdffd5"
+  },
+  {
+    "id": "lens",
+    "title": "Lens framework",
+    "url": "urn:cyber-atlas:source:lens",
+    "location": "urn:cyber-atlas:source:lens",
+    "checked": "2026-11-26",
+    "read_scope": "Đã đọc protocol/framework/template; vận dụng NMF, IPOD, C/V, resources, tradeoffs.",
+    "sha256": "bad41ea02251147a535518fe761743e08e6bbbe1fd6eed1d51f2f36cad34a5c4"
+  },
+  {
+    "id": "csf",
+    "title": "NIST Cybersecurity Framework",
+    "url": "https://www.nist.gov/cyberframework",
+    "location": "https://www.nist.gov/cyberframework",
+    "checked": "2026-11-26",
+    "read_scope": "Trang tổng quan chính thức; dùng làm khung định hướng, không tuyên bố crosswalk mọi subcategory."
+  },
+  {
+    "id": "measure",
+    "title": "NIST SP 800-55 Vol. 1 (2024)",
+    "url": "https://csrc.nist.gov/pubs/sp/800/55/v1/final",
+    "location": "https://csrc.nist.gov/pubs/sp/800/55/v1/final",
+    "checked": "2026-11-26",
+    "read_scope": "Trang xuất bản và abstract: lựa chọn/đánh giá phép đo. Các công thức atlas do tác giả bản đồ đề xuất, không gán cho NIST."
+  },
+  {
+    "id": "zt",
+    "title": "NIST SP 800-207 (2020)",
+    "url": "https://csrc.nist.gov/pubs/sp/800/207/final",
+    "location": "https://csrc.nist.gov/pubs/sp/800/207/final",
+    "checked": "2026-11-26",
+    "read_scope": "Trang xuất bản/tổng quan Zero Trust; khung liên quan, không claim từng card là yêu cầu tiêu chuẩn."
+  },
+  {
+    "id": "identity",
+    "title": "NIST SP 800-63B-4 (2025)",
+    "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+    "location": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+    "checked": "2026-11-26",
+    "read_scope": "Đọc cụ thể §3.2.5 phishing resistance và đoạn replay resistance. Tách OTP khỏi protocol chống phishing; các kịch bản lifecycle là phần mở rộng phân tích."
+  },
+  {
+    "id": "asvs",
+    "title": "OWASP ASVS 5.0.0",
+    "url": "https://asvs.owasp.org/",
+    "location": "https://asvs.owasp.org/",
+    "checked": "2026-11-26",
+    "read_scope": "Trang dự án, stable release 2025-05-30; tài liệu để đào tiếp. Chưa map đến requirement ID."
+  },
+  {
+    "id": "api",
+    "title": "OWASP API Security Top 10 (2023)",
+    "url": "https://api-security.owasp.org/editions/2023/en/0x11-t10/",
+    "location": "https://api-security.owasp.org/editions/2023/en/0x11-t10/",
+    "checked": "2026-11-26",
+    "read_scope": "Đọc danh sách rủi ro cấp tổng quan; các tình huống cache/race/async là mở rộng phân tích."
+  },
+  {
+    "id": "attack",
+    "title": "MITRE ATT&CK",
+    "url": "https://attack.mitre.org/",
+    "location": "https://attack.mitre.org/",
+    "checked": "2026-11-26",
+    "read_scope": "Trang matrix trực tiếp; dùng như vocabulary hành vi, không copy toàn matrix hay khẳng định detection coverage. Taxonomy thay đổi nên cần pin release khi triển khai."
+  },
+  {
+    "id": "ir",
+    "title": "NIST SP 800-61 Rev. 3 (2025)",
+    "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+    "location": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+    "checked": "2026-11-26",
+    "read_scope": "Trang xuất bản/abstract; bản 2025 thay rev2. Các drill trong atlas là đề xuất riêng."
+  },
+  {
+    "id": "ssdf",
+    "title": "NIST SP 800-218, SSDF v1.1 (2022)",
+    "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+    "location": "https://csrc.nist.gov/pubs/sp/800/218/final",
+    "checked": "2026-11-26",
+    "read_scope": "Pinned edition; trang xuất bản/tổng quan. Không tuyên bố đã rà mọi phiên bản draft mới."
+  },
+  {
+    "id": "ot",
+    "title": "NIST SP 800-82 Rev. 3 (2023)",
+    "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+    "location": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+    "checked": "2026-11-26",
+    "read_scope": "Trang xuất bản nhấn mạnh performance/reliability/safety. Ngày rà có note Rev4 initial public draft, hạn góp ý 2026-11-30; atlas pin rev3, không trộn draft."
+  },
+  {
+    "id": "cvss",
+    "title": "FIRST CVSS v4.0 specification",
+    "url": "https://www.first.org/cvss/v4.0/specification-document",
+    "location": "https://www.first.org/cvss/v4.0/specification-document",
+    "checked": "2026-11-26",
+    "read_scope": "Đọc Metrics/Assessment: CVSS là đầu vào, các yếu tố tổn thất kinh doanh ngoài phạm vi CVSS. Các công thức exposure-hours là đề xuất atlas."
+  },
+  {
+    "id": "llm",
+    "title": "OWASP Top 10 for LLM Applications (2025)",
+    "url": "https://genai.owasp.org/llm-top-10/",
+    "location": "https://genai.owasp.org/llm-top-10/",
+    "checked": "2026-11-26",
+    "read_scope": "Trang tổng quan các loại rủi ro; không coi danh sách này là threat model đầy đủ cho mọi agent."
+  },
+  {
+    "id": "k8s",
+    "title": "Kubernetes Security Checklist",
+    "url": "https://kubernetes.io/docs/concepts/security/security-checklist/",
+    "location": "https://kubernetes.io/docs/concepts/security/security-checklist/",
+    "checked": "2026-11-26",
+    "read_scope": "Đọc cụ thể Pod security: RBAC và admission khác nhau; warn/audit khác enforce. Trang online thay đổi, cần pin version cluster khi áp dụng."
+  },
+  {
+    "id": "slsa",
+    "title": "SLSA v1.2",
+    "url": "https://slsa.dev/spec/v1.2/",
+    "location": "https://slsa.dev/spec/v1.2/",
+    "checked": "2026-11-26",
+    "read_scope": "Trang approved specification overview/tracks/provenance; chưa thẩm định đủ điều kiện từng level. Không cấp chứng nhận SLSA qua atlas."
+  }
+]

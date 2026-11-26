@@ -1,0 +1,41 @@
+{
+  "id": "J03",
+  "title": "Supply Chain Integrity from Source to Runtime",
+  "cards": [
+    "sup-dependency",
+    "sup-builder",
+    "sup-deploy",
+    "cry-key",
+    "sw-release",
+    "inv-lifecycle"
+  ],
+  "goal": "Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.",
+  "boundary": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng.",
+  "branches": [
+    "Hosted builder: chuyển một phần trust sang provider; cần bằng chứng về isolation và identity.",
+    "Self-hosted builder: chủ động control nhưng phải tự giữ sạch state và secrets.",
+    "OPEN: reproducible build hỗ trợ đối soát nhưng không thay review ý định source."
+  ],
+  "reopen": "Thay builder, signer, registry, dependency resolver hoặc đường deploy ngoài pipeline.",
+  "type": "journey",
+  "parent": "supply",
+  "domain": "supply",
+  "status": "analyst_process_model",
+  "provenance": "analyst_expansion",
+  "steps": [
+    "J03.1",
+    "J03.2",
+    "J03.3",
+    "J03.4",
+    "J03.5",
+    "J03.6",
+    "J03.7",
+    "J03.8"
+  ],
+  "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng.",
+  "aliases": [
+    "Chuỗi cung ứng: source đúng không bảo đảm binary đúng"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

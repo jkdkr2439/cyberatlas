@@ -1,0 +1,15 @@
+{
+  "id": "J03.1",
+  "title": "Ý định release được cố định",
+  "type": "step",
+  "parent": "J03",
+  "domain": "supply",
+  "journey": "J03",
+  "order": 1,
+  "process": "Chốt revision, workflow version và dependency resolution; branch/tag mutable chưa là identity ổn định.",
+  "observable": "Commit/digest cụ thể và người có quyền duyệt.",
+  "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng.",
+  "goal": "Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

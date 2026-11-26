@@ -1,0 +1,18 @@
+{
+  "id": "F02",
+  "title": "Confidential Computing and Attestation",
+  "type": "frontier",
+  "parent": "crypto",
+  "domain": "crypto",
+  "status": "OPEN",
+  "question": "Attestation xác nhận binary/config nào, ai cung cấp freshness và ai được giải phóng secret?",
+  "related": "cry-key",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Dữ liệu lưu và truyền; PKI/KMS owner",
+  "aliases": [
+    "Confidential computing và attestation"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

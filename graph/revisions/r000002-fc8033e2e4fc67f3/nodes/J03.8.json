@@ -1,0 +1,20 @@
+{
+  "id": "J03.8",
+  "title": "Connect Runtime Inventory to Revocation",
+  "type": "step",
+  "parent": "J03",
+  "domain": "supply",
+  "journey": "J03",
+  "order": 8,
+  "process": "Xác nhận artifact đang chạy và tìm mọi instance khi provenance/key bị nghi ngờ. Rollback phải xét migration dữ liệu.",
+  "observable": "Runtime digest inventory, affected instances và rehearsal rollback.",
+  "frame": "Source control → dependency resolution → runner → signer → registry → deploy → runtime. Provenance không tự chứng minh mã không có lỗ hổng.",
+  "goal": "Production chạy artifact đúng nguồn, builder và policy được phê duyệt; có khả năng truy hồi và thu hồi.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Runtime và thu hồi được nối lại"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

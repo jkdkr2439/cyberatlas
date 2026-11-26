@@ -1,0 +1,30 @@
+{
+  "id": "authorization",
+  "title": "Authorization and Tenant Isolation",
+  "type": "domain",
+  "parent": "root",
+  "scope": "API và kho dữ liệu; chủ sản phẩm",
+  "goal": "Chủ thể chỉ tác động đúng đối tượng và hành động được phép",
+  "variables": "Role; thuộc tính; ownership; tenant; thời điểm commit",
+  "resources": "Policy engine; test matrix; owner dữ liệu",
+  "book_part": 3,
+  "book_anchor": {
+    "id": "B1604",
+    "line": 1604,
+    "level": 2,
+    "title": "Phần 03 — IPOD của bảo mật: Input, Process, Output, Data",
+    "end_line": 3533
+  },
+  "source_refs": [
+    "api",
+    "asvs"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "API và kho dữ liệu; chủ sản phẩm",
+  "aliases": [
+    "Phân quyền và tenant"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

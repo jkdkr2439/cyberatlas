@@ -1,0 +1,6 @@
+# Portable source files and documentation.
+* text=auto eol=lf
+
+# Immutable snapshots are checksum-bound: never transform their bytes.
+graph/revisions/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+exports/*.jsonl -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

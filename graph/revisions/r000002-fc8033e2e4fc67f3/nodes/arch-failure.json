@@ -1,0 +1,68 @@
+{
+  "id": "arch-failure",
+  "title": "Fail-Open and Fail-Closed Behavior",
+  "condition": "Policy service mất kết nối",
+  "input": "Yêu cầu mới và timeout",
+  "process": "Chọn hành vi theo mức nguy hại của thao tác",
+  "output": "Cho phép, từ chối hoặc giới hạn chức năng",
+  "data": "Lý do fallback và thời gian",
+  "invariant": "Chế độ lỗi là quyết định thiết kế có mục tiêu",
+  "failure": "Timeout vô tình bỏ xác thực",
+  "control": "Fallback riêng cho read/write và emergency path",
+  "measure": "Yêu cầu được cho phép ngoài chính sách khi dependency lỗi / yêu cầu thử",
+  "test": "Gây timeout ở lab rồi thử thao tác mức rủi ro khác nhau",
+  "tradeoff": "Fail-closed có thể gây outage; fail-open tăng phơi nhiễm",
+  "open": "Grace period nào phù hợp từng dữ liệu và đối tượng?",
+  "type": "mechanism",
+  "parent": "architecture",
+  "domain": "architecture",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Dịch vụ phân tán; kiến trúc sư; Policy service mất kết nối",
+  "goal": "Sai lệch không được tự do lan sang miền khác",
+  "variables": "Tenant; đường mạng; failover; vị trí enforcement",
+  "resources": "Sơ đồ thực tế; test môi trường; năng lực vận hành",
+  "book_anchor": {
+    "id": "B6626",
+    "line": 6626,
+    "level": 2,
+    "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+    "end_line": 7585
+  },
+  "source_refs": [
+    "book",
+    "zt"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Grace period nào phù hợp từng dữ liệu và đối tượng? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Yêu cầu được cho phép ngoài chính sách khi dependency lỗi / yêu cầu thử",
+    "domain": "Dịch vụ phân tán; kiến trúc sư; Policy service mất kết nối",
+    "conditions": "Policy service mất kết nối",
+    "goal": "Sai lệch không được tự do lan sang miền khác",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Lý do fallback và thời gian; bằng chứng test: Gây timeout ở lab rồi thử thao tác mức rủi ro khác nhau",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Fail-closed có thể gây outage; fail-open tăng phơi nhiễm; Grace period nào phù hợp từng dữ liệu và đối tượng?",
+    "binding": "arch-failure → điểm thực thi: Chọn hành vi theo mức nguy hại của thao tác"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Cho phép, từ chối hoặc giới hạn chức năng / Timeout vô tình bỏ xác thực",
+    "domain": "Chốt population và giới hạn: Dịch vụ phân tán; kiến trúc sư; Policy service mất kết nối",
+    "mechanism": "Control có giữ invariant này không? Chế độ lỗi là quyết định thiết kế có mục tiêu",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Gây timeout ở lab rồi thử thao tác mức rủi ro khác nhau",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Sơ đồ thực tế; test môi trường; năng lực vận hành; Tenant; đường mạng; failover; vị trí enforcement",
+    "consequence": "Đạt Sai lệch không được tự do lan sang miền khác nhưng phải theo dõi Fail-closed có thể gây outage; fail-open tăng phơi nhiễm"
+  },
+  "aliases": [
+    "Fail-open và fail-closed"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

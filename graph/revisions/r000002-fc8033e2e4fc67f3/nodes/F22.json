@@ -1,0 +1,18 @@
+{
+  "id": "F22",
+  "title": "Crisis Communication",
+  "type": "frontier",
+  "parent": "response",
+  "domain": "response",
+  "status": "OPEN",
+  "question": "Ai được nói điều gì với mức chắc chắn nào khi scope sự cố còn chưa biết?",
+  "related": "ir-learn",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Sự cố đã nghi ngờ; incident commander",
+  "aliases": [
+    "Crisis communication"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

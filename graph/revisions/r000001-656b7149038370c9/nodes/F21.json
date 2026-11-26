@@ -1,0 +1,13 @@
+{
+  "id": "F21",
+  "title": "Deception và honeypot",
+  "type": "frontier",
+  "parent": "detection",
+  "domain": "detection",
+  "status": "OPEN",
+  "question": "Ai có thể chạm honeypot hợp lệ, và tín hiệu phản ánh môi trường thật đến đâu?",
+  "related": "det-base",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Tín hiệu đến quyết định; SOC"
+}

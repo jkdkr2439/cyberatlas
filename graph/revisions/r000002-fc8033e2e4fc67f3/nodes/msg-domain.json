@@ -1,0 +1,68 @@
+{
+  "id": "msg-domain",
+  "title": "Sender Domain Authentication",
+  "condition": "Nhiều dịch vụ gửi email",
+  "input": "Envelope, headers, chữ ký và DNS policy",
+  "process": "Kiểm tra cơ chế xác thực/alignment được cấu hình",
+  "output": "Tín hiệu xác thực miền",
+  "data": "Authentication results và thay đổi DNS",
+  "invariant": "Miền gửi xác thực không bảo đảm nội dung lương thiện",
+  "failure": "Account thật bị chiếm; lookalike domain hợp lệ",
+  "control": "Domain policy kết hợp nội dung và xác minh giao dịch",
+  "measure": "Nguồn gửi hợp lệ sai alignment / nguồn gửi được kiểm thử",
+  "test": "Thử forwarding và dịch vụ marketing được cho phép",
+  "tradeoff": "Siết policy có thể mất thư hợp lệ",
+  "open": "Danh sách toàn bộ bên gửi thay mặt tổ chức đã đầy đủ chưa?",
+  "type": "mechanism",
+  "parent": "messaging",
+  "domain": "messaging",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Tên miền và hộp thư; IT/messaging; Nhiều dịch vụ gửi email",
+  "goal": "Thông điệp không tự trở thành bằng chứng thẩm quyền",
+  "variables": "Forwarding; alias; dịch vụ gửi ngoài; tên gần giống",
+  "resources": "DNS control; mail gateway; kênh xác minh độc lập",
+  "book_anchor": {
+    "id": "B470",
+    "line": 470,
+    "level": 2,
+    "title": "Phần 02 — Cơ chế gốc: hằng và biến trong bảo mật",
+    "end_line": 1603
+  },
+  "source_refs": [
+    "book",
+    "csf"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Danh sách toàn bộ bên gửi thay mặt tổ chức đã đầy đủ chưa? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Nguồn gửi hợp lệ sai alignment / nguồn gửi được kiểm thử",
+    "domain": "Tên miền và hộp thư; IT/messaging; Nhiều dịch vụ gửi email",
+    "conditions": "Nhiều dịch vụ gửi email",
+    "goal": "Thông điệp không tự trở thành bằng chứng thẩm quyền",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Authentication results và thay đổi DNS; bằng chứng test: Thử forwarding và dịch vụ marketing được cho phép",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Siết policy có thể mất thư hợp lệ; Danh sách toàn bộ bên gửi thay mặt tổ chức đã đầy đủ chưa?",
+    "binding": "msg-domain → điểm thực thi: Kiểm tra cơ chế xác thực/alignment được cấu hình"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Tín hiệu xác thực miền / Account thật bị chiếm; lookalike domain hợp lệ",
+    "domain": "Chốt population và giới hạn: Tên miền và hộp thư; IT/messaging; Nhiều dịch vụ gửi email",
+    "mechanism": "Control có giữ invariant này không? Miền gửi xác thực không bảo đảm nội dung lương thiện",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Thử forwarding và dịch vụ marketing được cho phép",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? DNS control; mail gateway; kênh xác minh độc lập; Forwarding; alias; dịch vụ gửi ngoài; tên gần giống",
+    "consequence": "Đạt Thông điệp không tự trở thành bằng chứng thẩm quyền nhưng phải theo dõi Siết policy có thể mất thư hợp lệ"
+  },
+  "aliases": [
+    "Xác thực miền gửi"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

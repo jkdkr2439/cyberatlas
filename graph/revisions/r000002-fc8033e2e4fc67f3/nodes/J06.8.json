@@ -1,0 +1,20 @@
+{
+  "id": "J06.8",
+  "title": "Prevent Unsupported Trust Promotion in Memory",
+  "type": "step",
+  "parent": "J06",
+  "domain": "agents",
+  "journey": "J06",
+  "order": 8,
+  "process": "Lưu kết luận cùng bằng chứng và trạng thái; sửa được khi nguồn đổi. Chặn vòng tự viện dẫn biến một suy đoán thành nhiều chứng cứ.",
+  "observable": "Claim-source graph, expiry, correction và revalidation.",
+  "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất.",
+  "goal": "Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Memory không tự tăng mức tin"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

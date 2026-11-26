@@ -1,0 +1,20 @@
+{
+  "id": "J07.3",
+  "title": "Decompose Triggering Conditions",
+  "type": "step",
+  "parent": "J07",
+  "domain": "vulnerability",
+  "journey": "J07",
+  "order": 3,
+  "process": "Cần quyền nào, path nào, input nào, cấu hình nào? Không yêu cầu khai thác hệ thật để ghi điều kiện.",
+  "observable": "Preconditions có nguồn; unknown thay vì tự gán impossible.",
+  "frame": "Asset-version-function-exposure-control-business outcome; finding có thể false positive hoặc thiếu context.",
+  "goal": "Giảm các đường gây hại ưu tiên trong ngân sách và thời hạn, không tối ưu số ticket đóng.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Điều kiện kích hoạt được mở"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

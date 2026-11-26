@@ -1,0 +1,20 @@
+{
+  "id": "J01.4",
+  "title": "Propagate State to Consumers",
+  "type": "step",
+  "parent": "J01",
+  "domain": "identity",
+  "journey": "J01",
+  "order": 4,
+  "process": "Push invalidation có thể mất; pull có chu kỳ; token tự chứa có thể hợp lệ đến expiry. Không giả định logout IdP xóa app session.",
+  "observable": "Timestamp nhận version ở từng consumer; consumer offline là unresolved.",
+  "frame": "IdP + app + API gateway + resource server + refresh store + cache đa vùng. Không giả định tất cả kiểm tra online.",
+  "goal": "Một chủ thể bị thu hồi không còn thực hiện hành động thuộc scope sau bound được chấp thuận.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Các consumer nhận state mới"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

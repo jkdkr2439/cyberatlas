@@ -1,0 +1,20 @@
+{
+  "id": "J05.6",
+  "title": "Manage Finite Alert Queues",
+  "type": "step",
+  "parent": "J05",
+  "domain": "telemetry",
+  "journey": "J05",
+  "order": 6,
+  "process": "Arrival và service rate theo độ khó quyết định backlog. Đừng loại ca chưa xong để làm MTTR đẹp.",
+  "observable": "Queue age theo cohort, pending count và complexity.",
+  "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ.",
+  "goal": "Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Alert đi vào hàng đợi có hạn"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

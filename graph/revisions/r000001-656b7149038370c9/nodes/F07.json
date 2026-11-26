@@ -1,0 +1,13 @@
+{
+  "id": "F07",
+  "title": "Firmware, boot và thiết bị ngoại vi",
+  "type": "frontier",
+  "parent": "endpoint",
+  "domain": "endpoint",
+  "status": "OPEN",
+  "question": "Chuỗi tin cậy từ boot tới runtime đứt ở đâu khi một thành phần firmware bị sửa?",
+  "related": "end-execution",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Máy trạm, server; endpoint team"
+}

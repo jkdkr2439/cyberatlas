@@ -1,0 +1,20 @@
+{
+  "id": "J02.6",
+  "title": "Carry Scoped Authority into Asynchronous Jobs",
+  "type": "step",
+  "parent": "J02",
+  "domain": "authorization",
+  "journey": "J02",
+  "order": 6,
+  "process": "Job chạy sau nhiều giờ không nên dùng ambient admin mà quên người yêu cầu. Quyết định dùng snapshot quyền hay recheck phải tường minh.",
+  "observable": "Requester, purpose, scope, authorization epoch và expiry trên job.",
+  "frame": "SaaS nhiều tenant; quyền share hợp lệ phải được mô hình hóa. ID không cần bí mật để bảo vệ quyền.",
+  "goal": "Không lộ hay sửa dữ liệu tenant khác, kể cả đường export, cache và background job.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Async job mang authority giới hạn"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

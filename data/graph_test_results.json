@@ -1,0 +1,8 @@
+{
+  "revision": "r000002-fc8033e2e4fc67f3",
+  "tests": 26,
+  "failures": 0,
+  "errors": 0,
+  "status": "pass",
+  "scope": "Versioned graph, partial loading, schema, atomic update protocol, reference integrity; no production security claim."
+}

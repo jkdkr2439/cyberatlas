@@ -1,0 +1,20 @@
+{
+  "id": "J06.7",
+  "title": "Observe and Classify Outcomes",
+  "type": "step",
+  "parent": "J06",
+  "domain": "agents",
+  "journey": "J06",
+  "order": 7,
+  "process": "Tool báo sent/updated phải đối chiếu state đích khi có thể. Output text không trở thành instruction tự động cho bước sau.",
+  "observable": "Observed state, discrepancies và taint/provenance output.",
+  "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất.",
+  "goal": "Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Kết quả được quan sát và phân loại"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

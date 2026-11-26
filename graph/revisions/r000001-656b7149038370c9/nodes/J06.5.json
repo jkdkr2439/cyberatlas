@@ -1,0 +1,15 @@
+{
+  "id": "J06.5",
+  "title": "Review gắn với nội dung bất biến",
+  "type": "step",
+  "parent": "J06",
+  "domain": "agents",
+  "journey": "J06",
+  "order": 5,
+  "process": "Người duyệt cần thấy đúng dữ liệu, đích và hậu quả. Nếu args/state đổi sau review, approval phải kiểm lại theo contract.",
+  "observable": "Approved action digest/version và execute-time comparison.",
+  "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất.",
+  "goal": "Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

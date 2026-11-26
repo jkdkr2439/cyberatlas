@@ -1,0 +1,20 @@
+{
+  "id": "J06.4",
+  "title": "Enforce Authorization outside the Model",
+  "type": "step",
+  "parent": "J06",
+  "domain": "agents",
+  "journey": "J06",
+  "order": 4,
+  "process": "Kiểm principal, object, action, args, destination, cost và thời hạn. Schema đúng không đủ nếu mục tiêu hành động sai.",
+  "observable": "Policy decision độc lập và capability được cấp cho request.",
+  "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất.",
+  "goal": "Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Gateway kiểm quyền ngoài model"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

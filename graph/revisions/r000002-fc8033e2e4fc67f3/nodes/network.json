@@ -1,0 +1,29 @@
+{
+  "id": "network",
+  "title": "Networks, Segmentation, and Egress",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Lưu lượng giữa dịch vụ; network team",
+  "goal": "Đường kết nối chỉ mở cho quan hệ có chủ đích",
+  "variables": "DNS; route; IPv6; proxy; lưu lượng mã hóa",
+  "resources": "Thiết bị mạng; bản đồ luồng; năng lực lọc",
+  "book_part": 6,
+  "book_anchor": {
+    "id": "B6626",
+    "line": 6626,
+    "level": 2,
+    "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+    "end_line": 7585
+  },
+  "source_refs": [
+    "zt"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Lưu lượng giữa dịch vụ; network team",
+  "aliases": [
+    "Mạng, phân vùng và egress"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "J08.1",
+  "title": "Define the Process and Safety Envelope",
+  "type": "step",
+  "parent": "J08",
+  "domain": "ot",
+  "journey": "J08",
+  "order": 1,
+  "process": "Nhiệt độ, áp suất, tốc độ hoặc vị trí có giới hạn phụ thuộc chế độ. Ngưỡng phải từ thiết kế/kỹ sư, không tự phát minh.",
+  "observable": "Approved operating limits và mode definitions.",
+  "frame": "Sensor → controller → actuator → physical process → sensor feedback; IT policy không tự quyết trạng thái safety.",
+  "goal": "Giữ quy trình trong envelope an toàn khi gặp sai lệch số, với quyết định do chuyên gia vận hành xác nhận.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Tiến trình và envelope được mô tả"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "F27",
+  "title": "Telecommunications, Satellites, and National Infrastructure",
+  "type": "frontier",
+  "parent": "thirdparty",
+  "domain": "thirdparty",
+  "status": "OPEN",
+  "question": "Failure domain, đặc quyền vận hành và time horizon khác enterprise thông thường thế nào?",
+  "related": "tp-concentration",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Quan hệ ngoài tổ chức; procurement và service owner",
+  "aliases": [
+    "Telecom, vệ tinh và hạ tầng quốc gia"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

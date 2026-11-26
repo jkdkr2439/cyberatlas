@@ -1,0 +1,20 @@
+{
+  "id": "J04.7",
+  "title": "Verify Business Operations End to End",
+  "type": "step",
+  "parent": "J04",
+  "domain": "architecture",
+  "journey": "J04",
+  "order": 7,
+  "process": "Server healthy chỉ là tiền điều kiện. Người đại diện nghiệp vụ chạy test không gây giao dịch thật để xác nhận đủ chức năng.",
+  "observable": "End-to-end checks, completion time, data-loss interval.",
+  "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc.",
+  "goal": "Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Nghiệp vụ được kiểm đầu cuối"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

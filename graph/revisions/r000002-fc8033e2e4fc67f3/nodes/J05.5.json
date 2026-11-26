@@ -1,0 +1,20 @@
+{
+  "id": "J05.5",
+  "title": "Test Detection with Discriminating Cases",
+  "type": "step",
+  "parent": "J05",
+  "domain": "telemetry",
+  "journey": "J05",
+  "order": 5,
+  "process": "Rule phải phân biệt legitimate và adversarial scenario trong frame; ATT&CK label chỉ là chỉ mục tham chiếu.",
+  "observable": "TP/FP/FN trên bộ test có nhãn; unresolved giữ riêng.",
+  "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ.",
+  "goal": "Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion",
+  "aliases": [
+    "Detection có bài kiểm phân biệt"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

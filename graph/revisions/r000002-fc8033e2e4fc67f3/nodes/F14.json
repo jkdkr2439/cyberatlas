@@ -1,0 +1,18 @@
+{
+  "id": "F14",
+  "title": "Multi-Cluster Systems and Service Meshes",
+  "type": "frontier",
+  "parent": "containers",
+  "domain": "containers",
+  "status": "OPEN",
+  "question": "Trust bundle và identity federation làm tăng hay giảm blast radius khi một control plane bị chiếm?",
+  "related": "k8s-identity",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Cluster và workload; platform/SRE",
+  "aliases": [
+    "Multi-cluster và service mesh"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

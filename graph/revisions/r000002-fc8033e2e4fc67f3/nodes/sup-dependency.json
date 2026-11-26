@@ -1,0 +1,69 @@
+{
+  "id": "sup-dependency",
+  "title": "Dependencies and Source Trust",
+  "condition": "Build dùng package bên ngoài",
+  "input": "Tên, version, checksum, registry và dependency tree",
+  "process": "Resolve theo nguồn cho phép và kiểm provenance khi có",
+  "output": "Dependency cụ thể được đưa vào build",
+  "data": "Lockfile, inventory và nguồn thực",
+  "invariant": "Đúng tên package không chứng minh đúng tác giả/nguồn",
+  "failure": "Namespace confusion hoặc update độc",
+  "control": "Pin, registry policy, review update, SBOM hỗ trợ",
+  "measure": "Dependency resolve ngoài nguồn dự định / dependency resolved",
+  "test": "Đổi registry ưu tiên trong fixture không có secret",
+  "tradeoff": "Pin giảm biến động nhưng trì hoãn patch",
+  "open": "Transitive dependency và install script thực thi quyền gì?",
+  "type": "mechanism",
+  "parent": "supply",
+  "domain": "supply",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Source, build, artifact, deploy; release team; Build dùng package bên ngoài",
+  "goal": "Artifact triển khai đúng nguồn và chính sách cho phép",
+  "variables": "Dependency; runner; signer; registry; mutable tag",
+  "resources": "Builder cô lập; chứng thực; kiểm tra ở deploy",
+  "book_anchor": {
+    "id": "B12409",
+    "line": 12409,
+    "level": 2,
+    "title": "Phần 11 — Từ ontology sang hệ thống AI security agent",
+    "end_line": 14030
+  },
+  "source_refs": [
+    "book",
+    "slsa",
+    "ssdf"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Transitive dependency và install script thực thi quyền gì? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Dependency resolve ngoài nguồn dự định / dependency resolved",
+    "domain": "Source, build, artifact, deploy; release team; Build dùng package bên ngoài",
+    "conditions": "Build dùng package bên ngoài",
+    "goal": "Artifact triển khai đúng nguồn và chính sách cho phép",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Lockfile, inventory và nguồn thực; bằng chứng test: Đổi registry ưu tiên trong fixture không có secret",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Pin giảm biến động nhưng trì hoãn patch; Transitive dependency và install script thực thi quyền gì?",
+    "binding": "sup-dependency → điểm thực thi: Resolve theo nguồn cho phép và kiểm provenance khi có"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Dependency cụ thể được đưa vào build / Namespace confusion hoặc update độc",
+    "domain": "Chốt population và giới hạn: Source, build, artifact, deploy; release team; Build dùng package bên ngoài",
+    "mechanism": "Control có giữ invariant này không? Đúng tên package không chứng minh đúng tác giả/nguồn",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Đổi registry ưu tiên trong fixture không có secret",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Builder cô lập; chứng thực; kiểm tra ở deploy; Dependency; runner; signer; registry; mutable tag",
+    "consequence": "Đạt Artifact triển khai đúng nguồn và chính sách cho phép nhưng phải theo dõi Pin giảm biến động nhưng trì hoãn patch"
+  },
+  "aliases": [
+    "Dependency và nguồn tin"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

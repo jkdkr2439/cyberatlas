@@ -1,0 +1,29 @@
+{
+  "id": "response",
+  "title": "Incident Response and Forensics",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Sự cố đã nghi ngờ; incident commander",
+  "goal": "Giới hạn thiệt hại và giữ khả năng hiểu sự kiện",
+  "variables": "Thời điểm; phạm vi; authority; nguồn chứng cứ",
+  "resources": "Runbook; đội trực; kho chứng cứ; truyền thông",
+  "book_part": 10,
+  "book_anchor": {
+    "id": "B11375",
+    "line": 11375,
+    "level": 2,
+    "title": "Phần 10 — Agent bảo mật: quyền, data và human review",
+    "end_line": 12408
+  },
+  "source_refs": [
+    "ir"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Sự cố đã nghi ngờ; incident commander",
+  "aliases": [
+    "Ứng phó và pháp chứng"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

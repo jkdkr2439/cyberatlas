@@ -1,0 +1,63 @@
+{
+  "id": "arch-blast",
+  "title": "Phạm vi lan truyền",
+  "condition": "Một principal hoặc workload bị chiếm",
+  "input": "Đồ thị quyền và đường kết nối",
+  "process": "Tìm tài sản nhạy cảm còn reachable theo điều kiện",
+  "output": "Tập tài sản có thể bị ảnh hưởng",
+  "data": "Snapshot quyền và đường đi",
+  "invariant": "Một control chỉ giới hạn những đường nó thực sự cắt",
+  "failure": "Phân mạng nhưng cùng admin và backup credential",
+  "control": "Tách authority, segment, giảm quyền liên miền",
+  "measure": "Số tài sản quan trọng reachable từ principal thử; báo cả giả định",
+  "test": "Bỏ một cạnh quyền, tính lại phạm vi lan truyền",
+  "tradeoff": "Cô lập mạnh tăng gánh vận hành và recovery",
+  "open": "Đường gián tiếp qua CI hoặc support có được mô hình hóa?",
+  "type": "mechanism",
+  "parent": "architecture",
+  "domain": "architecture",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Dịch vụ phân tán; kiến trúc sư; Một principal hoặc workload bị chiếm",
+  "goal": "Sai lệch không được tự do lan sang miền khác",
+  "variables": "Tenant; đường mạng; failover; vị trí enforcement",
+  "resources": "Sơ đồ thực tế; test môi trường; năng lực vận hành",
+  "book_anchor": {
+    "id": "B6626",
+    "line": 6626,
+    "level": 2,
+    "title": "Phần 06 — Zero Trust: ontology của quyền và niềm tin",
+    "end_line": 7585
+  },
+  "source_refs": [
+    "book",
+    "zt"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Đường gián tiếp qua CI hoặc support có được mô hình hóa? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Số tài sản quan trọng reachable từ principal thử; báo cả giả định",
+    "domain": "Dịch vụ phân tán; kiến trúc sư; Một principal hoặc workload bị chiếm",
+    "conditions": "Một principal hoặc workload bị chiếm",
+    "goal": "Sai lệch không được tự do lan sang miền khác",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Snapshot quyền và đường đi; bằng chứng test: Bỏ một cạnh quyền, tính lại phạm vi lan truyền",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Cô lập mạnh tăng gánh vận hành và recovery; Đường gián tiếp qua CI hoặc support có được mô hình hóa?",
+    "binding": "arch-blast → điểm thực thi: Tìm tài sản nhạy cảm còn reachable theo điều kiện"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Tập tài sản có thể bị ảnh hưởng / Phân mạng nhưng cùng admin và backup credential",
+    "domain": "Chốt population và giới hạn: Dịch vụ phân tán; kiến trúc sư; Một principal hoặc workload bị chiếm",
+    "mechanism": "Control có giữ invariant này không? Một control chỉ giới hạn những đường nó thực sự cắt",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Bỏ một cạnh quyền, tính lại phạm vi lan truyền",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Sơ đồ thực tế; test môi trường; năng lực vận hành; Tenant; đường mạng; failover; vị trí enforcement",
+    "consequence": "Đạt Sai lệch không được tự do lan sang miền khác nhưng phải theo dõi Cô lập mạnh tăng gánh vận hành và recovery"
+  }
+}

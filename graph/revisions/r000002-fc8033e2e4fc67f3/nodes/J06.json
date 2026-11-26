@@ -1,0 +1,42 @@
+{
+  "id": "J06",
+  "title": "Agent Authority from Untrusted Input to Observed Effects",
+  "cards": [
+    "ai-instruction",
+    "ai-tool",
+    "ai-memory",
+    "dat-class",
+    "dat-egress",
+    "net-egress",
+    "auth-race"
+  ],
+  "goal": "Agent có thể dùng thông tin bên ngoài mà không trao authority cho chính thông tin đó.",
+  "boundary": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất.",
+  "branches": [
+    "Read-only assistant: ít hậu quả trực tiếp hơn nhưng vẫn có rò dữ liệu và tư vấn sai.",
+    "Write-capable agent: cần authority, atomic approval và hậu kiểm tương ứng hậu quả.",
+    "OPEN: tác vụ dài nhiều agent/ủy quyền cần map authority qua từng bước, không gán trust theo tên agent."
+  ],
+  "reopen": "Thêm tool, quyền ghi, memory persistence, nguồn retrieval hoặc model/harness mới.",
+  "type": "journey",
+  "parent": "agents",
+  "domain": "agents",
+  "status": "analyst_process_model",
+  "provenance": "analyst_expansion",
+  "steps": [
+    "J06.1",
+    "J06.2",
+    "J06.3",
+    "J06.4",
+    "J06.5",
+    "J06.6",
+    "J06.7",
+    "J06.8"
+  ],
+  "frame": "User authorization, harness, model, retrieval, memory, tool gateway và hệ đích. Model không được coi là reference monitor duy nhất.",
+  "aliases": [
+    "Agent: dữ liệu lạ → ý định → công cụ → hậu quả"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "gov-exception",
+  "title": "Time-Bounded Exceptions",
+  "condition": "Control không thể áp ngay",
+  "input": "Yêu cầu miễn trừ và lý do",
+  "process": "Đánh giá phạm vi, bù trừ và ngày hết hạn",
+  "output": "Ngoại lệ được giới hạn",
+  "data": "Registry ngoại lệ và review",
+  "invariant": "Ngoại lệ không được âm thầm thành mặc định",
+  "failure": "Gia hạn tự động che nợ rủi ro",
+  "control": "Expiry, owner, kiểm tra control bù",
+  "measure": "Ngoại lệ hết hạn còn hiệu lực / ngoại lệ hết hạn",
+  "test": "Cho ngoại lệ hết hạn trong lab; kiểm tra enforcement",
+  "tradeoff": "Chặn đột ngột có thể ngừng nghiệp vụ",
+  "open": "Cơ chế rollback nào giữ cả an toàn lẫn tính liên tục?",
+  "type": "mechanism",
+  "parent": "governance",
+  "domain": "governance",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_expansion",
+  "frame": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ; Control không thể áp ngay",
+  "goal": "Quyết định có người chịu trách nhiệm và có giới hạn",
+  "variables": "Khẩu vị rủi ro; quy mô; thời hạn; nghĩa vụ",
+  "resources": "Thẩm quyền; thời gian đánh giá; ngân sách sửa sai",
+  "book_anchor": {
+    "id": "B5510",
+    "line": 5510,
+    "level": 2,
+    "title": "Phần 05 — Ontology rủi ro: Threat, Vulnerability, Likelihood, Impact, Risk",
+    "end_line": 6625
+  },
+  "source_refs": [
+    "book",
+    "csf",
+    "measure"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "reopen": "Cơ chế rollback nào giữ cả an toàn lẫn tính liên tục? Mở lại khi đổi frame, có counterexample hoặc nguồn mới.",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Ngoại lệ hết hạn còn hiệu lực / ngoại lệ hết hạn",
+    "domain": "Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ; Control không thể áp ngay",
+    "conditions": "Control không thể áp ngay",
+    "goal": "Quyết định có người chịu trách nhiệm và có giới hạn",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Registry ngoại lệ và review; bằng chứng test: Cho ngoại lệ hết hạn trong lab; kiểm tra enforcement",
+    "method": "Operationalize candidate sau khi chốt denominator, ground truth và scope; dùng test phản ví dụ của thẻ.",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Chặn đột ngột có thể ngừng nghiệp vụ; Cơ chế rollback nào giữ cả an toàn lẫn tính liên tục?",
+    "binding": "gov-exception → điểm thực thi: Đánh giá phạm vi, bù trừ và ngày hết hạn"
+  },
+  "six_regions": {
+    "meaning": "Phân biệt trạng thái mong muốn với failure: Ngoại lệ được giới hạn / Gia hạn tự động che nợ rủi ro",
+    "domain": "Chốt population và giới hạn: Doanh nghiệp; hội đồng rủi ro và chủ dịch vụ; Control không thể áp ngay",
+    "mechanism": "Control có giữ invariant này không? Ngoại lệ không được âm thầm thành mặc định",
+    "evidence": "Quan sát nào có thể bác bỏ kết luận? Cho ngoại lệ hết hạn trong lab; kiểm tra enforcement",
+    "operational": "Nguồn lực có đủ và điều kiện nào đổi? Thẩm quyền; thời gian đánh giá; ngân sách sửa sai; Khẩu vị rủi ro; quy mô; thời hạn; nghĩa vụ",
+    "consequence": "Đạt Quyết định có người chịu trách nhiệm và có giới hạn nhưng phải theo dõi Chặn đột ngột có thể ngừng nghiệp vụ"
+  },
+  "aliases": [
+    "Ngoại lệ có hạn dùng"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

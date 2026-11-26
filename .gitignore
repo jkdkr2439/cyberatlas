@@ -1,0 +1,44 @@
+# External source books are not part of this repository.
+*.[pP][dD][fF]
+*.[dD][oO][cC][xX]
+
+# Python / local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local secrets and editor state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+.ssh/
+.aws/
+.azure/
+.config/gcloud/
+credentials.json
+service-account*.json
+*.log
+*.tmp
+.local/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Uncommitted graph writer state
+graph/WRITE.lock
+graph/CURRENT.*.tmp
+
+# Retired visual checks / local bootstrap receipt
+data/browser_validation.json
+init_receipt.json

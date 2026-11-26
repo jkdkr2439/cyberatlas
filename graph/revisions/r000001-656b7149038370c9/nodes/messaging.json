@@ -1,0 +1,24 @@
+{
+  "id": "messaging",
+  "title": "Email, DNS và thông điệp",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Tên miền và hộp thư; IT/messaging",
+  "goal": "Thông điệp không tự trở thành bằng chứng thẩm quyền",
+  "variables": "Forwarding; alias; dịch vụ gửi ngoài; tên gần giống",
+  "resources": "DNS control; mail gateway; kênh xác minh độc lập",
+  "book_part": 2,
+  "book_anchor": {
+    "id": "B470",
+    "line": 470,
+    "level": 2,
+    "title": "Phần 02 — Cơ chế gốc: hằng và biến trong bảo mật",
+    "end_line": 1603
+  },
+  "source_refs": [
+    "csf"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Tên miền và hộp thư; IT/messaging"
+}

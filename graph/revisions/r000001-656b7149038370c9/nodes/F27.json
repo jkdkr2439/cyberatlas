@@ -1,0 +1,13 @@
+{
+  "id": "F27",
+  "title": "Telecom, vệ tinh và hạ tầng quốc gia",
+  "type": "frontier",
+  "parent": "thirdparty",
+  "domain": "thirdparty",
+  "status": "OPEN",
+  "question": "Failure domain, đặc quyền vận hành và time horizon khác enterprise thông thường thế nào?",
+  "related": "tp-concentration",
+  "reopen": "Chọn scope cụ thể và nguồn chuyên ngành; trả lời câu hỏi trước khi sinh metric.",
+  "provenance": "research_question",
+  "frame": "Quan hệ ngoài tổ chức; procurement và service owner"
+}

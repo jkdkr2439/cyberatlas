@@ -1,0 +1,68 @@
+{
+  "id": "action-toctou",
+  "parent": "action-approval",
+  "title": "Post-Approval Context Changes",
+  "condition": "Giữa review và execution có thời gian",
+  "input": "Approved snapshot và target state hiện tại",
+  "process": "Kiểm lại precondition quan trọng tại commit",
+  "output": "Hành động chỉ chạy nếu context còn khớp",
+  "data": "Resource version và expiry result",
+  "invariant": "Approval đúng quá khứ không tự đúng hiện tại",
+  "failure": "Target owner/quyền/giá trị đổi nhưng lệnh vẫn chạy",
+  "control": "Precondition, expiry và re-approval khi cần",
+  "measure": "Hành động commit với precondition lỗi / race fixtures",
+  "test": "Đổi owner hoặc target version sau review",
+  "tradeoff": "Kiểm lại nhiều dễ gây review fatigue",
+  "open": "Điều kiện nào đổi là vô hại, điều kiện nào bắt buộc hỏi lại?",
+  "domain": "agents",
+  "goal": "Nội dung không đáng tin không được nâng thành authority",
+  "variables": "Prompt; retrieval; memory; tool; chi phí; model change",
+  "resources": "Policy ngoài model; sandbox; review; provenance",
+  "book_anchor": {
+    "id": "B10086",
+    "line": 10086,
+    "level": 2,
+    "title": "Phần 09 — Agent ontology: từ chatbot đến hệ vận hành",
+    "end_line": 11374
+  },
+  "source_refs": [
+    "book",
+    "llm"
+  ],
+  "source_relation": "Book: conceptual seed only; primary references: domain context unless SOURCES states a specific inspected passage.",
+  "type": "mechanism",
+  "status": "mapped_not_observed",
+  "provenance": "analyst_recursive_expansion",
+  "frame": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Agent chuẩn bị hành động có hậu quả; Giữa review và execution có thời gian",
+  "reopen": "Điều kiện nào đổi là vô hại, điều kiện nào bắt buộc hỏi lại?",
+  "evidence_status": "proposed_test_not_run_on_real_system",
+  "metric_sketch": {
+    "status": "candidate_missing_data",
+    "region": "owner_selects_from_six_regions",
+    "q": "Hành động commit với precondition lỗi / race fixtures",
+    "domain": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Agent chuẩn bị hành động có hậu quả; Giữa review và execution có thời gian",
+    "conditions": "Giữa review và execution có thời gian",
+    "goal": "Nội dung không đáng tin không được nâng thành authority",
+    "baseline": "Chọn baseline cùng population, phiên bản policy và điều kiện; owner chưa bind môi trường.",
+    "scale": "Theo đơn vị được nêu trong candidate; không gom thành điểm tổng.",
+    "time": "Cửa sổ và cadence cần owner chốt theo vòng đời/điều kiện của thẻ.",
+    "data": "Resource version và expiry result",
+    "method": "Đổi owner hoặc target version sau review",
+    "missing": "Unknown/unrun/unresolved báo riêng. Nếu là tỷ lệ, D=0 → undefined; không loại missing khỏi population cần quan sát.",
+    "limitation": "Kiểm lại nhiều dễ gây review fatigue; Điều kiện nào đổi là vô hại, điều kiện nào bắt buộc hỏi lại?",
+    "binding": "action-toctou → Kiểm lại precondition quan trọng tại commit"
+  },
+  "six_regions": {
+    "meaning": "Approval đúng quá khứ không tự đúng hiện tại",
+    "domain": "Ứng dụng LLM và automation; AI/platform owner; Model có khả năng ghi hoặc gửi; Agent chuẩn bị hành động có hậu quả; Giữa review và execution có thời gian",
+    "mechanism": "Kiểm lại precondition quan trọng tại commit; failure: Target owner/quyền/giá trị đổi nhưng lệnh vẫn chạy",
+    "evidence": "Đổi owner hoặc target version sau review",
+    "operational": "Policy ngoài model; sandbox; review; provenance; Kiểm lại nhiều dễ gây review fatigue",
+    "consequence": "Nội dung không đáng tin không được nâng thành authority; Điều kiện nào đổi là vô hại, điều kiện nào bắt buộc hỏi lại?"
+  },
+  "aliases": [
+    "Môi trường đổi sau approval"
+  ],
+  "title_language": "en",
+  "content_language": "vi"
+}

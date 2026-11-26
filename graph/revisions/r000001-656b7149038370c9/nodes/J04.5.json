@@ -1,0 +1,15 @@
+{
+  "id": "J04.5",
+  "title": "Khóa và dữ liệu được khôi phục",
+  "type": "step",
+  "parent": "J04",
+  "domain": "architecture",
+  "journey": "J04",
+  "order": 5,
+  "process": "Ciphertext phục hồi nhưng key mất thì không có dữ liệu hữu dụng. Kiểm cặp key version và backup sau rotation.",
+  "observable": "Decryption/integrity result; không xuất secret ra báo cáo.",
+  "frame": "Ứng dụng + identity + DNS + keys + database + queue + backup control plane + con người. Không mô phỏng mã độc.",
+  "goal": "Khôi phục giao dịch quan trọng trong mục tiêu đã thỏa thuận, từ trạng thái có thể tin và đối soát.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}

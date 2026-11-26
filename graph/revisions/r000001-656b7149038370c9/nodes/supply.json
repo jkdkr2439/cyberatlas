@@ -1,0 +1,25 @@
+{
+  "id": "supply",
+  "title": "Chuỗi cung ứng phần mềm",
+  "type": "domain",
+  "parent": "root",
+  "scope": "Source, build, artifact, deploy; release team",
+  "goal": "Artifact triển khai đúng nguồn và chính sách cho phép",
+  "variables": "Dependency; runner; signer; registry; mutable tag",
+  "resources": "Builder cô lập; chứng thực; kiểm tra ở deploy",
+  "book_part": 11,
+  "book_anchor": {
+    "id": "B12409",
+    "line": 12409,
+    "level": 2,
+    "title": "Phần 11 — Từ ontology sang hệ thống AI security agent",
+    "end_line": 14030
+  },
+  "source_refs": [
+    "slsa",
+    "ssdf"
+  ],
+  "status": "mapped",
+  "provenance": "analyst_expansion_from_book",
+  "frame": "Source, build, artifact, deploy; release team"
+}

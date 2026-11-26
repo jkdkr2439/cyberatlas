@@ -1,0 +1,15 @@
+{
+  "id": "J05.4",
+  "title": "Parser giữ đúng nghĩa",
+  "type": "step",
+  "parent": "J05",
+  "domain": "telemetry",
+  "journey": "J05",
+  "order": 4,
+  "process": "Actor/target/resource/time cần giữ nghĩa qua normalization; schema hợp lệ không đảm bảo semantic đúng.",
+  "observable": "Fixtures có expected meaning; parser version và clock bounds.",
+  "frame": "Sensor → transport → parse → correlate → alert → analyst → actuator → observed result. Ground truth production thường không đầy đủ.",
+  "goal": "Sự kiện cần xử lý tạo ra quyết định và hành động đủ sớm, với mức bỏ sót/sai chặn được trình bày trung thực.",
+  "status": "proposed_process_step",
+  "provenance": "analyst_expansion"
+}
