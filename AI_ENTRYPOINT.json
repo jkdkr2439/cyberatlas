@@ -1,5 +1,8 @@
 {
-  "project": "Cybersecurity Concept Atlas",
+  "project": "CyberAtlas",
+  "project_version": "0.1.0",
+  "release_stage": "research_preview",
+  "roadmap": "ROADMAP.md",
   "mode": "machine_first_no_visual_interface",
   "schema_version": "1.0",
   "node_title_language": "en",

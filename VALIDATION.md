@@ -2,6 +2,10 @@
 
 Current graph revision: `r000002-fc8033e2e4fc67f3`.
 
+## CyberAtlas v0.1 presentation verification — 2026-11-26
+
+The staged release-preparation checkout passed graph validation and **44 tests: 43 passed, 1 skipped** (external-book comparison). The three additional hygiene tests distinguish PNG pixel data from text metadata, inspect compressed metadata, and reject unreadable metadata. The generated 2172 × 724 PNG banner was visually reviewed, decoded successfully, and contains no embedded metadata fields. README local links, navigation anchors and version metadata were checked. Staged-file and reachable-history scans reported no findings. No graph content changed, and no remote publication was performed.
+
 ## Sanitized repository verification — 2026-11-26
 
 Both graph snapshots were regenerated with portable source URNs, preserving all node/edge/metric content and updating revision IDs and checksums. A staged clean checkout passed graph validation and **41 tests: 40 passed, 1 skipped** (external-book comparison). Four hygiene regression tests cover redacted findings, credential/path patterns, opt-in source resolution and source metadata across both snapshots. The staged repository contains 636 files with no PDF/DOCX payloads. Pattern scanning and a separate high-entropy quoted-string review found no credential candidates. Full Git-history scanning is part of the final sanitized-import check; scan limitations are documented in REPOSITORY_HYGIENE.md.

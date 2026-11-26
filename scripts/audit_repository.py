@@ -7,7 +7,9 @@ from pathlib import Path
 import argparse
 import json
 import re
+import struct
 import subprocess
+import zlib
 
 ROOT = Path(__file__).resolve().parents[1]
 RULES = {
@@ -38,9 +40,57 @@ def read_objects(ids):
         offset = start + size + 1
     return objects
 
+PNG_SIGNATURE = b'\x89PNG\r\n\x1a\n'
+
+def png_text(data):
+    """Inspect text metadata, not compressed pixel bytes that resemble paths."""
+    offset = len(PNG_SIGNATURE)
+    texts = []
+    def unpack(raw):
+        decoder = zlib.decompressobj()
+        result = decoder.decompress(raw, 1024 * 1024)
+        if not decoder.eof or decoder.unconsumed_tail:
+            raise ValueError('Oversized or invalid PNG text metadata')
+        return result
+    while offset + 12 <= len(data):
+        size = struct.unpack('>I', data[offset:offset + 4])[0]
+        kind = data[offset + 4:offset + 8]
+        end = offset + 12 + size
+        if end > len(data):
+            raise ValueError('Truncated PNG chunk')
+        payload = data[offset + 8:end - 4]
+        if kind == b'tEXt':
+            texts.append(payload.replace(b'\0', b'\n'))
+        elif kind == b'zTXt':
+            keyword, body = payload.split(b'\0', 1)
+            if body[:1] != b'\0':
+                raise ValueError('Invalid PNG text compression')
+            texts.append(keyword + b'\n' + unpack(body[1:]))
+        elif kind == b'iTXt':
+            keyword, body = payload.split(b'\0', 1)
+            if len(body) < 2 or body[0] not in (0, 1) or body[1] != 0:
+                raise ValueError('Invalid PNG international text')
+            flag = body[0]
+            language, translated, body = body[2:].split(b'\0', 2)
+            texts.append(b'\n'.join((keyword, language, translated, unpack(body) if flag else body)))
+        elif kind == b'eXIf':
+            # EXIF may contain plain personal metadata; inspect it conservatively.
+            texts.append(payload)
+        if kind == b'IEND':
+            texts.append(data[end:])
+            return b'\n'.join(texts)
+        offset = end
+    raise ValueError('Missing PNG end chunk')
+
 def scan_content(data, location):
     if data.startswith(b'%PDF-'):
         return [{'location': location, 'line': 1, 'rule': 'pdf_payload'}]
+    if data.startswith(PNG_SIGNATURE):
+        try:
+            data = png_text(data)
+            location += ':png-metadata'
+        except (ValueError, IndexError, zlib.error):
+            return [{'location': location, 'rule': 'unreadable_png_metadata'}]
     text = data.decode('utf-8', errors='replace')
     return [{'location': location, 'line': text.count('\n', 0, match.start()) + 1, 'rule': rule}
             for rule, pattern in RULES.items() for match in pattern.finditer(text)]

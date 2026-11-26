@@ -20,6 +20,8 @@ The offline scanner checks tracked and nonignored new files, optionally staged c
 
 ## Cleanup record — 2026-11-26
 
+PNG assets are checked through their text/EXIF metadata and trailing data; compressed pixel bytes are not interpreted as text. Malformed metadata is reported rather than silently skipped. This is not a steganography detector. The generated banner was also checked as a valid image and contains no embedded metadata fields.
+
 Personal source paths were found in provenance metadata, exports and both original graph snapshots. No recognizable credential was found by the scanner. Both snapshots were regenerated with source URNs, fresh revision IDs and matching checksums; node IDs, node content, metrics and graph relations were preserved. Revision references and rename receipts were updated together. The single unpublished Git import is replaced by the sanitized import, so the old paths are not retained in publishable history.
 
 The portable export is `exports/cybersecurity.nodes.jsonl`; the old `.txt` copy was removed. Bootstrap receipts, retired browser output and Python caches are local generated files, not deliverables. Existing authorship attribution is retained; Git's configured noreply author address is not a credential.
